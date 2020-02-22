@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>django on Hazuli Fidastian</title>
+    <link>https://hazulifidastian.id/tags/django/</link>
+    <description>Recent content in django on Hazuli Fidastian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Jan 2019 07:00:00 +0700</lastBuildDate>
+    
+	<atom:link href="https://hazulifidastian.id/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Format DateField Django</title>
+      <link>https://hazulifidastian.id/post/format-datefield-django/</link>
+      <pubDate>Tue, 22 Jan 2019 07:00:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/post/format-datefield-django/</guid>
+      <description>&lt;p&gt;Beberapa cara penggunaan format DateField didjango form.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
