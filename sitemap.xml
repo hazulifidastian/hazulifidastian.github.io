@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://hazulifidastian.id/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hazulifidastian.id/post/halo-pelican/</loc>
+    <lastmod>2019-07-14T03:32:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hazulifidastian.id/</loc>
+    <lastmod>2019-07-14T03:32:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hazulifidastian.id/tags/pelican/</loc>
+    <lastmod>2019-07-14T03:32:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hazulifidastian.id/tags/</loc>
+    <lastmod>2019-07-14T03:32:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hazulifidastian.id/post/custom-domain-github/</loc>
+    <lastmod>2017-06-28T08:00:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hazulifidastian.id/tags/github/</loc>
+    <lastmod>2017-06-28T08:00:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hazulifidastian.id/tags/tutorial/</loc>
+    <lastmod>2017-06-28T08:00:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hazulifidastian.id/post/membuat-website-gratis-github/</loc>
+    <lastmod>2017-06-28T06:00:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hazulifidastian.id/categories/</loc>
+  </url>
+  
+</urlset>

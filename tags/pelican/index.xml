@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pelican on Hazuli Fidastian</title>
+    <link>https://hazulifidastian.id/tags/pelican/</link>
+    <description>Recent content in pelican on Hazuli Fidastian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jul 2019 03:32:00 +0700</lastBuildDate>
+    
+	<atom:link href="https://hazulifidastian.id/tags/pelican/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Halo Pelican</title>
+      <link>https://hazulifidastian.id/post/halo-pelican/</link>
+      <pubDate>Sun, 14 Jul 2019 03:32:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/post/halo-pelican/</guid>
+      <description>&lt;p&gt;Website ini sebelumnya dibuat menggunakan pure html dan framework css skeleton. Fiturnya hanya berisi informasi personal statis dan jarang diperbarui.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

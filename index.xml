@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hazuli Fidastian</title>
+    <link>https://hazulifidastian.id/</link>
+    <description>Recent content on Hazuli Fidastian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jul 2019 03:32:00 +0700</lastBuildDate>
+    
+	<atom:link href="https://hazulifidastian.id/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://hazulifidastian.id/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hazulifidastian.id/about/</guid>
+      <description>Saya Hazuli Fidastian. Programmer di Jakarta. Bekerja lepas untuk pengembangan aplikasi diplatform web dan mobile.
+Anda bisa menemukan saya online di Twitter dan di Medium.
+Ingin membicarakan proyek? Hubungi saya melalui email.
+Catatan:
+ Doodle: Created by my wife Wiwin. Template: Based on Hugo Lithium.  </description>
+    </item>
+    
+    <item>
+      <title>Halo Pelican</title>
+      <link>https://hazulifidastian.id/post/halo-pelican/</link>
+      <pubDate>Sun, 14 Jul 2019 03:32:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/post/halo-pelican/</guid>
+      <description>&lt;p&gt;Website ini sebelumnya dibuat menggunakan pure html dan framework css skeleton. Fiturnya hanya berisi informasi personal statis dan jarang diperbarui.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Custom Domain Github</title>
+      <link>https://hazulifidastian.id/post/custom-domain-github/</link>
+      <pubDate>Wed, 28 Jun 2017 08:00:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/post/custom-domain-github/</guid>
+      <description>&lt;p&gt;Setelah membuat website menggunakan Github, website bisa dibuatkan domain khusus.
+Artinya, setiap kita ingin akses ke website tidak perlu menggunakan domain standar
+bawaan dari Github hazulifidastian.github.io. Tapi bisa menggunakan alamat yang kita
+tentukan sendiri, misalnya alamat saya ini &lt;del&gt;hazulifidastian.my.id&lt;/del&gt; hazulifidastian.id.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Membuat Website Gratis Github</title>
+      <link>https://hazulifidastian.id/post/membuat-website-gratis-github/</link>
+      <pubDate>Wed, 28 Jun 2017 06:00:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/post/membuat-website-gratis-github/</guid>
+      <description>&lt;p&gt;Membuat website sederhana yang menampilkan profil pribadi atau organisasi bisa
+dilakukan dengan menggunakan Github. Kita tidak perlu menyewa jasa penyedia hosting
+berbayar. Cukup dengan membuat akun Github fasilitas “hosting” web bisa digunakan
+secara gratis.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

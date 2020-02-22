@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial on Hazuli Fidastian</title>
+    <link>https://hazulifidastian.id/tags/tutorial/</link>
+    <description>Recent content in tutorial on Hazuli Fidastian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jun 2017 08:00:00 +0700</lastBuildDate>
+    
+	<atom:link href="https://hazulifidastian.id/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Custom Domain Github</title>
+      <link>https://hazulifidastian.id/post/custom-domain-github/</link>
+      <pubDate>Wed, 28 Jun 2017 08:00:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/post/custom-domain-github/</guid>
+      <description>&lt;p&gt;Setelah membuat website menggunakan Github, website bisa dibuatkan domain khusus.
+Artinya, setiap kita ingin akses ke website tidak perlu menggunakan domain standar
+bawaan dari Github hazulifidastian.github.io. Tapi bisa menggunakan alamat yang kita
+tentukan sendiri, misalnya alamat saya ini &lt;del&gt;hazulifidastian.my.id&lt;/del&gt; hazulifidastian.id.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Membuat Website Gratis Github</title>
+      <link>https://hazulifidastian.id/post/membuat-website-gratis-github/</link>
+      <pubDate>Wed, 28 Jun 2017 06:00:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/post/membuat-website-gratis-github/</guid>
+      <description>&lt;p&gt;Membuat website sederhana yang menampilkan profil pribadi atau organisasi bisa
+dilakukan dengan menggunakan Github. Kita tidak perlu menyewa jasa penyedia hosting
+berbayar. Cukup dengan membuat akun Github fasilitas “hosting” web bisa digunakan
+secara gratis.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

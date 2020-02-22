@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.64.1" />
+
+
+<title>Custom Domain Github - Hazuli Fidastian</title>
+<meta property="og:title" content="Custom Domain Github - Hazuli Fidastian">
+
+
+<link href='https://hazulifidastian.id/favicon.ico' rel='icon' type='image/x-icon' />
+
+
+
+
+
+
+
+
+<link rel="icon" href="https://hazulifidastian.id/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://hazulifidastian.id/css/main.css" media="all">
+<link rel="stylesheet" href="https://hazulifidastian.id/css/overrider.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://hazulifidastian.id/" class="nav-logo">
+    <img src="https://hazulifidastian.id/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">Me</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+    <article class="article">
+        
+        <span class="article-duration">2 min read</span>
+        
+
+        <h1 class="article-title">Custom Domain Github</h1>
+
+        
+        <span class="article-date">June 28, 2017</span>
+        
+
+        <div class="article-content">
+            <p>Setelah membuat website menggunakan Github, website bisa dibuatkan domain khusus.
+Artinya, setiap kita ingin akses ke website tidak perlu menggunakan domain standar
+bawaan dari Github hazulifidastian.github.io. Tapi bisa menggunakan alamat yang kita
+tentukan sendiri, misalnya alamat saya ini <del>hazulifidastian.my.id</del> hazulifidastian.id.</p>
+<p>Memiliki domain sendiri tidaklah terlalu sulit, hanya saja kita perlu membeli domain
+tersebut. Harganya pun tidak terlalu mahal, dibayarkan pertahun. Harganya antara 50
+ribu hingga 110 ribu untuk domain my.id, web.id, .com, .net dll.</p>
+<h2 id="konfigurasi-repository-di-github">Konfigurasi repository di Github</h2>
+<p>Repository website kita pada Github harus dikonfigurasi agar bisa menerima custom
+domain. Buka repository website. Jika dari contoh post Saya sebelumnya, nama repository
+website adalah hazulifidastian.github.io.</p>
+<figure>
+    <img src="/images/custom-domain-github/github-settings-menu.png"
+         alt="Github settigs"/> <figcaption>
+            <p>Github settings</p>
+        </figcaption>
+</figure>
+
+<p>Pada halaman repository, dibawah nama repository hazulifidastian.github.io klik menu
+Settings. Menu dengan gambar gear.</p>
+<figure>
+    <img src="/images/custom-domain-github/github-custom-domain.png"
+         alt="Github settigs"/> <figcaption>
+            <p>Github settings</p>
+        </figcaption>
+</figure>
+
+<p>Cari Custom Domain, ganti dengan nama domain yang akan digunakan. Misalnya saya
+menggunakan domain <del><a href="http://www.hazulifidastian.my.id">www.hazulifidastian.my.id</a></del> <a href="http://www.hazulifidastian.id">www.hazulifidastian.id</a>. Setelah dirubah, simpan perubahan tersebut.</p>
+<h2 id="konfigurasi-dns">Konfigurasi DNS</h2>
+<p>Login di client area tempat kita membeli domain, kemudian pilih domain yang akan
+dirubah konfigurasinya. Masing-masing penyedia jasa memiliki menu yang berbeda-beda.
+Temukan menu DNS Management.</p>
+<figure>
+    <img src="/images/custom-domain-github/dns-settings.png"
+         alt="DNS Settings"/> <figcaption>
+            <p>DNS Settings</p>
+        </figcaption>
+</figure>
+
+<p>Kita perlu menambahkan 3 record untuk mengarahkan domain kita ke Github. Hasil akhir
+semua record setelah ditambahkan bisa dilihat ditable dibawah ini.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Domain</th>
+<th align="center">TTL</th>
+<th align="center">Class</th>
+<th align="center">Type</th>
+<th align="center">Destination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="http://www.hazulifidastian.id">www.hazulifidastian.id</a></td>
+<td align="center">14400</td>
+<td align="center">IN</td>
+<td align="center">CNAME</td>
+<td align="center">hazulifidastian.github.io</td>
+</tr>
+<tr>
+<td align="left">hazulifidastian.id</td>
+<td align="center">14400</td>
+<td align="center">IN</td>
+<td align="center">A</td>
+<td align="center">185.199.108.153</td>
+</tr>
+<tr>
+<td align="left">hazulifidastian.id</td>
+<td align="center">14400</td>
+<td align="center">IN</td>
+<td align="center">A</td>
+<td align="center">185.199.109.153</td>
+</tr>
+<tr>
+<td align="left">hazulifidastian.id</td>
+<td align="center">14400</td>
+<td align="center">IN</td>
+<td align="center">A</td>
+<td align="center">185.199.110.153</td>
+</tr>
+<tr>
+<td align="left">hazulifidastian.id</td>
+<td align="center">14400</td>
+<td align="center">IN</td>
+<td align="center">A</td>
+<td align="center">185.199.111.153</td>
+</tr>
+</tbody>
+</table>
+<p>Setelah penambahan, jika kita mengetikkan domain kita misalnya
+<del><a href="http://www.hazulifidastian.my.id">www.hazulifidastian.my.id</a></del> <a href="http://www.hazulifidastian.id">www.hazulifidastian.id</a> halaman website kita belum akan muncul. Karena perubahan
+DNS membutuhkan waktu untuk setiap perubahan. Lamanya tergantung dengan provider
+domain, bisa beberapa menit bahkan bisa sampai sehari.</p>
+
+            
+            <div class="article-tags">
+                
+                <a href="https://hazulifidastian.id//tags/tutorial/">#tutorial</a>&nbsp;
+                
+                <a href="https://hazulifidastian.id//tags/github/">#github</a>&nbsp;
+                
+            </div>
+            
+
+        </div>
+    </article>
+
+    
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="https://hazulifidastian.id/images/hugo-logo.png" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+
