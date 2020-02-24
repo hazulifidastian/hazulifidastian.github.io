@@ -17,7 +17,9 @@
       <pubDate>Tue, 22 Jan 2019 07:00:00 +0700</pubDate>
       
       <guid>https://hazulifidastian.id/format-datefield-django/</guid>
-      <description>&lt;p&gt;Beberapa cara penggunaan format DateField didjango form.&lt;/p&gt;</description>
+      <description>Format Spesifik Menentukan format spesifik DateField pada form. Jika pengguna memasukkan tanggal diluar format tersebut, form akan menampilkan error saat validasi.
+# forms.py class MyForm(forms.ModelForm): # Hanya menerima input dengan format contoh: 25/01/2019  tanggal = forms.DateField(input_formats=&amp;#39;%d-%m-%Y&amp;#39;) Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.
+# settings.py DATE_INPUT_FORMATS = &amp;#39;%d-%m-%Y&amp;#39; Penggunaan yang Salah! Jika DATE_INPUT_FORMATS tidak di set, django akan melihat konfigurasi LANGUAGE_CODE pada settings.py. Contoh jika file settings.</description>
     </item>
     
   </channel>
