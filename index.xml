@@ -26,28 +26,28 @@ Catatan:
     
     <item>
       <title>Halo Pelican</title>
-      <link>https://hazulifidastian.id/post/halo-pelican/</link>
+      <link>https://hazulifidastian.id/halo-pelican/</link>
       <pubDate>Sun, 14 Jul 2019 03:32:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.id/post/halo-pelican/</guid>
+      <guid>https://hazulifidastian.id/halo-pelican/</guid>
       <description>&lt;p&gt;Website ini sebelumnya dibuat menggunakan pure html dan framework css skeleton. Fiturnya hanya berisi informasi personal statis dan jarang diperbarui.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Format DateField Django</title>
-      <link>https://hazulifidastian.id/post/format-datefield-django/</link>
+      <link>https://hazulifidastian.id/format-datefield-django/</link>
       <pubDate>Tue, 22 Jan 2019 07:00:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.id/post/format-datefield-django/</guid>
+      <guid>https://hazulifidastian.id/format-datefield-django/</guid>
       <description>&lt;p&gt;Beberapa cara penggunaan format DateField didjango form.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Custom Domain Github</title>
-      <link>https://hazulifidastian.id/post/custom-domain-github/</link>
+      <link>https://hazulifidastian.id/custom-domain-github/</link>
       <pubDate>Wed, 28 Jun 2017 08:00:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.id/post/custom-domain-github/</guid>
+      <guid>https://hazulifidastian.id/custom-domain-github/</guid>
       <description>&lt;p&gt;Setelah membuat website menggunakan Github, website bisa dibuatkan domain khusus.
 Artinya, setiap kita ingin akses ke website tidak perlu menggunakan domain standar
 bawaan dari Github hazulifidastian.github.io. Tapi bisa menggunakan alamat yang kita
@@ -56,10 +56,10 @@ tentukan sendiri, misalnya alamat saya ini &lt;del&gt;hazulifidastian.my.id&lt;/
     
     <item>
       <title>Membuat Website Gratis Github</title>
-      <link>https://hazulifidastian.id/post/membuat-website-gratis-github/</link>
+      <link>https://hazulifidastian.id/membuat-website-gratis-github/</link>
       <pubDate>Wed, 28 Jun 2017 06:00:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.id/post/membuat-website-gratis-github/</guid>
+      <guid>https://hazulifidastian.id/membuat-website-gratis-github/</guid>
       <description>&lt;p&gt;Membuat website sederhana yang menampilkan profil pribadi atau organisasi bisa
 dilakukan dengan menggunakan Github. Kita tidak perlu menyewa jasa penyedia hosting
 berbayar. Cukup dengan membuat akun Github fasilitas “hosting” web bisa digunakan

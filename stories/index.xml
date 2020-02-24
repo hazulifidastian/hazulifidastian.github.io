@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tutorial on Hazuli Fidastian</title>
-    <link>https://hazulifidastian.id/tags/tutorial/</link>
-    <description>Recent content in tutorial on Hazuli Fidastian</description>
+    <title>Stories on Hazuli Fidastian</title>
+    <link>https://hazulifidastian.id/stories/</link>
+    <description>Recent content in Stories on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jun 2017 08:00:00 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jul 2019 03:32:00 +0700</lastBuildDate>
     
-	<atom:link href="https://hazulifidastian.id/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hazulifidastian.id/stories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Halo Pelican</title>
+      <link>https://hazulifidastian.id/halo-pelican/</link>
+      <pubDate>Sun, 14 Jul 2019 03:32:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/halo-pelican/</guid>
+      <description>&lt;p&gt;Website ini sebelumnya dibuat menggunakan pure html dan framework css skeleton. Fiturnya hanya berisi informasi personal statis dan jarang diperbarui.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Format DateField Django</title>
+      <link>https://hazulifidastian.id/format-datefield-django/</link>
+      <pubDate>Tue, 22 Jan 2019 07:00:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/format-datefield-django/</guid>
+      <description>&lt;p&gt;Beberapa cara penggunaan format DateField didjango form.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Custom Domain Github</title>
