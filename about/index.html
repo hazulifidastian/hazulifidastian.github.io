@@ -22,6 +22,7 @@
 <link rel="icon" href="https://hazulifidastian.id/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="https://hazulifidastian.id/css/main.css" media="all">
 <link rel="stylesheet" href="https://hazulifidastian.id/css/overrider.css" media="all">
+<link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
 
   </head>
@@ -85,18 +86,27 @@
 
 </main>
 
-      <footer class="footer">
-        <ul class="footer-links">
-          
-          <li>
-            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="https://hazulifidastian.id/images/hugo-logo.png" width="22" height="22"></a>
-          </li>
-        </ul>
-      </footer>
+<footer class="footer">
+    <ul class="footer-links">
+        
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img
+                    src="https://hazulifidastian.id/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+        <li>
+            <a id="night-mode-toggle" class="footer-links-kudos" data-current-mode="light"
+                style="cursor: pointer;">Night</a>
+        </li>
+    </ul>
+</footer>
 
-    </div>
+</div>
 
-    
-  </body>
+
+
+<script src="/js/night_toggle.js"></script>
+
+</body>
+
 </html>
 
