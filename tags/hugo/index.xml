@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on Hazuli Fidastian</title>
+    <link>https://hazulifidastian.id/tags/hugo/</link>
+    <description>Recent content in hugo on Hazuli Fidastian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Feb 2020 22:31:24 +0700</lastBuildDate>
+    
+	<atom:link href="https://hazulifidastian.id/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Night Mode</title>
+      <link>https://hazulifidastian.id/night-mode/</link>
+      <pubDate>Tue, 25 Feb 2020 22:31:24 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/night-mode/</guid>
+      <description>Mode Malam Mode malam atau dengan nama lain mode gelap (dark mode), sudah menjadi trend desain antarmuka. Banyak aplikasi mobile, desktop bahkan website menerapkannya.
+Aplikasi messenger seperti telegram, slack, signals sudah menjadikan ini sebagai fiturnya. Terakhir whatsapp, meluncurkan fitur ini pada aplikasi beta di platform android.
+Saya termasuk yang sering menggunakan antarmuka mode malam ini. Memang karena sering membaca dan menggunakan smartphone dimalam hari. Terkadang nyaman juga dipakai disiang hari.</description>
+    </item>
+    
+  </channel>
+</rss>
