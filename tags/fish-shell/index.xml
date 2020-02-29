@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fish shell on Hazuli Fidastian</title>
+    <link>https://hazulifidastian.id/tags/fish-shell/</link>
+    <description>Recent content in fish shell on Hazuli Fidastian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Feb 2020 10:12:40 +0700</lastBuildDate>
+    
+	<atom:link href="https://hazulifidastian.id/tags/fish-shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fish Shell Upgrade Error</title>
+      <link>https://hazulifidastian.id/fish-shell-upgrade-error/</link>
+      <pubDate>Sat, 29 Feb 2020 10:12:40 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/fish-shell-upgrade-error/</guid>
+      <description>Fish shell gagal di upgrade karena issue https://github.com/fish-shell/fish-shell/issues/5822. Package manager gagal me-replace file autocompletion rg.fish.
+Penyebabnya adalah, pernah instalasi aplikasi ripgrep menggunakan cargo. Cargo adalah package manager bawaan dari bahasa pemograman rust.
+Cargo menjadikan user rigprep sebagai pemilik file rg.fish. Sehingga package manager bawaan OS gagal me-replace file tersebut.
+Efek errornya, saya tidak bisa masuk ke terminal. Masuk console melalui shortcut Ctrl-Alt-F1 pun tidak bisa.
+Instalasi aplikasi baru juga tidak bisa.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Feb 2020 22:31:24 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 29 Feb 2020 10:12:40 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>elementary os</title>
+      <link>https://hazulifidastian.id/tags/elementary-os/</link>
+      <pubDate>Sat, 29 Feb 2020 10:12:40 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/tags/elementary-os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fish shell</title>
+      <link>https://hazulifidastian.id/tags/fish-shell/</link>
+      <pubDate>Sat, 29 Feb 2020 10:12:40 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/tags/fish-shell/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>

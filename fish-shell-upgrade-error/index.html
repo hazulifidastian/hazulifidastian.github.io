@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.64.1" />
+
+
+<title>Fish Shell Upgrade Error - Hazuli Fidastian</title>
+<meta property="og:title" content="Fish Shell Upgrade Error - Hazuli Fidastian">
+
+
+<link href='https://hazulifidastian.id/favicon.ico' rel='icon' type='image/x-icon' />
+
+
+
+
+
+
+
+
+<link rel="icon" href="https://hazulifidastian.id/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://hazulifidastian.id/css/main.css" media="all">
+<link rel="stylesheet" href="https://hazulifidastian.id/css/overrider.css" media="all">
+<link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://hazulifidastian.id/" class="nav-logo">
+    <img src="https://hazulifidastian.id/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">Me</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+    <article class="article">
+
+        
+        <span class="article-duration">1 min read</span>
+        
+
+        <h1 class="article-title">Fish Shell Upgrade Error</h1>
+
+        
+        <span class="article-date">February 29, 2020</span>
+        
+
+        
+
+
+        
+
+
+        <div class="article-content">
+            <p>Fish shell gagal di upgrade karena issue <a href="https://github.com/fish-shell/fish-shell/issues/5822">https://github.com/fish-shell/fish-shell/issues/5822</a>. Package manager gagal me-replace file autocompletion rg.fish.</p>
+<p>Penyebabnya adalah, pernah instalasi aplikasi ripgrep menggunakan cargo. Cargo adalah package manager bawaan dari bahasa pemograman rust.</p>
+<p>Cargo menjadikan user rigprep sebagai pemilik file rg.fish. Sehingga package manager bawaan OS gagal me-replace file tersebut.</p>
+<p>Efek errornya, saya tidak bisa masuk ke terminal. Masuk console melalui shortcut Ctrl-Alt-F1 pun tidak bisa.</p>
+<p>Instalasi aplikasi baru juga tidak bisa. Masih tersangkut error gagal upgrade fish shell.</p>
+<h2 id="solusi">Solusi</h2>
+<h3 id="mengembalikan-terminal">Mengembalikan Terminal</h3>
+<p>Saya menggunakan aplikasi Dconf Editor<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> untuk mengganti setelan opsi shell menjadi <em>bash</em>, yang defaultnya adalah <em>fish</em><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> untuk aplikasi terminal Elementary OS.</p>
+<figure>
+    <img src="/images/fish-shell-upgrade-error/dconf-editor.png"
+         alt="Dconf Editor"/> <figcaption>
+            <p>Dconf Editor</p>
+        </figcaption>
+</figure>
+
+<h3 id="force-overwrite">Force Overwrite</h3>
+<p>Setelah berhasil masuk terminal, saya bisa memperbaiki proses upgrade fish shell yang gagal.</p>
+<p>Perintah dibawah ini digunakan untuk memaksa manajer aplikasi untuk overwrite file jika diperlukan.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt -o Dpkg::Options::<span style="color:#f92672">=</span><span style="color:#d88200">&#34;--force-overwrite&#34;</span> -f upgrade
+</code></pre></div><h2 id="catatan">Catatan</h2>
+<p>Saat terjadi masalah gagal upgrade fish shell saya langsung restart OS. Terminal tidak bisa dibuka setelah restart.</p>
+<p>Padahal awalnya terminal masih bisa dibuka. Harusnya saat itu langsung diterapkan solusi force overwrite.</p>
+<p>Kembalikan nilai shell menjadi default setelah berhasil. Cek <strong>User default value</strong> setelan opsi shell pada dconf-editor.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://wiki.gnome.org/action/show/Projects/dconf?action=show&amp;redirect=dconf">https://wiki.gnome.org/action/show/Projects/dconf?action=show&amp;redirect=dconf</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Nilai defaultnya berasal dari perintah chsh pada user. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+            
+<div class="article-tags">
+    
+    <a href="https://hazulifidastian.id//tags/fish-shell/">#fish shell</a>&nbsp;
+    
+    <a href="https://hazulifidastian.id//tags/elementary-os/">#elementary os</a>&nbsp;
+    
+</div>
+
+
+        </div>
+    </article>
+
+    
+
+</main>
+
+<footer class="footer">
+    <ul class="footer-links">
+        
+        <li>
+            <a id="night-mode-toggle" title="Toggle Night/Light mode" class="footer-links-kudos"
+                data-current-mode="light" style="cursor: pointer;"></a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img
+                    src="https://hazulifidastian.id/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+</footer>
+
+</div>
+
+
+
+<script src="/js/night_toggle.js"></script>
+
+</body>
+
+</html>
+
