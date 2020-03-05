@@ -6,7 +6,7 @@
     <description>Recent content on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Feb 2020 10:12:40 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2020 06:25:49 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,6 +22,17 @@ Anda bisa menemukan saya online di Twitter dan di Medium.
 Ingin membicarakan proyek? Hubungi saya melalui email.
 Catatan:
  Doodle: Created by my wife Wiwin. Template: Based on Hugo Lithium.  </description>
+    </item>
+    
+    <item>
+      <title>Suspendable App</title>
+      <link>https://hazulifidastian.id/suspendable-app/</link>
+      <pubDate>Mon, 02 Mar 2020 06:25:49 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/suspendable-app/</guid>
+      <description>Saya akan membagi aplikasi menjadi dua bagian. Pertama adalah bagian yang terus-menerus memantau input yang diberikan user melalui keyboard. Bagian ini akan aktif bersamaan dengan berjalannya aplikasi. Saya akan membuat fungsi yang merespon terhadap kombinasi shortcut keyboard tertentu.
+Kedua adalah bagian yang menjalankan pekerjaan utama dalam aplikasi. Bagian ini bisa dikontrol, suspend (ditunda pekerjaannya), resume (dilanjutkan kembali) dan dihentikan.
+Error yang terjadi dibagian kedua tidak boleh mempengaruhi bagian pertama. Dan bagian pertama memiliki kontrol penuh terhadap bagian kedua.</description>
     </item>
     
     <item>

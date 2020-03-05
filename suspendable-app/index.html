@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.64.1" />
+
+
+<title>Suspendable App - Hazuli Fidastian</title>
+<meta property="og:title" content="Suspendable App - Hazuli Fidastian">
+
+
+<link href='https://hazulifidastian.id/favicon.ico' rel='icon' type='image/x-icon' />
+
+
+
+
+<meta property="description" content="Tulisan ini membahas cara melakukan suspend (menghentikan sementara) dan resume (melanjutkan kembali) aplikasi menggunakan python. Perintahnya ditrigger menggunakan shortcut pada keyboard.">
+
+
+
+
+
+<link rel="icon" href="https://hazulifidastian.id/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://hazulifidastian.id/css/main.css" media="all">
+<link rel="stylesheet" href="https://hazulifidastian.id/css/overrider.css" media="all">
+<link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://hazulifidastian.id/" class="nav-logo">
+    <img src="https://hazulifidastian.id/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">Me</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+    <article class="article">
+
+        
+        <span class="article-duration">4 min read</span>
+        
+
+        <h1 class="article-title">Suspendable App</h1>
+
+        
+        <span class="article-date">March 2, 2020</span>
+        
+
+        
+<div id="article-description">
+    <p>Tulisan ini membahas cara melakukan suspend (menghentikan sementara) dan resume (melanjutkan kembali) aplikasi menggunakan python. Perintahnya ditrigger menggunakan shortcut pada keyboard.</p>
+</div>
+
+
+
+        
+
+<div id="article-toc">
+    <h2 class="toc-title">Daftar Isi</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#kebutuhan">Kebutuhan</a></li>
+    <li><a href="#keyboard-handler">Keyboard Handler</a>
+      <ul>
+        <li><a href="#kode">Kode</a></li>
+        <li><a href="#breakdown">Breakdown</a></li>
+      </ul>
+    </li>
+    <li><a href="#prototyping-menggunakan-thread">Prototyping Menggunakan Thread</a>
+      <ul>
+        <li><a href="#kode-1">Kode</a></li>
+        <li><a href="#breakdown-1">Breakdown</a></li>
+        <li><a href="#catatan">Catatan</a></li>
+      </ul>
+    </li>
+    <li><a href="#prototyping-menggunakan-process">Prototyping Menggunakan Process</a>
+      <ul>
+        <li><a href="#kode-2">Kode</a></li>
+        <li><a href="#breakdown-2">Breakdown</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <hr>
+</div>
+
+
+
+        <div class="article-content">
+            <p>Saya akan membagi aplikasi menjadi dua bagian. Pertama adalah bagian yang terus-menerus memantau input yang diberikan user melalui keyboard. Bagian ini akan aktif bersamaan dengan berjalannya aplikasi. Saya akan membuat fungsi yang merespon terhadap kombinasi shortcut keyboard tertentu.</p>
+<p>Kedua adalah bagian yang menjalankan pekerjaan utama dalam aplikasi. Bagian ini bisa dikontrol, suspend (ditunda pekerjaannya), resume (dilanjutkan kembali) dan dihentikan.</p>
+<p>Error yang terjadi dibagian kedua tidak boleh mempengaruhi bagian pertama. Dan bagian pertama memiliki kontrol penuh terhadap bagian kedua.</p>
+<p>Dengan kebutuhan seperti diatas, saya mencoba membuat dua prototipe menggunakan fitur konkurensi pada python.</p>
+<p>Kenapa harus konkurensi? Karena dua bagian yang dibutuhkan aplikasi diatas harus berjalan <em>bersamaan</em>. Input keyboard dari user harus terus bisa dipantau secara realtime. Kerja utama aplikasi juga tidak boleh terganggu.</p>
+<p>Dengan cara sekuens, kita tidak bisa mendapatkan hasil yang sama. Karena sekuens mengharuskan kita memilih salah satu bagian untuk dijalankan, dan membuat bagian yang lain harus menunggu yang sedang berjalan itu selesai.</p>
+<h2 id="kebutuhan">Kebutuhan</h2>
+<p>Install package <code>pyinput</code> untuk menangani input dari user.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install pyinput
+</code></pre></div><p>Sebelumnya saya mencoba package <code>curses</code>, yang ternyata kurang cocok dengan kebutuhan untuk prototipe ini. Sepertinya <code>curses</code> digunakan jika kita ingin membuat antar muka / user inteface  dengan konsep <em>window</em> diterminal.</p>
+<h2 id="keyboard-handler">Keyboard Handler</h2>
+<h3 id="kode">Kode</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">pynput</span> <span style="color:#f92672">import</span> <span style="color:#111">keyboard</span>
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">keyboard_handler</span><span style="color:#111">(</span><span style="color:#111">proc</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">on_cp</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#75715e"># Perintah pause &amp; resume</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">on_cq</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#75715e"># Perintah keluar</span>
+        <span style="color:#00a8c8">return</span> <span style="color:#111">False</span>
+
+    <span style="color:#111">listener</span> <span style="color:#f92672">=</span> <span style="color:#111">keyboard</span><span style="color:#f92672">.</span><span style="color:#111">GlobalHotKeys</span><span style="color:#111">(</span><span style="color:#111">{</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">&lt;ctrl&gt;+p</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span> <span style="color:#111">on_cp</span><span style="color:#111">,</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">&lt;ctrl&gt;+q</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span> <span style="color:#111">on_cq</span><span style="color:#111">}</span><span style="color:#111">)</span>
+    <span style="color:#111">listener</span><span style="color:#f92672">.</span><span style="color:#111">start</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+</code></pre></div><h3 id="breakdown">Breakdown</h3>
+<p>Saya mendefinisikan fungsi untuk menangani input dari user melalui keyboard.</p>
+<h4 id="shortcut">Shortcut</h4>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">listener</span> <span style="color:#f92672">=</span> <span style="color:#111">keyboard</span><span style="color:#f92672">.</span><span style="color:#111">GlobalHotKeys</span><span style="color:#111">(</span><span style="color:#111">{</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">&lt;ctrl&gt;+p</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span> <span style="color:#111">on_cp</span><span style="color:#111">,</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">&lt;ctrl&gt;+q</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span> <span style="color:#111">on_cq</span><span style="color:#111">}</span><span style="color:#111">)</span>
+</code></pre></div><p>Kode ini menetapkan shortcut, beserta fungsi untuk merespon shortcut tersebut.</p>
+<ul>
+<li><code>Ctrl+p</code> akan memanggil fungsi <code>on_cp</code>. Didalamnya berisi perintah untuk menghentikan sementara dan melanjutkan kembali.</li>
+<li><code>Ctrl+q</code> akan memanggil fungsi <code>on_cq</code>. Perintah untuk keluar dari thread atau process.</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">listener</span><span style="color:#f92672">.</span><span style="color:#111">start</span><span style="color:#111">(</span><span style="color:#111">)</span>
+</code></pre></div><p>Kode ini akan memulai pemantauan input keyboard keyboard dari user.</p>
+<h2 id="prototyping-menggunakan-thread">Prototyping Menggunakan Thread</h2>
+<h3 id="kode-1">Kode</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> <span style="color:#111">threading</span>
+<span style="color:#f92672">import</span> <span style="color:#111">time</span>
+
+<span style="color:#f92672">from</span> <span style="color:#111">pynput</span> <span style="color:#f92672">import</span> <span style="color:#111">keyboard</span>
+
+
+<span style="color:#00a8c8">class</span> <span style="color:#75af00">Worker</span><span style="color:#111">(</span><span style="color:#111">threading</span><span style="color:#f92672">.</span><span style="color:#111">Thread</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#00a8c8">def</span> <span style="color:#111">__init__</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">,</span> <span style="color:#f92672">*</span><span style="color:#111">args</span><span style="color:#111">,</span> <span style="color:#f92672">*</span><span style="color:#f92672">*</span><span style="color:#111">kwargs</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#111">super</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#f92672">.</span><span style="color:#111">__init__</span><span style="color:#111">(</span><span style="color:#f92672">*</span><span style="color:#111">args</span><span style="color:#111">,</span> <span style="color:#f92672">*</span><span style="color:#f92672">*</span><span style="color:#111">kwargs</span><span style="color:#111">)</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">event</span> <span style="color:#f92672">=</span> <span style="color:#111">threading</span><span style="color:#f92672">.</span><span style="color:#111">Event</span><span style="color:#111">(</span><span style="color:#111">)</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#111">)</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">__stop</span> <span style="color:#f92672">=</span> <span style="color:#111">False</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">run</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">while</span> <span style="color:#111">True</span><span style="color:#111">:</span>
+            <span style="color:#00a8c8">if</span> <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">__stop</span><span style="color:#111">:</span>
+                <span style="color:#00a8c8">break</span>
+            <span style="color:#00a8c8">if</span> <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">is_set</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+                <span style="color:#75715e"># Your main code here</span>
+                <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">work</span><span style="color:#111">(</span><span style="color:#111">)</span>
+                <span style="color:#111">time</span><span style="color:#f92672">.</span><span style="color:#111">sleep</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">work</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">Working</span><span style="color:#d88200">&#39;</span><span style="color:#111">)</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">suspend</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">Suspending</span><span style="color:#d88200">&#39;</span><span style="color:#111">)</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">clear</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">resume</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">Resuming</span><span style="color:#d88200">&#39;</span><span style="color:#111">)</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">terminate</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">Terminate</span><span style="color:#d88200">&#39;</span><span style="color:#111">)</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">__stop</span> <span style="color:#f92672">=</span> <span style="color:#111">True</span>
+
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">keyboard_handler</span><span style="color:#111">(</span><span style="color:#111">worker</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">on_cp</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#111">worker</span><span style="color:#f92672">.</span><span style="color:#111">suspend</span><span style="color:#111">(</span><span style="color:#111">)</span> <span style="color:#00a8c8">if</span> <span style="color:#111">worker</span><span style="color:#f92672">.</span><span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">is_set</span><span style="color:#111">(</span><span style="color:#111">)</span> <span style="color:#00a8c8">else</span> <span style="color:#111">worker</span><span style="color:#f92672">.</span><span style="color:#111">resume</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">on_cq</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#111">worker</span><span style="color:#f92672">.</span><span style="color:#111">terminate</span><span style="color:#111">(</span><span style="color:#111">)</span>
+        <span style="color:#00a8c8">return</span> <span style="color:#111">False</span>
+
+    <span style="color:#111">listener</span> <span style="color:#f92672">=</span> <span style="color:#111">keyboard</span><span style="color:#f92672">.</span><span style="color:#111">GlobalHotKeys</span><span style="color:#111">(</span><span style="color:#111">{</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">&lt;ctrl&gt;+p</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span> <span style="color:#111">on_cp</span><span style="color:#111">,</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">&lt;ctrl&gt;+q</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span> <span style="color:#111">on_cq</span><span style="color:#111">}</span><span style="color:#111">)</span>
+    <span style="color:#111">listener</span><span style="color:#f92672">.</span><span style="color:#111">start</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">main</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#111">worker</span> <span style="color:#f92672">=</span> <span style="color:#111">Worker</span><span style="color:#111">(</span><span style="color:#111">daemon</span><span style="color:#f92672">=</span><span style="color:#111">True</span><span style="color:#111">)</span>
+    <span style="color:#111">worker</span><span style="color:#f92672">.</span><span style="color:#111">start</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+    <span style="color:#111">keyboard_handler</span><span style="color:#111">(</span><span style="color:#111">worker</span><span style="color:#111">)</span>
+
+    <span style="color:#111">worker</span><span style="color:#f92672">.</span><span style="color:#111">join</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+
+<span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">__main__</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span>
+    <span style="color:#111">main</span><span style="color:#111">(</span><span style="color:#111">)</span>
+</code></pre></div><h3 id="breakdown-1">Breakdown</h3>
+<h4 id="fungsi-main-dan-objek-worker">Fungsi <code>main</code> dan objek <code>Worker</code></h4>
+<p>Saat aplikasi pertama dijalankan saya membuat Thread baru yang terpisah dari proses utama. Thread baru ini membuat objek <code>Worker</code> yang akan mengeksekusi method <code>run()</code>. Dan mencetak tulisan &ldquo;Working&rdquo;  secara terus menerus diterminal.</p>
+<h5 id="threadingevent"><code>threading.Event</code></h5>
+<p><code>Event</code> adalah kelas yang mengimplementasikan  objek event. Event memanajemen <em>flag</em> yang bernilai boolean. Dengan perantara method <code>set()</code>, <code>clear()</code>, dan <code>wait()</code>.</p>
+<p>Pada saat inisiasi <em>flag</em> bernilai <code>False</code>.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">run</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#75715e"># ...</span>
+    <span style="color:#00a8c8">if</span> <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">is_set</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#75715e"># Your main code here</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">work</span><span style="color:#111">(</span><span style="color:#111">)</span>
+</code></pre></div><p>Pada method <code>run()</code>, saya memberikan kondisi menggunakan objek event. Objek inilah yang nantinya akan kita kontrol. Dan nilainya menentukan apakah program di suspend, atau dijalankan.</p>
+<p>Pada method <code>def __init__</code> di kelas <code>Worker</code> saya menjadikan flag objek event menjadi <code>True</code> saat diinstansiasi. Lihat perintah perintah <code>self.event.set()</code> dimethod tersebut.</p>
+<h4 id="kontrol">Kontrol</h4>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">suspend</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">clear</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">resume</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">set</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">terminate</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">__stop</span> <span style="color:#f92672">=</span> <span style="color:#111">True</span>
+</code></pre></div><p>Fungsi kontrol dilakukan dengan cara memanipulasi flag dari objek event.</p>
+<p>Saat objek dibuat, flag pada objek event bernilai <code>True</code>. Ini berarti program dijalankan. Dimethod <code>suspend()</code>, program dihentikan sementara. Caranya merubah nilai flag pada objek event menjadi <code>False</code> menggunakan method <code>clear()</code>.</p>
+<p>Method <code>resume()</code>, akan melanjutkan program dengan kembali memanggil method <code>set()</code> pada objek event.</p>
+<p>Untuk menghentikan aktifitas pada thread, variabel <code>self.__stop</code> di set menjadi <code>True</code>.</p>
+<h3 id="catatan">Catatan</h3>
+<p>Mekanisme pada <code>Thread</code> <em>tidaklah benar-benar mensuspend</em> program.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">run</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#00a8c8">while</span> <span style="color:#111">True</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">event</span><span style="color:#f92672">.</span><span style="color:#111">is_set</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+            <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">work</span><span style="color:#111">(</span><span style="color:#111">)</span>
+</code></pre></div><p>Dia hanya melewatkan eksekusi saat disuspend (flag event bernilai <code>False</code>).</p>
+<p>Sejauh yang saya pahami, saya belum menemukan cara untuk benar-benar men-suspend sebuah <code>Thread</code>.</p>
+<h2 id="prototyping-menggunakan-process">Prototyping Menggunakan Process</h2>
+<h3 id="kode-2">Kode</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> <span style="color:#111">os</span>
+<span style="color:#f92672">import</span> <span style="color:#111">signal</span>
+<span style="color:#f92672">import</span> <span style="color:#111">time</span>
+<span style="color:#f92672">from</span> <span style="color:#111">multiprocessing</span> <span style="color:#f92672">import</span> <span style="color:#111">Process</span>
+
+<span style="color:#f92672">from</span> <span style="color:#111">pynput</span> <span style="color:#f92672">import</span> <span style="color:#111">keyboard</span>
+
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">worker</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#00a8c8">while</span> <span style="color:#111">True</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">Working</span><span style="color:#d88200">&#39;</span><span style="color:#111">)</span>
+        <span style="color:#111">time</span><span style="color:#f92672">.</span><span style="color:#111">sleep</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span>
+
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">keyboard_handler</span><span style="color:#111">(</span><span style="color:#111">proc</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#111">pause</span> <span style="color:#f92672">=</span> <span style="color:#111">False</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">suspend</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">kill</span><span style="color:#111">(</span><span style="color:#111">proc</span><span style="color:#f92672">.</span><span style="color:#111">pid</span><span style="color:#111">,</span> <span style="color:#111">signal</span><span style="color:#f92672">.</span><span style="color:#111">SIGSTOP</span><span style="color:#111">)</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">resume</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">kill</span><span style="color:#111">(</span><span style="color:#111">proc</span><span style="color:#f92672">.</span><span style="color:#111">pid</span><span style="color:#111">,</span> <span style="color:#111">signal</span><span style="color:#f92672">.</span><span style="color:#111">SIGCONT</span><span style="color:#111">)</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">quit</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#111">proc</span><span style="color:#f92672">.</span><span style="color:#111">terminate</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">on_cp</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#111">nonlocal</span> <span style="color:#111">pause</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#f92672">not</span> <span style="color:#111">pause</span><span style="color:#111">:</span>
+            <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">Suspending</span><span style="color:#d88200">&#39;</span><span style="color:#111">)</span>
+            <span style="color:#111">suspend</span><span style="color:#111">(</span><span style="color:#111">)</span>
+            <span style="color:#111">pause</span> <span style="color:#f92672">=</span> <span style="color:#111">True</span>
+        <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+            <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">Suspending</span><span style="color:#d88200">&#39;</span><span style="color:#111">)</span>
+            <span style="color:#111">resume</span><span style="color:#111">(</span><span style="color:#111">)</span>
+            <span style="color:#111">pause</span> <span style="color:#f92672">=</span> <span style="color:#111">False</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">on_cq</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">Terminating</span><span style="color:#d88200">&#39;</span><span style="color:#111">)</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#111">pause</span><span style="color:#111">:</span>
+            <span style="color:#111">resume</span><span style="color:#111">(</span><span style="color:#111">)</span>
+        <span style="color:#111">quit</span><span style="color:#111">(</span><span style="color:#111">)</span>
+        <span style="color:#00a8c8">return</span> <span style="color:#111">False</span>
+
+    <span style="color:#111">listener</span> <span style="color:#f92672">=</span> <span style="color:#111">keyboard</span><span style="color:#f92672">.</span><span style="color:#111">GlobalHotKeys</span><span style="color:#111">(</span><span style="color:#111">{</span><span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">&lt;ctrl&gt;+p</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span> <span style="color:#111">on_cp</span><span style="color:#111">,</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">&lt;ctrl&gt;+q</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span> <span style="color:#111">on_cq</span><span style="color:#111">}</span><span style="color:#111">)</span>
+    <span style="color:#111">listener</span><span style="color:#f92672">.</span><span style="color:#111">start</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">main</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#111">proc</span> <span style="color:#f92672">=</span> <span style="color:#111">Process</span><span style="color:#111">(</span><span style="color:#111">target</span><span style="color:#f92672">=</span><span style="color:#111">worker</span><span style="color:#111">,</span> <span style="color:#111">daemon</span><span style="color:#f92672">=</span><span style="color:#111">True</span><span style="color:#111">)</span>
+    <span style="color:#111">proc</span><span style="color:#f92672">.</span><span style="color:#111">start</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+    <span style="color:#111">keyboard_handler</span><span style="color:#111">(</span><span style="color:#111">proc</span><span style="color:#111">)</span>
+
+    <span style="color:#111">proc</span><span style="color:#f92672">.</span><span style="color:#111">join</span><span style="color:#111">(</span><span style="color:#111">)</span>
+
+
+<span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200"></span><span style="color:#d88200">&#39;</span><span style="color:#d88200">__main__</span><span style="color:#d88200">&#39;</span><span style="color:#111">:</span>
+    <span style="color:#111">main</span><span style="color:#111">(</span><span style="color:#111">)</span>
+</code></pre></div><h3 id="breakdown-2">Breakdown</h3>
+<h4 id="fungsi-main-dan-worker">Fungsi <code>main</code> dan <code>worker</code></h4>
+<p>Disini saya membuat proses (<code>Process</code>) baru yang terpisah dari proses utama. Proses baru ini mengeksekusi fungsi <code>worker</code> yang akan mencetak tulisan &ldquo;Working&rdquo;  secara terus menerus diterminal.</p>
+<p><code>proc.start()</code> akan memulai proses, dan <code>proc.join()</code> akan menunggu hingga proses selesai dijalankan. Tentunya proses selesai dijalankan jika kita perintahkan untuk berhenti menggunakan shortcut yang dihandle didalam fungsi <code>keyboard_handler(proc)</code>.</p>
+<h4 id="fungsi-kontrol">Fungsi Kontrol</h4>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">suspend</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">kill</span><span style="color:#111">(</span><span style="color:#111">proc</span><span style="color:#f92672">.</span><span style="color:#111">pid</span><span style="color:#111">,</span> <span style="color:#111">signal</span><span style="color:#f92672">.</span><span style="color:#111">SIGSTOP</span><span style="color:#111">)</span>
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">resume</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">kill</span><span style="color:#111">(</span><span style="color:#111">proc</span><span style="color:#f92672">.</span><span style="color:#111">pid</span><span style="color:#111">,</span> <span style="color:#111">signal</span><span style="color:#f92672">.</span><span style="color:#111">SIGCONT</span><span style="color:#111">)</span>
+
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">quit</span><span style="color:#111">(</span><span style="color:#111">)</span><span style="color:#111">:</span>
+    <span style="color:#111">proc</span><span style="color:#f92672">.</span><span style="color:#111">terminate</span><span style="color:#111">(</span><span style="color:#111">)</span>
+</code></pre></div><p>Saya mengendalikan proses dengan mengirimkan signal tertentu pada proses. <code>SIGSTOP</code> untuk menghentikan sementara proses, dan <code>SIGCONT</code> untuk melanjutkan kembali proses.</p>
+<p>Kita bisa menghentikan proses dengan menggunakan method <code>proc.terminate()</code>. <code>terminate()</code> akan menghentikan proses dan melanjutkan eksekusi ke method <code>proc.join()</code>. Kemudian keseluruhan aplikasi akan berhenti.</p>
+
+
+            
+<div class="article-tags">
+    
+    <a href="https://hazulifidastian.id//tags/python/">#python</a>&nbsp;
+    
+    <a href="https://hazulifidastian.id//tags/concurency/">#concurency</a>&nbsp;
+    
+</div>
+
+
+        </div>
+    </article>
+
+    
+
+</main>
+
+<footer class="footer">
+    <ul class="footer-links">
+        
+        <li>
+            <a id="night-mode-toggle" title="Toggle Night/Light mode" class="footer-links-kudos"
+                data-current-mode="light" style="cursor: pointer;"></a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img
+                    src="https://hazulifidastian.id/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+</footer>
+
+</div>
+
+
+
+<script src="/js/night_toggle.js"></script>
+
+</body>
+
+</html>
+
