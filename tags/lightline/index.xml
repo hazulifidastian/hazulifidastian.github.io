@@ -6,7 +6,7 @@
     <description>Recent content in lightline on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Mar 2020 11:51:46 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 11:51:46 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/tags/lightline/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Lightline &amp; winwidth Nvim</title>
       <link>https://hazulifidastian.id/lightline-dan-winwidth-nvim/</link>
-      <pubDate>Thu, 05 Mar 2020 11:51:46 +0700</pubDate>
+      <pubDate>Mon, 09 Mar 2020 11:51:46 +0700</pubDate>
       
       <guid>https://hazulifidastian.id/lightline-dan-winwidth-nvim/</guid>
       <description>Pembahasan kali ini adalah tentang statusline di Nvim. Statusline adalah, garis horizontal yang ada dibagian bawah nvim. Ia menampilkan status dari buffer/file yang sedang aktif.
