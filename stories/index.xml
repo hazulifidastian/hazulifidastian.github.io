@@ -6,10 +6,21 @@
     <description>Recent content in Stories on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Mar 2020 06:25:49 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2020 11:51:46 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/stories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lightline &amp; winwidth Nvim</title>
+      <link>https://hazulifidastian.id/lightline-dan-winwidth-nvim/</link>
+      <pubDate>Thu, 05 Mar 2020 11:51:46 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/lightline-dan-winwidth-nvim/</guid>
+      <description>Pembahasan kali ini adalah tentang statusline di Nvim. Statusline adalah, garis horizontal yang ada dibagian bawah nvim. Ia menampilkan status dari buffer/file yang sedang aktif.
+Statusline bisa ditampilkan dalam beberapa bagian. Bisa berisi mode vim, nama file, direktori dari file, posisi kursor, dll.
+Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin Lightline1. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa juga dengan mudah mengatur tema untuk menambah indah tampilan editor.</description>
+    </item>
     
     <item>
       <title>Suspendable App</title>
