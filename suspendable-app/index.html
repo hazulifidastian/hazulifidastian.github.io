@@ -52,27 +52,25 @@
 
 
 <main class="content" role="main">
+  <article class="article">
+    
+    <span class="article-duration">4 min read</span>
+    
 
-    <article class="article">
+    <h1 class="article-title">Suspendable App</h1>
 
-        
-        <span class="article-duration">4 min read</span>
-        
+    
+    <span class="article-date">March 2, 2020</span>
+    
 
-        <h1 class="article-title">Suspendable App</h1>
-
-        
-        <span class="article-date">March 2, 2020</span>
-        
-
-        
+    
 <div id="article-description">
     <p>Tulisan ini membahas cara melakukan suspend (menghentikan sementara) dan resume (melanjutkan kembali) aplikasi menggunakan python. Perintahnya ditrigger menggunakan shortcut pada keyboard.</p>
 </div>
 
 
 
-        
+    
 
 <div id="article-toc">
     <h2 class="toc-title">Daftar Isi</h2>
@@ -105,8 +103,8 @@
 
 
 
-        <div class="article-content">
-            <p>Saya akan membagi aplikasi menjadi dua bagian. Pertama adalah bagian yang terus-menerus memantau input yang diberikan user melalui keyboard. Bagian ini akan aktif bersamaan dengan berjalannya aplikasi. Saya akan membuat fungsi yang merespon terhadap kombinasi shortcut keyboard tertentu.</p>
+    <div class="article-content">
+      <p>Saya akan membagi aplikasi menjadi dua bagian. Pertama adalah bagian yang terus-menerus memantau input yang diberikan user melalui keyboard. Bagian ini akan aktif bersamaan dengan berjalannya aplikasi. Saya akan membuat fungsi yang merespon terhadap kombinasi shortcut keyboard tertentu.</p>
 <p>Kedua adalah bagian yang menjalankan pekerjaan utama dalam aplikasi. Bagian ini bisa dikontrol, suspend (ditunda pekerjaannya), resume (dilanjutkan kembali) dan dihentikan.</p>
 <p>Error yang terjadi dibagian kedua tidak boleh mempengaruhi bagian pertama. Dan bagian pertama memiliki kontrol penuh terhadap bagian kedua.</p>
 <p>Dengan kebutuhan seperti diatas, saya mencoba membuat dua prototipe menggunakan fitur konkurensi pada python.</p>
@@ -317,20 +315,23 @@
 <p>Kita bisa menghentikan proses dengan menggunakan method <code>proc.terminate()</code>. <code>terminate()</code> akan menghentikan proses dan melanjutkan eksekusi ke method <code>proc.join()</code>. Kemudian keseluruhan aplikasi akan berhenti.</p>
 
 
-            
+      
 <div class="article-tags">
-    
-    <a href="https://hazulifidastian.id//tags/python/">#python</a>&nbsp;
-    
-    <a href="https://hazulifidastian.id//tags/concurency/">#concurency</a>&nbsp;
-    
+  
+  <a href="https://hazulifidastian.id/tags/python/">#python</a
+  >&nbsp;
+  
+  <a href="https://hazulifidastian.id/tags/concurency/">#concurency</a
+  >&nbsp;
+  
 </div>
 
 
-        </div>
-    </article>
+    </div>
+  </article>
 
-    <div id="disqus_thread"></div>
+  
+  <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -350,7 +351,7 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  
 </main>
 
 <footer class="footer">
