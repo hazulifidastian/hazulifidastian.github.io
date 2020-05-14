@@ -6,7 +6,7 @@
     <description>Recent content on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Mar 2020 11:51:46 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 00:48:53 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,6 +22,17 @@ Anda bisa menemukan saya online di Twitter dan di Medium.
 Ingin membicarakan proyek? Hubungi saya melalui email.
 Catatan:
  Doodle: Created by my wife Wiwin. Template: Based on Hugo Lithium.  </description>
+    </item>
+    
+    <item>
+      <title>Modul PHP Doom Emacs</title>
+      <link>https://hazulifidastian.id/modul-php-doom-emacs/</link>
+      <pubDate>Thu, 14 May 2020 00:48:53 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/modul-php-doom-emacs/</guid>
+      <description>Konfigurasi Doom Emacs init.el Jelajah file konfigurasi dengan shorcut SPC f p, kemudian pilih file init.el. Kemudian aktifkan beberapa modul berikut, dengan cara menghilangkan tanda komentar ;;.
+ Modul syntax, ada pada grup :checkers. Modul lsp, ada pada grup :tools. Modul (php +lsp), tambahan +lsp. Ada pada grup :lang.  package.el Aktifkan package phpactor pada file konfigurasi package.el. Buka dengan shorcut SPC f p.
+(package! phpactor) Sinkronisasi Konfigurasi Doom Emacs Ketikkan perintah ~/.</description>
     </item>
     
     <item>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emacs on Hazuli Fidastian</title>
+    <link>https://hazulifidastian.id/tags/emacs/</link>
+    <description>Recent content in emacs on Hazuli Fidastian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 May 2020 00:48:53 +0700</lastBuildDate>
+    
+	<atom:link href="https://hazulifidastian.id/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Modul PHP Doom Emacs</title>
+      <link>https://hazulifidastian.id/modul-php-doom-emacs/</link>
+      <pubDate>Thu, 14 May 2020 00:48:53 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/modul-php-doom-emacs/</guid>
+      <description>Konfigurasi Doom Emacs init.el Jelajah file konfigurasi dengan shorcut SPC f p, kemudian pilih file init.el. Kemudian aktifkan beberapa modul berikut, dengan cara menghilangkan tanda komentar ;;.
+ Modul syntax, ada pada grup :checkers. Modul lsp, ada pada grup :tools. Modul (php +lsp), tambahan +lsp. Ada pada grup :lang.  package.el Aktifkan package phpactor pada file konfigurasi package.el. Buka dengan shorcut SPC f p.
+(package! phpactor) Sinkronisasi Konfigurasi Doom Emacs Ketikkan perintah ~/.</description>
+    </item>
+    
+  </channel>
+</rss>
