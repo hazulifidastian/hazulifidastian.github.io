@@ -76,7 +76,7 @@
     <h2 class="toc-title">Daftar Isi</h2>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#kebutuhan">Kebutuhan</a></li>
+    <li><a href="#package-yang-dibutuhkan">Package yang Dibutuhkan</a></li>
     <li><a href="#keyboard-handler">Keyboard Handler</a>
       <ul>
         <li><a href="#kode">Kode</a></li>
@@ -109,10 +109,10 @@
 <p>Dengan kebutuhan seperti diatas, saya mencoba membuat dua prototipe menggunakan fitur konkurensi pada python.</p>
 <p>Kenapa harus konkurensi? Karena dua bagian yang dibutuhkan aplikasi diatas harus berjalan <em>bersamaan</em>. Input keyboard dari user harus terus bisa dipantau secara realtime. Kerja utama aplikasi juga tidak boleh terganggu.</p>
 <p>Dengan cara sekuens, kita tidak bisa mendapatkan hasil yang sama. Karena sekuens mengharuskan kita memilih salah satu bagian untuk dijalankan, dan membuat bagian yang lain harus menunggu yang sedang berjalan itu selesai.</p>
-<h2 id="kebutuhan">Kebutuhan</h2>
+<h2 id="package-yang-dibutuhkan">Package yang Dibutuhkan</h2>
 <p>Install package <code>pyinput</code> untuk menangani input dari user.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install pyinput
-</code></pre></div><p>Sebelumnya saya mencoba package <code>curses</code>, yang ternyata kurang cocok dengan kebutuhan untuk prototipe ini. Sepertinya <code>curses</code> digunakan jika kita ingin membuat antar muka / user inteface  dengan konsep <em>window</em> diterminal.</p>
+</code></pre></div><p>Sebelumnya saya mencoba package <code>curses</code>, yang ternyata kurang cocok dengan kebutuhan untuk prototipe ini. Sepertinya <code>curses</code> digunakan jika kita ingin membuat antar muka / user inteface dengan konsep <em>window</em> diterminal.</p>
 <h2 id="keyboard-handler">Keyboard Handler</h2>
 <h3 id="kode">Kode</h3>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">pynput</span> <span style="color:#f92672">import</span> <span style="color:#111">keyboard</span>
@@ -204,9 +204,9 @@
     <span style="color:#111">main</span><span style="color:#111">()</span>
 </code></pre></div><h3 id="breakdown-1">Breakdown</h3>
 <h4 id="fungsi-main-dan-objek-worker">Fungsi <code>main</code> dan objek <code>Worker</code></h4>
-<p>Saat aplikasi pertama dijalankan saya membuat Thread baru yang terpisah dari proses utama. Thread baru ini membuat objek <code>Worker</code> yang akan mengeksekusi method <code>run()</code>. Dan mencetak tulisan &ldquo;Working&rdquo;  secara terus menerus diterminal.</p>
+<p>Saat aplikasi pertama dijalankan saya membuat Thread baru yang terpisah dari proses utama. Thread baru ini membuat objek <code>Worker</code> yang akan mengeksekusi method <code>run()</code>. Dan mencetak tulisan &ldquo;Working&rdquo; secara terus menerus diterminal.</p>
 <h5 id="threadingevent"><code>threading.Event</code></h5>
-<p><code>Event</code> adalah kelas yang mengimplementasikan  objek event. Event memanajemen <em>flag</em> yang bernilai boolean. Dengan perantara method <code>set()</code>, <code>clear()</code>, dan <code>wait()</code>.</p>
+<p><code>Event</code> adalah kelas yang mengimplementasikan objek event. Event memanajemen <em>flag</em> yang bernilai boolean. Dengan perantara method <code>set()</code>, <code>clear()</code>, dan <code>wait()</code>.</p>
 <p>Pada saat inisiasi <em>flag</em> bernilai <code>False</code>.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">run</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
     <span style="color:#75715e"># ...</span>
@@ -299,7 +299,7 @@
     <span style="color:#111">main</span><span style="color:#111">()</span>
 </code></pre></div><h3 id="breakdown-2">Breakdown</h3>
 <h4 id="fungsi-main-dan-worker">Fungsi <code>main</code> dan <code>worker</code></h4>
-<p>Disini saya membuat proses (<code>Process</code>) baru yang terpisah dari proses utama. Proses baru ini mengeksekusi fungsi <code>worker</code> yang akan mencetak tulisan &ldquo;Working&rdquo;  secara terus menerus diterminal.</p>
+<p>Disini saya membuat proses (<code>Process</code>) baru yang terpisah dari proses utama. Proses baru ini mengeksekusi fungsi <code>worker</code> yang akan mencetak tulisan &ldquo;Working&rdquo; secara terus menerus diterminal.</p>
 <p><code>proc.start()</code> akan memulai proses, dan <code>proc.join()</code> akan menunggu hingga proses selesai dijalankan. Tentunya proses selesai dijalankan jika kita perintahkan untuk berhenti menggunakan shortcut yang dihandle didalam fungsi <code>keyboard_handler(proc)</code>.</p>
 <h4 id="fungsi-kontrol">Fungsi Kontrol</h4>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">suspend</span><span style="color:#111">():</span>

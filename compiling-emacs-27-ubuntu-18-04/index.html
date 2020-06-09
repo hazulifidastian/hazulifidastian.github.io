@@ -68,18 +68,10 @@
 
 
     <div class="article-content">
-      <p>Bagi yang ingin merasakan emacs versi  27, kita
-mungkin akan kesulitan menemukan paketnya di Ubuntu 18.04.
-Karena emacs versi 27 belum rilis versi stabilnya, juga
-versi ini masih dalam tahap beta.</p>
-<p>Jika browsing <a href="https://launchpad.net/~kelleyk/+archive/ubuntu/emacs" title="launchpad">launchpad</a>
-versi 27 juga belum ada. Terakhir masih versi 26.3.</p>
-<p>Jika tidak ingin menunggu rilis, dan ingin buru-buru mencicipi
-emacs 27 ini kita bisa meng-compile sendiri.</p>
-<p>Prosesnya tidak terlalu sulit, hanya perlu instalasi
-beberapa tool dan librari. Kemudian kita download source code
-Emacs 27 dari github, selanjutnya kita bisa compile dan instal.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Jika sedang ada emacs26 sebaiknya diuninstall terlebih dahulu</span>
+      <p>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan
+instalasi beberapa tools dan library.</p>
+<p><strong>Compile &amp; Install</strong></p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu</span>
 sudo apt purge emacs26 emacs26-common
 
 <span style="color:#75715e"># Install tools dan library</span>
@@ -90,7 +82,7 @@ wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz
 
 tar -xzf emacs-27.0.91.tar.gz
 
-<span style="color:#75715e"># Konfigurasi dan setup emacs</span>
+<span style="color:#75715e"># Konfigurasi dan install emacs</span>
 <span style="color:#111">cd</span> emacs-27.0.91
 ./configure
 make
@@ -98,14 +90,15 @@ make install
 
 <span style="color:#75715e"># Check instalasi</span>
 emacs --version
-</code></pre></div><p>Setelah instalasi selesai, file konfigurasi emacs perlu dibuild
+</code></pre></div><p><strong>Rebuild</strong></p>
+<p>Setelah instalasi selesai, file konfigurasi emacs perlu di <strong>build</strong>
 ulang menggunakan emacs versi terbaru. Saya menggunakan doom
 emacs, perintahnya:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~/.emacs.d/bin/doom sync
 ~/.emacs.d/bin/doom build
-</code></pre></div><p>Jika tidak dibuild ulang, emacs akan menampilkan interface standard.
-Konfigurasi themes dan lainnya yang kita gunakan dengan Emacs 26
-tidak cocok dengan Emacs 27.</p>
+</code></pre></div><p>Jika tidak di <strong>rebuild</strong> ulang, emacs akan menampilkan interface standard.
+Hasil kompilasi konfigurasi menggunakan Emacs 26 tidak bisa digunakan pada Emacs 27.</p>
+<p><strong>Uninstall</strong></p>
 <p>Jika ingin menhapus instalasi, ketik perintah:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make uninstall
 </code></pre></div>

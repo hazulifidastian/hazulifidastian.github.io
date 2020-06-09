@@ -17,10 +17,9 @@
       <pubDate>Sat, 30 May 2020 16:26:37 +0700</pubDate>
       
       <guid>https://hazulifidastian.id/compiling-emacs-27-ubuntu-18-04/</guid>
-      <description>Bagi yang ingin merasakan emacs versi 27, kita mungkin akan kesulitan menemukan paketnya di Ubuntu 18.04. Karena emacs versi 27 belum rilis versi stabilnya, juga versi ini masih dalam tahap beta.
-Jika browsing launchpad versi 27 juga belum ada. Terakhir masih versi 26.3.
-Jika tidak ingin menunggu rilis, dan ingin buru-buru mencicipi emacs 27 ini kita bisa meng-compile sendiri.
-Prosesnya tidak terlalu sulit, hanya perlu instalasi beberapa tool dan librari. Kemudian kita download source code Emacs 27 dari github, selanjutnya kita bisa compile dan instal.</description>
+      <description>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan instalasi beberapa tools dan library.
+Compile &amp;amp; Install
+# Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz tar -xzf emacs-27.0.91.tar.gz # Konfigurasi dan install emacs cd emacs-27.0.91 .</description>
     </item>
     
   </channel>
