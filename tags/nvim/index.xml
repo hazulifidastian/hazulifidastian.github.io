@@ -18,8 +18,8 @@
       
       <guid>https://hazulifidastian.id/lightline-dan-winwidth-nvim/</guid>
       <description>Pembahasan kali ini adalah tentang statusline di Nvim. Statusline adalah, garis horizontal yang ada dibagian bawah nvim. Ia menampilkan status dari buffer/file yang sedang aktif.
-Statusline bisa ditampilkan dalam beberapa bagian. Bisa berisi mode vim, nama file, direktori dari file, posisi kursor, dll.
-Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin Lightline1. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa juga dengan mudah mengatur tema untuk menambah indah tampilan editor.</description>
+Statusline bisa menampilkan informasi dalam beberapa bagian. Bisa berisi mode vim, nama file, direktori dari file, posisi kursor, dll.
+Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin Lightline1. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa juga dengan mudah mengatur tema untuk memper-indah tampilan status.</description>
     </item>
     
   </channel>
