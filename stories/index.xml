@@ -6,10 +6,21 @@
     <description>Recent content in Stories on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2020 16:26:37 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2020 04:55:23 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/stories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Django: Login dan Registrasi Bg.1</title>
+      <link>https://hazulifidastian.id/django-login-dan-registrasi-bagian-1/</link>
+      <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/django-login-dan-registrasi-bagian-1/</guid>
+      <description>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.
+Fitur login dan registrasi penguna disini saya bagi menjadi dua. Pertama, pengguna bisa melakukan registrasi dan login menggunakan akun email dan sosial media. Disini saya menggunakan akun google/gmail, facebook, dan twitter. Kemudian kedua, pengguna bisa registrasi manual seperti biasa menggunakan form berisi username dan password.
+Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user dan integrasi dengan akun google.</description>
+    </item>
     
     <item>
       <title>Compiling Emacs 27 Ubuntu 18.04</title>
