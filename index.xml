@@ -25,11 +25,11 @@ Catatan:
     </item>
     
     <item>
-      <title>Django: Login dan Registrasi Bg.1</title>
-      <link>https://hazulifidastian.id/django-login-dan-registrasi-bagian-1/</link>
+      <title>Django: Login dan Registrasi dengan Akun Google</title>
+      <link>https://hazulifidastian.id/django-login-dan-registrasi-dengan-akun-google/</link>
       <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
       
-      <guid>https://hazulifidastian.id/django-login-dan-registrasi-bagian-1/</guid>
+      <guid>https://hazulifidastian.id/django-login-dan-registrasi-dengan-akun-google/</guid>
       <description>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.
 Fitur login dan registrasi penguna disini saya bagi menjadi dua. Pertama, pengguna bisa melakukan registrasi dan login menggunakan akun email dan sosial media. Disini saya menggunakan akun google/gmail, facebook, dan twitter. Kemudian kedua, pengguna bisa registrasi manual seperti biasa menggunakan form berisi username dan password.
 Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user dan integrasi dengan akun google.</description>
