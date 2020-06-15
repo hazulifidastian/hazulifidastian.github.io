@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.71.0" />
+
+
+<title>Magit Cheatsheet - Hazuli Fidastian</title>
+<meta property="og:title" content="Magit Cheatsheet - Hazuli Fidastian">
+
+
+<link href='https://hazulifidastian.id/favicon.ico' rel='icon' type='image/x-icon' />
+
+
+
+
+<meta property="description" content="Emacs magit cheatsheet. Artikel ini akan selalu diperbarui.">
+
+
+
+
+
+<link rel="icon" href="https://hazulifidastian.id/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://hazulifidastian.id/css/main.css" media="all">
+<link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet"> 
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://hazulifidastian.id/" class="nav-logo">
+    <img src="https://hazulifidastian.id/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">Me</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">Magit Cheatsheet</h1>
+
+    
+    <span class="article-date">June 15, 2020</span>
+    
+
+    
+<div id="article-description">
+    <p>Emacs magit cheatsheet. Artikel ini akan selalu diperbarui.</p>
+</div>
+
+
+
+    
+
+<div id="article-toc">
+    <h2 class="toc-title">Daftar Isi</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#my-environment">My Environment</a></li>
+    <li><a href="#shortcut">Shortcut</a>
+      <ul>
+        <li><a href="#magit-buffer">Magit Buffer</a></li>
+        <li><a href="#file-buffer">File Buffer</a></li>
+      </ul>
+    </li>
+    <li><a href="#referensi">Referensi</a></li>
+  </ul>
+</nav>
+</div>
+
+
+
+    <div class="article-content">
+      <h2 id="my-environment">My Environment</h2>
+<p>Saya menggunakan Emacs 27, dengan framework DoomEmacs. Pastinya, saya juga mengaktifkan Evil-mode.
+Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya akan menyesuaikan dengan Evil-mode.</p>
+<h2 id="shortcut">Shortcut</h2>
+<h3 id="magit-buffer">Magit Buffer</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="left">Command &amp;/ Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>SPC gg</code></td>
+<td align="left"><strong><code>magit-status</code></strong>. Buka buffer magit (git status)</td>
+</tr>
+<tr>
+<td align="center"><code>gr</code></td>
+<td align="left">Refresh buffer magit</td>
+</tr>
+<tr>
+<td align="center"><code>?</code></td>
+<td align="left">Popup perintah-perintah magit</td>
+</tr>
+<tr>
+<td align="center"><strong>Navigasi</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>j</code> <code>k</code> <code>Up</code> <code>Down</code></td>
+<td align="left">Pindah antar baris</td>
+</tr>
+<tr>
+<td align="center"><code>M-n</code> <code>M-p</code></td>
+<td align="left">Pindah antar section</td>
+</tr>
+<tr>
+<td align="center"><code>TAB</code> <code>S-TAB</code></td>
+<td align="left">Toggle visibility, detail section / baris</td>
+</tr>
+<tr>
+<td align="center"><strong>Diff</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>D</code></td>
+<td align="left"><strong><code>magit-diff</code></strong> Menu diff</td>
+</tr>
+<tr>
+<td align="center"><code>Dt</code></td>
+<td align="left"><strong><code>magit-diff-toggle-refine-hunk</code></strong>, highlight perubahan agar mudah dilihat.</td>
+</tr>
+<tr>
+<td align="center"><code>V</code></td>
+<td align="left"><strong><code>evil-visual-line</code></strong>. Memulai seleksi pada hunk.</td>
+</tr>
+<tr>
+<td align="center"><code>v</code></td>
+<td align="left"><strong><code>evil-visual-char</code></strong>. Memulai seleksi pada hunk.</td>
+</tr>
+<tr>
+<td align="center"><code>C-c C-t</code></td>
+<td align="left"><strong><code>magit-diff-trace-definition</code></strong>. Tampilkan history perubahan dari fungsi/variabel/etc</td>
+</tr>
+<tr>
+<td align="center"><code>-</code></td>
+<td align="left"><strong><code>magit-reverse</code></strong>. Reverse staged hunk</td>
+</tr>
+<tr>
+<td align="center"><strong>Discard</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>d</code></td>
+<td align="left"><strong><code>magit-discard</code></strong>. Hapus perubahan pada sebuah poin.</td>
+</tr>
+<tr>
+<td align="center"><strong>Log</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>l</code></td>
+<td align="left"><strong><code>magit-log</code></strong>. Menu log</td>
+</tr>
+<tr>
+<td align="center"><code>ll</code></td>
+<td align="left"><strong><code>magit-log-current</code></strong>. Current branch log</td>
+</tr>
+<tr>
+<td align="center"><strong>Commit</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>c</code></td>
+<td align="left"><strong><code>magit-commit</code></strong>. Menu commit</td>
+</tr>
+<tr>
+<td align="center"><code>ce</code></td>
+<td align="left"><strong><code>magit-commit-extends</code></strong>. Extends commit, tanpa mengganti pesan commit</td>
+</tr>
+<tr>
+<td align="center"><code>cw</code></td>
+<td align="left"><strong><code>magit-commit-reword</code></strong>. Reword commit, ganti pesan commit</td>
+</tr>
+<tr>
+<td align="center"><code>ca</code></td>
+<td align="left"><strong><code>magit-commit-amend</code></strong>. Amend commit</td>
+</tr>
+<tr>
+<td align="center"><code>cf</code></td>
+<td align="left"><strong><code>magit-commit-fixup</code></strong>. Fixup commit</td>
+</tr>
+<tr>
+<td align="center"><code>cs</code></td>
+<td align="left"><strong><code>magit-commit-squash</code></strong>. Squash commit</td>
+</tr>
+<tr>
+<td align="center"><code>C-c C-c</code></td>
+<td align="left">Save commit</td>
+</tr>
+<tr>
+<td align="center"><code>C-c C-k</code></td>
+<td align="left">Cancel commit</td>
+</tr>
+<tr>
+<td align="center"><code>M-n</code> <code>M-p</code></td>
+<td align="left">Pilih history pesan, saat mengetik pesan commit</td>
+</tr>
+<tr>
+<td align="center"><strong>Branch</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>b</code></td>
+<td align="left"><strong><code>magit-branch</code></strong>. Menu branch</td>
+</tr>
+<tr>
+<td align="center"><code>bb</code></td>
+<td align="left">Daftar branch</td>
+</tr>
+<tr>
+<td align="center"><code>bl</code></td>
+<td align="left">Daftar branch lokal saja</td>
+</tr>
+<tr>
+<td align="center"><code>bc</code></td>
+<td align="left">Buat branch baru dan checkout</td>
+</tr>
+<tr>
+<td align="center"><code>bn</code></td>
+<td align="left">Buat branch baru tanpa checkout</td>
+</tr>
+<tr>
+<td align="center"><code>bs</code></td>
+<td align="left"><strong><code>magit-branch-spinoff</code></strong>. Spinoff new branch <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></td>
+</tr>
+<tr>
+<td align="center"><strong>Revert</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>_</code></td>
+<td align="left"><strong><code>magit-revert</code></strong>. Menu revert</td>
+</tr>
+<tr>
+<td align="center"><code>_O</code></td>
+<td align="left"><strong><code>magit-revert-and-commit</code></strong>. Revert dan commit</td>
+</tr>
+<tr>
+<td align="center"><code>_o</code></td>
+<td align="left"><strong><code>magit-revert-no-commit</code></strong> Revert tanpa commit</td>
+</tr>
+<tr>
+<td align="center"><strong>Reset</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>O</code></td>
+<td align="left"><strong><code>magit-reset</code></strong>. Menu reset</td>
+</tr>
+<tr>
+<td align="center"><strong>Stash</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>Z</code></td>
+<td align="left"><strong><code>magit-stash</code></strong>. Menu stash</td>
+</tr>
+<tr>
+<td align="center"><code>Zi</code></td>
+<td align="left"><strong><code>magit-stash-index</code></strong>. Stash index</td>
+</tr>
+<tr>
+<td align="center"><code>Zz</code></td>
+<td align="left"><strong><code>magit-stash-both</code></strong>. Stash index dan untracked file</td>
+</tr>
+<tr>
+<td align="center"><code>Zp</code></td>
+<td align="left"><strong><code>magit-stash-pop</code></strong>. Pop stash, hapus dari daftar stash dan kembalikan ke index</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"><strong>Daftar stash</strong></td>
+</tr>
+<tr>
+<td align="center"><code>a</code></td>
+<td align="left">Apply, kembalikan stash pilihan ke index</td>
+</tr>
+<tr>
+<td align="center"><strong>Rebase</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>r</code></td>
+<td align="left"><strong><code>magit-rebase</code></strong>. Menu rebase</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"><strong>Daftar commit</strong></td>
+</tr>
+<tr>
+<td align="center"><code>ri</code></td>
+<td align="left"><strong><code>magit-rebase-interactive</code></strong>. Rebase interaktif</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left"><strong>Daftar commit pilihan saat rebase interaktif</strong></td>
+</tr>
+<tr>
+<td align="center"><code>p</code></td>
+<td align="left">pickup - Ambil commit</td>
+</tr>
+<tr>
+<td align="center"><code>r</code></td>
+<td align="left">reword - Ambil commit, tapi lakukan perubahan pesan</td>
+</tr>
+<tr>
+<td align="center"><code>e</code></td>
+<td align="left">edit - Ambil commit, tapi lakukan perubahan commit</td>
+</tr>
+<tr>
+<td align="center"><code>s</code></td>
+<td align="left">squash - Ambil commit, tapi gabungkan dengan commit sebelumnya</td>
+</tr>
+<tr>
+<td align="center"><code>f</code></td>
+<td align="left">fixup - Ambil commit, gabungkan dengan commit sebelumnya dan hapus pesan</td>
+</tr>
+<tr>
+<td align="center"><code>d</code></td>
+<td align="left">drop - Hapus commit</td>
+</tr>
+<tr>
+<td align="center"><code>u</code></td>
+<td align="left">undo - Batalkan perubahan terakhir</td>
+</tr>
+<tr>
+<td align="center"><code>C-c C-c</code></td>
+<td align="left">Simpan</td>
+</tr>
+<tr>
+<td align="center"><code>C-c C-k</code></td>
+<td align="left">Batalkan</td>
+</tr>
+<tr>
+<td align="center"><code>j</code> <code>k</code></td>
+<td align="left">Pindah baris</td>
+</tr>
+<tr>
+<td align="center"><code>gj</code> <code>gk</code></td>
+<td align="left">Pindahkan baris commit</td>
+</tr>
+<tr>
+<td align="center"><code>RET</code></td>
+<td align="left">Tampilkan commit dibuffer yang lain</td>
+</tr>
+<tr>
+<td align="center"><strong>Lain-lain</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"><code>$</code></td>
+<td align="left">Menampilkan history command yang dilakukan dimagit buffer</td>
+</tr>
+</tbody>
+</table>
+<p>Contoh kasus kenapa kita butuh <code>branch new spin-off</code>:</p>
+<ul>
+<li>Kita sedang ada dibranch master</li>
+<li>Sudah melakukan perubahan kode dan beberapa commit</li>
+<li>Commit dibranch master tersebut belum dipush ke upstream</li>
+<li>Dan, kita ingin memisahkan commit tersebut menjadi branch tersendiri</li>
+</ul>
+<p><code>branch new spin-off</code> akan melakukan:</p>
+<ul>
+<li>Memisahkan beberapa commit terakhir dibranch master menjadi branch tersendiri
+dengan mengambil patokan dari upstream, misal origin/master</li>
+<li>Mengembalikan/mereset branch master sesuai dengan commit terakhir diupstream, origin/master</li>
+<li>Checkout otomatis ke branch baru</li>
+</ul>
+<h3 id="file-buffer">File Buffer</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="left">Command &amp;/ Deskripsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>C-c M-g</code></td>
+<td align="left"><strong><code>magit-file-dispatch</code></strong>. Menu magit yang bisa diterapkan pada buffer aktif</td>
+</tr>
+<tr>
+<td align="center"><code>SPC g /</code></td>
+<td align="left"><strong><code>magit-dispatch</code></strong>. Menu global magit, tanpa perlu membuka buffer magit</td>
+</tr>
+<tr>
+<td align="center"><code>SPC g L</code></td>
+<td align="left"><strong><code>magit-log</code></strong>. Menu magit log pada buffer aktif</td>
+</tr>
+</tbody>
+</table>
+<h2 id="referensi">Referensi</h2>
+<ul>
+<li>EmacsConf 2019 Magit deep dive - Jonathan Chu <a href="https://www.youtube.com/watch?v=vS7YNdl64gY">https://www.youtube.com/watch?v=vS7YNdl64gY</a></li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://magit.vc/manual/magit/Branch-Commands.html">https://magit.vc/manual/magit/Branch-Commands.html</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://fluca1978.github.io/2017/06/11/magit-spin-offs-anothew-way-to-name.html">https://fluca1978.github.io/2017/06/11/magit-spin-offs-anothew-way-to-name.html</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="http://blog.jenkster.com/2017/07/emacs-feature-branch-tip.html">http://blog.jenkster.com/2017/07/emacs-feature-branch-tip.html</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+      
+<div class="article-tags">
+  
+  <a href="https://hazulifidastian.id/tags/emacs/">#emacs</a
+  >&nbsp;
+  
+  <a href="https://hazulifidastian.id/tags/magit/">#magit</a
+  >&nbsp;
+  
+</div>
+
+
+    </div>
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hazulifidastian" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</main>
+
+<footer class="footer">
+    <ul class="footer-links">
+        
+        <li>
+            <a id="night-mode-toggle" title="Toggle Night/Light mode" class="footer-links-kudos"
+                data-current-mode="light" style="cursor: pointer;"></a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img
+                    src="https://hazulifidastian.id/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+</footer>
+
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-9380146-9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+<script src="/js/night_toggle.js"></script>
+
+</body>
+
+</html>
+

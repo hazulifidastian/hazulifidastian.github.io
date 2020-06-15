@@ -6,10 +6,20 @@
     <description>Recent content in Stories on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Jun 2020 04:55:23 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2020 20:39:51 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/stories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Magit Cheatsheet</title>
+      <link>https://hazulifidastian.id/magit-cheatsheet/</link>
+      <pubDate>Mon, 15 Jun 2020 20:39:51 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/magit-cheatsheet/</guid>
+      <description>My Environment Saya menggunakan Emacs 27, dengan framework DoomEmacs. Pastinya, saya juga mengaktifkan Evil-mode. Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya akan menyesuaikan dengan Evil-mode.
+Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-status. Buka buffer magit (git status)   gr Refresh buffer magit   ? Popup perintah-perintah magit   Navigasi    j k Up Down Pindah antar baris   M-n M-p Pindah antar section   TAB S-TAB Toggle visibility, detail section / baris   Diff    D magit-diff Menu diff   Dt magit-diff-toggle-refine-hunk, highlight perubahan agar mudah dilihat.</description>
+    </item>
     
     <item>
       <title>Django: Login dan Registrasi dengan Akun Google</title>
