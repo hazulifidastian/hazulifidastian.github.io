@@ -42,8 +42,9 @@ Editor lain, seperti milik JetBrains, VS Code mendukung ligature out of the box.
       <pubDate>Mon, 15 Jun 2020 20:39:51 +0700</pubDate>
       
       <guid>https://hazulifidastian.id/magit-cheatsheet/</guid>
-      <description>My Environment Saya menggunakan Emacs 27, dengan framework DoomEmacs. Pastinya, saya juga mengaktifkan Evil-mode. Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya akan menyesuaikan dengan Evil-mode.
-Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-status. Buka buffer magit (git status)   gr Refresh buffer magit   ? Popup perintah-perintah magit   Navigasi    j k Up Down Pindah antar baris   M-n M-p Pindah antar section   TAB S-TAB Toggle visibility, detail section / baris   Diff    D magit-diff Menu diff   Dt magit-diff-toggle-refine-hunk, highlight perubahan agar mudah dilihat.</description>
+      <description>Saya menggunakan Emacs 27, dengan framework konfigurasi Doom. Standarnya, Doom menggunakan emulasi vim menggunakan evil-mode. Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya tidak akan terlepas dari evil-mode.
+Bagi Anda vanilla user, saya memasukkan nama command/perintah untuk melengkapi shortcut key. Agar, jika Anda tidak mengenali key-nya, Anda bisa mengakses perintahnya melalui shortcut M-x.
+Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-status.</description>
     </item>
     
     <item>
