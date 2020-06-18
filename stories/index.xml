@@ -6,10 +6,22 @@
     <description>Recent content in Stories on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jun 2020 20:39:51 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 23:15:25 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/stories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Emacs 27 Dan Font Ligature</title>
+      <link>https://hazulifidastian.id/emacs-27-dan-font-ligature/</link>
+      <pubDate>Thu, 18 Jun 2020 23:15:25 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/emacs-27-dan-font-ligature/</guid>
+      <description>Font ligature adalah, karakter spesial pada font yang menggabungkan beberapa karakter berdekatan menjadi satu.
+Ligature pada awalnya digunakan pada media cetak tradisional untuk menghemat ruang. Dalam pemrograman, ligature digunakan untuk menyederhanakan dan memperindah kode.
+Emacs 27 pada dasarnya tidak mendukung ligature secara khusus, tapi ada beberapa cara untuk mensiasatinya. Tentunya kita perlu menerapkan konfigurasi khusus.
+Editor lain, seperti milik JetBrains, VS Code mendukung ligature out of the box. Hanya perlu mengaktifkan opsi mau pakai fitur ligature.</description>
+    </item>
     
     <item>
       <title>Magit Cheatsheet</title>
