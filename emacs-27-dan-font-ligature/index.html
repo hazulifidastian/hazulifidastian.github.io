@@ -119,7 +119,7 @@
         </figcaption>
 </figure>
 
-<p>Terlihat pada gambar, hasilnya tidak memuaskan. Ada beberapa karakter yg tidak tergabung sempurna. Misal, pada karakter <code>===</code>.</p>
+<p>Terlihat pada gambar, hasilnya tidak memuaskan. Ada beberapa karakter yang tidak tergabung sempurna. Misal, pada karakter <code>===</code>.</p>
 <p>Lanjut dengan konfigurasi kedua dari github issue<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, dengan sebelumnya menghapus konfigurasi dari stackexchange.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; Gathered from https://www.jetbrains.com/lp/mono/#ligatures</span>
 <span style="color:#75715e">;; The cheatsheat shows &#34;\/&#34; and &#34;\&#34; which I couldn&#39;t get working</span>
@@ -255,16 +255,16 @@
 </figure>
 
 <p>Saat membuka menu flycheck show all errors di kode python, dan saat mengakses fitur yang memanggil package helm. Kasus lainnya adalah saat saya membuka file PHP.</p>
-<p>Berkali-kali saya harus mematikan paksa emacs. Jika dipantau melalui aplikasi monitoring pada sistem operasi, emacs menghabiskan resource yg besar.</p>
+<p>Berkali-kali saya harus mematikan paksa emacs. Jika dipantau melalui aplikasi monitoring pada sistem operasi, emacs menghabiskan resource yang besar.</p>
 <p>Akhirnya, karena tidak memiliki opsi lain saya menghapus konfigurasi ligature terakhir dan mencoba menggunakan font kedua.</p>
 <h2 id="fira-code">Fira Code</h2>
 <p>Font Fira Code didesign oleh beberapa designer, turunan dari font Fira Mono. Informasi lengkapnya dan link untuk mengunduh bisa dilihat <a href="https://github.com/tonsky/FiraCode">disini</a>. Secara personal, saya kurang terlalu suka dengan font ini. Penerapan ini hanya untuk kebutuhan percobaan saja.</p>
 <p>Pada halaman githubnya, disertakan informasi dukungan untuk emacs dan cara untuk mengkonfigurasinya.</p>
 <p>Ada empat cara konfigurasi yang direkomendasikan pada <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#enabling">halaman</a> resminya.</p>
 <p>Pilihan konfigurasi pertama, <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-composition-mode-in-emacs-mac-port">Using composition mode in Emacs Mac port</a> tidak bisa saya terapkan karena saya menggunakan linux.</p>
-<p>Pilihan konfigurasi kedua <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-prettify-symbols">
+<p>Pilihan konfigurasi kedua, <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-prettify-symbols">
 Using prettify-symbols</a>, tidak menampilkan ligature apapun.</p>
-<p>Pilihan konfigurasi keempat <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-font-lock-keywords">Using font-lock keywords</a> (ketiga saya lewati dulu), menampilkan karakter-karakter aneh.</p>
+<p>Pilihan konfigurasi keempat, <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-font-lock-keywords">Using font-lock keywords</a> (ketiga saya lewati dulu), menampilkan karakter-karakter aneh.</p>
 <figure>
     <img src="/images/emacs-27-dan-font-ligature/fira-code-config-4.png"
          alt="Karakter aneh ligature Fira Code"/> <figcaption>
@@ -272,7 +272,7 @@ Using prettify-symbols</a>, tidak menampilkan ligature apapun.</p>
         </figcaption>
 </figure>
 
-<p>Yang berhasil hanya konfigurasi ketiga <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-composition-char-table">Using composition char table</a>. Kombinasi ligature-nya muncul sempurna. Masalah pada flycheck dan package helm saat menggunakan font JetBrains Mono tidak saya temukan disini.</p>
+<p>Yang berhasil hanya konfigurasi ketiga, <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-composition-char-table">Using composition char table</a>. Kombinasi ligature-nya muncul sempurna. Masalah pada flycheck dan package helm saat menggunakan font JetBrains Mono tidak saya temukan disini.</p>
 <figure>
     <img src="/images/emacs-27-dan-font-ligature/fira-code-config-3.jpg"
          alt="Fira Code ligature"/> <figcaption>
