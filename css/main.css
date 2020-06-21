@@ -304,17 +304,8 @@ img {
   color: #666;
 }
 
-.archive-item-date {
-  margin-right: 0.5em;
-}
-
 .archive-tags {
   text-transform: capitalize;
-  margin-left: 0.5em;
-}
-
-.archive-tags span {
-  padding: 0 0.3em;
 }
 
 table {
