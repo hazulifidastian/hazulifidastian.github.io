@@ -210,16 +210,35 @@ img {
   text-decoration: underline;
 }
 
-#article-toc ul {
-  margin-bottom: 0;
+#TableOfContents ul {
+  list-style-position: inside;
+  list-style: none;
 }
 
-#article-toc #TableOfContents a {
+/* Direct children */
+#TableOfContents > ul {
+  font-family: "Bree Serif", serif;
+  margin-bottom: 0;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+#TableOfContents > ul > li:before {
+  content: "\26CA";
+  margin-right: 0.5em;
+}
+
+#TableOfContents > ul > li ul > li:before {
+  content: "\26C9";
+  margin-right: 0.5em;
+}
+
+#TableOfContents a {
   text-decoration: none;
   color: inherit;
 }
 
-#article-toc #TableOfContents a:hover {
+#TableOfContents a:hover {
   box-shadow: inset 0 -3px 0 #ffce07;
   background: #ffce07;
   transition: background 150ms ease;
