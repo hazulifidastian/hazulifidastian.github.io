@@ -262,6 +262,7 @@ img {
   font-family: "Bree Serif", serif;
   display: inline-block;
   text-decoration: none;
+  font-size: 17px;
   font-weight: 700;
   color: #555;
   padding: 5px 0 0;
@@ -414,6 +415,7 @@ td {
   }
 
   .archive-item-link {
+    font-size: 19px;
   }
 
   .article-title {
