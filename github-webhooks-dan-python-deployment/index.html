@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-us" class="font-1-available">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.72.0" />
+
+
+<title>GitHub Webhooks &amp; Python Deployment - Hazuli Fidastian</title>
+<meta property="og:title" content="GitHub Webhooks &amp; Python Deployment - Hazuli Fidastian">
+
+
+<link href='https://hazulifidastian.id/favicon.ico' rel='icon' type='image/x-icon' />
+
+
+
+
+<meta property="description" content="Saya akan membahas cara menangani GitHub webhooks menggunakan server python. Apa yang saya tulis disini adalah contoh sederhana, tanpa menggunakan web framework apapun. Hanya mengandalkan library yang sudah disediakan oleh python">
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://hazulifidastian.id/css/main.css" media="all">
+<link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://hazulifidastian.id/" class="nav-logo">
+    <img src="https://hazulifidastian.id/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">Me</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    <h1 class="article-title">GitHub Webhooks &amp; Python Deployment</h1>
+
+    
+    <div class="article-meta">
+      <span class="article-date">June 22, 2020</span>
+      <svg style="position:relative; bottom: -2px;" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <span class="article-duration">7 min read</span>
+    </div>
+    
+
+    
+<div id="article-description">
+    <p>Saya akan membahas cara menangani GitHub webhooks menggunakan server python. Apa yang saya tulis disini adalah contoh sederhana, tanpa menggunakan web framework apapun. Hanya mengandalkan library yang sudah disediakan oleh python</p>
+</div>
+
+
+
+    
+      
+
+<div id="article-toc">
+  <h2 class="toc-title">Daftar Isi</h2>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#deskripsi-masalah">Deskripsi Masalah</a></li>
+    <li><a href="#github-webhooks">GitHub Webhooks</a>
+      <ul>
+        <li><a href="#konfigurasi-webhooks">Konfigurasi Webhooks</a></li>
+      </ul>
+    </li>
+    <li><a href="#source-code-server">Source Code Server</a>
+      <ul>
+        <li><a href="#entry-point">Entry Point</a></li>
+        <li><a href="#kontrol-server">Kontrol Server</a></li>
+        <li><a href="#request-handler">Request Handler</a></li>
+        <li><a href="#fungsi-deploy">Fungsi deploy()</a></li>
+        <li><a href="#fungsi-is_secure">Fungsi is_secure()</a></li>
+        <li><a href="#fungsi-is_deployable">Fungsi is_deployable()</a></li>
+        <li><a href="#fungsi-run_command">Fungsi run_command()</a></li>
+        <li><a href="#menjalankan-server">Menjalankan server</a></li>
+        <li><a href="#kode-lengkap">Kode Lengkap</a></li>
+      </ul>
+    </li>
+    <li><a href="#kesimpulan">Kesimpulan</a></li>
+  </ul>
+</nav>
+</div>
+
+
+    
+
+    <div class="article-content">
+      <h2 id="deskripsi-masalah">Deskripsi Masalah</h2>
+<p>Seorang developer memiliki aplikasi yang sudah ditahap production. Live, sudah bisa diakses menggunakan internet. Aplikasinya dibangun menggunakan web framework dengan bahasa pemrograman python.</p>
+<p>Pada server, developer menggunakan docker sebagai solusi pengepakan aplikasi. Kode disalin ke dalam sebuah image menjadi satu paket dengan sistem operasi didalam container.</p>
+<p>Proses deployment yang berjalan sekarang menggunakan cara:</p>
+<ul>
+<li>Aplikasi rsync untuk memperbarui kode yang ada pada server</li>
+<li>Aplikasi remote ssh untuk mengontrol server</li>
+<li>Menjalankan perintah pada server untuk memperbarui docker container</li>
+<li>Menjalankan perintah pada server untuk migrasi database</li>
+</ul>
+<p>Prosesnya masih dilakukan secara manual. Jika dalam dalam sehari banyak dilakukan deployment, maka berulangkali juga proses diatas dilakukan.</p>
+<p>Proses diatas sebenarnya masih bisa disederhanakan. Dengan membuat beberapa script diserver, beberapa perintah pembaruan server bisa dihemat menjadi satu saja. Namun tetap masih diperlukan remote ssh untuk mengeksekusi script tersebut.</p>
+<p>Bisakah proses deployment disederhanakan, tanpa harus melakukan satupun proses diatas? Inilah tujuan tulisan ini dibuat.</p>
+<h2 id="github-webhooks">GitHub Webhooks</h2>
+<p>Sebagian besar programmer saat ini pasti menggunakan version control system (VCS) dalam mengembangkan aplikasi. VCS ada beberapa macam, salah satunya adalah git yang sangat populer saat ini.</p>
+<p>Git bisa digunakan secara lokal pada perangkat personal. Bisa juga menjadi server online. Pada server, git menjadi mirror bagi source code pada perangkat personal.</p>
+<p>Salah satu server git yang banyak digunakan adalah <a href="https://github.com">GitHub</a>. GitHub menampung banyak source code dari seluruh dunia. Bisa digunakan gratis, dengan beberapa fitur yang dibatasi maupun berbayar. Source code bisa dibuka untuk umum (public), bisa juga disimpan untuk pribadi saja (private).</p>
+<p>Webhooks adalah salah satu fitur pada GitHub. Menurut situs resminya webhooks adalah:</p>
+<blockquote>
+<p>Webhooks allow you to build or set up integrations, such as GitHub Apps or OAuth Apps, which subscribe to certain events on GitHub.com. When one of those events is triggered, we&rsquo;ll send a HTTP POST payload to the webhook&rsquo;s configured URL. Webhooks can be used to update an external issue tracker, trigger CI builds, update a backup mirror, or even deploy to your production server. You&rsquo;re only limited by your imagination.</p>
+</blockquote>
+<p>Kurang lebih, webhooks adalah suatu fitur yang mengintegrasikan GitHub.com dengan aplikasi atau layanan diluarnya. Webhooks memicu sebuah event dan mengirimkan HTTP POST payload ke url yang telah dikonfigurasikan.</p>
+<p>Fitur inilah yang akan digunakan untuk membuat otomatisasi proses deployment aplikasi.</p>
+<p>Bagaimana memicu event pada webhooks?</p>
+<p>Event pada webhooks dijelaskan pada <a href="https://developer.github.com/webhooks/event-payloads/">situs resminya</a>. Fokus tulisan ini ada pada dua event, yaitu:</p>
+<ol>
+<li>Pushes, saat developer melakukan push source code ke GitHub</li>
+<li>Pull Requests, saat developer melakukan aktifitas pull request</li>
+</ol>
+<p>Push biasa digunakan untuk memperbarui source code yang ada pada server GitHub. Bisa sebagai backup, atau menjadi cara untuk mempublikasikan source code terbaru jika bekerja bersama tim.</p>
+<p>Pull request adalah permintaan untuk menggabungkan source code. Hasil pengembangan source code diperangkat lokal dipush ke server sebagai branch sendiri. Selanjutnya pemilik branch membuat pull request (permintaan) untuk menggabungkan kodenya dengan branch utama. Kode pada branch tersebut akan direview, bisa diterima, diperbaiki atau bisa juga ditolak pull requestnya.</p>
+<p>Kedua event tersebut yang akan dipantau dan diutilisasi untuk memicu proses deployment secara otomatis.</p>
+<p>Standarnya, GitHub akan memicu event pada seluruh aktifitas yang terkait dengan dua event diatas. Push misalnya, semua push akan memicu event, tak peduli pada branch apapun. Tidak ada konfigurasi untuk memilih, misalnya hanya terpicu jika push pada branch master saja tidak pada branch yang lain. Begitu juga pull request, jika ada yang komentar pada thread pull request, ini juga akan memicu event pull request.</p>
+<p>Tidak semua event yang dikirim oleh GitHub memicu proses deployment. Harus difilter. Namun filternya bukan pada GitHub, tapi pada aplikasi server yang menangani HTTP POST payload dari webhooks.</p>
+<p>Saya spesifikasikan aktifitas yang bisa memicu proses deployment:</p>
+<ul>
+<li>Hanya push ke branch master</li>
+<li>Hanya merge pull request ke branch master</li>
+</ul>
+<p>Dibawah ini adalah payload yang dikirimkan jika push ke branch master.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#111">{</span>
+  <span style="color:#f92672">&#34;ref&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;refs/heads/master&#34;</span>
+<span style="color:#111">}</span>
+</code></pre></div><p>Sedangkan dibawah ini jika merge pull request ke branch master.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#111">{</span>
+  <span style="color:#f92672">&#34;action&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;closed&#34;</span><span style="color:#111">,</span>
+  <span style="color:#f92672">&#34;pull_request&#34;</span><span style="color:#111">:</span> <span style="color:#111">{</span>
+    <span style="color:#f92672">&#34;merged&#34;</span><span style="color:#111">:</span> <span style="color:#00a8c8">true</span><span style="color:#111">,</span>
+    <span style="color:#f92672">&#34;base&#34;</span><span style="color:#111">:</span> <span style="color:#111">{</span>
+      <span style="color:#f92672">&#34;ref&#34;</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;master&#34;</span>
+    <span style="color:#111">}</span>
+  <span style="color:#111">}</span>
+<span style="color:#111">}</span>
+</code></pre></div><p>Aplikasi server yang menangani webhooks harus bisa memfilter dan memproses hanya dua payload diatas.</p>
+<h3 id="konfigurasi-webhooks">Konfigurasi Webhooks</h3>
+<figure>
+    <img src="/images/github-webhooks-dan-python-deployment/github-konfigurasi-webhooks.png"
+         alt="Konfigurasi GitHub"/> <figcaption>
+            <p>Konfigurasi GitHub</p>
+        </figcaption>
+</figure>
+
+<p>Konfigurasi webhooks pada halaman <strong>Settings</strong> pada repository. Kita bahas satu persatu bidang isian pada form konfigurasi webhooks diatas.</p>
+<ul>
+<li>Payload URL, url yang akan dikirimkan HTTP POST payload oleh GitHub</li>
+<li>Content type, tipe content berupa pilihan form html atau json</li>
+<li>Secret, teks yang akan dienkripsi dan dikirimkan ke server. Pada server nantinya akan divalidasi, untuk memastikan bahwa HTTP POST benar dikirimkan oleh GitHub webhooks.</li>
+<li>Let me select individual events, event yang akan memicu webhooks. Pilih hanya dua:
+<figure>
+    <img src="/images/github-webhooks-dan-python-deployment/github-pilihan-events.png"
+         alt="Pilihan event"/> <figcaption>
+            <p>Pilihan event</p>
+        </figcaption>
+</figure>
+
+<ul>
+<li>Pushes dan</li>
+<li>Pull Requests</li>
+</ul>
+</li>
+</ul>
+<p>Simpan konfigurasi diatas. Selanjunya akan dibahas pemasangan server.</p>
+<h2 id="source-code-server">Source Code Server</h2>
+<p>Server dibuat dengan python, tanpa menggunakan paket eksternal. Saya menggunakan python versi tiga.</p>
+<p>Kode server ini sudah saya buat kan repository githubnya, tautannya ada diakhir tulisan.</p>
+<h3 id="entry-point">Entry Point</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">if</span> <span style="color:#111">__name__</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;__main__&#39;</span><span style="color:#111">:</span>
+    <span style="color:#f92672">from</span> <span style="color:#111">sys</span> <span style="color:#f92672">import</span> <span style="color:#111">argv</span>
+
+    <span style="color:#00a8c8">if</span> <span style="color:#111">len</span><span style="color:#111">(</span><span style="color:#111">argv</span><span style="color:#111">)</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span><span style="color:#111">:</span>
+<span style="display:block;width:100%;background-color:#e1e1e1">        <span style="color:#111">run_server</span><span style="color:#111">(</span><span style="color:#111">port</span><span style="color:#f92672">=</span><span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">argv</span><span style="color:#111">[</span><span style="color:#ae81ff">1</span><span style="color:#111">]))</span>
+</span>    <span style="color:#00a8c8">else</span><span style="color:#111">:</span>
+        <span style="color:#111">run_server</span><span style="color:#111">()</span>
+</code></pre></div><p>Kode diatas adalah entry point aplikasi. Menerima argument <code>port</code> yang akan digunakan oleh server.</p>
+<h3 id="kontrol-server">Kontrol Server</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">run_server</span><span style="color:#111">(</span><span style="color:#111">server_class</span><span style="color:#f92672">=</span><span style="color:#111">HTTPServer</span><span style="color:#111">,</span> <span style="color:#111">handler_class</span><span style="color:#f92672">=</span><span style="color:#111">ServerHandler</span><span style="color:#111">,</span> <span style="color:#111">port</span><span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span><span style="color:#111">):</span>
+    <span style="color:#d88200">&#34;&#34;&#34;Run server&#34;&#34;&#34;</span>
+    <span style="color:#111">server_address</span> <span style="color:#f92672">=</span> <span style="color:#111">(</span><span style="color:#d88200">&#39;&#39;</span><span style="color:#111">,</span> <span style="color:#111">port</span><span style="color:#111">)</span>
+    <span style="color:#111">httpd</span> <span style="color:#f92672">=</span> <span style="color:#111">server_class</span><span style="color:#111">(</span><span style="color:#111">server_address</span><span style="color:#111">,</span> <span style="color:#111">handler_class</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Starting httpd...&#39;</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#111">f</span><span style="color:#d88200">&#39;Serving at port {port}</span><span style="color:#8045ff">\n</span><span style="color:#d88200">&#39;</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">try</span><span style="color:#111">:</span>
+<span style="display:block;width:100%;background-color:#e1e1e1">        <span style="color:#111">httpd</span><span style="color:#f92672">.</span><span style="color:#111">serve_forever</span><span style="color:#111">()</span>
+</span>    <span style="color:#00a8c8">except</span> <span style="color:#75af00">KeyboardInterrupt</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">pass</span>
+    <span style="color:#111">httpd</span><span style="color:#f92672">.</span><span style="color:#111">server_close</span><span style="color:#111">()</span>
+    <span style="color:#00a8c8">print</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Stopping httpd...&#39;</span><span style="color:#111">)</span>
+</code></pre></div><p>Kode <code>httpd.serve_forever()</code> akan menjalankan server dan akan berhenti jika ada interupsi oleh keyboard.</p>
+<h3 id="request-handler">Request Handler</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">class</span> <span style="color:#75af00">ServerHandler</span><span style="color:#111">(</span><span style="color:#111">BaseHTTPRequestHandler</span><span style="color:#111">):</span>
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">_set_response</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+        <span style="color:#d88200">&#34;&#34;&#34;Set response&#34;&#34;&#34;</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">send_response</span><span style="color:#111">(</span><span style="color:#ae81ff">200</span><span style="color:#111">)</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">send_header</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Content-type&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;text/html&#39;</span><span style="color:#111">)</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">end_headers</span><span style="color:#111">()</span>
+
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">_send_response</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">,</span> <span style="color:#111">message</span><span style="color:#111">:</span> <span style="color:#111">str</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;{&#34;status&#34;: &#34;failed&#34;}&#39;</span><span style="color:#111">):</span>
+        <span style="color:#d88200">&#34;&#34;&#34;Send response&#34;&#34;&#34;</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">_set_response</span><span style="color:#111">()</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">wfile</span><span style="color:#f92672">.</span><span style="color:#111">write</span><span style="color:#111">(</span><span style="color:#111">message</span><span style="color:#f92672">.</span><span style="color:#111">encode</span><span style="color:#111">(</span><span style="color:#d88200">&#39;utf-8&#39;</span><span style="color:#111">))</span>
+
+<span style="display:block;width:100%;background-color:#e1e1e1">    <span style="color:#00a8c8">def</span> <span style="color:#75af00">do_POST</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+</span>        <span style="color:#d88200">&#34;&#34;&#34;Handle post request on /&#34;&#34;&#34;</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#f92672">not</span> <span style="color:#111">str</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">path</span><span style="color:#111">)</span><span style="color:#f92672">.</span><span style="color:#111">startswith</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/payload&#39;</span><span style="color:#111">):</span>
+            <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">_send_response</span><span style="color:#111">()</span>
+            <span style="color:#00a8c8">return</span>
+
+        <span style="color:#111">content_length</span> <span style="color:#f92672">=</span> <span style="color:#111">int</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">headers</span><span style="color:#111">[</span><span style="color:#d88200">&#39;Content-Length&#39;</span><span style="color:#111">])</span>
+        <span style="color:#111">request_body</span> <span style="color:#f92672">=</span> <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">rfile</span><span style="color:#f92672">.</span><span style="color:#111">read</span><span style="color:#111">(</span><span style="color:#111">content_length</span><span style="color:#111">)</span>
+
+        <span style="color:#00a8c8">try</span><span style="color:#111">:</span>
+            <span style="color:#111">form</span> <span style="color:#f92672">=</span> <span style="color:#111">cgi</span><span style="color:#f92672">.</span><span style="color:#111">FieldStorage</span><span style="color:#111">(</span>
+                <span style="color:#111">BytesIO</span><span style="color:#111">(</span><span style="color:#111">request_body</span><span style="color:#111">),</span>
+                <span style="color:#111">headers</span><span style="color:#f92672">=</span><span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">headers</span><span style="color:#111">,</span>
+                <span style="color:#111">environ</span><span style="color:#f92672">=</span><span style="color:#111">{</span>
+                    <span style="color:#d88200">&#39;REQUEST_METHOD&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;POST&#39;</span><span style="color:#111">,</span>
+                    <span style="color:#d88200">&#39;CONTENT_TYPE&#39;</span><span style="color:#111">:</span> <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">headers</span><span style="color:#111">[</span><span style="color:#d88200">&#39;Content-Type&#39;</span><span style="color:#111">],</span>
+                <span style="color:#111">},</span>
+            <span style="color:#111">)</span>
+            <span style="color:#111">payload_str</span> <span style="color:#f92672">=</span> <span style="color:#111">form</span><span style="color:#f92672">.</span><span style="color:#111">getvalue</span><span style="color:#111">(</span><span style="color:#d88200">&#39;payload&#39;</span><span style="color:#111">)</span>
+<span style="display:block;width:100%;background-color:#e1e1e1">            <span style="color:#111">deploy</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">headers</span><span style="color:#111">,</span> <span style="color:#111">request_body</span><span style="color:#111">,</span> <span style="color:#111">payload_str</span><span style="color:#111">)</span>
+</span>        <span style="color:#00a8c8">except</span> <span style="color:#75af00">Exception</span><span style="color:#111">:</span>
+            <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">_send_response</span><span style="color:#111">()</span>
+            <span style="color:#00a8c8">return</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">_send_response</span><span style="color:#111">(</span><span style="color:#d88200">&#39;{&#34;status&#34;: &#34;success&#34;}&#39;</span><span style="color:#111">)</span>
+</code></pre></div><p>Bagian ini menangani request dari GitHub webhooks. Method <code>do_POST</code> akan dipanggil jika ada request POST yang masuk.</p>
+<p>Handler ini akan menangani request yang memiliki uri <strong>/payload</strong>, selainnya tidak akan dilayani. Method ini akan mengirimkan pesan status dalam bentuk json.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">deploy</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">headers</span><span style="color:#111">,</span> <span style="color:#111">request_body</span><span style="color:#111">,</span> <span style="color:#111">payload_str</span><span style="color:#111">)</span>
+</code></pre></div><p>Jika requst tidak ada masalah, maka baris kode ini akan memanggil fungsi <code>deploy</code>.</p>
+<h3 id="fungsi-deploy">Fungsi deploy()</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">deploy</span><span style="color:#111">(</span><span style="color:#111">headers</span><span style="color:#111">:</span> <span style="color:#111">dict</span><span style="color:#111">,</span> <span style="color:#111">request_body</span><span style="color:#111">:</span> <span style="color:#111">bytes</span><span style="color:#111">,</span> <span style="color:#111">payload_str</span><span style="color:#111">:</span> <span style="color:#111">str</span><span style="color:#111">):</span>
+    <span style="color:#d88200">&#34;&#34;&#34;Deploy&#34;&#34;&#34;</span>
+    <span style="color:#00a8c8">if</span> <span style="color:#111">payload_str</span><span style="color:#111">:</span>
+        <span style="color:#111">payload_json</span> <span style="color:#f92672">=</span> <span style="color:#111">to_json</span><span style="color:#111">(</span><span style="color:#111">payload_str</span><span style="color:#111">)</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#111">payload_json</span><span style="color:#111">:</span>
+            <span style="color:#00a8c8">if</span> <span style="color:#111">is_secure</span><span style="color:#111">(</span><span style="color:#111">headers</span><span style="color:#111">,</span> <span style="color:#111">request_body</span><span style="color:#111">)</span> <span style="color:#f92672">and</span> <span style="color:#111">is_deployable</span><span style="color:#111">(</span><span style="color:#111">payload_json</span><span style="color:#111">):</span>
+                <span style="color:#111">run_command</span><span style="color:#111">()</span>
+</code></pre></div><p>Fungsi <code>deploy</code> memiliki beberapa tugas:</p>
+<ul>
+<li><code>to_json()</code>, mengkonversi data payload berupa string menjadi json dengan tipe data dict</li>
+<li><code>is_secure()</code>, menvalidasi teks rahasia terenkripsi. Yang diinputkan pada bidang isian <strong>Secret</strong> saat konfigurasi webhooks</li>
+<li><code>is_deployable()</code>, melakukan filter payload dan menentukan aktifitas dari event yang bisa memicu proses deployment</li>
+<li><code>run_command()</code>, akan menjalankan perintah deployment</li>
+</ul>
+<h3 id="fungsi-is_secure">Fungsi is_secure()</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">is_secure</span><span style="color:#111">(</span><span style="color:#111">headers</span><span style="color:#111">:</span> <span style="color:#111">dict</span><span style="color:#111">,</span> <span style="color:#111">request_body</span><span style="color:#111">:</span> <span style="color:#111">bytes</span><span style="color:#111">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#111">bool</span><span style="color:#111">:</span>
+    <span style="color:#d88200">&#34;&#34;&#34;Check secret key on header&#34;&#34;&#34;</span>
+    <span style="color:#111">secret</span> <span style="color:#f92672">=</span> <span style="color:#111">environ</span><span style="color:#111">[</span><span style="color:#d88200">&#39;GITHUB_WEBHOOKS_SECRET&#39;</span><span style="color:#111">]</span>
+    <span style="color:#111">github_sig</span> <span style="color:#f92672">=</span> <span style="color:#111">headers</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;X-Hub-Signature&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;&#39;</span><span style="color:#111">)</span>
+<span style="display:block;width:100%;background-color:#e1e1e1">    <span style="color:#111">hex_sig</span> <span style="color:#f92672">=</span> <span style="color:#111">hmac</span><span style="color:#f92672">.</span><span style="color:#111">new</span><span style="color:#111">(</span><span style="color:#111">secret</span><span style="color:#f92672">.</span><span style="color:#111">encode</span><span style="color:#111">(),</span> <span style="color:#111">request_body</span><span style="color:#111">,</span> <span style="color:#111">hashlib</span><span style="color:#f92672">.</span><span style="color:#111">sha1</span><span style="color:#111">)</span><span style="color:#f92672">.</span><span style="color:#111">hexdigest</span><span style="color:#111">()</span>
+</span>    <span style="color:#111">expected_sig</span> <span style="color:#f92672">=</span> <span style="color:#111">f</span><span style="color:#d88200">&#39;sha1={hex_sig}&#39;</span>
+
+<span style="display:block;width:100%;background-color:#e1e1e1">    <span style="color:#00a8c8">if</span> <span style="color:#111">hmac</span><span style="color:#f92672">.</span><span style="color:#111">compare_digest</span><span style="color:#111">(</span><span style="color:#111">expected_sig</span><span style="color:#111">,</span> <span style="color:#111">github_sig</span><span style="color:#111">):</span>
+</span>        <span style="color:#00a8c8">return</span> <span style="color:#111">True</span>
+    <span style="color:#00a8c8">return</span> <span style="color:#111">False</span>
+</code></pre></div><p>Pada header yang dikirimkan GitHub, disisipkan key <code>X-Hub-Signature</code> berisi nilai <code>sha1=SIGNATURE</code>. Signature merupakan text hasil enkripsi pada bidang isian <strong>Secret</strong> dan data payload.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">hex_sig</span> <span style="color:#f92672">=</span> <span style="color:#111">hmac</span><span style="color:#f92672">.</span><span style="color:#111">new</span><span style="color:#111">(</span><span style="color:#111">secret</span><span style="color:#f92672">.</span><span style="color:#111">encode</span><span style="color:#111">(),</span> <span style="color:#111">request_body</span><span style="color:#111">,</span> <span style="color:#111">hashlib</span><span style="color:#f92672">.</span><span style="color:#111">sha1</span><span style="color:#111">)</span><span style="color:#f92672">.</span><span style="color:#111">hexdigest</span><span style="color:#111">()</span>
+</code></pre></div><p>kode ini membuat teks terenkripsi menggunakan teks rahasia yang digabungkan dengan request_body. Teks rahasia disisipkan melalui variabel environment <code>GITHUB_WEBHOOKS_SECRET</code>. Algoritma hash menggunakan <strong>sha1</strong>.</p>
+<p>Cara menyisipkan variable environment saat menjalankan kode python:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#111">GITHUB_WEBHOOKS_SECRET</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;THIS IS SECRET&#34;</span> python3 deploy_server.py <span style="color:#ae81ff">8080</span>
+</code></pre></div><h3 id="fungsi-is_deployable">Fungsi is_deployable()</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">is_deployable</span><span style="color:#111">(</span><span style="color:#111">payload_json</span><span style="color:#111">:</span> <span style="color:#111">dict</span><span style="color:#111">)</span> <span style="color:#f92672">-&gt;</span> <span style="color:#111">bool</span><span style="color:#111">:</span>
+    <span style="color:#d88200">&#34;&#34;&#34;
+</span><span style="color:#d88200">    Cek is deployable. Push or merge pull request
+</span><span style="color:#d88200">    on branch master
+</span><span style="color:#d88200">    &#34;&#34;&#34;</span>
+    <span style="color:#111">is_push_to_master</span> <span style="color:#f92672">=</span> <span style="color:#111">payload_json</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;ref&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;&#39;</span><span style="color:#111">)</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;refs/heads/master&#39;</span>
+    <span style="color:#00a8c8">try</span><span style="color:#111">:</span>
+        <span style="color:#111">is_merge_pr_to_master</span> <span style="color:#f92672">=</span> <span style="color:#111">(</span>
+            <span style="color:#111">payload_json</span><span style="color:#111">[</span><span style="color:#d88200">&#39;action&#39;</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;closed&#39;</span>
+            <span style="color:#f92672">and</span> <span style="color:#111">payload_json</span><span style="color:#111">[</span><span style="color:#d88200">&#39;pull_request&#39;</span><span style="color:#111">][</span><span style="color:#d88200">&#39;merged&#39;</span><span style="color:#111">]</span> <span style="color:#f92672">is</span> <span style="color:#111">True</span>
+            <span style="color:#f92672">and</span> <span style="color:#111">payload_json</span><span style="color:#111">[</span><span style="color:#d88200">&#39;pull_request&#39;</span><span style="color:#111">][</span><span style="color:#d88200">&#39;base&#39;</span><span style="color:#111">][</span><span style="color:#d88200">&#39;ref&#39;</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#39;master&#39;</span>
+        <span style="color:#111">)</span>
+    <span style="color:#00a8c8">except</span> <span style="color:#75af00">KeyError</span><span style="color:#111">:</span>
+        <span style="color:#111">is_merge_pr_to_master</span> <span style="color:#f92672">=</span> <span style="color:#111">False</span>
+
+    <span style="color:#00a8c8">if</span> <span style="color:#111">is_push_to_master</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">return</span> <span style="color:#111">True</span>
+    <span style="color:#00a8c8">elif</span> <span style="color:#111">is_merge_pr_to_master</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">return</span> <span style="color:#111">True</span>
+
+    <span style="color:#00a8c8">return</span> <span style="color:#111">False</span>
+</code></pre></div><p>Fungsi ini melakukan filter pada request yang masuk dengan membaca payload. Jika push dan merge pull request dilakukan pada branch master, maka fungsi akan mengembalikan nilai <code>True</code>.</p>
+<h3 id="fungsi-run_command">Fungsi run_command()</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00a8c8">def</span> <span style="color:#75af00">run_command</span><span style="color:#111">():</span>
+    <span style="color:#d88200">&#34;&#34;&#34;Run command&#34;&#34;&#34;</span>
+    <span style="color:#75715e"># git pull</span>
+    <span style="color:#75715e"># rebuild docker</span>
+    <span style="color:#75715e"># migration</span>
+    <span style="color:#75715e"># dll</span>
+</code></pre></div><p>Fungsi <code>run_command()</code> berisi perintah untuk melakukan proses deployment. Perintah yang utama adalah <code>git pull</code> yang akan memperbarui source code pada aplikasi production.</p>
+<p>Pastikan public key pada server production sudah terintegrasi dengan GitHub. Pelajari tutorial <a href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">ini</a>.</p>
+<h3 id="menjalankan-server">Menjalankan server</h3>
+<p>Jalankan server menggunakan perintah dibawah ini. Terlihat dalam perintah ini disisipkan variabel environtment <code>GITHUB_WEBHOOKS_SECRET</code>.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#111">GITHUB_WEBHOOKS_SECRET</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;THIS IS SECRET&#34;</span> python3 deploy_server.py <span style="color:#ae81ff">8080</span>
+</code></pre></div><p>Gunakan aplikasi ngrok untuk melakukan pengetesan. Ikuti tutorial pada halaman <a href="https://developer.github.com/webhooks/configuring/#using-ngrok">Using Ngrok</a>. Aplikasi ngrok bisa menjembatani antara GitHub webhooks dan perangkat lokal.</p>
+<p>Saat production, harus online dan memiliki domain atau ip address agar github bisa mengirimkan HTTP POST payload. Gunakan aplikasi gunicorn untuk menjalankan server saat production.</p>
+<h3 id="kode-lengkap">Kode Lengkap</h3>
+<p>Pada tulisan ini, saya tidak membahas semua kode. Kode lebih lengkap saya unggah pada github <a href="">koknggakada/deploy_server</a>.</p>
+<h2 id="kesimpulan">Kesimpulan</h2>
+<p>GitHub menyediakan fitur webhooks untuk mengintegrasikan source code pada server mereka agar otomatis bisa dideploy.</p>
+<p>GitHub mengirimkan event pada setiap aktifitas yang berhubungan dengan event tersebut. Kode server yang harus melakukan filter, aktifitas apa yang bisa memicu deployment.</p>
+<p>Proses deployment otomatis berjalan saat developer melakukan push atau merge pull request source codenya.</p>
+
+
+      
+<div class="article-tags">
+  
+  <a href="https://hazulifidastian.id/tags/deployment/">#deployment</a
+  >&nbsp;
+  
+  <a href="https://hazulifidastian.id/tags/python/">#python</a
+  >&nbsp;
+  
+</div>
+
+
+    </div>
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hazulifidastian" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</main>
+
+<footer class="footer">
+    <ul class="footer-links">
+        
+        <li>
+            <a id="night-mode-toggle" title="Toggle Night/Light mode" class="footer-links-kudos"
+                data-current-mode="light" style="cursor: pointer;"></a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img
+                    src="https://hazulifidastian.id/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+</footer>
+
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-9380146-9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+<script src="/js/night_toggle.js"></script>
+
+</body>
+
+</html>
+

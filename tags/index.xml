@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jun 2020 22:04:00 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 22:58:05 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>deployment</title>
+      <link>https://hazulifidastian.id/tags/deployment/</link>
+      <pubDate>Mon, 22 Jun 2020 22:58:05 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://hazulifidastian.id/tags/python/</link>
+      <pubDate>Mon, 22 Jun 2020 22:58:05 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/tags/python/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>github</title>
@@ -21,7 +39,7 @@
     </item>
     
     <item>
-      <title>manajemen proyek</title>
+      <title>manajemen proyek </title>
       <link>https://hazulifidastian.id/tags/manajemen-proyek/</link>
       <pubDate>Fri, 19 Jun 2020 22:04:00 +0700</pubDate>
       
@@ -53,15 +71,6 @@
       <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
       
       <guid>https://hazulifidastian.id/tags/django/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://hazulifidastian.id/tags/python/</link>
-      <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.id/tags/python/</guid>
       <description></description>
     </item>
     
