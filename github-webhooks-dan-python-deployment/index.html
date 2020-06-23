@@ -98,7 +98,7 @@
         <li><a href="#fungsi-is_secure">Fungsi is_secure()</a></li>
         <li><a href="#fungsi-is_deployable">Fungsi is_deployable()</a></li>
         <li><a href="#fungsi-run_command">Fungsi run_command()</a></li>
-        <li><a href="#menjalankan-server">Menjalankan server</a></li>
+        <li><a href="#menjalankan-server">Menjalankan Server</a></li>
         <li><a href="#kode-lengkap">Kode Lengkap</a></li>
       </ul>
     </li>
@@ -326,7 +326,7 @@
     <span style="color:#75715e"># dll</span>
 </code></pre></div><p>Fungsi <code>run_command()</code> berisi perintah untuk melakukan proses deployment. Perintah yang utama adalah <code>git pull</code> yang akan memperbarui source code pada aplikasi production.</p>
 <p>Pastikan public key pada server production sudah terintegrasi dengan GitHub. Pelajari tutorial <a href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">ini</a>.</p>
-<h3 id="menjalankan-server">Menjalankan server</h3>
+<h3 id="menjalankan-server">Menjalankan Server</h3>
 <p>Jalankan server menggunakan perintah dibawah ini. Terlihat dalam perintah ini disisipkan variabel environtment <code>GITHUB_WEBHOOKS_SECRET</code>.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#111">GITHUB_WEBHOOKS_SECRET</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;THIS IS SECRET&#34;</span> python3 deploy_server.py <span style="color:#ae81ff">8080</span>
 </code></pre></div><p>Gunakan aplikasi ngrok untuk melakukan pengetesan. Ikuti tutorial pada halaman <a href="https://developer.github.com/webhooks/configuring/#using-ngrok">Using Ngrok</a>. Aplikasi ngrok bisa menjembatani antara GitHub webhooks dan perangkat lokal.</p>
