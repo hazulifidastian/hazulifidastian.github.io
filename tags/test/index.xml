@@ -17,7 +17,7 @@
       <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
       
       <guid>https://hazulifidastian.id/python-mock-dan-patch/</guid>
-      <description>Mock os.environ Mocking fungsi os.environ saat membaca variable environment.
+      <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
 import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() </description>
     </item>
     

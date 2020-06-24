@@ -6,8 +6,8 @@
 <meta name="generator" content="Hugo 0.72.0" />
 
 
-<title>Python Mock &amp; Patch - Hazuli Fidastian</title>
-<meta property="og:title" content="Python Mock &amp; Patch - Hazuli Fidastian">
+<title>Git Tips Dan Tricks - Hazuli Fidastian</title>
+<meta property="og:title" content="Git Tips Dan Tricks - Hazuli Fidastian">
 
 
 <link href='https://hazulifidastian.id/favicon.ico' rel='icon' type='image/x-icon' />
@@ -49,7 +49,7 @@
 
 <main class="content" role="main">
   <article class="article">
-    <h1 class="article-title">Python Mock &amp; Patch</h1>
+    <h1 class="article-title">Git Tips Dan Tricks</h1>
 
     
     <div class="article-meta">
@@ -68,23 +68,17 @@
     
 
     <div class="article-content">
-      <h3 id="mocking-osenviron">Mocking os.environ</h3>
-<p>Jika kode yang dites memanggil fungsi <code>os.environ</code>. Gunakan kode dibawah ini untuk melakukan mocking.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> <span style="color:#111">os.environ</span>
-<span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
+      <h3 id="caching-password">Caching Password</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global credential.helper cache
+git push origin master
+</code></pre></div><p>Username dan password akan dicache, <code>git push</code> selanjutnya tidak akan diminta lagi.</p>
+<p>Referensi: <a href="https://help.github.com/en/github/using-git/caching-your-github-password-in-git#platform-linux">Caching your GitHub password in Git</a></p>
 
-<span style="color:#75af00">@mock.patch.dict</span><span style="color:#111">(</span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">environ</span><span style="color:#111">,</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;KEY&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Value&#39;</span><span style="color:#111">})</span>
-<span style="color:#00a8c8">def</span> <span style="color:#75af00">test_foo</span><span style="color:#111">():</span>
-    <span style="color:#111">foo</span><span style="color:#111">()</span>
-</code></pre></div>
 
       
 <div class="article-tags">
   
-  <a href="https://hazulifidastian.id/tags/test/">#test</a
-  >&nbsp;
-  
-  <a href="https://hazulifidastian.id/tags/python/">#python</a
+  <a href="https://hazulifidastian.id/tags/git/">#git</a
   >&nbsp;
   
 </div>
