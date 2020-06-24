@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us" class="font-1-available">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.72.0" />
+
+
+<title>Python Mock &amp; Patch - Hazuli Fidastian</title>
+<meta property="og:title" content="Python Mock &amp; Patch - Hazuli Fidastian">
+
+
+<link href='https://hazulifidastian.id/favicon.ico' rel='icon' type='image/x-icon' />
+
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://hazulifidastian.id/css/main.css" media="all">
+<link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://hazulifidastian.id/" class="nav-logo">
+    <img src="https://hazulifidastian.id/images/logo.png" 
+         width="50" 
+         height="50" 
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">Me</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    <h1 class="article-title">Python Mock &amp; Patch</h1>
+
+    
+    <div class="article-meta">
+      <span class="article-date">June 24, 2020</span>
+      <svg style="position:relative; bottom: -2px;" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <span class="article-duration">1 min read</span>
+    </div>
+    
+
+    
+
+
+    
+      
+
+    
+
+    <div class="article-content">
+      <h3 id="mock-osenviron">Mock os.environ</h3>
+<p>Mocking fungsi <code>os.environ</code> saat membaca variable environment.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> <span style="color:#111">os.environ</span>
+<span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
+
+<span style="color:#75af00">@mock.patch.dict</span><span style="color:#111">(</span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">environ</span><span style="color:#111">,</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;KEY&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Value&#39;</span><span style="color:#111">})</span>
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">test_foo</span><span style="color:#111">():</span>
+    <span style="color:#111">foo</span><span style="color:#111">()</span>
+</code></pre></div>
+
+      
+<div class="article-tags">
+  
+  <a href="https://hazulifidastian.id/tags/test/">#test</a
+  >&nbsp;
+  
+  <a href="https://hazulifidastian.id/tags/python/">#python</a
+  >&nbsp;
+  
+</div>
+
+
+    </div>
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hazulifidastian" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</main>
+
+<footer class="footer">
+    <ul class="footer-links">
+        
+        <li>
+            <a id="night-mode-toggle" title="Toggle Night/Light mode" class="footer-links-kudos"
+                data-current-mode="light" style="cursor: pointer;"></a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img
+                    src="https://hazulifidastian.id/images/hugo-logo.png" width="22" height="22"></a>
+        </li>
+    </ul>
+</footer>
+
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-9380146-9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+<script src="/js/night_toggle.js"></script>
+
+</body>
+
+</html>
+

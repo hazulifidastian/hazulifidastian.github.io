@@ -6,7 +6,7 @@
     <description>Recent content on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Jun 2020 22:58:05 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2020 12:11:00 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,6 +22,16 @@ Anda bisa menemukan saya online di Twitter dan di Medium.
 Ingin membicarakan proyek? Hubungi saya melalui email.
 Catatan:
  Doodle: Sketsa oleh Wiwin. Template: Based on Hugo Lithium.  </description>
+    </item>
+    
+    <item>
+      <title>Python Mock &amp; Patch</title>
+      <link>https://hazulifidastian.id/python-mock-dan-patch/</link>
+      <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/python-mock-dan-patch/</guid>
+      <description>Mock os.environ Mocking fungsi os.environ saat membaca variable environment.
+import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() </description>
     </item>
     
     <item>
