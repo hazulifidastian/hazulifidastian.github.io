@@ -31,7 +31,11 @@ Catatan:
       
       <guid>https://hazulifidastian.id/git-tips-dan-tricks/</guid>
       <description>Caching Password git config --global credential.helper cache git push origin master Username dan password akan dicache, git push selanjutnya tidak akan diminta lagi.
-Referensi: Caching your GitHub password in Git</description>
+Referensi: Caching your GitHub password in Git
+Melihat Revisi Commit Melihat revisi commit pada log.
+# Menggunakan range id commit. git log --oneline 6ff1760..05474ff # Menggunakan range nama branch. git log --oneline master..origin/master Referensi:
+ git-log gitrevision  Melihat Revisi Kode Melihat revisi kode.
+# Menggunakan range id commit.</description>
     </item>
     
     <item>
