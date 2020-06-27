@@ -6,10 +6,31 @@
     <description>Recent content in Stories on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jun 2020 16:22:19 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2020 05:29:47 +0700</lastBuildDate>
     
 	<atom:link href="https://hazulifidastian.id/stories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>asdf Cheatsheet</title>
+      <link>https://hazulifidastian.id/asdf-cheatsheet/</link>
+      <pubDate>Sat, 27 Jun 2020 05:29:47 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/asdf-cheatsheet/</guid>
+      <description>Cheatsheet Berikut daftar opsi yang bisa digunakan pada perintah asdf.
+Manajemen Plugin    Perintah Deskripsi     asdf list daftar plugin beserta semua paket yang terpasang   asdf plugin list all daftar seluruh plugin   asdf plugin list daftar plugin yang terpasang   asdf plugin list --urls daftar plugin yang terpasang beserta urlnya   asdf plugin add python pasang plugin python   asdf plugin remove python copot plugin python   asdf plugin update python perbarui plugin python   asdf plugin update --all perbarui seluruh plugin    Manajemen Paket    Perintah Deskripsi     asdf list all python daftar paket python yang bisa dipasang   asdf latest python versi stabil terakhir paket python   asdf latest python 3.</description>
+    </item>
+    
+    <item>
+      <title>asdf</title>
+      <link>https://hazulifidastian.id/asdf/</link>
+      <pubDate>Fri, 26 Jun 2020 10:24:41 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.id/asdf/</guid>
+      <description>asdf adalah command line interface (CLI) yang digunakan untuk memanajemeni beberapa atau banyak versi bahasa pemrograman. asdf seperti pyenv pada python, rbenv pada ruby atau nvm pada nodejs tetapi all in one. asdf bisa menangani semuanya, khususnya bahasa pemrograman populer.
+Pada perkembangannya, asdf tidak hanya digunakan untuk bahasa pemgrograman saja. Ada plugin yang bisa memanajemeni database seperti mysql dan postgresql, redis, bahkan text editor neovim.
+Kenapa asdf? Menurut dokumentasi resminya, ini adalah alasan kenapa menggunakan asdf:</description>
+    </item>
     
     <item>
       <title>Git Tips dan Tricks</title>
