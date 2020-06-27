@@ -72,15 +72,15 @@ yang ada dibagian bawah nvim. Ia menampilkan status dari buffer/file yang sedang
 <p>Statusline bisa menampilkan informasi dalam beberapa bagian. Bisa berisi mode vim, nama file, direktori
 dari file, posisi kursor, dll.</p>
 <p>Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin
-Lightline<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa juga dengan mudah
+Lightline<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa dengan mudah
 mengatur tema untuk memper-indah tampilan status.</p>
-<p>Kendala yang saya alami saat menggunakan Lightline adalah, ketika saya mengecilkan terminal.
-Atau, ketika saya membagi window menjadi beberapa bagian horizontal (split horizontal). Informasi
-yang saya prioritaskan untuk saya lihat, menghilang dari statusline. Yang tampil malah informasi
-yang tidak saya prioritaskan.</p>
+<p>Kendala yang dialami saat menggunakan Lightline adalah, ketika saya mengecilkan terminal.
+Atau, ketika membagi window menjadi beberapa bagian horizontal (split horizontal). Informasi
+yang diprioritaskan untuk dilihat menghilang dari statusline. Yang tampil justru informasi
+yang tidak diprioritaskan.</p>
 <p>Tulisan ini membahas bagaimana cara mengatur informasi yang tampil pada statusline tersebut.
 Terutama ketika window memiliki ruang horizontal yang sempit.</p>
-<p><strong>Konfigurasi</strong></p>
+<h3 id="konfigurasi">Konfigurasi</h3>
 <p>Ketika kita menginisiasi lightline, kita akan mengatur variabel tipe dictionaries dengan
 nama <code>g:lightline</code>, dan dengan key <code>component_function</code>.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-viml" data-lang="viml"><span style="color:#00a8c8">let</span> <span style="color:#75af00">g</span>:<span style="color:#75af00">lightline</span> <span style="color:#111">=</span> {<span style="color:#960050;background-color:#1e0010">
@@ -105,7 +105,7 @@ maka statusline akan mengeksekusi fungsi yang sudah diatur pada pengaturan <code
 <p>Ketika akan menampilkan <code>gitbranch</code>, maka fungsi <code>LightlineFugitiveHead</code> akan dieksekusi. Untuk <code>cocstatus</code>,
 maka fungsi <code>LightlineCocStatus</code> yang akan dieksekusi.</p>
 <p>Pada contoh pengaturan diatas, kita sebenarnya membuat fungsi sendiri dengan nama, <code>LightlineFugitiveHead</code>,
-dan <code>LightlineCocStatus</code>. Didalam fungsi inilah kita mengatur mekanisme untuk menampilkan
+dan <code>LightlineCocStatus</code>. Didalam fungsi inilah diatur mekanisme untuk menampilkan
 informasi pada statusline.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-viml" data-lang="viml"><span style="color:#75715e">&#34; Lebar minimal window</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#00a8c8">let</span> <span style="color:#75af00">g</span>:<span style="color:#75af00">minwidth</span> <span style="color:#111">=</span> <span style="color:#ae81ff">120</span><span style="color:#960050;background-color:#1e0010">
@@ -135,14 +135,14 @@ lebar window lebih besar dari nilai variabel lebar minimal window. Nilai variabe
 lebar minimal window adalah <code>120</code>.</p>
 <p>Jika lebar window lebih besar, maka bagian <code>gitbranch</code> dan <code>cocstatus</code> akan ditampilkan.
 Jika lebih kecil, maka <code>gitbranch</code> dan <code>cocstatus</code> akan disembunyikan.</p>
-<p><strong>Kesimpulan</strong></p>
-<p>Dengan memadukan fungsi <code>winwidth</code> dan fleksibilitas plugin lightline, kita dengan mudah
+<h3 id="kesimpulan">Kesimpulan</h3>
+<p>Dengan memadukan fungsi <code>winwidth</code> dan fleksibilitas plugin lightline, memudahkan
 mengatur informasi apa saja yang tampil pada statusline dalam kondisi lebar window
 tertentu.</p>
 <p>Konfigurasi diatas tidak hanya digunakan untuk menampilkan <code>gitbranch</code> dan <code>cocstatus</code> saja.
-Bisa menyesuaikan dengan kebutuhan sendiri dan untuk bagian-bagian statusline yang lain.</p>
+Bisa disesuaikan dengan kebutuhan sendiri dan bagian statusline yang lain.</p>
 <p>Fungsi <code>winwidth</code> dari Nvim membantu kita untuk menentukan lebar window pada sebuah buffer.</p>
-<p>Untuk melihat konfigurasi lengkap saya untuk lightline, bisa ikuti
+<p>Untuk melihat konfigurasi lengkap saya untuk lightline, bisa lihat pada
 <a href="https://github.com/hazulifidastian/dotfiles/blob/master/.config/nvim/init.vim.d/plugins.d/lightline.vim">tautan ini</a>.</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>

@@ -26,13 +26,13 @@ Melihat Revisi Commit Melihat revisi commit pada log.
     </item>
     
     <item>
-      <title>Python Mock dan Patch</title>
-      <link>https://hazulifidastian.id/python-mock-dan-patch/</link>
+      <title>Python Mock dan Stub</title>
+      <link>https://hazulifidastian.id/python-mock-dan-stub/</link>
       <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.id/python-mock-dan-patch/</guid>
+      <guid>https://hazulifidastian.id/python-mock-dan-stub/</guid>
       <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
-import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() </description>
+import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() Referensi  https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub  </description>
     </item>
     
     <item>
@@ -122,7 +122,7 @@ Compile &amp;amp; Install
       <guid>https://hazulifidastian.id/lightline-dan-winwidth-nvim/</guid>
       <description>Pembahasan kali ini adalah tentang statusline di Nvim. Statusline adalah, garis horizontal yang ada dibagian bawah nvim. Ia menampilkan status dari buffer/file yang sedang aktif.
 Statusline bisa menampilkan informasi dalam beberapa bagian. Bisa berisi mode vim, nama file, direktori dari file, posisi kursor, dll.
-Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin Lightline1. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa juga dengan mudah mengatur tema untuk memper-indah tampilan status.</description>
+Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin Lightline1. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa dengan mudah mengatur tema untuk memper-indah tampilan status.</description>
     </item>
     
     <item>

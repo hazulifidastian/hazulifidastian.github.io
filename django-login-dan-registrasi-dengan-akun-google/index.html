@@ -492,17 +492,17 @@ kode berikut pada file <strong>admin.py</strong>,</p>
     <span style="color:#111">},</span>
     <span style="color:#f92672">...</span>
 <span style="color:#111">}</span>
-</code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</code></pre></div><!-- ### Integrasi Dengan Akun Twitter -->
+<!-- !!! Catatan: saya masih belum berhasil dengan twitter. Nanti akan saya update tulisan ini jika ada perkembangan. -->
+<!-- Agar bisa terintegrasi dengan twitter anda harus memiliki akun twitter terlebih dahulu. Dengan akun tersebut, anda bisa membuat app twitter melalui: -->
+<!-- Lebih lengkapnya bisa dipelajari disini https://django-allauth.readthedocs.io/en/latest/providers.html#twitter. -->
+<!-- ### Integrasi Dengan Akun Facebook -->
+<!-- Lebih lengkapnya bisa dipelajari disini https://django-allauth.readthedocs.io/en/latest/providers.html#facebook -->
+<!-- Lebih praktis ikuti tutorial disini https://www.digitalocean.com/community/tutorials/django-authentication-with-facebook-instagram-and-linkedin#step-2-%E2%80%94-facebook-authentication -->
+<!-- Sebagai tambahan, saya menambahkan paket `django-sslserver` agar bisa berinteraksi dengan server facebook tanpa error. Facebook mengharuskan client untuk menggunakan ssl/https. -->
+<!-- ```bash -->
+<!-- poetry add django-sslserver -->
+<!-- ``` -->
 <h3 id="uji-coba-registrasi-dan-login">Uji Coba Registrasi dan Login</h3>
 <p>Setelah akun terintegrasi, kita lakukan uji coba registrasi dan login untuk memastikan keberhasilannya.</p>
 <ul>
@@ -511,13 +511,13 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 <li>Pilih akun atau login dengan akun google anda</li>
 <li>Jika berhasil, aplikasi akan mengarahkan anda ke halaman depan aplikasi kita. Dan menampilkan email dari akun google yang kita gunakan untuk registrasi.</li>
 </ul>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<!-- ## Fitur Lain django-allauth -->
+<!-- ### Registrasi Manual -->
+<!-- #### Konfigurasi Email Backend -->
+<!-- #### Registrasi -->
+<!-- #### Aktivasi Email -->
+<!-- ### Login Manual -->
+<!-- ### Menghubungkan Akun Manual Dengan Sosial -->
 <h2 id="kesimpulan">Kesimpulan</h2>
 <p>Django memiliki fitur untuk menyimpan data user, namun tidak memiliki fitur untuk menangani proses login dan registrasi. Dengan paket django-allauth kita bisa memenuhi kebutuhan ini.</p>
 <p>Dengan django-allauth kita tidak hanya bisa terhubung dengan akun google saja, namun juga bisa terhubung ke banyak provider lainnya. Tapi masing-masing provider memiliki prosedur yang berbeda, kita perlu mengkonfigurasinya satu persatu.</p>

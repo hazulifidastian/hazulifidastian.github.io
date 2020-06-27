@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Python Mock dan Patch</title>
-      <link>https://hazulifidastian.id/python-mock-dan-patch/</link>
+      <title>Python Mock dan Stub</title>
+      <link>https://hazulifidastian.id/python-mock-dan-stub/</link>
       <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.id/python-mock-dan-patch/</guid>
+      <guid>https://hazulifidastian.id/python-mock-dan-stub/</guid>
       <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
-import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() </description>
+import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() Referensi  https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub  </description>
     </item>
     
   </channel>
