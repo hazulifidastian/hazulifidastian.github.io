@@ -53,7 +53,9 @@ Melihat Revisi Commit Melihat revisi commit pada log.
       
       <guid>https://hazulifidastian.id/python-mock-dan-stub/</guid>
       <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
-import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() Referensi  https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub  </description>
+import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() Mocking time.sleep Patch menggunakan decorator.
+from unittest import mock from unittest import TestCase class TestClass(TestCase): @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None) def test_func_with_time(self, patched_time_sleep): func_with_time() # Harus dipanggil 1 kali self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.
+from unittest import mock from unittest import TestCase class TestClass(TestCase): def test_func_with_time(self): with mock.</description>
     </item>
     
     <item>
