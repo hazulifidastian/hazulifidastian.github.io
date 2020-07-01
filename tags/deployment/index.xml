@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>deployment on Hazuli Fidastian</title>
-    <link>https://hazulifidastian.id/tags/deployment/</link>
+    <link>https://www.hazulifidastian.id/tags/deployment/</link>
     <description>Recent content in deployment on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Jun 2020 22:58:05 +0700</lastBuildDate>
     
-	<atom:link href="https://hazulifidastian.id/tags/deployment/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.hazulifidastian.id/tags/deployment/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GitHub Webhooks &amp; Python Deployment</title>
-      <link>https://hazulifidastian.id/github-webhooks-dan-python-deployment/</link>
+      <link>https://www.hazulifidastian.id/github-webhooks-dan-python-deployment/</link>
       <pubDate>Mon, 22 Jun 2020 22:58:05 +0700</pubDate>
       
-      <guid>https://hazulifidastian.id/github-webhooks-dan-python-deployment/</guid>
+      <guid>https://www.hazulifidastian.id/github-webhooks-dan-python-deployment/</guid>
       <description>Deskripsi Masalah Seorang developer memiliki aplikasi yang sudah ditahap production. Live, sudah bisa diakses menggunakan internet. Aplikasinya dibangun menggunakan web framework dengan bahasa pemrograman python.
 Pada server, developer menggunakan docker sebagai solusi pengepakan aplikasi. Kode disalin ke dalam sebuah image menjadi satu paket dengan sistem operasi didalam container.
 Proses deployment yang berjalan sekarang menggunakan cara:

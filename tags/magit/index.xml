@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>magit on Hazuli Fidastian</title>
-    <link>https://hazulifidastian.id/tags/magit/</link>
+    <link>https://www.hazulifidastian.id/tags/magit/</link>
     <description>Recent content in magit on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Jun 2020 20:39:51 +0700</lastBuildDate>
     
-	<atom:link href="https://hazulifidastian.id/tags/magit/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.hazulifidastian.id/tags/magit/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Magit Cheatsheet</title>
-      <link>https://hazulifidastian.id/magit-cheatsheet/</link>
+      <link>https://www.hazulifidastian.id/magit-cheatsheet/</link>
       <pubDate>Mon, 15 Jun 2020 20:39:51 +0700</pubDate>
       
-      <guid>https://hazulifidastian.id/magit-cheatsheet/</guid>
+      <guid>https://www.hazulifidastian.id/magit-cheatsheet/</guid>
       <description>Saya menggunakan Emacs 27, dengan framework konfigurasi Doom. Standarnya, Doom menggunakan emulasi vim menggunakan evil-mode. Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya tidak akan terlepas dari evil-mode.
 Bagi Anda vanilla user, saya memasukkan nama command/perintah untuk melengkapi shortcut key. Agar, jika Anda tidak mengenali key-nya, Anda bisa mengakses perintahnya melalui shortcut M-x.
 Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-status.</description>
