@@ -2,183 +2,183 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hazuli Fidastian</title>
-    <link>https://www.hazulifidastian.id/tags/</link>
+    <link>https://hazulifidastian.github.io/tags/</link>
     <description>Recent content in Tags on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <lastBuildDate>Sat, 27 Jun 2020 05:29:47 +0700</lastBuildDate>
     
-	<atom:link href="https://www.hazulifidastian.id/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hazulifidastian.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>asdf</title>
-      <link>https://www.hazulifidastian.id/tags/asdf/</link>
+      <link>https://hazulifidastian.github.io/tags/asdf/</link>
       <pubDate>Sat, 27 Jun 2020 05:29:47 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/asdf/</guid>
+      <guid>https://hazulifidastian.github.io/tags/asdf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>https://www.hazulifidastian.id/tags/git/</link>
+      <link>https://hazulifidastian.github.io/tags/git/</link>
       <pubDate>Wed, 24 Jun 2020 16:22:19 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/git/</guid>
+      <guid>https://hazulifidastian.github.io/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://www.hazulifidastian.id/tags/python/</link>
+      <link>https://hazulifidastian.github.io/tags/python/</link>
       <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/python/</guid>
+      <guid>https://hazulifidastian.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>test</title>
-      <link>https://www.hazulifidastian.id/tags/test/</link>
+      <link>https://hazulifidastian.github.io/tags/test/</link>
       <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/test/</guid>
+      <guid>https://hazulifidastian.github.io/tags/test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>deployment</title>
-      <link>https://www.hazulifidastian.id/tags/deployment/</link>
+      <link>https://hazulifidastian.github.io/tags/deployment/</link>
       <pubDate>Mon, 22 Jun 2020 22:58:05 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/deployment/</guid>
+      <guid>https://hazulifidastian.github.io/tags/deployment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>github</title>
-      <link>https://www.hazulifidastian.id/tags/github/</link>
+      <link>https://hazulifidastian.github.io/tags/github/</link>
       <pubDate>Fri, 19 Jun 2020 22:04:00 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/github/</guid>
+      <guid>https://hazulifidastian.github.io/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>manajemen proyek </title>
-      <link>https://www.hazulifidastian.id/tags/manajemen-proyek/</link>
+      <link>https://hazulifidastian.github.io/tags/manajemen-proyek/</link>
       <pubDate>Fri, 19 Jun 2020 22:04:00 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/manajemen-proyek/</guid>
+      <guid>https://hazulifidastian.github.io/tags/manajemen-proyek/</guid>
       <description></description>
     </item>
     
     <item>
       <title>emacs</title>
-      <link>https://www.hazulifidastian.id/tags/emacs/</link>
+      <link>https://hazulifidastian.github.io/tags/emacs/</link>
       <pubDate>Thu, 18 Jun 2020 23:15:25 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/emacs/</guid>
+      <guid>https://hazulifidastian.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>magit</title>
-      <link>https://www.hazulifidastian.id/tags/magit/</link>
+      <link>https://hazulifidastian.github.io/tags/magit/</link>
       <pubDate>Mon, 15 Jun 2020 20:39:51 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/magit/</guid>
+      <guid>https://hazulifidastian.github.io/tags/magit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>django</title>
-      <link>https://www.hazulifidastian.id/tags/django/</link>
+      <link>https://hazulifidastian.github.io/tags/django/</link>
       <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/django/</guid>
+      <guid>https://hazulifidastian.github.io/tags/django/</guid>
       <description></description>
     </item>
     
     <item>
       <title>elementary os</title>
-      <link>https://www.hazulifidastian.id/tags/elementary-os/</link>
+      <link>https://hazulifidastian.github.io/tags/elementary-os/</link>
       <pubDate>Sat, 30 May 2020 16:26:37 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/elementary-os/</guid>
+      <guid>https://hazulifidastian.github.io/tags/elementary-os/</guid>
       <description></description>
     </item>
     
     <item>
       <title>php</title>
-      <link>https://www.hazulifidastian.id/tags/php/</link>
+      <link>https://hazulifidastian.github.io/tags/php/</link>
       <pubDate>Thu, 14 May 2020 00:48:53 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/php/</guid>
+      <guid>https://hazulifidastian.github.io/tags/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>lightline</title>
-      <link>https://www.hazulifidastian.id/tags/lightline/</link>
+      <link>https://hazulifidastian.github.io/tags/lightline/</link>
       <pubDate>Mon, 09 Mar 2020 11:51:46 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/lightline/</guid>
+      <guid>https://hazulifidastian.github.io/tags/lightline/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nvim</title>
-      <link>https://www.hazulifidastian.id/tags/nvim/</link>
+      <link>https://hazulifidastian.github.io/tags/nvim/</link>
       <pubDate>Mon, 09 Mar 2020 11:51:46 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/nvim/</guid>
+      <guid>https://hazulifidastian.github.io/tags/nvim/</guid>
       <description></description>
     </item>
     
     <item>
       <title>concurency</title>
-      <link>https://www.hazulifidastian.id/tags/concurency/</link>
+      <link>https://hazulifidastian.github.io/tags/concurency/</link>
       <pubDate>Mon, 02 Mar 2020 06:25:49 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/concurency/</guid>
+      <guid>https://hazulifidastian.github.io/tags/concurency/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fish shell</title>
-      <link>https://www.hazulifidastian.id/tags/fish-shell/</link>
+      <link>https://hazulifidastian.github.io/tags/fish-shell/</link>
       <pubDate>Sat, 29 Feb 2020 10:12:40 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/fish-shell/</guid>
+      <guid>https://hazulifidastian.github.io/tags/fish-shell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>https://www.hazulifidastian.id/tags/hugo/</link>
+      <link>https://hazulifidastian.github.io/tags/hugo/</link>
       <pubDate>Tue, 25 Feb 2020 22:31:24 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/hugo/</guid>
+      <guid>https://hazulifidastian.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>https://www.hazulifidastian.id/tags/tutorial/</link>
+      <link>https://hazulifidastian.github.io/tags/tutorial/</link>
       <pubDate>Tue, 25 Feb 2020 22:31:24 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/tutorial/</guid>
+      <guid>https://hazulifidastian.github.io/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pelican</title>
-      <link>https://www.hazulifidastian.id/tags/pelican/</link>
+      <link>https://hazulifidastian.github.io/tags/pelican/</link>
       <pubDate>Sun, 14 Jul 2019 03:32:00 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/tags/pelican/</guid>
+      <guid>https://hazulifidastian.github.io/tags/pelican/</guid>
       <description></description>
     </item>
     

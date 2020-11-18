@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>test on Hazuli Fidastian</title>
-    <link>https://www.hazulifidastian.id/tags/test/</link>
+    <link>https://hazulifidastian.github.io/tags/test/</link>
     <description>Recent content in test on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
     <lastBuildDate>Wed, 24 Jun 2020 12:11:00 +0700</lastBuildDate>
     
-	<atom:link href="https://www.hazulifidastian.id/tags/test/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hazulifidastian.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python Mock dan Stub</title>
-      <link>https://www.hazulifidastian.id/python-mock-dan-stub/</link>
+      <link>https://hazulifidastian.github.io/python-mock-dan-stub/</link>
       <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
       
-      <guid>https://www.hazulifidastian.id/python-mock-dan-stub/</guid>
+      <guid>https://hazulifidastian.github.io/python-mock-dan-stub/</guid>
       <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
 import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() Mocking time.sleep Patch menggunakan decorator.
 from unittest import mock from unittest import TestCase class TestClass(TestCase): @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None) def test_func_with_time(self, patched_time_sleep): func_with_time() # Harus dipanggil 1 kali self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.
