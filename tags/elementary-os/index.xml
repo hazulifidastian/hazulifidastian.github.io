@@ -6,11 +6,7 @@
     <description>Recent content in elementary os on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Sat, 30 May 2020 16:26:37 +0700</lastBuildDate>
-    
-	<atom:link href="https://hazulifidastian.github.io/tags/elementary-os/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 30 May 2020 16:26:37 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/elementary-os/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Compiling Emacs 27 Ubuntu 18.04</title>
       <link>https://hazulifidastian.github.io/compiling-emacs-27-ubuntu-18-04/</link>

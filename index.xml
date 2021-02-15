@@ -6,11 +6,7 @@
     <description>Recent content on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Sat, 27 Jun 2020 05:29:47 +0700</lastBuildDate>
-    
-	<atom:link href="https://hazulifidastian.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 27 Jun 2020 05:29:47 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://hazulifidastian.github.io/about/</link>
@@ -31,7 +27,7 @@ Catatan:
       
       <guid>https://hazulifidastian.github.io/asdf-cheatsheet/</guid>
       <description>Cheatsheet Berikut daftar opsi yang bisa digunakan pada perintah asdf.
-Manajemen Plugin    Perintah Deskripsi     asdf list daftar plugin beserta semua paket yang terpasang   asdf plugin list all daftar seluruh plugin   asdf plugin list daftar plugin yang terpasang   asdf plugin list --urls daftar plugin yang terpasang beserta urlnya   asdf plugin add python pasang plugin python   asdf plugin remove python copot plugin python   asdf plugin update python perbarui plugin python   asdf plugin update --all perbarui seluruh plugin    Manajemen Paket    Perintah Deskripsi     asdf list all python daftar paket python yang bisa dipasang   asdf latest python versi stabil terakhir paket python   asdf latest python 3.</description>
+Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua paket yang terpasangasdf plugin list alldaftar seluruh pluginasdf plugin listdaftar plugin yang terpasangasdf plugin list --urlsdaftar plugin yang terpasang beserta urlnyaasdf plugin add pythonpasang plugin pythonasdf plugin remove pythoncopot plugin pythonasdf plugin update pythonperbarui plugin pythonasdf plugin update --allperbarui seluruh pluginManajemen Paket PerintahDeskripsiasdf list all pythondaftar paket python yang bisa dipasangasdf latest pythonversi stabil terakhir paket pythonasdf latest python 3.</description>
     </item>
     
     <item>
@@ -235,9 +231,9 @@ tentukan sendiri, misalnya alamat saya ini &lt;del&gt;hazulifidastian.my.id&lt;/
       <pubDate>Wed, 28 Jun 2017 06:00:00 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/membuat-website-gratis-github/</guid>
-      <description>&lt;p&gt;Membuat website sederhana yang menampilkan profil pribadi atau organisasi bisa
-dilakukan dengan menggunakan Github. Kita tidak perlu menyewa jasa penyedia hosting
-berbayar. Cukup dengan membuat akun Github fasilitas “hosting” web bisa digunakan
+      <description>&lt;p&gt;Membuat website sederhana yang menampilkan profil pribadi atau organisasi bisa 
+dilakukan dengan menggunakan Github. Kita tidak perlu menyewa jasa penyedia hosting 
+berbayar. Cukup dengan membuat akun Github fasilitas “hosting” web bisa digunakan 
 secara gratis.&lt;/p&gt;</description>
     </item>
     
