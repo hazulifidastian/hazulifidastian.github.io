@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
 <title>Project Workflow - Hazuli Fidastian</title>
@@ -31,18 +31,10 @@
         <nav class="nav">
   <a href="https://hazulifidastian.github.io/" class="nav-logo">
     <img src="https://hazulifidastian.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
+         width="80" 
+         height="80" 
          alt="Logo">
   </a>
-
-  <ul class="nav-links">
-    
-    <li><a href="/about/">Me</a></li>
-    
-    <li><a href="/tags/">Tags</a></li>
-    
-  </ul>
 </nav>
 
       </header>
@@ -139,28 +131,27 @@
 <ol>
 <li>
 <p>Buat folder proyek pada perangkat kerja lokal dan inisiasi menjadi repository git.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git init
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git init
 </code></pre></div></li>
 <li>
 <p>Tambah file <code>.gitignore</code> mengunakan aplikasi dari <a href="https://www.toptal.com/developers/gitignore">gitignore.io</a>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gi python,django
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gi python,django
 </code></pre></div><p>Perintah diatas akan membuat file <code>.gitignore</code> untuk python dan django.</p>
 </li>
 <li>
 <p>Lakukan commit pertama kali.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -m <span style="color:#d88200">&#34;Initial commit&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -m <span style="color:#d88200">&#34;Initial commit&#34;</span>
 </code></pre></div></li>
 <li>
 <p>Push repository lokal ke repository github, dengan sebelumnya menambahkan remote url.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add origin git@...
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add origin git@...
 git push -u origin master
 </code></pre></div></li>
 </ol>
 <h3 id="manajemen-feature">Manajemen Feature</h3>
 <p>Dari hasil analisa kebutuhan proyek, bisa ditentukan fitur-fitur apa saja yang akan dikerjakan. Dari sini bisa dibuat issue baru dengan nama fitur tersebut.</p>
-<figure>
-    <img src="/images/project-workflow/github-bagian-issue.png"
-         alt="Bagian issue github"/> <figcaption>
+<figure><img src="/images/project-workflow/github-bagian-issue.png"
+         alt="Bagian issue github"/><figcaption>
             <p>Bagian issue github</p>
         </figcaption>
 </figure>
@@ -175,9 +166,8 @@ git push -u origin master
 <li>Pilih <strong>Feature</strong> pada bagian <strong>Projects</strong>.</li>
 <li>Untuk milestone bisa dikosongkan. Atau bisa input data baru, misalnya &ldquo;Demo&rdquo;. Artinya fitur ini ditargetkan selesai untuk kebutuhan demo. Jika proyek sudah berkembang, bisa menambahkan milestone baru misalnya v1.0.0. Bebas, intinya target yang ingin dicapai.</li>
 </ul>
-<figure>
-    <img src="/images/project-workflow/github-issue-baru.png"
-         alt="Issue baru"/> <figcaption>
+<figure><img src="/images/project-workflow/github-issue-baru.png"
+         alt="Issue baru"/><figcaption>
             <p>Issue baru</p>
         </figcaption>
 </figure>
@@ -186,28 +176,26 @@ git push -u origin master
 <h4 id="pengembangan-fitur">Pengembangan Fitur</h4>
 <p>Sekarang mari mulai mengerjakan fitur tersebut.</p>
 <p>Buka bagian <strong>Projects</strong>, pilih <strong>Feature</strong>. Akan terlihat kartu kecil di kolom <strong>To do</strong>, berisi nama fitur yang akan dikerjakan. Pindahkan kartu tersebut ke kolom <strong>In progress</strong>. Ini tanda dimulai pengerjaan.</p>
-<figure>
-    <img src="/images/project-workflow/github-project-feature.png"
-         alt="Project Feature"/> <figcaption>
+<figure><img src="/images/project-workflow/github-project-feature.png"
+         alt="Project Feature"/><figcaption>
             <p>Project Feature</p>
         </figcaption>
 </figure>
 
 <p>Kembali ke perangkat personal. Buat branch baru pada <em>source code</em>. Branch ini harus berisi nama fitur, bisa juga ditambahkan dengan nomor issue fitur yang didapat dari github.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout -b feature-#1 master
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout -b feature-#1 master
 git push origin -b feature-#1
 </code></pre></div><p>Secara berkala, perubahan pada master (jika ada) harus digabungkan kembali ke branch fitur. Atasi konflik pada <em>source code</em> jika ada.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge master
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge master
 </code></pre></div><p>Secara berkala, push perubahan ke github.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin feature-#1
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin feature-#1
 </code></pre></div><h4 id="open-pull-request">Open Pull Request</h4>
 <p>Open pull request adalah permintaan untuk menggabungkan perubahan terbaru dengan branch origin/master pada github.</p>
 <ol>
 <li>
 <p>Klik menu pull request, lanjutkan dengan memilih base branch, yaitu branch master. Kemudian pilih branch fitur akan digabungkan</p>
-<figure>
-    <img src="/images/project-workflow/github-pull-request.png"
-         alt="Open pull request"/> <figcaption>
+<figure><img src="/images/project-workflow/github-pull-request.png"
+         alt="Open pull request"/><figcaption>
             <p>Open pull request</p>
         </figcaption>
 </figure>
@@ -218,9 +206,8 @@ git push origin -b feature-#1
 </li>
 <li>
 <p>Merge pull request</p>
-<figure>
-    <img src="/images/project-workflow/github-merge-pull-request.png"
-         alt="Merge pull request"/> <figcaption>
+<figure><img src="/images/project-workflow/github-merge-pull-request.png"
+         alt="Merge pull request"/><figcaption>
             <p>Merge pull request</p>
         </figcaption>
 </figure>
@@ -228,9 +215,8 @@ git push origin -b feature-#1
 </li>
 <li>
 <p>Hapus branch feature-#1</p>
-<figure>
-    <img src="/images/project-workflow/github-delete-feature-branch.png"
-         alt="Delete branch fitur"/> <figcaption>
+<figure><img src="/images/project-workflow/github-delete-feature-branch.png"
+         alt="Delete branch fitur"/><figcaption>
             <p>Delete branch fitur</p>
         </figcaption>
 </figure>
@@ -239,32 +225,30 @@ git push origin -b feature-#1
 </ol>
 <h4 id="close-issue">Close issue</h4>
 <p>Buka halaman <strong>Issue</strong>. Klik issue feature-#1 yang baru diselesaikan dan Klik tombol <strong>Close Issue</strong>.</p>
-<figure>
-    <img src="/images/project-workflow/github-close-issue.png"
-         alt="Close issue"/> <figcaption>
+<figure><img src="/images/project-workflow/github-close-issue.png"
+         alt="Close issue"/><figcaption>
             <p>Close issue</p>
         </figcaption>
 </figure>
 
 <p>Klik bagian <strong>Projects</strong>. Pindahkan kartu feature yang baru saja selesai digabungkan ke kolom <strong>Done</strong>.</p>
-<figure>
-    <img src="/images/project-workflow/github-project-issue-done.png"
-         alt="Project issue Done"/> <figcaption>
+<figure><img src="/images/project-workflow/github-project-issue-done.png"
+         alt="Project issue Done"/><figcaption>
             <p>Project issue Done</p>
         </figcaption>
 </figure>
 
 <h4 id="perbarui-repository-lokal">Perbarui Repository lokal</h4>
 <p>Setelah proses pull request selesai, perbarui repository lokal untuk menyesuaikan perubahan pada repository remote di github.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch
 </code></pre></div><p>Perintah untuk membandingkan perbedaan repository,</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --oneline master origin/master  <span style="color:#75715e"># perbedaan commit</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log --oneline master origin/master  <span style="color:#75715e"># perbedaan commit</span>
 git diff master origin/master  <span style="color:#75715e"># perbedaan kode</span>
 </code></pre></div><p>Gabungkan branch origin/master ke master.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
 git merge origin/master
 </code></pre></div><p>Hapus branch feature.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -d feature-#1
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -d feature-#1
 </code></pre></div><h3 id="manajemen-bugs">Manajemen Bugs</h3>
 <ol>
 <li>Buat issue baru. Isi input label dan project dengan nama <strong>Bugs</strong></li>
@@ -272,15 +256,15 @@ git merge origin/master
 <li>Buat branch baru pada repository lokal,</li>
 <li>Pindahkan kartu issue pada halaman <strong>Project - Bugs</strong> ke kolom <strong>In progress</strong></li>
 <li>Sesuaikan branch bug dengan perubahan pada branch master secara berkala
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge master
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge master
 </code></pre></div></li>
 <li>Push perubahan pada branch bug secara berkala
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin bug-#2
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin bug-#2
 </code></pre></div></li>
 <li>Open pull request branch master dengan bug. Review, merge dan delete branch pull request jika sudah selesai.</li>
 <li>Close issue bug #2, dan pindahkan kartu bug #2 pada halaman <strong>Projects Bugs</strong> ke kolom <strong>Done</strong></li>
 <li>Perbarui repository lokal
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch
 git log --oneline master origin/master  <span style="color:#75715e"># perbedaan commit</span>
 git diff master origin/master  <span style="color:#75715e"># perbedaan kode</span>
 git checkout master
@@ -295,15 +279,15 @@ git branch -d bug-#2
 <li>Buat branch baru pada repository lokal,</li>
 <li>Pindahkan kartu issue pada halaman <strong>Project - Hotfix</strong> ke kolom <strong>In progress</strong></li>
 <li>Sesuaikan branch hotfix dengan perubahan pada branch master secara berkala
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge master
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge master
 </code></pre></div></li>
 <li>Push perubahan pada branch hotfix secara berkala
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin hotfix-#3
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin hotfix-#3
 </code></pre></div></li>
 <li>Open pull request branch master dengan hotfix. Review, merge dan delete branch pull request jika sudah selesai.</li>
 <li>Close issue hotfix #3, dan pindahkan kartu hotfix #3 pada halaman <strong>Projects - Hotfix</strong> ke kolom <strong>Done</strong></li>
 <li>Perbarui repository lokal
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch
 git log --oneline master origin/master  <span style="color:#75715e"># perbedaan commit</span>
 git diff master origin/master  <span style="color:#75715e"># perbedaan kode</span>
 git checkout master
@@ -388,7 +372,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
 <script src="/js/night_toggle.js"></script>
 

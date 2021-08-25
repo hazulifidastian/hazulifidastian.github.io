@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
 <title>Emacs 27 dan Font Ligature - Hazuli Fidastian</title>
@@ -29,18 +29,10 @@
         <nav class="nav">
   <a href="https://hazulifidastian.github.io/" class="nav-logo">
     <img src="https://hazulifidastian.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
+         width="80" 
+         height="80" 
          alt="Logo">
   </a>
-
-  <ul class="nav-links">
-    
-    <li><a href="/about/">Me</a></li>
-    
-    <li><a href="/tags/">Tags</a></li>
-    
-  </ul>
 </nav>
 
       </header>
@@ -76,7 +68,7 @@
 <p>Font JetBrains Mono bisa di gunakan gratis. Bisa diunduh pada halaman <a href="https://www.jetbrains.com/lp/mono/">ini</a>.</p>
 <p>Pasang font pada sistem operasi kita. Untuk distro turunan Ubuntu, salin file font ke folder ~/.local/share/fonts. Selanjutnya, jalankan perintah fc-cache untuk memperbarui cache font.</p>
 <p>Ubah konfigurasi emacs menggunakan set-face-attribute.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#111">(</span><span style="color:#111">set-face-attribute</span> <span style="color:#d88200">&#39;default</span> <span style="color:#00a8c8">nil</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#111">(</span><span style="color:#111">set-face-attribute</span> <span style="color:#d88200">&#39;default</span> <span style="color:#00a8c8">nil</span>
     <span style="color:#111">:family</span> <span style="color:#d88200">&#34;JetBrains Mono&#34;</span>
     <span style="color:#111">:height</span> <span style="color:#ae81ff">105</span><span style="color:#111">)</span>
 </code></pre></div><p>Sesuaikan konfigurasi diatas dengan selera Anda di emacs.</p>
@@ -85,7 +77,7 @@
 <p>Pada halaman web font JetBrains Mono, tidak ada informasi dukungan terhadap editor emacs dan tidak ada juga informasi cara untuk mengkonfigurasinya.</p>
 <p>Saya googling. Ketemu dengan dua informasi. Pertama di stackexchange dan issue tracking font JetBrains Mono digithub.</p>
 <p>Berikut, saya mulai dengan menerapkan konfigurasi dari stackexchange<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#111">(</span><span style="color:#111">defconst</span> <span style="color:#111">jetbrains-ligature-mode--ligatures</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#111">(</span><span style="color:#111">defconst</span> <span style="color:#111">jetbrains-ligature-mode--ligatures</span>
    <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;--&gt;&#34;</span> <span style="color:#d88200">&#34;//&#34;</span> <span style="color:#d88200">&#34;/**&#34;</span> <span style="color:#d88200">&#34;/*&#34;</span> <span style="color:#d88200">&#34;*/&#34;</span> <span style="color:#d88200">&#34;&lt;!--&#34;</span> <span style="color:#d88200">&#34;:=&#34;</span> <span style="color:#d88200">&#34;-&gt;&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;&lt;-&#34;</span> <span style="color:#d88200">&#34;-&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;-&#34;</span>
      <span style="color:#d88200">&#34;&lt;=&gt;&#34;</span> <span style="color:#d88200">&#34;==&#34;</span> <span style="color:#d88200">&#34;!=&#34;</span> <span style="color:#d88200">&#34;&lt;=&#34;</span> <span style="color:#d88200">&#34;&gt;=&#34;</span> <span style="color:#d88200">&#34;=:=&#34;</span> <span style="color:#d88200">&#34;!==&#34;</span> <span style="color:#d88200">&#34;&amp;&amp;&#34;</span> <span style="color:#d88200">&#34;||&#34;</span> <span style="color:#d88200">&#34;...&#34;</span> <span style="color:#d88200">&#34;..&#34;</span>
      <span style="color:#d88200">&#34;|||&#34;</span> <span style="color:#d88200">&#34;///&#34;</span> <span style="color:#d88200">&#34;&amp;&amp;&amp;&#34;</span> <span style="color:#d88200">&#34;===&#34;</span> <span style="color:#d88200">&#34;++&#34;</span> <span style="color:#d88200">&#34;--&#34;</span> <span style="color:#d88200">&#34;=&gt;&#34;</span> <span style="color:#d88200">&#34;|&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;|&#34;</span> <span style="color:#d88200">&#34;||&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;||&#34;</span>
@@ -109,16 +101,15 @@
                                            <span style="color:#ae81ff">0</span>
                                     <span style="color:#d88200">&#39;compose-gstring-for-graphic</span><span style="color:#111">)))))</span>
 </code></pre></div><p>Hasilnya,</p>
-<figure>
-    <img src="/images/emacs-27-dan-font-ligature/jetbrains-mono-config-1.png"
-         alt="JetBrains Mono ligature"/> <figcaption>
+<figure><img src="/images/emacs-27-dan-font-ligature/jetbrains-mono-config-1.png"
+         alt="JetBrains Mono ligature"/><figcaption>
             <p>JetBrains Mono ligature</p>
         </figcaption>
 </figure>
 
 <p>Terlihat pada gambar, hasilnya tidak memuaskan. Ada beberapa karakter yang tidak tergabung sempurna. Misal, pada karakter <code>===</code>.</p>
 <p>Lanjut dengan konfigurasi kedua dari github issue<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, dengan sebelumnya menghapus konfigurasi dari stackexchange.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; Gathered from https://www.jetbrains.com/lp/mono/#ligatures</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elisp" data-lang="elisp"><span style="color:#75715e">;; Gathered from https://www.jetbrains.com/lp/mono/#ligatures</span>
 <span style="color:#75715e">;; The cheatsheat shows &#34;\/&#34; and &#34;\&#34; which I couldn&#39;t get working</span>
 <span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">alist</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#75715e">;;  -&gt; -- --&gt; -&gt;&gt; -&lt; -&lt;&lt; --- -~ -|</span>
                <span style="color:#111">(</span><span style="color:#d88200">?-</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:--\\|[-&gt;]&gt;?\\|&lt;&lt;?\\|[~|]\\)&#34;</span><span style="color:#111">)</span>
@@ -235,18 +226,16 @@
   <span style="color:#111">(</span><span style="color:#111">dolist</span> <span style="color:#111">(</span><span style="color:#111">syms</span> <span style="color:#111">ranges</span><span style="color:#111">)</span>
     <span style="color:#111">(</span><span style="color:#75af00">set-fontset-font</span> <span style="color:#00a8c8">t</span> <span style="color:#111">syms</span> <span style="color:#d88200">&#34;Symbols Nerd Font&#34;</span><span style="color:#111">)))</span>
 </code></pre></div><p>Hasilnya,</p>
-<figure>
-    <img src="/images/emacs-27-dan-font-ligature/jetbrains-mono-config-2.png"
-         alt="JetBrains Mono ligature"/> <figcaption>
+<figure><img src="/images/emacs-27-dan-font-ligature/jetbrains-mono-config-2.png"
+         alt="JetBrains Mono ligature"/><figcaption>
             <p>JetBrains Mono ligature</p>
         </figcaption>
 </figure>
 
 <p>Terlihat hasilnya lumayan baik, ada sedikit ketidaksempurnaan pada gabungan karakter ===. Namun jauh lebih baik dari pada konfigurasi sebelumnya.</p>
 <p>Beberapa saat, konfigurasi terakhir terus saya gunakan untuk aktifitas coding. Sampai saya menemukan masalah yang cukup fatal, emacs tidak merespon saat saya akses beberapa fitur tertentu.</p>
-<figure>
-    <img src="/images/emacs-27-dan-font-ligature/jetbrains-mono-config-2-hang.png"
-         alt="Emacs hang saat membuka menu flycheck"/> <figcaption>
+<figure><img src="/images/emacs-27-dan-font-ligature/jetbrains-mono-config-2-hang.png"
+         alt="Emacs hang saat membuka menu flycheck"/><figcaption>
             <p>Emacs hang saat membuka menu flycheck</p>
         </figcaption>
 </figure>
@@ -262,17 +251,15 @@
 <p>Pilihan konfigurasi kedua, <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-prettify-symbols">
 Using prettify-symbols</a>, tidak menampilkan ligature apapun.</p>
 <p>Pilihan konfigurasi keempat, <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-font-lock-keywords">Using font-lock keywords</a> (ketiga saya lewati dulu), menampilkan karakter-karakter aneh.</p>
-<figure>
-    <img src="/images/emacs-27-dan-font-ligature/fira-code-config-4.png"
-         alt="Karakter aneh ligature Fira Code"/> <figcaption>
+<figure><img src="/images/emacs-27-dan-font-ligature/fira-code-config-4.png"
+         alt="Karakter aneh ligature Fira Code"/><figcaption>
             <p>Karakter aneh ligature Fira Code</p>
         </figcaption>
 </figure>
 
 <p>Yang berhasil hanya konfigurasi ketiga, <a href="https://github.com/tonsky/FiraCode/wiki/Emacs-instructions#using-composition-char-table">Using composition char table</a>. Kombinasi ligature-nya muncul sempurna. Masalah pada flycheck dan package helm saat menggunakan font JetBrains Mono tidak saya temukan disini.</p>
-<figure>
-    <img src="/images/emacs-27-dan-font-ligature/fira-code-config-3.jpg"
-         alt="Fira Code ligature"/> <figcaption>
+<figure><img src="/images/emacs-27-dan-font-ligature/fira-code-config-3.jpg"
+         alt="Fira Code ligature"/><figcaption>
             <p>Fira Code ligature</p>
         </figcaption>
 </figure>
@@ -295,9 +282,8 @@ Using prettify-symbols</a>, tidak menampilkan ligature apapun.</p>
 <h2 id="kesimpulan">Kesimpulan</h2>
 <p>Fitur ligature pada emacs masih belum kukuh. Konfigurasi diatas adalah cara hacking untuk mengaktifkan fiturnya.</p>
 <p>Pada dokumentasi integrasi font Fira Code juga terdapat catatan kelemahan.</p>
-<figure>
-    <img src="/images/emacs-27-dan-font-ligature/fira-code-catatan.png"
-         alt="Catatan untuk implementasi Fira Code"/> <figcaption>
+<figure><img src="/images/emacs-27-dan-font-ligature/fira-code-catatan.png"
+         alt="Catatan untuk implementasi Fira Code"/><figcaption>
             <p>Catatan untuk implementasi Fira Code</p>
         </figcaption>
 </figure>
@@ -308,13 +294,13 @@ Using prettify-symbols</a>, tidak menampilkan ligature apapun.</p>
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p><a href="https://emacs.stackexchange.com/questions/55059/ligatures-with-the-jetbrains-mono-font">https://emacs.stackexchange.com/questions/55059/ligatures-with-the-jetbrains-mono-font</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://emacs.stackexchange.com/questions/55059/ligatures-with-the-jetbrains-mono-font">https://emacs.stackexchange.com/questions/55059/ligatures-with-the-jetbrains-mono-font</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p><a href="https://github.com/JetBrains/JetBrainsMono/issues/156#issuecomment-614852962">https://github.com/JetBrains/JetBrainsMono/issues/156#issuecomment-614852962</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://github.com/JetBrains/JetBrainsMono/issues/156#issuecomment-614852962">https://github.com/JetBrains/JetBrainsMono/issues/156#issuecomment-614852962</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p><a href="https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/pretty-code#emacs-mac-port-or-emacs-28">https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/pretty-code#emacs-mac-port-or-emacs-28</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/pretty-code#emacs-mac-port-or-emacs-28">https://github.com/hlissner/doom-emacs/tree/develop/modules/ui/pretty-code#emacs-mac-port-or-emacs-28</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -385,7 +371,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
 <script src="/js/night_toggle.js"></script>
 

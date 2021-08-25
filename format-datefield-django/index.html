@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
 <title>Format DateField Django - Hazuli Fidastian</title>
@@ -31,18 +31,10 @@
         <nav class="nav">
   <a href="https://hazulifidastian.github.io/" class="nav-logo">
     <img src="https://hazulifidastian.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
+         width="80" 
+         height="80" 
          alt="Logo">
   </a>
-
-  <ul class="nav-links">
-    
-    <li><a href="/about/">Me</a></li>
-    
-    <li><a href="/tags/">Tags</a></li>
-    
-  </ul>
 </nav>
 
       </header>
@@ -105,16 +97,16 @@
     <div class="article-content">
       <h2 id="format-spesifik">Format Spesifik</h2>
 <p>Menentukan format spesifik DateField pada form. Jika pengguna memasukkan tanggal diluar format tersebut, form akan menampilkan error saat validasi.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># forms.py</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># forms.py</span>
 <span style="color:#00a8c8">class</span> <span style="color:#75af00">MyForm</span><span style="color:#111">(</span><span style="color:#111">forms</span><span style="color:#f92672">.</span><span style="color:#111">ModelForm</span><span style="color:#111">):</span>
     <span style="color:#75715e"># Hanya menerima input dengan format contoh: 25/01/2019    </span>
     <span style="color:#111">tanggal</span> <span style="color:#f92672">=</span> <span style="color:#111">forms</span><span style="color:#f92672">.</span><span style="color:#111">DateField</span><span style="color:#111">(</span><span style="color:#111">input_formats</span><span style="color:#f92672">=</span><span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">-%m-%Y&#39;</span><span style="color:#111">)</span>
 </code></pre></div><p>Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># settings.py</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># settings.py</span>
 <span style="color:#111">DATE_INPUT_FORMATS</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">-%m-%Y&#39;</span>
 </code></pre></div><h2 id="penggunaan-yang-salah">Penggunaan yang Salah!</h2>
 <p>Jika <code>DATE_INPUT_FORMATS</code> tidak di set, django akan melihat konfigurasi <code>LANGUAGE_CODE</code> pada settings.py. Contoh jika file <code>settings.py</code> <code>LANGUAGE_CODE='id-id'</code> Django akan memanggil default format dari konfigurasi global <code>conf/locale/id/formats.py</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># conf/locale/id/formats.py</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># conf/locale/id/formats.py</span>
 <span style="color:#111">DATE_INPUT_FORMATS</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
     <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">-%m-%y&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">/%m/%y&#39;</span><span style="color:#111">,</span>             <span style="color:#75715e"># &#39;25-10-09&#39;, 25/10/09&#39;</span>
     <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">-%m-%Y&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">/%m/%Y&#39;</span><span style="color:#111">,</span>             <span style="color:#75715e"># &#39;25-10-2009&#39;, 25/10/2009&#39;</span>
@@ -122,7 +114,7 @@
     <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200"> %B %Y&#39;</span><span style="color:#111">,</span>                         <span style="color:#75715e"># &#39;25 October 2006&#39;</span>
 <span style="color:#111">]</span>
 </code></pre></div><p>Pada konfigurasi global <code>formats.py</code> diatas, format default yang akan digunakan setelah form berhasil disimpan dan data tanggal akan ditampilkan kembali pada input adalah indeks pertama dari <code>DATE_INPUT_FORMAT</code> yaitu,<code>'%d-%m-%y'</code>. Dan hasil yang terlihat pada input adalah <code>25-01-19</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Tanggal yang diinput
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Tanggal yang diinput
 +— — — — — — +
 | 25–01–2019 |
 + — — — — — —+
@@ -134,12 +126,12 @@ Setelah disimpan, field tanggal menampilkan informasi yang berbeda
 </code></pre></div><p>Jadi set variabel <code>DATE_INPUT_FORMATS='%d-%m-%Y'</code> untuk menampilkan format tanggal yang sama dengan yang diinputkan.</p>
 <h2 id="format-alternatif">Format Alternatif</h2>
 <p>Langkah pertama menggunakan format alternatif pada DateField adalah, properti <code>format_inputs=</code> saat inisiasi tidak perlu digunakan,</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># forms.py</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># forms.py</span>
 <span style="color:#00a8c8">class</span> <span style="color:#75af00">MyForm</span><span style="color:#111">(</span><span style="color:#111">forms</span><span style="color:#f92672">.</span><span style="color:#111">ModelForm</span><span style="color:#111">):</span>  
     <span style="color:#111">tanggal</span> <span style="color:#f92672">=</span> <span style="color:#111">forms</span><span style="color:#f92672">.</span><span style="color:#111">DateField</span><span style="color:#111">()</span>
 </code></pre></div><p>Django akan melihat format alternatif pada conf/locale/id/formats.py jika menggunakan konfigurasi <code>LANGUAGE_CODE='id-id'</code></p>
 <p>Atau bisa di set langsung pada <code>settings.py</code>,</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># settings.py</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># settings.py</span>
 <span style="color:#111">DATE_INPUT_FORMATS</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
     <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">-%m-%y&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">/%m/%y&#39;</span><span style="color:#111">,</span>             <span style="color:#75715e"># &#39;25-10-09&#39;, 25/10/09&#39;</span>
     <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">-%m-%Y&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">/%m/%Y&#39;</span><span style="color:#111">,</span>             <span style="color:#75715e"># &#39;25-10-2009&#39;, 25/10/2009&#39;</span>
@@ -147,7 +139,7 @@ Setelah disimpan, field tanggal menampilkan informasi yang berbeda
     <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200"> %B %Y&#39;</span><span style="color:#111">,</span>                         <span style="color:#75715e"># &#39;25 October 2006&#39;</span>
 <span style="color:#111">]</span>
 </code></pre></div><p>Ganti prioritas format dengan menggeser indexnya,</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># settings.py</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># settings.py</span>
 <span style="color:#111">DATE_INPUT_FORMATS</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
     <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">-%m-%Y&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">/%m/%Y&#39;</span><span style="color:#111">,</span>             <span style="color:#75715e"># &#39;25-10-2009&#39;, 25/10/2009&#39;</span>
     <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">-%m-%y&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;</span><span style="color:#d88200">%d</span><span style="color:#d88200">/%m/%y&#39;</span><span style="color:#111">,</span>             <span style="color:#75715e"># &#39;25-10-09&#39;, 25/10/09&#39;</span>
@@ -156,7 +148,7 @@ Setelah disimpan, field tanggal menampilkan informasi yang berbeda
 <span style="color:#111">]</span>
 </code></pre></div><p>Diatas, prioritas saat input dan output data DateField diganti dari <code>%d-%m-%y</code> menjadi <code>%d-%m-%Y</code> (perhatikan huruf Y diakhir format).</p>
 <p>Maka input pada browser akan menampilkan informasi tanggal yang sama.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Tanggal yang diinput
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Tanggal yang diinput
 +— — — — — — +
 | 25–01–2019 |
 + — — — — — —+
@@ -167,7 +159,7 @@ Setelah disimpan, field tanggal akan menampilkan informasi yang sama.
 + — — — — — —+
 </code></pre></div><p><strong><em>Catatan</em></strong>:</p>
 <p>Pada format alternatif, form akan melakukan validasi tanggal sesuai dengan kemungkinan format yang akan muncul pada setting variabel <code>DATE_INPUT_FORMATS</code></p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Input tanggal pada browser menerima alternatif format
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plaintext" data-lang="plaintext">Input tanggal pada browser menerima alternatif format
 berdasarkan konfigurasi DATE_INPUT_FORMATS
 
 Tanggal yang diinput
@@ -251,7 +243,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
 <script src="/js/night_toggle.js"></script>
 

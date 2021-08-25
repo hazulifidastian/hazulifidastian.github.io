@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
 <title>Compiling Emacs 27 Ubuntu 18.04 - Hazuli Fidastian</title>
@@ -29,18 +29,10 @@
         <nav class="nav">
   <a href="https://hazulifidastian.github.io/" class="nav-logo">
     <img src="https://hazulifidastian.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
+         width="80" 
+         height="80" 
          alt="Logo">
   </a>
-
-  <ul class="nav-links">
-    
-    <li><a href="/about/">Me</a></li>
-    
-    <li><a href="/tags/">Tags</a></li>
-    
-  </ul>
 </nav>
 
       </header>
@@ -70,7 +62,7 @@
       <p>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan
 instalasi beberapa tools dan library.</p>
 <p><strong>Compile &amp; Install</strong></p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu</span>
 sudo apt purge emacs26 emacs26-common
 
 <span style="color:#75715e"># Install tools dan library</span>
@@ -94,13 +86,13 @@ emacs --version
 <p>Setelah instalasi selesai, file konfigurasi emacs perlu di <strong>build</strong>
 ulang menggunakan emacs versi terbaru. Saya menggunakan doom
 emacs, perintahnya:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~/.emacs.d/bin/doom sync
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~/.emacs.d/bin/doom sync
 ~/.emacs.d/bin/doom build
 </code></pre></div><p>Jika tidak di <strong>rebuild</strong> ulang, emacs akan menampilkan interface standard.
 Hasil kompilasi konfigurasi menggunakan Emacs 26 tidak bisa digunakan pada Emacs 27.</p>
 <p><strong>Uninstall</strong></p>
 <p>Jika ingin menhapus instalasi, ketik perintah:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make uninstall
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make uninstall
 </code></pre></div>
 
       
@@ -171,7 +163,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
 <script src="/js/night_toggle.js"></script>
 

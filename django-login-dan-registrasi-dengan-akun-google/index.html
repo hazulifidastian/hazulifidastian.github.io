@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
 <title>Django: Login dan Registrasi dengan Akun Google - Hazuli Fidastian</title>
@@ -31,18 +31,10 @@
         <nav class="nav">
   <a href="https://hazulifidastian.github.io/" class="nav-logo">
     <img src="https://hazulifidastian.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
+         width="80" 
+         height="80" 
          alt="Logo">
   </a>
-
-  <ul class="nav-links">
-    
-    <li><a href="/about/">Me</a></li>
-    
-    <li><a href="/tags/">Tags</a></li>
-    
-  </ul>
 </nav>
 
       </header>
@@ -130,33 +122,33 @@
 <h2 id="dependency-management">Dependency Management</h2>
 <p>Sebelum membuat proyek django, kita perlu memasang paket django terlebih dahulu.</p>
 <p>Saya menggunakan <a href="https://python-poetry.org/">poetry</a> sebagai <em>dependency management</em>. Selain poetry, anda bisa menggunakan <code>pip</code> atau <code>pipenv</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir django-login-register
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir django-login-register
 <span style="color:#111">cd</span> django-login-register
 poetry init
 </code></pre></div><p>Perintah <code>poetry init</code> membantu anda membuat file <strong>pyproject.toml</strong>. Saat menjalankan perintah tersebut diterminal akan muncul beberapa pertanyaan yang perlu anda isi.</p>
 <p>Untuk beberapa pertanyaan, jawab dengan isian seperti dibawah ini.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Compatible Python versions <span style="color:#f92672">[</span>^3.7<span style="color:#f92672">]</span>:  ~<span style="color:#f92672">=</span>3.7
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Compatible Python versions <span style="color:#f92672">[</span>^3.7<span style="color:#f92672">]</span>:  ~<span style="color:#f92672">=</span>3.7
 
 Would you like to define your main dependencies interactively? <span style="color:#f92672">(</span>yes/no<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>yes<span style="color:#f92672">]</span> no
 Would you like to define your development dependencies interactively? <span style="color:#f92672">(</span>yes/no<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>yes<span style="color:#f92672">]</span> no
 </code></pre></div><p>Buka file <strong>pyproject.toml</strong>, dan tambahkan paket django seperti dibawah ini.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#111">[</span><span style="color:#75af00">tool</span><span style="color:#111">.</span><span style="color:#75af00">poetry</span><span style="color:#111">.</span><span style="color:#75af00">dependencies</span><span style="color:#111">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#111">[</span><span style="color:#75af00">tool</span><span style="color:#111">.</span><span style="color:#75af00">poetry</span><span style="color:#111">.</span><span style="color:#75af00">dependencies</span><span style="color:#111">]</span>
 <span style="color:#75af00">python</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;~=3.7&#34;</span>
 <span style="color:#75af00">django</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;~=2.2&#34;</span>
 </code></pre></div><p>Selanjutnya kita bisa perintahkan poetry untuk mengunduh dan memasang paket yang sudah didefiniskan pada file pyproject.toml.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry install
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry install
 </code></pre></div><p>Poetry akan memasang paket django dengan versi <code>2.2.*</code>. Pada saat tutorial ini saya buat, paket django yang terpasang adalah versi <code>2.2.13</code>.</p>
 <p>Kenapa menggunakan paket django versi <code>2.2.0</code>?</p>
 <p>Paket tersebut merupakan versi stabil dan LTS (Long Time Support). Artinya versi tersebut akan didukung untuk waktu yang lama. Bugs pada kode, dan kelemahan keamanan akan terus diperbaiki hingga waktu dukungannya telah selesai.</p>
 <h2 id="membuat-proyek-django">Membuat Proyek Django</h2>
 <p>Untuk membuat proyek django menggunakan paket django yang kita pasang sebelumnya, masuk terlebih dahulu ke <em>virtual enviroment</em> yang sudah disiapkan oleh poetry.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry shell
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry shell
 </code></pre></div><p>Didalam <em>virtual environment</em>, aplikasi dan paket pada proyek anda terisolasi hanya didirektori tersebut. Versi python beserta paketnya bisa terpisah dengan versi python yang ada pada sistem operasi.</p>
 <p>Lanjutkan dengan membuat proyek django.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">django-admin startproject django_login_register .
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">django-admin startproject django_login_register .
 </code></pre></div><p>Jangan ketinggalan tanda titik pada akhir perintah diatas! <code>django-admin startproject</code> akan membuat proyek django dan menginisiasi struktur file dan direktori proyek.</p>
 <p>Perintah <code>tree</code> pada linux akan menampilkan struktur file dan direktori.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree
 .
 ├── django_login_register
 │   ├── __init__.py
@@ -174,12 +166,12 @@ Would you like to define your development dependencies interactively? <span styl
 <p>Lumayan repot.</p>
 <h3 id="membuat-app-users">Membuat App users</h3>
 <p>Untuk membuat model user sendiri, kita bisa mulai dengan membuat <code>app</code> django terlebih dahulu.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Pastikan anda sudah masuk ke virtual enviroment poetry.</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Pastikan anda sudah masuk ke virtual enviroment poetry.</span>
 <span style="color:#75715e"># Jika belum, ketik &#34;poetry shell&#34; terlebih dahulu</span>
 
 ./manage.py startapp users
 </code></pre></div><p>Django akan membuat struktur direktori baru dengan nama users.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree
 .
 ├── users
 │   ├── admin.py
@@ -194,7 +186,7 @@ Would you like to define your development dependencies interactively? <span styl
 │   ├── ...
 </code></pre></div><h3 id="membuat-model-customuser">Membuat model CustomUser</h3>
 <p>Kita akan merubah file <strong>models.py</strong>, dan membuat model user baru.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">django.db</span> <span style="color:#f92672">import</span> <span style="color:#111">models</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">django.db</span> <span style="color:#f92672">import</span> <span style="color:#111">models</span>
 <span style="color:#f92672">from</span> <span style="color:#111">django.contrib.auth.base_user</span> <span style="color:#f92672">import</span> <span style="color:#111">BaseUserManager</span>
 <span style="color:#f92672">from</span> <span style="color:#111">django.contrib.auth.models</span> <span style="color:#f92672">import</span> <span style="color:#111">AbstractUser</span>
 <span style="color:#f92672">from</span> <span style="color:#111">django.utils.translation</span> <span style="color:#f92672">import</span> <span style="color:#111">ugettext_lazy</span> <span style="color:#00a8c8">as</span> <span style="color:#111">_</span>
@@ -222,22 +214,22 @@ Would you like to define your development dependencies interactively? <span styl
         <span style="color:#d88200">&#34;&#34;&#34;
 </span><span style="color:#d88200">        Buat dan simpan superuser dengan email dan password
 </span><span style="color:#d88200">        &#34;&#34;&#34;</span>
-        <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">setdefault</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_staff&#39;</span><span style="color:#111">,</span> <span style="color:#111">True</span><span style="color:#111">)</span>
-        <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">setdefault</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_superuser&#39;</span><span style="color:#111">,</span> <span style="color:#111">True</span><span style="color:#111">)</span>
-        <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">setdefault</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_active&#39;</span><span style="color:#111">,</span> <span style="color:#111">True</span><span style="color:#111">)</span>
+        <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">setdefault</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_staff&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">True</span><span style="color:#111">)</span>
+        <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">setdefault</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_superuser&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">True</span><span style="color:#111">)</span>
+        <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">setdefault</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_active&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">True</span><span style="color:#111">)</span>
 
-        <span style="color:#00a8c8">if</span> <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_staff&#39;</span><span style="color:#111">)</span> <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#111">True</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_staff&#39;</span><span style="color:#111">)</span> <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#00a8c8">True</span><span style="color:#111">:</span>
             <span style="color:#00a8c8">raise</span> <span style="color:#75af00">ValueError</span><span style="color:#111">(</span><span style="color:#111">_</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Superuser must have is_staff=True.&#39;</span><span style="color:#111">))</span>
-        <span style="color:#00a8c8">if</span> <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_superuser&#39;</span><span style="color:#111">)</span> <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#111">True</span><span style="color:#111">:</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#111">extra_fields</span><span style="color:#f92672">.</span><span style="color:#111">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;is_superuser&#39;</span><span style="color:#111">)</span> <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#00a8c8">True</span><span style="color:#111">:</span>
             <span style="color:#00a8c8">raise</span> <span style="color:#75af00">ValueError</span><span style="color:#111">(</span><span style="color:#111">_</span><span style="color:#111">(</span><span style="color:#d88200">&#39;Superuser must have is_superuser=True.&#39;</span><span style="color:#111">))</span>
         <span style="color:#00a8c8">return</span> <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">create_user</span><span style="color:#111">(</span><span style="color:#111">email</span><span style="color:#111">,</span> <span style="color:#111">password</span><span style="color:#111">,</span> <span style="color:#f92672">**</span><span style="color:#111">extra_fields</span><span style="color:#111">)</span>
 
 
 <span style="color:#00a8c8">class</span> <span style="color:#75af00">CustomUser</span><span style="color:#111">(</span><span style="color:#111">AbstractUser</span><span style="color:#111">):</span>
     <span style="color:#d88200">&#34;Custom user&#34;</span>
-    <span style="color:#111">username</span> <span style="color:#f92672">=</span> <span style="color:#111">None</span>
-    <span style="color:#111">email</span> <span style="color:#f92672">=</span> <span style="color:#111">models</span><span style="color:#f92672">.</span><span style="color:#111">EmailField</span><span style="color:#111">(</span><span style="color:#111">_</span><span style="color:#111">(</span><span style="color:#d88200">&#34;email address&#34;</span><span style="color:#111">),</span> <span style="color:#111">unique</span><span style="color:#f92672">=</span><span style="color:#111">True</span><span style="color:#111">)</span>
-    <span style="color:#111">alamat</span> <span style="color:#f92672">=</span> <span style="color:#111">models</span><span style="color:#f92672">.</span><span style="color:#111">CharField</span><span style="color:#111">(</span><span style="color:#111">blank</span><span style="color:#f92672">=</span><span style="color:#111">True</span><span style="color:#111">,</span> <span style="color:#111">max_length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">255</span><span style="color:#111">)</span>
+    <span style="color:#111">username</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">None</span>
+    <span style="color:#111">email</span> <span style="color:#f92672">=</span> <span style="color:#111">models</span><span style="color:#f92672">.</span><span style="color:#111">EmailField</span><span style="color:#111">(</span><span style="color:#111">_</span><span style="color:#111">(</span><span style="color:#d88200">&#34;email address&#34;</span><span style="color:#111">),</span> <span style="color:#111">unique</span><span style="color:#f92672">=</span><span style="color:#00a8c8">True</span><span style="color:#111">)</span>
+    <span style="color:#111">alamat</span> <span style="color:#f92672">=</span> <span style="color:#111">models</span><span style="color:#f92672">.</span><span style="color:#111">CharField</span><span style="color:#111">(</span><span style="color:#111">blank</span><span style="color:#f92672">=</span><span style="color:#00a8c8">True</span><span style="color:#111">,</span> <span style="color:#111">max_length</span><span style="color:#f92672">=</span><span style="color:#ae81ff">255</span><span style="color:#111">)</span>
 
     <span style="color:#111">USERNAME_FIELD</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;email&#34;</span>
     <span style="color:#111">REQUIRED_FIELDS</span> <span style="color:#f92672">=</span> <span style="color:#111">[]</span>
@@ -256,7 +248,7 @@ Would you like to define your development dependencies interactively? <span styl
 </ul>
 <p>Agar model <code>CustomUser</code> bisa tampil pada halaman admin django, tambahkan
 kode berikut pada file <strong>admin.py</strong>,</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">django.contrib</span> <span style="color:#f92672">import</span> <span style="color:#111">admin</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">django.contrib</span> <span style="color:#f92672">import</span> <span style="color:#111">admin</span>
 <span style="color:#f92672">from</span> <span style="color:#111">users.models</span> <span style="color:#f92672">import</span> <span style="color:#111">CustomUser</span>
 
 
@@ -267,7 +259,7 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 
 <span style="color:#111">admin</span><span style="color:#f92672">.</span><span style="color:#111">site</span><span style="color:#f92672">.</span><span style="color:#111">register</span><span style="color:#111">(</span><span style="color:#111">CustomUser</span><span style="color:#111">,</span> <span style="color:#111">CustomUserAdmin</span><span style="color:#111">)</span>
 </code></pre></div><p>Kemudian tambahkan konfigurasi standar model user pada file <strong>settings.py</strong> dan daftarkan app users ke dalam variable <code>INSTALLED_APPS</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">INSTALLED_APPS</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">INSTALLED_APPS</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
     <span style="color:#f92672">...</span>
     <span style="color:#d88200">&#34;users&#34;</span><span style="color:#111">,</span>
 <span style="color:#111">]</span>
@@ -275,24 +267,23 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 <span style="color:#111">AUTH_USER_MODEL</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;users.CustomUser&#34;</span>
 </code></pre></div><h3 id="migrasi">Migrasi</h3>
 <p>Fitur migrasi pada django saat dijalankan pertama kali akan membuat database beserta tabel-tabel yang dibutuhkan.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py makemigrations
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py makemigrations
 ./manage.py migrate
 </code></pre></div><p>Jika kita tidak menentukan pilihan database, django akan menggunakan sqlite sebagai databasenya.</p>
 <p>Model CustomUser diatas akan menjadi tabel sendiri pada database. Dan tabel ini akan dijadikan sebagaia tempat penyimpanan data pengguna aplikasi.</p>
 <h3 id="menjalankan-django">Menjalankan Django</h3>
 <p>Sekarang anda bisa menjalankan django dari terminal dan menampilkan aplikasi pada browser.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py runserver
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py runserver
 </code></pre></div><p>Buka peramban web, dan ketikkan <code>http://127.0.0.1:8000</code>.</p>
-<figure>
-    <img src="/images/django-login-register/django-homepage.png"
-         alt="Halaman Depan Django"/> <figcaption>
+<figure><img src="/images/django-login-register/django-homepage.png"
+         alt="Halaman Depan Django"/><figcaption>
             <p>Halaman Depan Django</p>
         </figcaption>
 </figure>
 
 <h3 id="membuat-superuser">Membuat superuser</h3>
 <p>Perintah dibawah akan memandu anda untuk membuat superuser. Superuser adalah akun yang digunakan untuk login ke halaman admin (<code>http://127.0.0.1/admin/</code>)</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py createsuperuser
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py createsuperuser
 </code></pre></div><h2 id="manajemen-user-dengan-django-allauth">Manajemen User Dengan django-allauth</h2>
 <p>Django memang memiliki fitur untuk mempermudah perbuatan database user, tapi tidak memiliki fitur untuk manajemen login dan registrasi.</p>
 <p>Kita akan menggunakan paket <a href="https://github.com/pennersr/django-allauth">django-allauth</a> untuk memenuhi kebutuhan tersebut.</p>
@@ -306,10 +297,10 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 </ul>
 <p>Provider yang terhubung dengan django-allauth sangat banyak. Daftar nya bisa dilihat <a href="https://django-allauth.readthedocs.io/en/latest/overview.html#supported-providers">supported providers</a>.</p>
 <h3 id="pemasangan-django-allauth">Pemasangan django-allauth</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry add django-allauth
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">poetry add django-allauth
 </code></pre></div><h3 id="konfigurasi-django-allauth">Konfigurasi django-allauth</h3>
 <p>Konfigurasi file <strong>settings.py</strong>,</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">INSTALLED_APPS</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">INSTALLED_APPS</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
     <span style="color:#f92672">...</span>
     <span style="color:#75715e"># App ini dibutuhkan</span>
     <span style="color:#d88200">&#39;django.contrib.auth&#39;</span><span style="color:#111">,</span>
@@ -355,30 +346,30 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 <span style="color:#111">}</span>
 
 <span style="color:#75715e"># Konfigurasi lebih lengkap bisa dilihat di https://django-allauth.readthedocs.io/en/latest/configuration.html</span>
-<span style="color:#111">ACCOUNT_EMAIL_REQUIRED</span> <span style="color:#f92672">=</span> <span style="color:#111">True</span>
-<span style="color:#111">ACCOUNT_UNIQUE_EMAIL</span> <span style="color:#f92672">=</span> <span style="color:#111">True</span>
+<span style="color:#111">ACCOUNT_EMAIL_REQUIRED</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">True</span>
+<span style="color:#111">ACCOUNT_UNIQUE_EMAIL</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">True</span>
 
 <span style="color:#75715e"># Wajib diisi seperti ini, menyesuaikan</span>
 <span style="color:#75715e"># dengan model CustomUser yang kita buat</span>
 <span style="color:#75715e"># tanpa username</span>
-<span style="color:#111">ACCOUNT_USER_MODEL_USERNAME_FIELD</span> <span style="color:#f92672">=</span> <span style="color:#111">None</span>
-<span style="color:#111">ACCOUNT_USERNAME_REQUIRED</span> <span style="color:#f92672">=</span> <span style="color:#111">False</span>
+<span style="color:#111">ACCOUNT_USER_MODEL_USERNAME_FIELD</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">None</span>
+<span style="color:#111">ACCOUNT_USERNAME_REQUIRED</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">False</span>
 
-<span style="color:#111">ACCOUNT_EMAIL_VERIFICATION</span> <span style="color:#f92672">=</span> <span style="color:#111">True</span>
-<span style="color:#111">ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE</span> <span style="color:#f92672">=</span> <span style="color:#111">False</span>
-<span style="color:#111">ACCOUNT_SESSION_REMEMBER</span> <span style="color:#f92672">=</span> <span style="color:#111">True</span>
+<span style="color:#111">ACCOUNT_EMAIL_VERIFICATION</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">True</span>
+<span style="color:#111">ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">False</span>
+<span style="color:#111">ACCOUNT_SESSION_REMEMBER</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">True</span>
 <span style="color:#111">ACCOUNT_AUTHENTICATION_METHOD</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;email&#39;</span>
 
 <span style="color:#111">LOGIN_REDIRECT_URL</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;/&#39;</span>
 </code></pre></div><p>Pada file <strong>urls.py</strong>, kita akan mengarahkan path <code>/accounts/</code> untuk ditangani oleh django-allauth.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">urlpatterns</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">urlpatterns</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
     <span style="color:#f92672">...</span>
     <span style="color:#111">path</span><span style="color:#111">(</span><span style="color:#d88200">&#39;accounts/&#39;</span><span style="color:#111">,</span> <span style="color:#111">include</span><span style="color:#111">(</span><span style="color:#d88200">&#39;allauth.urls&#39;</span><span style="color:#111">)),</span>
     <span style="color:#f92672">...</span>
 <span style="color:#111">]</span>
 </code></pre></div><h3 id="migrasi-1">Migrasi</h3>
 <p>Setelah pemasangan dan konfigurasi selesai, jalankan perintah migrasi untuk penyesuaian database.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py migrate
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py migrate
 </code></pre></div><h3 id="url-baru">Url Baru</h3>
 <p>Saat ini aplikasi memiliki url baru yang diawali dengan <code>/accounts/...</code>. Penambahan <code>path('accounts/', include('allauth.urls'))</code> pada <code>urls.py</code> yang membuat aplikasi memiliki url baru.</p>
 <p>Beberapa url yang bisa anda eksplorasi:</p>
@@ -387,9 +378,8 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 <li><code>/accounts/signup/</code>, untuk registrasi</li>
 <li><code>/accounts/password/reset/</code>, untuk setel ulang password</li>
 </ul>
-<figure>
-    <img src="/images/django-login-register/login.png"
-         alt="Halaman Login"/> <figcaption>
+<figure><img src="/images/django-login-register/login.png"
+         alt="Halaman Login"/><figcaption>
             <p>Halaman Login</p>
         </figcaption>
 </figure>
@@ -397,15 +387,15 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 <h3 id="memasang-halaman-depan">Memasang Halaman Depan</h3>
 <p>Halaman depan akan kita isi dengan menu registrasi, login, logout dan informasi user yang sedang login.</p>
 <p>Untuk itu, kita perlu memuat app baru dengan nama home.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py startapp home
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./manage.py startapp home
 </code></pre></div><p>Buka file <strong>home/views.py</strong></p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">django.views.generic</span> <span style="color:#f92672">import</span> <span style="color:#111">TemplateView</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">django.views.generic</span> <span style="color:#f92672">import</span> <span style="color:#111">TemplateView</span>
 
 
 <span style="color:#00a8c8">class</span> <span style="color:#75af00">IndexView</span><span style="color:#111">(</span><span style="color:#111">TemplateView</span><span style="color:#111">):</span>
     <span style="color:#111">template_name</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;home/index.html&#39;</span>
 </code></pre></div><p>Buat file <strong>home/templates/home/index.html</strong>, dan isikan dengan,</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-django" data-lang="django"><span style="color:#75715e">{%</span> <span style="color:#00a8c8">extends</span> <span style="color:#d88200">&#39;base.html&#39;</span> <span style="color:#75715e">%}</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-django" data-lang="django"><span style="color:#75715e">{%</span> <span style="color:#00a8c8">extends</span> <span style="color:#d88200">&#39;base.html&#39;</span> <span style="color:#75715e">%}</span>
 
 <span style="color:#75715e">{%</span> <span style="color:#00a8c8">block</span> <span style="color:#111">content</span> <span style="color:#75715e">%}</span>
     <span style="color:#75715e">{%</span> <span style="color:#00a8c8">if</span> <span style="color:#111">request.user.is_authenticated</span> <span style="color:#75715e">%}</span>
@@ -415,7 +405,7 @@ kode berikut pada file <strong>admin.py</strong>,</p>
     <span style="color:#75715e">{%</span> <span style="color:#00a8c8">endif</span> <span style="color:#75715e">%}</span>
 <span style="color:#75715e">{%</span> <span style="color:#00a8c8">endblock</span> <span style="color:#75715e">%}</span>
 </code></pre></div><p>Buka file <strong>django-login-register/urls.py</strong></p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">...</span>
 <span style="color:#f92672">from</span> <span style="color:#111">home.views</span> <span style="color:#f92672">import</span> <span style="color:#111">IndexView</span>
 
 <span style="color:#111">urlpatterns</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
@@ -423,7 +413,7 @@ kode berikut pada file <strong>admin.py</strong>,</p>
     <span style="color:#f92672">...</span>
 <span style="color:#111">]</span>
 </code></pre></div><p>Tambahkan app home pada <code>INSTALLED_APPS</code> file <strong>django-login-register/settings.py</strong></p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">INSTALLED_APPS</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">INSTALLED_APPS</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
     <span style="color:#f92672">...</span>
     <span style="color:#d88200">&#39;home&#39;</span><span style="color:#111">,</span>
     <span style="color:#f92672">...</span>
@@ -441,9 +431,8 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 <li>Isi dengan nama project</li>
 <li>Klik Create</li>
 </ul>
-<figure>
-    <img src="/images/django-login-register/google-01-create-project.png"
-         alt="Create Project"/> <figcaption>
+<figure><img src="/images/django-login-register/google-01-create-project.png"
+         alt="Create Project"/><figcaption>
             <p>Create Project</p>
         </figcaption>
 </figure>
@@ -454,9 +443,8 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 <li>Lengkapi bidang isian Application name: django-login-register</li>
 <li>Klik Save</li>
 </ul>
-<figure>
-    <img src="/images/django-login-register/google-02-oauth-consent.png"
-         alt="OAuth Consent"/> <figcaption>
+<figure><img src="/images/django-login-register/google-02-oauth-consent.png"
+         alt="OAuth Consent"/><figcaption>
             <p>OAuth Consent</p>
         </figcaption>
 </figure>
@@ -473,16 +461,15 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 </ul>
 </li>
 </ul>
-<figure>
-    <img src="/images/django-login-register/google-03-client.png"
-         alt="Create OAuth Client ID"/> <figcaption>
+<figure><img src="/images/django-login-register/google-03-client.png"
+         alt="Create OAuth Client ID"/><figcaption>
             <p>Create OAuth Client ID</p>
         </figcaption>
 </figure>
 
 <h4 id="konfigurasi-django">Konfigurasi Django</h4>
 <p>File <strong>settings.py</strong></p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">SOCIALACCOUNT_PROVIDERS</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#111">SOCIALACCOUNT_PROVIDERS</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span>
     <span style="color:#d88200">&#39;google&#39;</span><span style="color:#111">:</span> <span style="color:#111">{</span>
         <span style="color:#d88200">&#39;APP&#39;</span><span style="color:#111">:</span> <span style="color:#111">{</span>
             <span style="color:#d88200">&#39;client_id&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;isi dengan client id yang anda dapatkan&#39;</span><span style="color:#111">,</span>
@@ -598,7 +585,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
 <script src="/js/night_toggle.js"></script>
 

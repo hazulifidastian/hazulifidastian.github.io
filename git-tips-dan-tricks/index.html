@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
 <title>Git Tips dan Tricks - Hazuli Fidastian</title>
@@ -29,18 +29,10 @@
         <nav class="nav">
   <a href="https://hazulifidastian.github.io/" class="nav-logo">
     <img src="https://hazulifidastian.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
+         width="80" 
+         height="80" 
          alt="Logo">
   </a>
-
-  <ul class="nav-links">
-    
-    <li><a href="/about/">Me</a></li>
-    
-    <li><a href="/tags/">Tags</a></li>
-    
-  </ul>
 </nav>
 
       </header>
@@ -68,13 +60,13 @@
 
     <div class="article-content">
       <h3 id="caching-password">Caching Password</h3>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global credential.helper cache
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global credential.helper cache
 git push origin master
 </code></pre></div><p>Username dan password akan dicache, <code>git push</code> selanjutnya tidak akan diminta lagi.</p>
 <p>Referensi: <a href="https://help.github.com/en/github/using-git/caching-your-github-password-in-git#platform-linux">Caching your GitHub password in Git</a></p>
 <h3 id="melihat-revisi-commit">Melihat Revisi Commit</h3>
 <p>Melihat revisi commit pada log.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Menggunakan range id commit.</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Menggunakan range id commit.</span>
 git log --oneline 6ff1760..05474ff
 
 <span style="color:#75715e"># Menggunakan range nama branch.</span>
@@ -86,7 +78,7 @@ git log --oneline master..origin/master
 </ul>
 <h3 id="melihat-revisi-kode">Melihat Revisi Kode</h3>
 <p>Melihat revisi kode.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Menggunakan range id commit.</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Menggunakan range id commit.</span>
 git diff 6ff1760..05474ff
 
 <span style="color:#75715e"># Menggunakan range nama branch.</span>
@@ -163,7 +155,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
 <script src="/js/night_toggle.js"></script>
 

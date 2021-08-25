@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 
 
 <title>Lightline dan winwidth Nvim - Hazuli Fidastian</title>
@@ -29,18 +29,10 @@
         <nav class="nav">
   <a href="https://hazulifidastian.github.io/" class="nav-logo">
     <img src="https://hazulifidastian.github.io/images/logo.png" 
-         width="50" 
-         height="50" 
+         width="80" 
+         height="80" 
          alt="Logo">
   </a>
-
-  <ul class="nav-links">
-    
-    <li><a href="/about/">Me</a></li>
-    
-    <li><a href="/tags/">Tags</a></li>
-    
-  </ul>
 </nav>
 
       </header>
@@ -83,7 +75,7 @@ Terutama ketika window memiliki ruang horizontal yang sempit.</p>
 <h3 id="konfigurasi">Konfigurasi</h3>
 <p>Ketika kita menginisiasi lightline, kita akan mengatur variabel tipe dictionaries dengan
 nama <code>g:lightline</code>, dan dengan key <code>component_function</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-viml" data-lang="viml"><span style="color:#00a8c8">let</span> <span style="color:#75af00">g</span>:<span style="color:#75af00">lightline</span> <span style="color:#111">=</span> {<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-viml" data-lang="viml"><span style="color:#00a8c8">let</span> <span style="color:#75af00">g</span>:<span style="color:#75af00">lightline</span> <span style="color:#111">=</span> {<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>    \   <span style="color:#d88200">&#39;active&#39;</span>: {<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>    \       <span style="color:#d88200">&#39;left&#39;</span>:[ [ <span style="color:#d88200">&#39;...&#39;</span> ]<span style="color:#111">,</span> [<span style="color:#d88200">&#39;gitbranch&#39;</span> <span style="color:#111">,</span> <span style="color:#d88200">&#39;...&#39;</span>]<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>    \     ]<span style="color:#111">,</span><span style="color:#960050;background-color:#1e0010">
@@ -107,7 +99,7 @@ maka fungsi <code>LightlineCocStatus</code> yang akan dieksekusi.</p>
 <p>Pada contoh pengaturan diatas, kita sebenarnya membuat fungsi sendiri dengan nama, <code>LightlineFugitiveHead</code>,
 dan <code>LightlineCocStatus</code>. Didalam fungsi inilah diatur mekanisme untuk menampilkan
 informasi pada statusline.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-viml" data-lang="viml"><span style="color:#75715e">&#34; Lebar minimal window</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-viml" data-lang="viml"><span style="color:#75715e">&#34; Lebar minimal window</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#00a8c8">let</span> <span style="color:#75af00">g</span>:<span style="color:#75af00">minwidth</span> <span style="color:#111">=</span> <span style="color:#ae81ff">120</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#00a8c8">function</span><span style="color:#111">!</span> <span style="color:#75af00">LightlineFugitiveHead</span><span style="color:#111">()</span> <span style="color:#75af00">abort</span><span style="color:#960050;background-color:#1e0010">
@@ -148,10 +140,10 @@ Bisa disesuaikan dengan kebutuhan sendiri dan bagian statusline yang lain.</p>
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p><a href="https://github.com/itchyny/lightline.vim">https://github.com/itchyny/lightline.vim</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://github.com/itchyny/lightline.vim">https://github.com/itchyny/lightline.vim</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p><a href="https://github.com/neoclide/coc.nvim">https://github.com/neoclide/coc.nvim</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://github.com/neoclide/coc.nvim">https://github.com/neoclide/coc.nvim</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -225,7 +217,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
 
 <script src="/js/night_toggle.js"></script>
 
