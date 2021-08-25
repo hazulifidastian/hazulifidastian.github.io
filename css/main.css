@@ -334,15 +334,12 @@ ol {
 .archive-item-link {
   font-family: "Lora", sans-serif;
   font-weight: 700;
-  display: inline-block;
+  display: inline;
   text-decoration: none;
   font-size: 22px;
   color: inherit;
   padding: 5px 0 0;
   border-bottom: none;
-}
-
-.archive-item-term-count {
 }
 
 .archive-item-link:hover {
