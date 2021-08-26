@@ -2,26 +2,24 @@
 @font-face {
   font-family: "Lora";
   font-style: normal;
-  font-weight: 400;
-  src: local("Lora Regular"), local("Lora-Regular"),
+  font-weight: normal;
+  src: local('Lora'), local('Lora-Regular'),
     url("../fonts/Lora-Regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/Lora-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/Lora-Regular.woff") format("woff");
   block-timeout: 0.3;
-  swap-timeout: 0; // Never swap
+  swap-timeout: 0;
 }
 
 /* roboto-regular - latin */
 @font-face {
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
-  src: local("Roboto"), local("Roboto"),
+  font-weight: normal;
+  src: local('Roboto'), local('Roboto-Regular'),
     url("../fonts/Roboto-Regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/Roboto-Regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/Roboto-Regular.woff") format("woff");
   block-timeout: 0.3;
-  swap-timeout: 0; // Never swap
+  swap-timeout: 0;
 }
 
 html,
@@ -77,7 +75,7 @@ img {
 }
 
 .header {
-  padding: 3em 0 1em;
+  padding: 3em 15px 1em 15px;
   position: relative;
 }
 
@@ -164,6 +162,25 @@ img {
   margin-bottom: 0;
 }
 
+.nav-about .socmed svg {
+  border-radius: 50%;
+  margin: auto 5px;
+  overflow: visible;
+  padding: 6px;
+  background-color: #17181e;
+  color: white;
+}
+
+.nav-about .socmed a {
+  color: inherit;
+}
+
+.nav-about .socmed a:hover > svg {
+  border-radius: 50%;
+  background-color: #ffce07;
+  transition: background 150ms ease;
+  color: inherit;
+}
 
 .nav-links {
   margin: 0;
@@ -384,7 +401,7 @@ ol {
 
 .archive-item {
   margin: 0 0;
-  padding: 0 0 1em;
+  padding: 0 0 1.7em;
 }
 
 .archive-item-link {
@@ -404,16 +421,9 @@ ol {
   transition: all 0.3s ease-out;
 }
 
-.archive-description-link {
-  color: inherit;
-  text-decoration: none !important;
-}
-
-.archive-description-link:hover {
-  border-bottom: 2px solid #ffce07;
-  box-shadow: inset 0 -3px 0 #ffce07;
-  background: transparent;
-  transition: background 150ms ease;
+.archive-description p {
+  margin: auto 0;
+  line-height: 25px;
 }
 
 .archive-meta {
