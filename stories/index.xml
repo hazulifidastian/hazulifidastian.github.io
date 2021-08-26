@@ -6,7 +6,17 @@
     <description>Recent content in Stories on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Sat, 27 Jun 2020 05:29:47 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/stories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Aug 2021 21:06:01 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/stories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Strategi Merge Branch Git yang Konflik</title>
+      <link>https://hazulifidastian.github.io/strategi-merge-branch-git-yang-konflik/</link>
+      <pubDate>Thu, 26 Aug 2021 21:06:01 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.github.io/strategi-merge-branch-git-yang-konflik/</guid>
+      <description>Saya termasuk orang yang paranoid saat melihat dua branch git yang akan digabungkan terdapat konflik. Sudah terbayang kesulitan untuk memilih, memilah bagian kode mana yang akan dipakai. Apalagi jika banyak file yang konflik ditambah selisih waktu antar branch juga panjang.
+Untuk mempermudah proses pengabungan, saya menggunakan feature magit emacs magit-file-checkout. Saya akan mengambil satu persatu file yang konflik dari branch master ke branch feature atau bugs, dan saya selesaikan konfliknya. Saya biasa menggunakan magit emacs sebagai interface untuk menjalankan perintah git, jika ada waktu saya akan tuliskan juga perintah-perintah jika menggunakan plain git.</description>
+    </item>
+    
     <item>
       <title>asdf Cheatsheet</title>
       <link>https://hazulifidastian.github.io/asdf-cheatsheet/</link>
