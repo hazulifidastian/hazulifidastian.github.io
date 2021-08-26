@@ -42,7 +42,7 @@
       },
       "datePublished": "2020-06-24",
       "description": "",
-      "wordCount":  84 ,
+      "wordCount":  121 ,
       "mainEntityOfPage": "True",
       "dateModified": "2020-06-24",
       "image": {
@@ -174,7 +174,10 @@ git diff master..origin/master
 <li><a href="https://git-scm.com/docs/git-diff">git-diff</a></li>
 <li><a href="https://git-scm.com/docs/gitrevisions">gitrevision</a></li>
 </ul>
-
+<h3 id="force-push-yang-aman">Force Push yang Aman</h3>
+<p>Force push dengan metode ini memastikan tidak akan menimpa/overwrite pekerjaan tim yang lain pada branch remote. Jika branch remote sudah ada commit yang lain force push akan dibatalkan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push --force-with-lease origin master
+</code></pre></div>
 
       
 <div class="article-tags">
