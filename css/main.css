@@ -153,6 +153,17 @@ img {
   text-decoration: none;
 }
 
+.nav-about {
+  display: block;
+  margin: 15px auto;
+  max-width: 500px;
+}
+
+.nav-about .me {
+  font-size: 33px;
+  margin-bottom: 0;
+}
+
 
 .nav-links {
   margin: 0;
