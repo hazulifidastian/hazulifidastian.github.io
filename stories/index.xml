@@ -8,11 +8,11 @@
     <language>id-id</language>
     <lastBuildDate>Fri, 27 Aug 2021 01:27:41 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/stories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hari dan Bulan Dalam Bahasa Indonesia Pada Framework Hugo</title>
-      <link>https://hazulifidastian.github.io/hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</link>
+      <title>Menampilkan Hari dan Bulan dalam Bahasa Indonesia pada Framework Hugo</title>
+      <link>https://hazulifidastian.github.io/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</link>
       <pubDate>Fri, 27 Aug 2021 01:27:41 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</guid>
+      <guid>https://hazulifidastian.github.io/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</guid>
       <description>File data File data/locale/id/day.yaml.
 Monday: Senin Tuesday: Selasa Wednesday: Rabu Thursday: Kamis Friday: Jum&amp;#39;at Saturday: Sabtu Sunday: Minggu File data/locale/id/month.yaml.
 - Januari - Februari - Maret - April - Mei - Juni - Juli - Agustus - September - Oktober - November - Desember Konfigurasi File config.toml
