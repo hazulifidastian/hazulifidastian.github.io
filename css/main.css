@@ -255,7 +255,7 @@ img {
 }
 
 .article-content ul,
-ol {
+.article-content ol {
   margin: 15px 0 25px;
 }
 
@@ -358,10 +358,6 @@ ol {
   overflow: hidden;
 
   transition: max-height 0.25s ease-in-out;
-}
-
-#TableOfContents ul {
-  margin-bottom: 0;
 }
 
 #TableOfContents a {

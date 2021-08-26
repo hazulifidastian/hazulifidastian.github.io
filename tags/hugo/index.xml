@@ -6,7 +6,20 @@
     <description>Recent content in hugo on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Tue, 25 Feb 2020 22:31:24 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Aug 2021 01:27:41 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hari dan Bulan Dalam Bahasa Indonesia Pada Framework Hugo</title>
+      <link>https://hazulifidastian.github.io/hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</link>
+      <pubDate>Fri, 27 Aug 2021 01:27:41 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.github.io/hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</guid>
+      <description>File data File data/locale/id/day.yaml.
+Monday: Senin Tuesday: Selasa Wednesday: Rabu Thursday: Kamis Friday: Jum&amp;#39;at Saturday: Sabtu Sunday: Minggu File data/locale/id/month.yaml.
+- Januari - Februari - Maret - April - Mei - Juni - Juli - Agustus - September - Oktober - November - Desember Konfigurasi File config.toml
+[params] defaultContentLanguage = &amp;#34;id&amp;#34; Template Partial File layouts/partials/date.html.
+{{ if eq .Context.Site.Params.defaultContentLanguage &amp;#34;en&amp;#34;}} {{ .Dt.Format &amp;#34;Monday, 02 Jan 2006&amp;#34; }} {{ else }} {{ $days := index (index .</description>
+    </item>
+    
     <item>
       <title>Night Mode</title>
       <link>https://hazulifidastian.github.io/night-mode/</link>
