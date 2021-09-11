@@ -26,7 +26,8 @@ Catatan:
       <pubDate>Sat, 11 Sep 2021 17:52:02 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/apps/sha1-hash-generator/</guid>
-      <description>  Apa itu hash1 dan SHA12 TEKS MD5 HASH Salin ke Clipboard    document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });      https://id.wikipedia.org/wiki/Hash ↩︎
+      <description>  Apa itu hash1 dan SHA12 TEKS MD5 HASH Salin ke Clipboard
+   document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });      https://id.wikipedia.org/wiki/Hash ↩︎
  https://en.wikipedia.org/wiki/SHA-1 ↩︎
   </description>
     </item>
@@ -37,7 +38,8 @@ Catatan:
       <pubDate>Sat, 11 Sep 2021 17:09:08 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/apps/md5-hash-generator/</guid>
-      <description>  Apa itu hash1 dan MD52 TEKS MD5 HASH Salin ke Clipboard    document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });      https://id.wikipedia.org/wiki/Hash ↩︎
+      <description>  Apa itu hash1 dan MD52 TEKS MD5 HASH Salin ke Clipboard
+   document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });      https://id.wikipedia.org/wiki/Hash ↩︎
  https://id.wikipedia.org/wiki/MD5 ↩︎
   </description>
     </item>
@@ -50,7 +52,7 @@ Catatan:
       <guid>https://hazulifidastian.github.io/apps/whatsapp-link/</guid>
       <description>Membuat link WhatsApp Me dengan menggabungkan api WhatsApp yang digunakan untuk menginisiasi pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang akan dikirimkan.
 Aplikasi ini dibuat reaktif menggunakan AlpineJs. Otomatis memantau perubahan pada input nomor telepondan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.
-NOMOR TELEPONPESANLINKSalin ke ClipboardSalin teks diatas untuk dijadikan url.document.addEventListener(&#39;alpine:init&#39;, () = {Alpine.</description>
+NOMOR TELEPONPESANLINKSalin ke ClipboardSalin teks diatas untuk dijadikan url.9 &amp;&amp; message !== &#39;&#39;&#34;LINK YANG BISA DIKLIK</description>
     </item>
     
     <item>
