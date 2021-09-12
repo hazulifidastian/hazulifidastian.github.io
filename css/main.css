@@ -428,7 +428,7 @@ img {
   font-size: 16px;
 }
 
-.archive-section {
+.archive-section, .article-section {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -436,7 +436,12 @@ img {
   line-height: 1;
 }
 
-.archive-section a {
+.article-section {
+  justify-content: center;
+}
+
+.archive-section a,
+.article-section a {
   height: 23px;
   padding: 0 7px;
   margin: 0 5px 10px 0;

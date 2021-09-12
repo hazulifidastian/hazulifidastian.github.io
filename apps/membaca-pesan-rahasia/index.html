@@ -86,6 +86,10 @@
 
 <main class="content" role="main">
   <article class="article">
+    <div class="article-section">
+      <a class="article-section" href="https://hazulifidastian.github.io/apps/">apps</a>
+    </div>
+
     <h1 class="article-title">Membaca Pesan Rahasia</h1>
 
     
@@ -132,10 +136,13 @@
         <option value="rabbit">Rabbit</option>
         <option value="rc4drop">RC4Drop</option>
     </select>
-    <label for="encrypted">PESAN TERENKRIPSI</label>
-    <textarea x-model="encrypted" name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi"></textarea>
+
     <label for="secret">KUNCI RAHASIA</label>
     <input x-model="secret" type="secret" id="secret" placeholder="Kunci rahasia">
+
+    <label for="encrypted">PESAN TERENKRIPSI</label>
+    <textarea x-model="encrypted" name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi"></textarea>
+
     <p class="small">Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.</p>
     <label for="message">PESAN</label>
     <textarea 

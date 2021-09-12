@@ -2,14 +2,15 @@
   margin-top: 30px;
 }
 
-#app input, select, textarea {
+#app input, #app select, #app textarea {
   display: block;
   width: 295px;
   margin: 0px 0px 20px;
   padding: 15px 15px;
-  border: 1px solid #414455;
+  border: 1px solid #ccc;
   font-family: Roboto;
   font-size: 17px;
+  background: none;
 }
 
 #app select {
@@ -31,7 +32,7 @@
 
 
 @media (min-width: 500px) {
-  #app input, textarea {
+  #app input, #app textarea {
     width: 395px;
   }
 
@@ -41,7 +42,7 @@
 }
 
 @media (min-width: 600px) {
-  #app input, textarea {
+  #app input, #app textarea {
     width: 495px;
   }
 
@@ -52,7 +53,7 @@
 
 
 @media (min-width: 700px) {
-  #app input, textarea {
+  #app input, #app textarea {
     width: 595px;
   }
 
@@ -62,7 +63,7 @@
 }
 
 @media (min-width: 800px) {
-  #app input, textarea {
+  #app input, #app textarea {
     width: 668px;
   }
 
