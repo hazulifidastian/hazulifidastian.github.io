@@ -41,17 +41,6 @@ Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua
     </item>
     
     <item>
-      <title>asdf</title>
-      <link>https://hazulifidastian.github.io/notes/asdf/</link>
-      <pubDate>Fri, 26 Jun 2020 10:24:41 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/notes/asdf/</guid>
-      <description>asdf adalah command line interface (CLI) yang digunakan untuk memanajemeni beberapa atau banyak versi bahasa pemrograman. asdf seperti pyenv pada python, rbenv pada ruby atau nvm pada nodejs tetapi all in one. asdf bisa menangani semuanya, khususnya bahasa pemrograman populer.
-Pada perkembangannya, asdf tidak hanya digunakan untuk bahasa pemgrograman saja. Ada plugin yang bisa memanajemeni database seperti mysql dan postgresql, redis, bahkan text editor neovim.
-Kenapa asdf? Menurut dokumentasi resminya, ini adalah alasan kenapa menggunakan asdf:</description>
-    </item>
-    
-    <item>
       <title>Git Tips dan Tricks</title>
       <link>https://hazulifidastian.github.io/notes/git-tips-dan-tricks/</link>
       <pubDate>Wed, 24 Jun 2020 16:22:19 +0700</pubDate>
@@ -78,18 +67,6 @@ from unittest import mock from unittest import TestCase class TestClass(TestCase
     </item>
     
     <item>
-      <title>Emacs 27 dan Font Ligature</title>
-      <link>https://hazulifidastian.github.io/notes/emacs-27-dan-font-ligature/</link>
-      <pubDate>Thu, 18 Jun 2020 23:15:25 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/notes/emacs-27-dan-font-ligature/</guid>
-      <description>Font ligature adalah, karakter spesial pada font yang menggabungkan beberapa karakter berdekatan menjadi satu.
-Ligature pada awalnya digunakan pada media cetak tradisional untuk menghemat ruang. Dalam pemrograman, ligature digunakan untuk menyederhanakan dan memperindah kode.
-Emacs 27 pada dasarnya tidak mendukung ligature secara khusus, tapi ada beberapa cara untuk mensiasatinya. Tentunya kita perlu menerapkan konfigurasi khusus.
-Editor lain, seperti milik JetBrains, VS Code mendukung ligature out of the box. Hanya perlu mengaktifkan opsi mau pakai fitur ligature.</description>
-    </item>
-    
-    <item>
       <title>Magit Cheatsheet</title>
       <link>https://hazulifidastian.github.io/notes/magit-cheatsheet/</link>
       <pubDate>Mon, 15 Jun 2020 20:39:51 +0700</pubDate>
@@ -98,17 +75,6 @@ Editor lain, seperti milik JetBrains, VS Code mendukung ligature out of the box.
       <description>Saya menggunakan Emacs 27, dengan framework konfigurasi Doom. Standarnya, Doom menggunakan emulasi vim menggunakan evil-mode. Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya tidak akan terlepas dari evil-mode.
 Bagi Anda vanilla user, saya memasukkan nama command/perintah untuk melengkapi shortcut key. Agar, jika Anda tidak mengenali key-nya, Anda bisa mengakses perintahnya melalui shortcut M-x.
 Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-status.</description>
-    </item>
-    
-    <item>
-      <title>Django: Login dan Registrasi dengan Akun Google</title>
-      <link>https://hazulifidastian.github.io/notes/django-login-dan-registrasi-dengan-akun-google/</link>
-      <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/notes/django-login-dan-registrasi-dengan-akun-google/</guid>
-      <description>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.
-Fitur login dan registrasi penguna disini saya bagi menjadi dua. Pertama, pengguna bisa melakukan registrasi dan login menggunakan akun email dan sosial media. Disini saya menggunakan akun google/gmail, facebook, dan twitter. Kemudian kedua, pengguna bisa registrasi manual seperti biasa menggunakan form berisi username dan password.
-Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user dan integrasi dengan akun google.</description>
     </item>
     
     <item>
@@ -166,30 +132,6 @@ Instalasi aplikasi baru juga tidak bisa.</description>
       <description>Format Spesifik Menentukan format spesifik DateField pada form. Jika pengguna memasukkan tanggal diluar format tersebut, form akan menampilkan error saat validasi.
 # forms.py class MyForm(forms.ModelForm): # Hanya menerima input dengan format contoh: 25/01/2019  tanggal = forms.DateField(input_formats=&amp;#39;%d-%m-%Y&amp;#39;) Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.
 # settings.py DATE_INPUT_FORMATS = &amp;#39;%d-%m-%Y&amp;#39; Penggunaan yang Salah! Jika DATE_INPUT_FORMATS tidak di set, django akan melihat konfigurasi LANGUAGE_CODE pada settings.py. Contoh jika file settings.</description>
-    </item>
-    
-    <item>
-      <title>Custom Domain Github</title>
-      <link>https://hazulifidastian.github.io/notes/custom-domain-github/</link>
-      <pubDate>Wed, 28 Jun 2017 08:00:00 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/notes/custom-domain-github/</guid>
-      <description>&lt;p&gt;Setelah membuat website menggunakan Github, website bisa dibuatkan domain khusus.
-Artinya, setiap kita ingin akses ke website tidak perlu menggunakan domain standar
-bawaan dari Github hazulifidastian.github.io. Tapi bisa menggunakan alamat yang kita
-tentukan sendiri, misalnya alamat saya ini &lt;del&gt;hazulifidastian.my.id&lt;/del&gt; hazulifidastian.id.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Membuat Website Gratis Github</title>
-      <link>https://hazulifidastian.github.io/notes/membuat-website-gratis-github/</link>
-      <pubDate>Wed, 28 Jun 2017 06:00:00 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/notes/membuat-website-gratis-github/</guid>
-      <description>&lt;p&gt;Membuat website sederhana yang menampilkan profil pribadi atau organisasi bisa 
-dilakukan dengan menggunakan Github. Kita tidak perlu menyewa jasa penyedia hosting 
-berbayar. Cukup dengan membuat akun Github fasilitas “hosting” web bisa digunakan 
-secara gratis.&lt;/p&gt;</description>
     </item>
     
   </channel>
