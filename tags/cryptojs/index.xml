@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>app on Hazuli Fidastian</title>
-    <link>https://hazulifidastian.github.io/tags/app/</link>
-    <description>Recent content in app on Hazuli Fidastian</description>
+    <title>CryptoJS on Hazuli Fidastian</title>
+    <link>https://hazulifidastian.github.io/tags/cryptojs/</link>
+    <description>Recent content in CryptoJS on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Sun, 12 Sep 2021 04:48:55 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 04:48:55 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/cryptojs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Membaca Pesan Rahasia</title>
       <link>https://hazulifidastian.github.io/apps/membaca-pesan-rahasia/</link>
@@ -55,17 +55,6 @@ PESAN TERENKRIPSI  Salin ke Clipboard
  https://alpinejs.dev/ ↩︎
  https://github.com/brix/crypto-js ↩︎
      document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });   </description>
-    </item>
-    
-    <item>
-      <title>WhatsApp Link</title>
-      <link>https://hazulifidastian.github.io/apps/whatsapp-link/</link>
-      <pubDate>Mon, 06 Sep 2021 14:07:21 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/apps/whatsapp-link/</guid>
-      <description>Membuat link WhatsApp Me dengan menggabungkan api WhatsApp yang digunakan untuk menginisiasi pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang akan dikirimkan.
-Aplikasi ini dibuat reaktif menggunakan AlpineJs1. Otomatis memantau perubahan pada input nomor telepondan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.
-NOMOR TELEPONPESANLINKSalin ke ClipboardSalin teks diatas untuk dijadikan url.9 &amp;&amp; message !== &#39;&#39;&#34;LINK YANG BISA DIKLIK</description>
     </item>
     
   </channel>
