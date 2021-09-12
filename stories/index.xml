@@ -6,77 +6,7 @@
     <description>Recent content in Stories on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Fri, 27 Aug 2021 01:27:41 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/stories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Menampilkan Hari dan Bulan dalam Bahasa Indonesia pada Framework Hugo</title>
-      <link>https://hazulifidastian.github.io/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</link>
-      <pubDate>Fri, 27 Aug 2021 01:27:41 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</guid>
-      <description>File data File data/locale/id/day.yaml.
-Monday: Senin Tuesday: Selasa Wednesday: Rabu Thursday: Kamis Friday: Jum&amp;#39;at Saturday: Sabtu Sunday: Minggu File data/locale/id/month.yaml.
-- Januari - Februari - Maret - April - Mei - Juni - Juli - Agustus - September - Oktober - November - Desember Konfigurasi File config.toml
-[params] defaultContentLanguage = &amp;#34;id&amp;#34; Template Partial File layouts/partials/date.html.
-{{ if eq .Context.Site.Params.defaultContentLanguage &amp;#34;en&amp;#34;}} {{ .Dt.Format &amp;#34;Monday, 02 Jan 2006&amp;#34; }} {{ else }} {{ $days := index (index .</description>
-    </item>
-    
-    <item>
-      <title>Strategi Merge Branch Git yang Konflik</title>
-      <link>https://hazulifidastian.github.io/strategi-merge-branch-git-yang-konflik/</link>
-      <pubDate>Thu, 26 Aug 2021 21:06:01 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/strategi-merge-branch-git-yang-konflik/</guid>
-      <description>Saya termasuk orang yang paranoid saat melihat dua branch git yang akan digabungkan terdapat banyak konflik. Sudah terbayang kesulitan untuk memilih, memilah bagian kode mana yang akan dipakai. Apalagi jika file yang konflik ada banyak, ditambah selisih waktu antar branch juga panjang.
-Jika menggunakan metode biasa, misalnya dengan langsung merge branch feature atau bugs ke branch master, saya cenderung panik terus bingung mau mulai dari mana karena melihat banyaknya file yang konflik.</description>
-    </item>
-    
-    <item>
-      <title>asdf Cheatsheet</title>
-      <link>https://hazulifidastian.github.io/asdf-cheatsheet/</link>
-      <pubDate>Sat, 27 Jun 2020 05:29:47 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/asdf-cheatsheet/</guid>
-      <description>Cheatsheet Berikut daftar opsi yang bisa digunakan pada perintah asdf.
-Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua paket yang terpasangasdf plugin list alldaftar seluruh pluginasdf plugin listdaftar plugin yang terpasangasdf plugin list --urlsdaftar plugin yang terpasang beserta urlnyaasdf plugin add pythonpasang plugin pythonasdf plugin remove pythoncopot plugin pythonasdf plugin update pythonperbarui plugin pythonasdf plugin update --allperbarui seluruh pluginManajemen Paket PerintahDeskripsiasdf list all pythondaftar paket python yang bisa dipasangasdf latest pythonversi stabil terakhir paket pythonasdf latest python 3.</description>
-    </item>
-    
-    <item>
-      <title>asdf</title>
-      <link>https://hazulifidastian.github.io/asdf/</link>
-      <pubDate>Fri, 26 Jun 2020 10:24:41 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/asdf/</guid>
-      <description>asdf adalah command line interface (CLI) yang digunakan untuk memanajemeni beberapa atau banyak versi bahasa pemrograman. asdf seperti pyenv pada python, rbenv pada ruby atau nvm pada nodejs tetapi all in one. asdf bisa menangani semuanya, khususnya bahasa pemrograman populer.
-Pada perkembangannya, asdf tidak hanya digunakan untuk bahasa pemgrograman saja. Ada plugin yang bisa memanajemeni database seperti mysql dan postgresql, redis, bahkan text editor neovim.
-Kenapa asdf? Menurut dokumentasi resminya, ini adalah alasan kenapa menggunakan asdf:</description>
-    </item>
-    
-    <item>
-      <title>Git Tips dan Tricks</title>
-      <link>https://hazulifidastian.github.io/git-tips-dan-tricks/</link>
-      <pubDate>Wed, 24 Jun 2020 16:22:19 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/git-tips-dan-tricks/</guid>
-      <description>Caching Password git config --global credential.helper cache git push origin master Username dan password akan dicache, git push selanjutnya tidak akan diminta lagi.
-Referensi: Caching your GitHub password in Git
-Melihat Revisi Commit Melihat revisi commit pada log.
-# Menggunakan range id commit. git log --oneline 6ff1760..05474ff # Menggunakan range nama branch. git log --oneline master..origin/master Referensi:
- git-log gitrevision  Melihat Revisi Kode Melihat revisi kode.
-# Menggunakan range id commit.</description>
-    </item>
-    
-    <item>
-      <title>Python Mock dan Stub</title>
-      <link>https://hazulifidastian.github.io/python-mock-dan-stub/</link>
-      <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/python-mock-dan-stub/</guid>
-      <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
-import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() Mocking time.sleep Patch menggunakan decorator.
-from unittest import mock from unittest import TestCase class TestClass(TestCase): @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None) def test_func_with_time(self, patched_time_sleep): func_with_time() # Harus dipanggil 1 kali self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.
-from unittest import mock from unittest import TestCase class TestClass(TestCase): def test_func_with_time(self): with mock.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 22 Jun 2020 22:58:05 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/stories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitHub Webhooks dan Python Deployment</title>
       <link>https://hazulifidastian.github.io/github-webhooks-dan-python-deployment/</link>
@@ -101,73 +31,6 @@ Aplikasi JIRA termasuk yang pernah saya coba, tapi hanya sekedar mencoba.</descr
     </item>
     
     <item>
-      <title>Emacs 27 dan Font Ligature</title>
-      <link>https://hazulifidastian.github.io/emacs-27-dan-font-ligature/</link>
-      <pubDate>Thu, 18 Jun 2020 23:15:25 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/emacs-27-dan-font-ligature/</guid>
-      <description>Font ligature adalah, karakter spesial pada font yang menggabungkan beberapa karakter berdekatan menjadi satu.
-Ligature pada awalnya digunakan pada media cetak tradisional untuk menghemat ruang. Dalam pemrograman, ligature digunakan untuk menyederhanakan dan memperindah kode.
-Emacs 27 pada dasarnya tidak mendukung ligature secara khusus, tapi ada beberapa cara untuk mensiasatinya. Tentunya kita perlu menerapkan konfigurasi khusus.
-Editor lain, seperti milik JetBrains, VS Code mendukung ligature out of the box. Hanya perlu mengaktifkan opsi mau pakai fitur ligature.</description>
-    </item>
-    
-    <item>
-      <title>Magit Cheatsheet</title>
-      <link>https://hazulifidastian.github.io/magit-cheatsheet/</link>
-      <pubDate>Mon, 15 Jun 2020 20:39:51 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/magit-cheatsheet/</guid>
-      <description>Saya menggunakan Emacs 27, dengan framework konfigurasi Doom. Standarnya, Doom menggunakan emulasi vim menggunakan evil-mode. Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya tidak akan terlepas dari evil-mode.
-Bagi Anda vanilla user, saya memasukkan nama command/perintah untuk melengkapi shortcut key. Agar, jika Anda tidak mengenali key-nya, Anda bisa mengakses perintahnya melalui shortcut M-x.
-Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-status.</description>
-    </item>
-    
-    <item>
-      <title>Django: Login dan Registrasi dengan Akun Google</title>
-      <link>https://hazulifidastian.github.io/django-login-dan-registrasi-dengan-akun-google/</link>
-      <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/django-login-dan-registrasi-dengan-akun-google/</guid>
-      <description>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.
-Fitur login dan registrasi penguna disini saya bagi menjadi dua. Pertama, pengguna bisa melakukan registrasi dan login menggunakan akun email dan sosial media. Disini saya menggunakan akun google/gmail, facebook, dan twitter. Kemudian kedua, pengguna bisa registrasi manual seperti biasa menggunakan form berisi username dan password.
-Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user dan integrasi dengan akun google.</description>
-    </item>
-    
-    <item>
-      <title>Compiling Emacs 27 Ubuntu 18.04</title>
-      <link>https://hazulifidastian.github.io/compiling-emacs-27-ubuntu-18-04/</link>
-      <pubDate>Sat, 30 May 2020 16:26:37 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/compiling-emacs-27-ubuntu-18-04/</guid>
-      <description>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan instalasi beberapa tools dan library.
-Compile &amp;amp; Install
-# Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz tar -xzf emacs-27.0.91.tar.gz # Konfigurasi dan install emacs cd emacs-27.0.91 .</description>
-    </item>
-    
-    <item>
-      <title>Modul PHP Doom Emacs</title>
-      <link>https://hazulifidastian.github.io/modul-php-doom-emacs/</link>
-      <pubDate>Thu, 14 May 2020 00:48:53 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/modul-php-doom-emacs/</guid>
-      <description>Konfigurasi Doom Emacs init.el Jelajah file konfigurasi dengan shorcut SPC f p, kemudian pilih file init.el. Aktifkan beberapa modul dengan cara menghilangkan tanda komentar ;;.
- Modul syntax, ada pada grup :checkers. Modul lsp, ada pada grup :tools. Modul (php +lsp), tambahan +lsp. Ada pada grup :lang.  package.el Aktifkan package phpactor pada file konfigurasi package.el. Buka dengan shorcut SPC f p.
-(package! phpactor) Sinkronisasi Konfigurasi Doom Emacs Ketikkan perintah ~/.</description>
-    </item>
-    
-    <item>
-      <title>Lightline dan winwidth Nvim</title>
-      <link>https://hazulifidastian.github.io/lightline-dan-winwidth-nvim/</link>
-      <pubDate>Mon, 09 Mar 2020 11:51:46 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/lightline-dan-winwidth-nvim/</guid>
-      <description>Pembahasan kali ini adalah tentang statusline di Nvim. Statusline adalah, garis horizontal yang ada dibagian bawah nvim. Ia menampilkan status dari buffer/file yang sedang aktif.
-Statusline bisa menampilkan informasi dalam beberapa bagian. Bisa berisi mode vim, nama file, direktori dari file, posisi kursor, dll.
-Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin Lightline1. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa dengan mudah mengatur tema untuk memper-indah tampilan status.</description>
-    </item>
-    
-    <item>
       <title>Suspendable App</title>
       <link>https://hazulifidastian.github.io/suspendable-app/</link>
       <pubDate>Mon, 02 Mar 2020 06:25:49 +0700</pubDate>
@@ -176,19 +39,6 @@ Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan 
       <description>Saya akan membagi aplikasi menjadi dua bagian. Pertama adalah bagian yang terus-menerus memantau input yang diberikan user melalui keyboard. Bagian ini akan aktif bersamaan dengan berjalannya aplikasi. Saya akan membuat fungsi yang merespon terhadap kombinasi shortcut keyboard tertentu.
 Kedua adalah bagian yang menjalankan pekerjaan utama dalam aplikasi. Bagian ini bisa dikontrol, suspend (ditunda pekerjaannya), resume (dilanjutkan kembali) dan dihentikan.
 Error yang terjadi dibagian kedua tidak boleh mempengaruhi bagian pertama. Dan bagian pertama memiliki kontrol penuh terhadap bagian kedua.</description>
-    </item>
-    
-    <item>
-      <title>Fish Shell Upgrade Error</title>
-      <link>https://hazulifidastian.github.io/fish-shell-upgrade-error/</link>
-      <pubDate>Sat, 29 Feb 2020 10:12:40 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/fish-shell-upgrade-error/</guid>
-      <description>Fish shell gagal di upgrade karena issue https://github.com/fish-shell/fish-shell/issues/5822. Package manager gagal me-replace file autocompletion rg.fish.
-Penyebabnya adalah, pernah instalasi aplikasi ripgrep menggunakan cargo. Cargo adalah package manager bawaan dari bahasa pemograman rust.
-Cargo menjadikan user rigprep sebagai pemilik file rg.fish. Sehingga package manager bawaan OS gagal me-replace file tersebut.
-Efek errornya, saya tidak bisa masuk ke terminal. Masuk console melalui shortcut Ctrl-Alt-F1 pun tidak bisa.
-Instalasi aplikasi baru juga tidak bisa.</description>
     </item>
     
     <item>
@@ -210,41 +60,6 @@ Saya termasuk yang sering menggunakan antarmuka mode malam ini. Memang karena se
       
       <guid>https://hazulifidastian.github.io/halo-pelican/</guid>
       <description>&lt;p&gt;Website ini sebelumnya dibuat menggunakan pure html dan framework css skeleton. Fiturnya hanya berisi informasi personal statis dan jarang diperbarui.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Format DateField Django</title>
-      <link>https://hazulifidastian.github.io/format-datefield-django/</link>
-      <pubDate>Tue, 22 Jan 2019 07:00:00 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/format-datefield-django/</guid>
-      <description>Format Spesifik Menentukan format spesifik DateField pada form. Jika pengguna memasukkan tanggal diluar format tersebut, form akan menampilkan error saat validasi.
-# forms.py class MyForm(forms.ModelForm): # Hanya menerima input dengan format contoh: 25/01/2019  tanggal = forms.DateField(input_formats=&amp;#39;%d-%m-%Y&amp;#39;) Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.
-# settings.py DATE_INPUT_FORMATS = &amp;#39;%d-%m-%Y&amp;#39; Penggunaan yang Salah! Jika DATE_INPUT_FORMATS tidak di set, django akan melihat konfigurasi LANGUAGE_CODE pada settings.py. Contoh jika file settings.</description>
-    </item>
-    
-    <item>
-      <title>Custom Domain Github</title>
-      <link>https://hazulifidastian.github.io/custom-domain-github/</link>
-      <pubDate>Wed, 28 Jun 2017 08:00:00 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/custom-domain-github/</guid>
-      <description>&lt;p&gt;Setelah membuat website menggunakan Github, website bisa dibuatkan domain khusus.
-Artinya, setiap kita ingin akses ke website tidak perlu menggunakan domain standar
-bawaan dari Github hazulifidastian.github.io. Tapi bisa menggunakan alamat yang kita
-tentukan sendiri, misalnya alamat saya ini &lt;del&gt;hazulifidastian.my.id&lt;/del&gt; hazulifidastian.id.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Membuat Website Gratis Github</title>
-      <link>https://hazulifidastian.github.io/membuat-website-gratis-github/</link>
-      <pubDate>Wed, 28 Jun 2017 06:00:00 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/membuat-website-gratis-github/</guid>
-      <description>&lt;p&gt;Membuat website sederhana yang menampilkan profil pribadi atau organisasi bisa 
-dilakukan dengan menggunakan Github. Kita tidak perlu menyewa jasa penyedia hosting 
-berbayar. Cukup dengan membuat akun Github fasilitas “hosting” web bisa digunakan 
-secara gratis.&lt;/p&gt;</description>
     </item>
     
   </channel>

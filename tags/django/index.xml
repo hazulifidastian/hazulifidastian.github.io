@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 13 Jun 2020 04:55:23 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Django: Login dan Registrasi dengan Akun Google</title>
-      <link>https://hazulifidastian.github.io/django-login-dan-registrasi-dengan-akun-google/</link>
+      <link>https://hazulifidastian.github.io/notes/django-login-dan-registrasi-dengan-akun-google/</link>
       <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/django-login-dan-registrasi-dengan-akun-google/</guid>
+      <guid>https://hazulifidastian.github.io/notes/django-login-dan-registrasi-dengan-akun-google/</guid>
       <description>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.
 Fitur login dan registrasi penguna disini saya bagi menjadi dua. Pertama, pengguna bisa melakukan registrasi dan login menggunakan akun email dan sosial media. Disini saya menggunakan akun google/gmail, facebook, dan twitter. Kemudian kedua, pengguna bisa registrasi manual seperti biasa menggunakan form berisi username dan password.
 Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user dan integrasi dengan akun google.</description>
@@ -20,10 +20,10 @@ Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user 
     
     <item>
       <title>Format DateField Django</title>
-      <link>https://hazulifidastian.github.io/format-datefield-django/</link>
+      <link>https://hazulifidastian.github.io/notes/format-datefield-django/</link>
       <pubDate>Tue, 22 Jan 2019 07:00:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/format-datefield-django/</guid>
+      <guid>https://hazulifidastian.github.io/notes/format-datefield-django/</guid>
       <description>Format Spesifik Menentukan format spesifik DateField pada form. Jika pengguna memasukkan tanggal diluar format tersebut, form akan menampilkan error saat validasi.
 # forms.py class MyForm(forms.ModelForm): # Hanya menerima input dengan format contoh: 25/01/2019  tanggal = forms.DateField(input_formats=&amp;#39;%d-%m-%Y&amp;#39;) Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.
 # settings.py DATE_INPUT_FORMATS = &amp;#39;%d-%m-%Y&amp;#39; Penggunaan yang Salah! Jika DATE_INPUT_FORMATS tidak di set, django akan melihat konfigurasi LANGUAGE_CODE pada settings.py. Contoh jika file settings.</description>

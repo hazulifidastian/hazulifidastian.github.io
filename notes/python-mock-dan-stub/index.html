@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id-id" class="font-1-available">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.87.0" />
+
+
+    <title>Python Mock dan Stub - Hazuli Fidastian</title>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Python Mock dan Stub - Hazuli Fidastian">
+    <title itemprop="name">Python Mock dan Stub | Hazuli Fidastian</title>
+    <meta name="twitter:title" content="Python Mock dan Stub | Hazuli Fidastian" />
+    <meta itemprop="name" content="Python Mock dan Stub | Hazuli Fidastian" />
+    <meta name="application-name" content="Python Mock dan Stub | Hazuli Fidastian" />
+    <meta property="og:site_name" content="" />
+
+
+    <link href='https://hazulifidastian.github.io/favicon.ico' rel='icon' type='image/x-icon' />
+
+
+
+
+
+
+
+
+
+
+<base href="https://hazulifidastian.github.io/notes/python-mock-dan-stub/">
+<link rel="canonical" href="https://hazulifidastian.github.io/notes/python-mock-dan-stub/" itemprop="url" /> 
+<meta name="url" content="https://hazulifidastian.github.io/notes/python-mock-dan-stub/" />
+<meta name="twitter:url" content="https://hazulifidastian.github.io/notes/python-mock-dan-stub/" /> 
+<meta property="og:url" content="https://hazulifidastian.github.io/notes/python-mock-dan-stub/" />
+
+<meta name="robots" content="index,follow" /> 
+<meta name="googlebot" content="index,follow" />
+<meta name="google-site-verification" content="Won_YvYvA2MlMOjNNvvHeLbAwVOs3Qt9-Dbaj-MtHAo" />
+
+
+<meta name="theme-color" content="#1997A5" /> 
+<meta name="msapplication-TileColor" content="#1997A5" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" /> 
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" /> 
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" /> 
+
+<link rel="stylesheet" href="https://hazulifidastian.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://hazulifidastian.github.io/css/app.css" media="all">
+<link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <div class="nav-circle">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <a href="https://hazulifidastian.github.io/" class="nav-logo">
+      <img src="https://hazulifidastian.github.io/images/logo.png" 
+          width="80" 
+          height="80" 
+          alt="Logo">
+    </a>
+  </div>
+  
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    <h1 class="article-title">Python Mock dan Stub</h1>
+
+    
+
+    
+      
+
+    
+
+    
+
+    <div class="article-content">
+      <h3 id="mocking-osenviron">Mocking os.environ</h3>
+<p>Jika kode yang dites memanggil fungsi <code>os.environ</code>. Gunakan kode dibawah ini untuk melakukan mocking.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> <span style="color:#111">os.environ</span>
+<span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
+
+<span style="color:#75af00">@mock</span><span style="color:#f92672">.</span><span style="color:#111">patch</span><span style="color:#f92672">.</span><span style="color:#111">dict</span><span style="color:#111">(</span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">environ</span><span style="color:#111">,</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;KEY&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Value&#39;</span><span style="color:#111">})</span>
+<span style="color:#00a8c8">def</span> <span style="color:#75af00">test_foo</span><span style="color:#111">():</span>
+    <span style="color:#111">foo</span><span style="color:#111">()</span>
+</code></pre></div><h3 id="mocking-timesleep">Mocking time.sleep</h3>
+<p>Patch menggunakan decorator.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
+<span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">TestCase</span>
+
+<span style="color:#00a8c8">class</span> <span style="color:#75af00">TestClass</span><span style="color:#111">(</span><span style="color:#111">TestCase</span><span style="color:#111">):</span>
+    <span style="color:#75af00">@mock</span><span style="color:#f92672">.</span><span style="color:#111">patch</span><span style="color:#111">(</span><span style="color:#d88200">&#39;time.sleep&#39;</span><span style="color:#111">,</span> <span style="color:#111">return_value</span><span style="color:#f92672">=</span><span style="color:#00a8c8">None</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_func_with_time</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">,</span> <span style="color:#111">patched_time_sleep</span><span style="color:#111">):</span>
+        <span style="color:#111">func_with_time</span><span style="color:#111">()</span>
+
+        <span style="color:#75715e"># Harus dipanggil 1 kali</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertEqual</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#111">patched_time_sleep</span><span style="color:#f92672">.</span><span style="color:#111">call_count</span><span style="color:#111">)</span>
+</code></pre></div><p>Patch menggunakan context manager <code>with</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
+<span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">TestCase</span>
+
+
+<span style="color:#00a8c8">class</span> <span style="color:#75af00">TestClass</span><span style="color:#111">(</span><span style="color:#111">TestCase</span><span style="color:#111">):</span>
+    <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_func_with_time</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+        <span style="color:#00a8c8">with</span> <span style="color:#111">mock</span><span style="color:#f92672">.</span><span style="color:#111">patch</span><span style="color:#111">(</span><span style="color:#d88200">&#39;time.sleep&#39;</span><span style="color:#111">,</span> <span style="color:#111">return_value</span><span style="color:#f92672">=</span><span style="color:#00a8c8">None</span><span style="color:#111">)</span> <span style="color:#00a8c8">as</span> <span style="color:#111">patched_time_sleep</span><span style="color:#111">:</span>
+            <span style="color:#111">func_with_time</span><span style="color:#111">()</span>
+
+        <span style="color:#75715e"># Harus dipanggil 1 kali</span>
+        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertEqual</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#111">patched_time_sleep</span><span style="color:#f92672">.</span><span style="color:#111">call_count</span><span style="color:#111">)</span>
+</code></pre></div><p><strong>Referensi</strong>: <a href="https://stackoverflow.com/questions/22836874/how-to-stub-time-sleep-in-python-unit-testing">How to stub time.sleep() in Python unit testing</a></p>
+<h3 id="referensi">Referensi</h3>
+<ul>
+<li><a href="https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub">https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub</a></li>
+</ul>
+
+
+      
+<div class="article-tags">
+  
+  <a href="https://hazulifidastian.github.io/tags/test/">#test</a
+  >&nbsp;
+  
+  <a href="https://hazulifidastian.github.io/tags/python/">#python</a
+  >&nbsp;
+  
+</div>
+
+
+    </div>
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hazulifidastian" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</main>
+
+<footer class="footer">
+    <ul class="footer-links">
+        
+        <li>
+            <a id="night-mode-toggle" title="Toggle Night/Light mode" class="footer-links-kudos"
+                data-current-mode="light" style="cursor: pointer;"></a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img
+                    src="https://hazulifidastian.github.io/images/hugo-logo.png" width="22" height="22" alt="Hugo logo"></a>
+        </li>
+    </ul>
+</footer>
+
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-9380146-9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<script src="/js/night_toggle.js"></script>
+
+</body>
+
+</html>
+

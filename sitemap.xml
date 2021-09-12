@@ -46,34 +46,34 @@
     <loc>https://hazulifidastian.github.io/tags/hugo/</loc>
     <lastmod>2021-08-27T01:27:41+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</loc>
+    <loc>https://hazulifidastian.github.io/notes/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</loc>
     <lastmod>2021-08-27T01:27:41+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/stories/</loc>
+    <loc>https://hazulifidastian.github.io/notes/</loc>
     <lastmod>2021-08-27T01:27:41+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/git/</loc>
     <lastmod>2021-08-26T21:06:01+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/strategi-merge-branch-git-yang-konflik/</loc>
+    <loc>https://hazulifidastian.github.io/notes/strategi-merge-branch-git-yang-konflik/</loc>
     <lastmod>2021-08-26T21:06:01+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/asdf/</loc>
     <lastmod>2020-06-27T05:29:47+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/asdf-cheatsheet/</loc>
+    <loc>https://hazulifidastian.github.io/notes/asdf-cheatsheet/</loc>
     <lastmod>2020-06-27T05:29:47+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/asdf/</loc>
+    <loc>https://hazulifidastian.github.io/notes/asdf/</loc>
     <lastmod>2020-06-26T10:24:41+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/git-tips-dan-tricks/</loc>
+    <loc>https://hazulifidastian.github.io/notes/git-tips-dan-tricks/</loc>
     <lastmod>2020-06-24T16:22:19+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/python/</loc>
     <lastmod>2020-06-24T12:11:00+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/python-mock-dan-stub/</loc>
+    <loc>https://hazulifidastian.github.io/notes/python-mock-dan-stub/</loc>
     <lastmod>2020-06-24T12:11:00+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/test/</loc>
@@ -83,6 +83,9 @@
     <lastmod>2020-06-22T22:58:05+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/github-webhooks-dan-python-deployment/</loc>
+    <lastmod>2020-06-22T22:58:05+07:00</lastmod>
+  </url><url>
+    <loc>https://hazulifidastian.github.io/stories/</loc>
     <lastmod>2020-06-22T22:58:05+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/github/</loc>
@@ -97,28 +100,28 @@
     <loc>https://hazulifidastian.github.io/tags/emacs/</loc>
     <lastmod>2020-06-18T23:15:25+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/emacs-27-dan-font-ligature/</loc>
+    <loc>https://hazulifidastian.github.io/notes/emacs-27-dan-font-ligature/</loc>
     <lastmod>2020-06-18T23:15:25+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/magit/</loc>
     <lastmod>2020-06-15T20:39:51+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/magit-cheatsheet/</loc>
+    <loc>https://hazulifidastian.github.io/notes/magit-cheatsheet/</loc>
     <lastmod>2020-06-15T20:39:51+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/django/</loc>
     <lastmod>2020-06-13T04:55:23+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/django-login-dan-registrasi-dengan-akun-google/</loc>
+    <loc>https://hazulifidastian.github.io/notes/django-login-dan-registrasi-dengan-akun-google/</loc>
     <lastmod>2020-06-13T04:55:23+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/compiling-emacs-27-ubuntu-18-04/</loc>
+    <loc>https://hazulifidastian.github.io/notes/compiling-emacs-27-ubuntu-18-04/</loc>
     <lastmod>2020-05-30T16:26:37+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/elementary-os/</loc>
     <lastmod>2020-05-30T16:26:37+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/modul-php-doom-emacs/</loc>
+    <loc>https://hazulifidastian.github.io/notes/modul-php-doom-emacs/</loc>
     <lastmod>2020-05-14T00:48:53+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/php/</loc>
@@ -127,7 +130,7 @@
     <loc>https://hazulifidastian.github.io/tags/lightline/</loc>
     <lastmod>2020-03-09T11:51:46+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/lightline-dan-winwidth-nvim/</loc>
+    <loc>https://hazulifidastian.github.io/notes/lightline-dan-winwidth-nvim/</loc>
     <lastmod>2020-03-09T11:51:46+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/nvim/</loc>
@@ -142,7 +145,7 @@
     <loc>https://hazulifidastian.github.io/tags/fish-shell/</loc>
     <lastmod>2020-02-29T10:12:40+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/fish-shell-upgrade-error/</loc>
+    <loc>https://hazulifidastian.github.io/notes/fish-shell-upgrade-error/</loc>
     <lastmod>2020-02-29T10:12:40+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/night-mode/</loc>
@@ -157,13 +160,13 @@
     <loc>https://hazulifidastian.github.io/tags/pelican/</loc>
     <lastmod>2019-07-14T03:32:00+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/format-datefield-django/</loc>
+    <loc>https://hazulifidastian.github.io/notes/format-datefield-django/</loc>
     <lastmod>2019-01-22T07:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/custom-domain-github/</loc>
+    <loc>https://hazulifidastian.github.io/notes/custom-domain-github/</loc>
     <lastmod>2017-06-28T08:00:00+07:00</lastmod>
   </url><url>
-    <loc>https://hazulifidastian.github.io/membuat-website-gratis-github/</loc>
+    <loc>https://hazulifidastian.github.io/notes/membuat-website-gratis-github/</loc>
     <lastmod>2017-06-28T06:00:00+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/categories/</loc>
