@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.87.0" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 
     <title>Membuat Pesan Rahasia - Hazuli Fidastian</title>
@@ -148,12 +148,12 @@
     <textarea 
         x-text="encrypted = $encrypt(algo, message, secret)" 
         name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi" readonly></textarea>
-    <p class="small"><button type="button" @click="$clipboard(encrypted)">Salin ke Clipboard</button></p>
+    <p class="small" style="text-align: right;"><button type="button" @click="$clipboard(encrypted)">Salin ke Clipboard</button></p>
 </div>
 
 <p>
-    Aplikasi ini tidak menyimpan data yang anda isikan pada form. Dan aktifitas enkripsi dilakukan secara
-    lokal pada browser (peramban) anda tanpa melibat kan sisi server.
+    Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) 
+    anda tanpa melibatkan sisi server.
 </p>
 
 <section class="footnotes" role="doc-endnotes">

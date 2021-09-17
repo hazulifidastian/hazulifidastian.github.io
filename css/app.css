@@ -2,24 +2,102 @@
   margin-top: 30px;
 }
 
-#app input, #app select, #app textarea {
+#app input, 
+#app select, 
+#app textarea {
   display: block;
-  width: 295px;
   margin: 0px 0px 20px;
   padding: 15px 15px;
-  border: 1px solid #ccc;
   font-family: Roboto;
   font-size: 17px;
   background: none;
+  border: 1px solid #ccc;
 }
+
+#app input:not([type=checkbox]), 
+#app select, 
+#app textarea {
+  width: 295px;
+}
+
 
 #app select {
   width: 327px;
 }
 
-#app input:focus, select:focus, textarea:focus {
+#app input:focus, 
+select:focus, 
+textarea:focus {
   outline: none;
 }
+
+
+/* https://www.w3schools.com/howto/howto_css_switch.asp */
+
+#app .switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+  margin: 0px 0px 20px;
+}
+
+/* Hide default HTML checkbox */
+#app .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+#app .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#app .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#app input:checked + .slider {
+  background-color: #2196F3;
+}
+
+#app input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+#app input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+#app .slider.round {
+  border-radius: 34px;
+}
+
+#app .slider.round:before {
+  border-radius: 50%;
+}
+
+/* end switch */
 
 #app p.small {
   font-size: 15px;
@@ -32,7 +110,8 @@
 
 
 @media (min-width: 500px) {
-  #app input, #app textarea {
+  #app input:not([type=checkbox]), 
+  #app textarea {
     width: 395px;
   }
 
@@ -42,7 +121,8 @@
 }
 
 @media (min-width: 600px) {
-  #app input, #app textarea {
+  #app input:not([type=checkbox]), 
+  #app textarea {
     width: 495px;
   }
 
@@ -53,7 +133,8 @@
 
 
 @media (min-width: 700px) {
-  #app input, #app textarea {
+  #app input:not([type=checkbox]), 
+  #app textarea {
     width: 595px;
   }
 
@@ -63,7 +144,8 @@
 }
 
 @media (min-width: 800px) {
-  #app input, #app textarea {
+  #app input:not([type=checkbox]), 
+  #app textarea {
     width: 668px;
   }
 
