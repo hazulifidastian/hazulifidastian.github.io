@@ -20,7 +20,6 @@
   width: 295px;
 }
 
-
 #app select {
   width: 327px;
 }
@@ -115,6 +114,7 @@ textarea:focus {
     width: 395px;
   }
 
+  #app p.small,
   #app select {
     width: 427px;
   }
@@ -126,6 +126,7 @@ textarea:focus {
     width: 495px;
   }
 
+  #app p.small,
   #app select {
     width: 527px;
   }
@@ -138,6 +139,7 @@ textarea:focus {
     width: 595px;
   }
 
+  #app p.small,
   #app select {
     width: 627px;
   }
@@ -149,6 +151,7 @@ textarea:focus {
     width: 668px;
   }
 
+  #app p.small,
   #app select {
     width: 700px;
   }
