@@ -6,7 +6,7 @@
     <description>Recent content on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Sun, 12 Sep 2021 04:48:55 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Sep 2021 14:14:56 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://hazulifidastian.github.io/about/</link>
@@ -18,6 +18,19 @@ Anda bisa menemukan saya online di Twitter dan di Medium.
 Ingin membicarakan proyek? Hubungi saya melalui email.
 Catatan:
  Doodle: Sketsa oleh Wiwin. Template: Based on Hugo Mood.  </description>
+    </item>
+    
+    <item>
+      <title>Password Generator</title>
+      <link>https://hazulifidastian.github.io/apps/password-generator/</link>
+      <pubDate>Fri, 17 Sep 2021 14:14:56 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.github.io/apps/password-generator/</guid>
+      <description> Membuat password acak dengan mengabungkan kombinasi huruf dan angka.
+ Aplikasi ini dibuat menggunakan library AlpineJS1 dan password-generator2. PANJANG ANGKA SAJA   MUDAH DIINGAT   PASSWORD Salin ke Clipboard
+BUAT PASSWORD   Aplikasi ini tidak menyimpan password yang dibuat. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server.   https://alpinejs.dev/ ↩︎
+ https://github.com/bermi/password-generator ↩︎
+    </description>
     </item>
     
     <item>

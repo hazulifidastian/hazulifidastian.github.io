@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id-id" class="font-1-available">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.88.1" />
+
+
+    <title>Password Generator - Hazuli Fidastian</title>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Password Generator - Hazuli Fidastian">
+    <title itemprop="name">Password Generator | Hazuli Fidastian</title>
+    <meta name="twitter:title" content="Password Generator | Hazuli Fidastian" />
+    <meta itemprop="name" content="Password Generator | Hazuli Fidastian" />
+    <meta name="application-name" content="Password Generator | Hazuli Fidastian" />
+    <meta property="og:site_name" content="" />
+
+
+    <link href='https://hazulifidastian.github.io/favicon.ico' rel='icon' type='image/x-icon' />
+
+
+
+
+<meta property="description" content="Membuat password acak">
+<meta name="description" content="Membuat password acak" />
+<meta itemprop="description" content="Membuat password acak" />
+<meta property="og:description" content="Membuat password acak" />
+<meta name="twitter:description" content="Membuat password acak" />
+
+
+
+
+
+
+
+<base href="https://hazulifidastian.github.io/apps/password-generator/">
+<link rel="canonical" href="https://hazulifidastian.github.io/apps/password-generator/" itemprop="url" /> 
+<meta name="url" content="https://hazulifidastian.github.io/apps/password-generator/" />
+<meta name="twitter:url" content="https://hazulifidastian.github.io/apps/password-generator/" /> 
+<meta property="og:url" content="https://hazulifidastian.github.io/apps/password-generator/" />
+
+<meta name="robots" content="index,follow" /> 
+<meta name="googlebot" content="index,follow" />
+<meta name="google-site-verification" content="Won_YvYvA2MlMOjNNvvHeLbAwVOs3Qt9-Dbaj-MtHAo" />
+
+
+<meta name="theme-color" content="#1997A5" /> 
+<meta name="msapplication-TileColor" content="#1997A5" />
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" /> 
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" /> 
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="" /> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" /> 
+
+<link rel="stylesheet" href="https://hazulifidastian.github.io/css/main.css" media="all">
+<link rel="stylesheet" href="https://hazulifidastian.github.io/css/app.css" media="all">
+<link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <div class="nav-circle">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <a href="https://hazulifidastian.github.io/" class="nav-logo">
+      <img src="https://hazulifidastian.github.io/images/logo.png" 
+          width="80" 
+          height="80" 
+          alt="Logo">
+    </a>
+  </div>
+  
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    <div class="article-section">
+      <a class="article-section" href="https://hazulifidastian.github.io/apps/">apps</a>
+    </div>
+
+    <h1 class="article-title">Password Generator</h1>
+
+    
+    <div class="article-meta">
+      <span class="article-date">
+        
+    
+    
+
+    
+    
+    Jum&#39;at, 17 September 2021
+
+
+
+      </span>
+      
+    </div>
+    
+
+    
+
+    
+
+    <div class="article-content">
+      
+<p>Membuat password acak dengan mengabungkan kombinasi huruf dan angka.</p>
+
+<p>
+    Aplikasi ini dibuat menggunakan library AlpineJS<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+    dan password-generator<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.
+</p>
+
+<div id="app" x-data="{ password: '', length : 12, memorable : false, numberOnly : false }">
+    <label for="length">PANJANG</label>
+    <input x-model="length" type="range" min=4 max=50 id="length" placeholder="Panjang">
+    <p class="small" x-text="length + ' karakter'"></p>
+
+    <label for="numberOnly">ANGKA SAJA</label>
+    <label class="switch">
+        <input x-model="numberOnly" type="checkbox" id="numberOnly" name="numberOnly" :checked="numberOnly">
+        <span class="slider"></span>
+    </label>
+
+    <label x-show="!numberOnly" for="memorable">MUDAH DIINGAT</label>
+    <label x-show="!numberOnly" class="switch">
+        <input x-model="memorable" type="checkbox" id="memorable" name="memorable" :checked="memorable">
+        <span class="slider"></span>
+    </label>
+
+    <label for="password">PASSWORD</label>
+    <input x-model="password" type="text" id="password" placeholder="Password" readonly>
+    <p class="small" style="text-align: right;"><button type="button" @click="$clipboard(password)">Salin ke Clipboard</button></p>
+
+    <button 
+        @click="
+            if (numberOnly) {
+                password = generatePassword(length, false, /\d/)
+            } else {
+                password = generatePassword(length, memorable)
+            }
+        ">BUAT PASSWORD</button>
+</div>
+
+<p>
+    Aplikasi ini tidak menyimpan password yang dibuat. Aktifitas pembuatan password dilakukan dibrowser (peramban) 
+    anda tanpa melibatkan sisi server.
+</p>
+
+<section class="footnotes" role="doc-endnotes">
+    <hr>
+    <ol>
+        <li id="fn:1" role="doc-endnote">
+            <p><a href="https://alpinejs.dev/">https://alpinejs.dev/</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+        <li id="fn:2" role="doc-endnote">
+            <p><a href="https://github.com/bermi/password-generator">https://github.com/bermi/password-generator</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+        </li>
+    </ol>
+</section>
+
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/password-generator@2.3.2/lib/password-generator.js" integrity="sha256-Aw7Ffq4jR6Pn8laljtdd6udMrF0lVlGD69khWksdgjY=" crossorigin="anonymous"></script>
+
+      
+<div class="article-tags">
+  
+  <a href="https://hazulifidastian.github.io/tags/app/">#app</a
+  >&nbsp;
+  
+  <a href="https://hazulifidastian.github.io/tags/js/">#js</a
+  >&nbsp;
+  
+  <a href="https://hazulifidastian.github.io/tags/alpinejs/">#alpinejs</a
+  >&nbsp;
+  
+  <a href="https://hazulifidastian.github.io/tags/cryptojs/">#CryptoJS</a
+  >&nbsp;
+  
+</div>
+
+
+    </div>
+  </article>
+
+  
+</main>
+
+<footer class="footer">
+    <ul class="footer-links">
+        
+        <li>
+            <a id="night-mode-toggle" title="Toggle Night/Light mode" class="footer-links-kudos"
+                data-current-mode="light" style="cursor: pointer;"></a>
+        </li>
+        <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img
+                    src="https://hazulifidastian.github.io/images/hugo-logo.png" width="22" height="22" alt="Hugo logo"></a>
+        </li>
+    </ul>
+</footer>
+
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-9380146-9', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<script src="/js/night_toggle.js"></script>
+
+</body>
+
+</html>
+
