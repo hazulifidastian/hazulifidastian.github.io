@@ -35,8 +35,8 @@
       <pubDate>Sat, 11 Sep 2021 17:52:02 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/apps/sha1-hash-generator/</guid>
-      <description>  Apa itu hash dan SHA1.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. TEKS  MD5 HASH Salin ke Clipboard
-    document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });   </description>
+      <description>  Apa itu hash dan SHA1.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. TEKS  SHA1 HASH Salin ke Clipboard
+      document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); }); let sha1 = function(text) { return CryptoJS.SHA1(text) } </description>
     </item>
     
     <item>
@@ -46,7 +46,7 @@
       
       <guid>https://hazulifidastian.github.io/apps/md5-hash-generator/</guid>
       <description>  Apa itu hash dan MD5.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. TEKS  MD5 HASH Salin ke Clipboard
-    document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });   </description>
+      document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); }); let md5 = function(text) { return CryptoJS.MD5(text) } </description>
     </item>
     
   </channel>
