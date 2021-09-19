@@ -282,7 +282,7 @@ h6 {
   padding-bottom: 0.9em;
 }
 
-.article-content p:not(.help) {
+.article-content p:not(.help) p:not(.footnotes) {
   margin: 15px 0 25px;
 }
 
