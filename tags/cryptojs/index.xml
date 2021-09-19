@@ -13,8 +13,8 @@
       <pubDate>Sun, 12 Sep 2021 04:48:55 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/apps/membaca-pesan-rahasia/</guid>
-      <description>Membaca pesan rahasia yang dibuat menggunakan empat algoritma pilihan yaitu AES1, TripleDES2, Rabbit3 dan RC4Drop4.  Aplikasi ini dibuat menggunakan library AlpineJS5 dan CryptoJS6. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA  PESAN TERENKRIPSI  Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.
- PESAN  Salin ke Clipboard
+      <description>Membaca pesan rahasia yang dibuat menggunakan empat algoritma pilihan yaitu AES1, TripleDES2, Rabbit3 dan RC4Drop4.  Aplikasi ini dibuat menggunakan library AlpineJS5 dan CryptoJS6. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.
+ PESAN TERENKRIPSI   PESAN  Salin ke Clipboard
    Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server.</description>
     </item>
     
@@ -24,8 +24,8 @@
       <pubDate>Sun, 12 Sep 2021 04:48:47 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/apps/membuat-pesan-rahasia/</guid>
-      <description>Membuat pesan rahasia menggunakan empat algoritma pilihan yaitu AES1, TripleDES2, Rabbit3 dan RC4Drop4.  Aplikasi ini dibuat menggunakan library AlpineJS5 dan CryptoJS6. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA  PESAN  Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.
- PESAN TERENKRIPSI  Salin ke Clipboard
+      <description>Membuat pesan rahasia menggunakan empat algoritma pilihan yaitu AES1, TripleDES2, Rabbit3 dan RC4Drop4.  Aplikasi ini dibuat menggunakan library AlpineJS5 dan CryptoJS6. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.
+ PESAN   PESAN TERENKRIPSI  Salin ke Clipboard
    Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server.</description>
     </item>
     
