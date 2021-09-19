@@ -282,13 +282,13 @@ h6 {
   padding-bottom: 0.9em;
 }
 
-.article-content p:not(.help) p:not(.footnotes) {
+.article-content > p {
   margin: 15px 0 25px;
 }
 
 .article-content hr {
   width: 150px;
-  margin: 50px auto;
+  margin: 2em auto;
   height: 1px;
   overflow: hidden;
   border: none;
@@ -449,6 +449,10 @@ h6 {
   padding: 10px;
 }
 
+.footnotes {
+  margin-bottom: 1.5em;
+}
+
 .footnotes ol li p a {
   overflow-wrap: break-word !important;
 }
@@ -493,10 +497,6 @@ h6 {
   position: relative;
   top: 6px;
   margin-left: 2px;
-}
-
-.footnotes ol li p a {
-  overflow-wrap: break-word !important;
 }
 
 @media (min-width: 600px) {
