@@ -14,7 +14,7 @@
       
       <guid>https://hazulifidastian.github.io/apps/password-generator/</guid>
       <description>Membuat password acak dengan mengabungkan kombinasi huruf dan angka.
- Aplikasi ini dibuat menggunakan library AlpineJS1 dan password-generator2. PANJANG         POLA KUSTOM (opsional) Pola kustom. Contoh: [A-D] menghasilkan kombinasi dari huruf A hingga D saja.
+ Aplikasi ini dibuat menggunakan library AlpineJS1 dan password-generator2. PANJANG         POLA KUSTOM (opsional) Pola kustom. Contoh: [A-D] menghasilkan kombinasi dari huruf A hingga D saja. Javascript RegExp3
  PASSWORD Salin ke Clipboard
  BUAT PASSWORD   Aplikasi ini tidak menyimpan password yang dibuat. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server.</description>
     </item>
