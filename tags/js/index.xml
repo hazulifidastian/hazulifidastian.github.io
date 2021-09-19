@@ -14,7 +14,7 @@
       
       <guid>https://hazulifidastian.github.io/apps/password-generator/</guid>
       <description>Membuat password acak dengan mengabungkan kombinasi huruf dan angka.
- Aplikasi ini dibuat menggunakan library AlpineJS1 dan password-generator2. PANJANG         POLA KUSTOM (opsional) Pola kustom. Contoh: [A-D] menghasilkan kombinasi dari huruf A hingga D saja. Javascript RegExp3
+ Aplikasi ini dibuat menggunakan library AlpineJS dan password-generator. PANJANG         POLA KUSTOM (opsional) Pola kustom. Contoh: [A-D] menghasilkan kombinasi dari huruf A hingga D saja. Lihat Javascript RegExp
  PASSWORD Salin ke Clipboard
  BUAT PASSWORD   Aplikasi ini tidak menyimpan password yang dibuat. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server.</description>
     </item>
@@ -25,7 +25,7 @@
       <pubDate>Sun, 12 Sep 2021 04:48:55 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/apps/membaca-pesan-rahasia/</guid>
-      <description>Membaca pesan rahasia yang dibuat menggunakan empat algoritma pilihan yaitu AES1, TripleDES2, Rabbit3 dan RC4Drop4.  Aplikasi ini dibuat menggunakan library AlpineJS5 dan CryptoJS6. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.
+      <description>Membaca pesan rahasia yang dibuat menggunakan empat algoritma pilihan yaitu AES, TripleDES, Rabbit dan RC4Drop.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.
  PESAN TERENKRIPSI   PESAN  Salin ke Clipboard
    Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server.</description>
     </item>
@@ -36,7 +36,7 @@
       <pubDate>Sun, 12 Sep 2021 04:48:47 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/apps/membuat-pesan-rahasia/</guid>
-      <description>Membuat pesan rahasia menggunakan empat algoritma pilihan yaitu AES1, TripleDES2, Rabbit3 dan RC4Drop4.  Aplikasi ini dibuat menggunakan library AlpineJS5 dan CryptoJS6. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.
+      <description>Membuat pesan rahasia menggunakan empat algoritma pilihan yaitu AES, TripleDES, Rabbit dan RC4Drop.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.
  PESAN   PESAN TERENKRIPSI  Salin ke Clipboard
    Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server.</description>
     </item>
@@ -47,12 +47,8 @@
       <pubDate>Sat, 11 Sep 2021 17:52:02 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/apps/sha1-hash-generator/</guid>
-      <description>  Apa itu hash1 dan SHA12  Aplikasi ini dibuat menggunakan library AlpineJS3 dan CryptoJS4. TEKS  MD5 HASH Salin ke Clipboard
-    https://id.wikipedia.org/wiki/Hash ↩︎
- https://en.wikipedia.org/wiki/SHA-1 ↩︎
- https://alpinejs.dev/ ↩︎
- https://github.com/brix/crypto-js ↩︎
-     document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });   </description>
+      <description>  Apa itu hash dan SHA1.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. TEKS  MD5 HASH Salin ke Clipboard
+    document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });   </description>
     </item>
     
     <item>
@@ -61,12 +57,8 @@
       <pubDate>Sat, 11 Sep 2021 17:09:08 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/apps/md5-hash-generator/</guid>
-      <description>  Apa itu hash1 dan MD52.  Aplikasi ini dibuat menggunakan library AlpineJS3 dan CryptoJS4. TEKS  MD5 HASH Salin ke Clipboard
-    https://id.wikipedia.org/wiki/Hash ↩︎
- https://id.wikipedia.org/wiki/MD5 ↩︎
- https://alpinejs.dev/ ↩︎
- https://github.com/brix/crypto-js ↩︎
-     document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });   </description>
+      <description>  Apa itu hash dan MD5.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. TEKS  MD5 HASH Salin ke Clipboard
+    document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); });   </description>
     </item>
     
     <item>
@@ -76,9 +68,9 @@
       
       <guid>https://hazulifidastian.github.io/apps/whatsapp-link/</guid>
       <description>Membuat link WhatsApp Me dengan menggabungkan api WhatsApp yang digunakan untuk menginisiasi pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang akan dikirimkan.
-Aplikasi ini dibuat reaktif menggunakan AlpineJs1. Otomatis memantau perubahan pada input nomor telepondan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.
+Aplikasi ini dibuat reaktif menggunakan AlpineJS. Otomatis memantau perubahan pada input nomor telepondan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.
 NOMOR TELEPONPESANLINKSalin ke Clipboard
-9 &amp;&amp; message !== &#39;&#39;&#34;KIRIM PESAN WHATSAPPKIRIM SEKARANGhttps://alpinejs.</description>
+9 &amp;&amp; message !== &#39;&#39;&#34;KIRIM PESAN WHATSAPPKIRIM SEKARANGdocument.</description>
     </item>
     
   </channel>
