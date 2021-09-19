@@ -2,7 +2,7 @@
 <html lang="id-id" class="font-1-available">
   <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.88.1" />
 
 
@@ -92,15 +92,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-touch-fullscreen" content="yes" /> 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="https://hazulifidastian.github.io/css/main.css" media="all">
-<link rel="stylesheet" href="https://hazulifidastian.github.io/css/app.css" media="all">
 <link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
 
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <nav class="nav">
+    <header class="header">
+      <nav class="nav">
   <div class="nav-circle">
     <div class="bg"></div>
     <div class="bg bg2"></div>
@@ -115,21 +114,21 @@
   
 </nav>
 
-      </header>
+    </header>
 
 
-<main class="content" role="main">
-  <article class="article">
-    <div class="article-section">
-      <a class="article-section" href="https://hazulifidastian.github.io/stories/">stories</a>
-    </div>
+<main role="main">
+  <div class="container">
+    <article class="article">
+      <div class="article-section">
+        <a class="article-section" href="https://hazulifidastian.github.io/stories/">stories</a>
+      </div>
 
-    <h1 class="article-title">Django: Login dan Registrasi dengan Akun Google</h1>
+      <h1 class="article-title">Django: Login dan Registrasi dengan Akun Google</h1>
 
-    
-    <div class="article-meta">
-      <span class="article-date">
-        
+      <div class="article-meta">
+        <span class="article-date">
+          
     
     
 
@@ -139,25 +138,24 @@
 
 
 
-      </span>
-      
-        <svg style="position:relative; bottom: -2px;" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-        <span class="article-duration">8 min read</span>
-      
-    </div>
-    
+        </span>
+        
+          <svg style="position:relative; bottom: -2px;" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span class="article-duration">8 min read</span>
+        
+      </div>
 
-    
       
+        
 <div id="article-description">
     <p>Tutorial ini mengupas cara pembuatan registrasi dan login menggunakan framework Django.</p>
 </div>
 
 
-    
-
-    
       
+
+      
+        
 
 <div id="article-toc">
   <input id="collapsible" class="toggle" type="checkbox">
@@ -210,10 +208,10 @@
 </div>
 
 
-    
+      
 
-    <div class="article-content">
-      <p>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.</p>
+      <div class="article-content">
+        <p>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.</p>
 <p>Fitur login dan registrasi penguna disini saya bagi menjadi dua. Pertama, pengguna bisa melakukan registrasi dan login menggunakan akun email dan sosial media. Disini saya menggunakan akun google/gmail, facebook, dan twitter. Kemudian kedua, pengguna bisa registrasi manual seperti biasa menggunakan form berisi username dan password.</p>
 <p>Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user dan integrasi dengan akun google.</p>
 <h2 id="dependency-management">Dependency Management</h2>
@@ -614,23 +612,23 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
 </code></pre></div>
 
-      
-<div class="article-tags">
+        
+<div class="article-tags mt-3 mb-3">
   
-  <a href="https://hazulifidastian.github.io/tags/python/">#python</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/python/">#python</a
   >&nbsp;
   
-  <a href="https://hazulifidastian.github.io/tags/django/">#django</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/django/">#django</a
   >&nbsp;
   
 </div>
 
 
-    </div>
-  </article>
+      </div>
+    </article>
 
-  
-  <div id="disqus_thread"></div>
+    
+    <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -650,7 +648,8 @@ kode berikut pada file <strong>admin.py</strong>,</p>
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  
+    
+  </div>
 </main>
 
 <footer class="footer">
@@ -666,8 +665,6 @@ kode berikut pada file <strong>admin.py</strong>,</p>
         </li>
     </ul>
 </footer>
-
-</div>
 
 
 <script type="application/javascript">

@@ -2,7 +2,7 @@
 <html lang="id-id" class="font-1-available">
   <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.88.1" />
 
 
@@ -58,15 +58,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-touch-fullscreen" content="yes" /> 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="https://hazulifidastian.github.io/css/main.css" media="all">
-<link rel="stylesheet" href="https://hazulifidastian.github.io/css/app.css" media="all">
 <link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
 
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <nav class="nav">
+    <header class="header">
+      <nav class="nav">
   <div class="nav-circle">
     <div class="bg"></div>
     <div class="bg bg2"></div>
@@ -81,21 +80,21 @@
   
 </nav>
 
-      </header>
+    </header>
 
 
-<main class="content" role="main">
-  <article class="article">
-    <div class="article-section">
-      <a class="article-section" href="https://hazulifidastian.github.io/apps/">apps</a>
-    </div>
+<main role="main">
+  <div class="container">
+    <article class="article">
+      <div class="article-section">
+        <a class="article-section" href="https://hazulifidastian.github.io/apps/">apps</a>
+      </div>
 
-    <h1 class="article-title">MD5 Hash Generator</h1>
+      <h1 class="article-title">MD5 Hash Generator</h1>
 
-    
-    <div class="article-meta">
-      <span class="article-date">
-        
+      <div class="article-meta">
+        <span class="article-date">
+          
     
     
 
@@ -105,17 +104,16 @@
 
 
 
-      </span>
+        </span>
+        
+      </div>
+
       
-    </div>
-    
 
-    
-
-    
-
-    <div class="article-content">
       
+
+      <div class="article-content">
+        
 <p>
     Apa itu hash<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
     dan MD5<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.
@@ -125,12 +123,17 @@
     dan CryptoJS<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.
 </p>
 
-<div id="app" x-data="{ text: '', hash: '' }">
-    <label for="text">TEKS</label>
-    <input x-model="text" @keyup="hash = CryptoJS.MD5(text)" type="text" id="text" placeholder="Isikan dengan teks">
-    <label for="hash">MD5 HASH</label>
-    <input x-model='hash' type="text" id="hash" placeholder="" readonly>
-    <p class="small" style="text-align: right;"><button class="button button-xs button-outline-black" type="button" @click="$clipboard(hash)">Salin ke Clipboard</button></p>
+<div class="box" id="app" x-data="{ text: '', hash: '' }">
+    <div class="field">
+        <label class="label" for="text">TEKS</label>
+        <input x-model="text" class="input" @keyup="hash = CryptoJS.MD5(text)" type="text" id="text" placeholder="Isikan dengan teks">
+    </div>
+
+    <div class="field">
+        <label class="label" for="hash">MD5 HASH</label>
+        <input x-model="hash" class="input" type="text" id="hash" placeholder="" readonly>
+        <p class="help"><button class="button is-small is-light" type="button" @click="$clipboard(hash)">Salin ke Clipboard</button></p>
+    </div>
 </div>
 
 <section class="footnotes" role="doc-endnotes">
@@ -162,28 +165,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js" integrity="sha512-t8vdA86yKUE154D1VlNn78JbDkjv3HxdK/0MJDMBUXUjshuzRgET0ERp/0MAgYS+8YD9YmFwnz6+FWLz1gRZaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.min.js" integrity="sha512-3sGbaDyhjGb+yxqvJKi/gl5zL4J7P5Yh4GXzq+E9puzlmVkIctjf4yP6LfijOUvtoBI3p9pLKia9crHsgYDTUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-      
-<div class="article-tags">
+        
+<div class="article-tags mt-3 mb-3">
   
-  <a href="https://hazulifidastian.github.io/tags/app/">#app</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/app/">#app</a
   >&nbsp;
   
-  <a href="https://hazulifidastian.github.io/tags/js/">#js</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/js/">#js</a
   >&nbsp;
   
-  <a href="https://hazulifidastian.github.io/tags/alpinejs/">#alpinejs</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/alpinejs/">#alpinejs</a
   >&nbsp;
   
-  <a href="https://hazulifidastian.github.io/tags/cryptojs/">#CryptoJS</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/cryptojs/">#CryptoJS</a
   >&nbsp;
   
 </div>
 
 
-    </div>
-  </article>
+      </div>
+    </article>
 
-  
+    
+  </div>
 </main>
 
 <footer class="footer">
@@ -199,8 +203,6 @@
         </li>
     </ul>
 </footer>
-
-</div>
 
 
 <script type="application/javascript">

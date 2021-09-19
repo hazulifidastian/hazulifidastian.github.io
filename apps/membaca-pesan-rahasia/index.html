@@ -2,7 +2,7 @@
 <html lang="id-id" class="font-1-available">
   <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Hugo 0.88.1" />
 
 
@@ -58,15 +58,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-touch-fullscreen" content="yes" /> 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="https://hazulifidastian.github.io/css/main.css" media="all">
-<link rel="stylesheet" href="https://hazulifidastian.github.io/css/app.css" media="all">
 <link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
 
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <nav class="nav">
+    <header class="header">
+      <nav class="nav">
   <div class="nav-circle">
     <div class="bg"></div>
     <div class="bg bg2"></div>
@@ -81,21 +80,21 @@
   
 </nav>
 
-      </header>
+    </header>
 
 
-<main class="content" role="main">
-  <article class="article">
-    <div class="article-section">
-      <a class="article-section" href="https://hazulifidastian.github.io/apps/">apps</a>
-    </div>
+<main role="main">
+  <div class="container">
+    <article class="article">
+      <div class="article-section">
+        <a class="article-section" href="https://hazulifidastian.github.io/apps/">apps</a>
+      </div>
 
-    <h1 class="article-title">Membaca Pesan Rahasia</h1>
+      <h1 class="article-title">Membaca Pesan Rahasia</h1>
 
-    
-    <div class="article-meta">
-      <span class="article-date">
-        
+      <div class="article-meta">
+        <span class="article-date">
+          
     
     
 
@@ -105,17 +104,16 @@
 
 
 
-      </span>
+        </span>
+        
+      </div>
+
       
-    </div>
-    
 
-    
-
-    
-
-    <div class="article-content">
       
+
+      <div class="article-content">
+        
 <p>
     Membaca pesan rahasia yang dibuat menggunakan empat algoritma pilihan yaitu AES<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, 
     TripleDES<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, 
@@ -128,27 +126,38 @@
     dan CryptoJS<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>.
 </p>
 
-<div id="app" x-data="{ algo: 'aes', encrypted: '', secret: '', message: '' }">
-    <label for="algo">ALGORITMA</label>
-    <select x-model='algo' name="algo" id="algo">
-        <option value="aes" selected>AES</option>
-        <option value="tripledes">TripleDES</option>
-        <option value="rabbit">Rabbit</option>
-        <option value="rc4drop">RC4Drop</option>
-    </select>
+<div class="box" id="app" x-data="{ algo: 'aes', encrypted: '', secret: '', message: '' }">
+    <div class="field">
+        <label class="label" for="algo">ALGORITMA</label>
+        <div class="select">
+            <select x-model='algo' name="algo" id="algo">
+                <option value="aes" selected>AES</option>
+                <option value="tripledes">TripleDES</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="rc4drop">RC4Drop</option>
+            </select>
+        </div>
+    </div>
 
-    <label for="secret">KUNCI RAHASIA</label>
-    <input x-model="secret" type="secret" id="secret" placeholder="Kunci rahasia">
+    <div class="field">
+        <label class="label" for="secret">KUNCI RAHASIA</label>
+        <input x-model="secret" class="input" type="secret" id="secret" placeholder="Kunci rahasia">
+    </div>
 
-    <label for="encrypted">PESAN TERENKRIPSI</label>
-    <textarea x-model="encrypted" name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi"></textarea>
+    <div class="field">
+        <label class="label" for="encrypted">PESAN TERENKRIPSI</label>
+        <textarea x-model="encrypted" class="textarea" name="encrypted" id="encrypted" rows="3" placeholder="Pesan terenkripsi"></textarea>
+        <p class="help">Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.</p>
+    </div>
 
-    <p class="small">Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.</p>
-    <label for="message">PESAN</label>
-    <textarea 
-        x-text="message = $decrypt(algo, encrypted, secret)" 
-        name="message" id="message" rows="3" placeholder="Pesan" readonly></textarea>
-    <p class="small" style="text-align: right;"><button class="button button-xs button-outline-black" type="button" @click="$clipboard(message)">Salin ke Clipboard</button></p>
+    <div class="field">
+        <label class="label" for="message">PESAN</label>
+        <textarea 
+            class="textarea"
+            x-text="message = $decrypt(algo, encrypted, secret)" 
+            name="message" id="message" rows="3" placeholder="Pesan" readonly></textarea>
+        <p class="help"><button class="button is-small is-light" type="button" @click="$clipboard(message)">Salin ke Clipboard</button></p>
+    </div>
 </div>
 
 <p>
@@ -212,28 +221,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-      
-<div class="article-tags">
+        
+<div class="article-tags mt-3 mb-3">
   
-  <a href="https://hazulifidastian.github.io/tags/app/">#app</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/app/">#app</a
   >&nbsp;
   
-  <a href="https://hazulifidastian.github.io/tags/js/">#js</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/js/">#js</a
   >&nbsp;
   
-  <a href="https://hazulifidastian.github.io/tags/alpinejs/">#alpinejs</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/alpinejs/">#alpinejs</a
   >&nbsp;
   
-  <a href="https://hazulifidastian.github.io/tags/cryptojs/">#CryptoJS</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/cryptojs/">#CryptoJS</a
   >&nbsp;
   
 </div>
 
 
-    </div>
-  </article>
+      </div>
+    </article>
 
-  
+    
+  </div>
 </main>
 
 <footer class="footer">
@@ -249,8 +259,6 @@
         </li>
     </ul>
 </footer>
-
-</div>
 
 
 <script type="application/javascript">

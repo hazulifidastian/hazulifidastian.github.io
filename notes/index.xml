@@ -37,7 +37,7 @@ Jika menggunakan metode biasa, misalnya dengan langsung merge branch feature ata
       
       <guid>https://hazulifidastian.github.io/notes/asdf-cheatsheet/</guid>
       <description>Cheatsheet Berikut daftar opsi yang bisa digunakan pada perintah asdf.
-Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua paket yang terpasangasdf plugin list alldaftar seluruh pluginasdf plugin listdaftar plugin yang terpasangasdf plugin list --urlsdaftar plugin yang terpasang beserta urlnyaasdf plugin add pythonpasang plugin pythonasdf plugin remove pythoncopot plugin pythonasdf plugin update pythonperbarui plugin pythonasdf plugin update --allperbarui seluruh pluginManajemen Paket PerintahDeskripsiasdf list all pythondaftar paket python yang bisa dipasangasdf latest pythonversi stabil terakhir paket pythonasdf latest python 3.</description>
+Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua paket yang terpasangasdf plugin list alldaftar seluruh pluginasdf plugin listdaftar plugin yang terpasangasdf plugin list --urlsdaftar plugin yang terpasang beserta urlnyaasdf plugin add pythonpasang plugin pythonasdf plugin remove pythoncopot plugin pythonasdf plugin update pythonperbarui plugin pythonasdf plugin update --allperbarui seluruh pluginManajemen Paket PerintahDeskripsiasdf list all pythondaftar paket python yang bisa dipasangasdf latest pythonversi stabil terakhir paket pythonasdf latest python 3.</description>
     </item>
     
     <item>
