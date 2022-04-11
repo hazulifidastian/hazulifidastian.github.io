@@ -6,7 +6,31 @@
     <description>Recent content in Notes on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Fri, 27 Aug 2021 01:27:41 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Apr 2022 07:36:02 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Notes</title>
+      <link>https://hazulifidastian.github.io/notes/python-notes/</link>
+      <pubDate>Mon, 11 Apr 2022 07:36:02 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.github.io/notes/python-notes/</guid>
+      <description>Tools Konversi requirements.txt ke Paket Poetry pyproject.toml Dari requirements.txt:
+pytest-django==4.5.2 di pyproject.toml menjadi
+pytest-django = &amp;#34;4.5.2&amp;#34; Menambahkan opsi dari requirements.txt:
+Werkzeug[watchdog]==2.0.3 di pyproject.toml menjadi
+Werkzeug = {extras = [&amp;#34;watchdog&amp;#34;], version = &amp;#34;2.0.3&amp;#34;} </description>
+    </item>
+    
+    <item>
+      <title>PHP Notes</title>
+      <link>https://hazulifidastian.github.io/notes/php-notes/</link>
+      <pubDate>Tue, 22 Feb 2022 23:32:19 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.github.io/notes/php-notes/</guid>
+      <description>Tools Xdebug Mode Off Trigger Makefile Error Pesan error:
+make: *** [Makefile:135: dump-autoload] Error 2816 Solusi:
+ Hilangkan setting XDEBUG_MODE = &amp;quot;off&amp;quot; Tambahkan informasi folder composer pada konfigurasi skipped paths di PHPStorm. Lihat tautan ini https://github.com/composer/composer/issues/8302#issuecomment-526908909.  </description>
+    </item>
+    
     <item>
       <title>Menampilkan Hari dan Bulan dalam Bahasa Indonesia pada Framework Hugo</title>
       <link>https://hazulifidastian.github.io/notes/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</link>
@@ -16,8 +40,8 @@
       <description>File data File data/locale/id/day.yaml.
 Monday: Senin Tuesday: Selasa Wednesday: Rabu Thursday: Kamis Friday: Jum&amp;#39;at Saturday: Sabtu Sunday: Minggu File data/locale/id/month.yaml.
 - Januari - Februari - Maret - April - Mei - Juni - Juli - Agustus - September - Oktober - November - Desember Konfigurasi File config.toml
-[params] defaultContentLanguage = &amp;#34;id&amp;#34; Template Partial File layouts/partials/date.html.
-{{ if eq .Context.Site.Params.defaultContentLanguage &amp;#34;en&amp;#34;}} {{ .Dt.Format &amp;#34;Monday, 02 Jan 2006&amp;#34; }} {{ else }} {{ $days := index (index .</description>
+[params]  defaultContentLanguage = &amp;#34;id&amp;#34; Template Partial File layouts/partials/date.html.
+{{ if eq .Context.Site.Params.defaultContentLanguage &amp;#34;en&amp;#34;}}  {{ .Dt.Format &amp;#34;Monday, 02 Jan 2006&amp;#34; }} {{ else }}  {{ $days := index (index .</description>
     </item>
     
     <item>
@@ -49,7 +73,7 @@ Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua 
       <description>Caching Password git config --global credential.helper cache git push origin master Username dan password akan dicache, git push selanjutnya tidak akan diminta lagi.
 Referensi: Caching your GitHub password in Git
 Melihat Revisi Commit Melihat revisi commit pada log.
-# Menggunakan range id commit. git log --oneline 6ff1760..05474ff # Menggunakan range nama branch. git log --oneline master..origin/master Referensi:
+# Menggunakan range id commit. git log --oneline 6ff1760..05474ff  # Menggunakan range nama branch. git log --oneline master..origin/master Referensi:
  git-log gitrevision  Melihat Revisi Kode Melihat revisi kode.
 # Menggunakan range id commit.</description>
     </item>
@@ -61,9 +85,8 @@ Melihat Revisi Commit Melihat revisi commit pada log.
       
       <guid>https://hazulifidastian.github.io/notes/python-mock-dan-stub/</guid>
       <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
-import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() Mocking time.sleep Patch menggunakan decorator.
-from unittest import mock from unittest import TestCase class TestClass(TestCase): @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None) def test_func_with_time(self, patched_time_sleep): func_with_time() # Harus dipanggil 1 kali self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.
-from unittest import mock from unittest import TestCase class TestClass(TestCase): def test_func_with_time(self): with mock.</description>
+import os.environ from unittest import mock  @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo():  foo() Mocking time.sleep Patch menggunakan decorator.
+from unittest import mock from unittest import TestCase  class TestClass(TestCase):  @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None)  def test_func_with_time(self, patched_time_sleep):  func_with_time()   # Harus dipanggil 1 kali  self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.</description>
     </item>
     
     <item>
@@ -85,7 +108,7 @@ Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-statu
       <guid>https://hazulifidastian.github.io/notes/compiling-emacs-27-ubuntu-18-04/</guid>
       <description>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan instalasi beberapa tools dan library.
 Compile &amp;amp; Install
-# Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz tar -xzf emacs-27.0.91.tar.gz # Konfigurasi dan install emacs cd emacs-27.0.91 .</description>
+# Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common  # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo  # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz  tar -xzf emacs-27.0.91.tar.gz  # Konfigurasi dan install emacs cd emacs-27.</description>
     </item>
     
     <item>
@@ -130,8 +153,8 @@ Instalasi aplikasi baru juga tidak bisa.</description>
       
       <guid>https://hazulifidastian.github.io/notes/format-datefield-django/</guid>
       <description>Format Spesifik Menentukan format spesifik DateField pada form. Jika pengguna memasukkan tanggal diluar format tersebut, form akan menampilkan error saat validasi.
-# forms.py class MyForm(forms.ModelForm): # Hanya menerima input dengan format contoh: 25/01/2019  tanggal = forms.DateField(input_formats=&amp;#39;%d-%m-%Y&amp;#39;) Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.
-# settings.py DATE_INPUT_FORMATS = &amp;#39;%d-%m-%Y&amp;#39; Penggunaan yang Salah! Jika DATE_INPUT_FORMATS tidak di set, django akan melihat konfigurasi LANGUAGE_CODE pada settings.py. Contoh jika file settings.</description>
+# forms.py class MyForm(forms.ModelForm):  # Hanya menerima input dengan format contoh: 25/01/2019   tanggal = forms.DateField(input_formats=&amp;#39;%d-%m-%Y&amp;#39;) Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.
+# settings.py DATE_INPUT_FORMATS = &amp;#39;%d-%m-%Y&amp;#39; Penggunaan yang Salah! Jika DATE_INPUT_FORMATS tidak di set, django akan melihat konfigurasi LANGUAGE_CODE pada settings.</description>
     </item>
     
   </channel>

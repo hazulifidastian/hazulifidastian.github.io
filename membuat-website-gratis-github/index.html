@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 
 
     <title>Membuat Website Gratis Github - Hazuli Fidastian</title>
@@ -172,10 +172,10 @@ New repository.</p>
 <p>Lanjutkan dengan melakukan clone (duplikasi) repository baru dibuat ke repository 
 dikomputer lokal. Sebelumnya install aplikasi git di komputer lokal. Jalankan 
 Terminal atau Command line.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone https://github.com/hazulifidastian/hazulifidastian.github.io.git
-$ <span style="color:#111">cd</span> hazulifidastian.github.io
-$ touch index.html
-$ <span style="color:#111">echo</span> <span style="color:#d88200">&#34;Halaman Website dengan Github&#34;</span> &gt;&gt; index.html</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git clone https://github.com/hazulifidastian/hazulifidastian.github.io.git
+</span></span><span style="display:flex;"><span>$ <span style="color:#111">cd</span> hazulifidastian.github.io
+</span></span><span style="display:flex;"><span>$ touch index.html
+</span></span><span style="display:flex;"><span>$ <span style="color:#111">echo</span> <span style="color:#d88200">&#34;Halaman Website dengan Github&#34;</span> &gt;&gt; index.html</span></span></code></pre></div>
 <p>Clone akan menduplikasi repository git pada Github ke komputer lokal. Perintah git 
 clone akan menghasilkan folder hazulifidastian.github.io. Didalam folder tersebut, 
 buat file index.html. Isikan dengan teks “Halaman Website dengan Github”.</p>
@@ -184,12 +184,12 @@ Sebagai gantinya, gunakan aplikasi Notepad untuk membuat file index.html didalam
 folder tersebut.</p>
 <p>Langkah selanjutnya, adalah menyimpan (merekam) perubahan pada repository git lokal, 
 dan kemudian mengirimkan kembali ke Github.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git add -A
-$ git commit -m <span style="color:#d88200">&#34;Initial commit&#34;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git add -A
+</span></span><span style="display:flex;"><span>$ git commit -m <span style="color:#d88200">&#34;Initial commit&#34;</span></span></span></code></pre></div>
 <p>Perintah git add -A untuk memasukkan semua source code yang berubah. git commit untuk 
 merekam perubahan, dengan pesan “Initial commit”.</p>
 <p>Pesan bisa dirubah, misalnya “kode pertama web saya”. Sekarang kirimkan perubahan ke Github,</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git push origin master</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git push origin master</span></span></code></pre></div>
 <p>Git akan meminta username dan password Github.</p>
 <p>Jika proses pengiriman selesai, buka halaman web hazulifidastian.github.io. Akan terlihat teks, “Halaman Website 
 dengan Github”.</p>
@@ -213,7 +213,7 @@ dengan Github”.</p>
     
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     

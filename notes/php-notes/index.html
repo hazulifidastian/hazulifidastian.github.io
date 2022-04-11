@@ -6,13 +6,13 @@
 <meta name="generator" content="Hugo 0.96.0" />
 
 
-    <title>elementary os - Hazuli Fidastian</title>
+    <title>PHP Notes - Hazuli Fidastian</title>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="elementary os - Hazuli Fidastian">
-    <title itemprop="name">elementary os | Hazuli Fidastian</title>
-    <meta name="twitter:title" content="elementary os | Hazuli Fidastian" />
-    <meta itemprop="name" content="elementary os | Hazuli Fidastian" />
-    <meta name="application-name" content="elementary os | Hazuli Fidastian" />
+    <meta property="og:title" content="PHP Notes - Hazuli Fidastian">
+    <title itemprop="name">PHP Notes | Hazuli Fidastian</title>
+    <meta name="twitter:title" content="PHP Notes | Hazuli Fidastian" />
+    <meta itemprop="name" content="PHP Notes | Hazuli Fidastian" />
+    <meta name="application-name" content="PHP Notes | Hazuli Fidastian" />
     <meta property="og:site_name" content="" />
 
 
@@ -21,17 +21,23 @@
 
 
 
+<meta property="description" content="Catatan-catatan kecil seputar PHP">
+<meta name="description" content="Catatan-catatan kecil seputar PHP" />
+<meta itemprop="description" content="Catatan-catatan kecil seputar PHP" />
+<meta property="og:description" content="Catatan-catatan kecil seputar PHP" />
+<meta name="twitter:description" content="Catatan-catatan kecil seputar PHP" />
 
 
 
 
 
 
-<base href="https://hazulifidastian.github.io/tags/elementary-os/">
-<link rel="canonical" href="https://hazulifidastian.github.io/tags/elementary-os/" itemprop="url" /> 
-<meta name="url" content="https://hazulifidastian.github.io/tags/elementary-os/" />
-<meta name="twitter:url" content="https://hazulifidastian.github.io/tags/elementary-os/" /> 
-<meta property="og:url" content="https://hazulifidastian.github.io/tags/elementary-os/" />
+
+<base href="https://hazulifidastian.github.io/notes/php-notes/">
+<link rel="canonical" href="https://hazulifidastian.github.io/notes/php-notes/" itemprop="url" /> 
+<meta name="url" content="https://hazulifidastian.github.io/notes/php-notes/" />
+<meta name="twitter:url" content="https://hazulifidastian.github.io/notes/php-notes/" /> 
+<meta property="og:url" content="https://hazulifidastian.github.io/notes/php-notes/" />
 
 <meta name="robots" content="index,follow" /> 
 <meta name="googlebot" content="index,follow" />
@@ -52,7 +58,6 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-touch-fullscreen" content="yes" /> 
 
-<link rel="alternate" type="application/rss+xml" href="https://hazulifidastian.github.io/tags/elementary-os/index.xml" title="Hazuli Fidastian" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="https://hazulifidastian.github.io/css/main.css" media="all">
 <link disabled id="night-mode-theme" rel="stylesheet" href="/css/night.css">
@@ -80,51 +85,66 @@
 
 <main role="main">
   <div class="container">
-    <div class="archive">
-        <h2 class="archive-title mb-6">elementary os</h2>
+    <article class="article">
+      <div class="article-section">
+        <a class="article-section" href="https://hazulifidastian.github.io/notes/">notes</a>
+      </div>
+
+      <h1 class="article-title">PHP Notes</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+          
+    
+    
+
+    
+    
+    Selasa, 22 Februari 2022
+
+
+
+        </span>
         
-        <article class="archive-item">
-          <a href="https://hazulifidastian.github.io/notes/compiling-emacs-27-ubuntu-18-04/" class="archive-item-link">Compiling Emacs 27 Ubuntu 18.04</a>
-          <div class="archive-meta">
-            
-    
-    
-
-    
-    
-    Sabtu, 30 Mei 2020
-
-
-
-          </div>
-        </article>
+          <svg style="position:relative; bottom: -2px;" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" class="feather-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span class="article-duration">1 min read</span>
         
-        <article class="archive-item">
-          <a href="https://hazulifidastian.github.io/notes/fish-shell-upgrade-error/" class="archive-item-link">Fish Shell Upgrade Error</a>
-          <div class="archive-meta">
-            
-    
-    
+      </div>
 
-    
-    
-    Sabtu, 29 Februari 2020
+      
+
+      
+
+      <div class="article-content">
+        <h2 id="tools">Tools</h2>
+<h3 id="xdebug-mode-off-trigger-makefile-error">Xdebug Mode Off Trigger Makefile Error</h3>
+<p>Pesan error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make: *** <span style="color:#f92672">[</span>Makefile:135: dump-autoload<span style="color:#f92672">]</span> Error <span style="color:#ae81ff">2816</span>
+</span></span></code></pre></div><p>Solusi:</p>
+<ol>
+<li>Hilangkan setting <code>XDEBUG_MODE = &quot;off&quot;</code></li>
+<li>Tambahkan informasi folder composer pada konfigurasi <em>skipped paths</em> di PHPStorm. Lihat tautan ini <a href="https://github.com/composer/composer/issues/8302#issuecomment-526908909">https://github.com/composer/composer/issues/8302#issuecomment-526908909</a>.</li>
+</ol>
 
 
-
-          </div>
-        </article>
         
-    </div>
+<div class="article-tags block mt-6 mb-6">
+  
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/php/">#php</a
+  >&nbsp;
+  
+</div>
+
+
+      </div>
+    </article>
+
+    
   </div>
 </main>
 
 <footer class="footer">
     <ul class="footer-links">
-        
-        <li>
-            <a href="/tags/elementary-os/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
-        </li>
         
         <li>
             <a id="night-mode-toggle" title="Toggle Night/Light mode" class="footer-links-kudos"

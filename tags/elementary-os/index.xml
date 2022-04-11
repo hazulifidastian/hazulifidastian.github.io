@@ -15,7 +15,7 @@
       <guid>https://hazulifidastian.github.io/notes/compiling-emacs-27-ubuntu-18-04/</guid>
       <description>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan instalasi beberapa tools dan library.
 Compile &amp;amp; Install
-# Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz tar -xzf emacs-27.0.91.tar.gz # Konfigurasi dan install emacs cd emacs-27.0.91 .</description>
+# Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common  # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo  # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz  tar -xzf emacs-27.0.91.tar.gz  # Konfigurasi dan install emacs cd emacs-27.</description>
     </item>
     
     <item>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 
 
     <title>Python Mock dan Stub - Hazuli Fidastian</title>
@@ -115,37 +115,37 @@
       <div class="article-content">
         <h3 id="mocking-osenviron">Mocking os.environ</h3>
 <p>Jika kode yang dites memanggil fungsi <code>os.environ</code>. Gunakan kode dibawah ini untuk melakukan mocking.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> <span style="color:#111">os.environ</span>
-<span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
-
-<span style="color:#75af00">@mock</span><span style="color:#f92672">.</span><span style="color:#111">patch</span><span style="color:#f92672">.</span><span style="color:#111">dict</span><span style="color:#111">(</span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">environ</span><span style="color:#111">,</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;KEY&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Value&#39;</span><span style="color:#111">})</span>
-<span style="color:#00a8c8">def</span> <span style="color:#75af00">test_foo</span><span style="color:#111">():</span>
-    <span style="color:#111">foo</span><span style="color:#111">()</span>
-</code></pre></div><h3 id="mocking-timesleep">Mocking time.sleep</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#111">os.environ</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">@mock</span><span style="color:#f92672">.</span><span style="color:#111">patch</span><span style="color:#f92672">.</span><span style="color:#111">dict</span><span style="color:#111">(</span><span style="color:#111">os</span><span style="color:#f92672">.</span><span style="color:#111">environ</span><span style="color:#111">,</span> <span style="color:#111">{</span><span style="color:#d88200">&#39;KEY&#39;</span><span style="color:#111">:</span> <span style="color:#d88200">&#39;Value&#39;</span><span style="color:#111">})</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">def</span> <span style="color:#75af00">test_foo</span><span style="color:#111">():</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">foo</span><span style="color:#111">()</span>
+</span></span></code></pre></div><h3 id="mocking-timesleep">Mocking time.sleep</h3>
 <p>Patch menggunakan decorator.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
-<span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">TestCase</span>
-
-<span style="color:#00a8c8">class</span> <span style="color:#75af00">TestClass</span><span style="color:#111">(</span><span style="color:#111">TestCase</span><span style="color:#111">):</span>
-    <span style="color:#75af00">@mock</span><span style="color:#f92672">.</span><span style="color:#111">patch</span><span style="color:#111">(</span><span style="color:#d88200">&#39;time.sleep&#39;</span><span style="color:#111">,</span> <span style="color:#111">return_value</span><span style="color:#f92672">=</span><span style="color:#00a8c8">None</span><span style="color:#111">)</span>
-    <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_func_with_time</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">,</span> <span style="color:#111">patched_time_sleep</span><span style="color:#111">):</span>
-        <span style="color:#111">func_with_time</span><span style="color:#111">()</span>
-
-        <span style="color:#75715e"># Harus dipanggil 1 kali</span>
-        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertEqual</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#111">patched_time_sleep</span><span style="color:#f92672">.</span><span style="color:#111">call_count</span><span style="color:#111">)</span>
-</code></pre></div><p>Patch menggunakan context manager <code>with</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
-<span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">TestCase</span>
-
-
-<span style="color:#00a8c8">class</span> <span style="color:#75af00">TestClass</span><span style="color:#111">(</span><span style="color:#111">TestCase</span><span style="color:#111">):</span>
-    <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_func_with_time</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
-        <span style="color:#00a8c8">with</span> <span style="color:#111">mock</span><span style="color:#f92672">.</span><span style="color:#111">patch</span><span style="color:#111">(</span><span style="color:#d88200">&#39;time.sleep&#39;</span><span style="color:#111">,</span> <span style="color:#111">return_value</span><span style="color:#f92672">=</span><span style="color:#00a8c8">None</span><span style="color:#111">)</span> <span style="color:#00a8c8">as</span> <span style="color:#111">patched_time_sleep</span><span style="color:#111">:</span>
-            <span style="color:#111">func_with_time</span><span style="color:#111">()</span>
-
-        <span style="color:#75715e"># Harus dipanggil 1 kali</span>
-        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertEqual</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#111">patched_time_sleep</span><span style="color:#f92672">.</span><span style="color:#111">call_count</span><span style="color:#111">)</span>
-</code></pre></div><p><strong>Referensi</strong>: <a href="https://stackoverflow.com/questions/22836874/how-to-stub-time-sleep-in-python-unit-testing">How to stub time.sleep() in Python unit testing</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">TestCase</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">TestClass</span><span style="color:#111">(</span><span style="color:#111">TestCase</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">@mock</span><span style="color:#f92672">.</span><span style="color:#111">patch</span><span style="color:#111">(</span><span style="color:#d88200">&#39;time.sleep&#39;</span><span style="color:#111">,</span> <span style="color:#111">return_value</span><span style="color:#f92672">=</span><span style="color:#00a8c8">None</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_func_with_time</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">,</span> <span style="color:#111">patched_time_sleep</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">func_with_time</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Harus dipanggil 1 kali</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertEqual</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#111">patched_time_sleep</span><span style="color:#f92672">.</span><span style="color:#111">call_count</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p>Patch menggunakan context manager <code>with</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">mock</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> <span style="color:#111">unittest</span> <span style="color:#f92672">import</span> <span style="color:#111">TestCase</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">TestClass</span><span style="color:#111">(</span><span style="color:#111">TestCase</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">def</span> <span style="color:#75af00">test_func_with_time</span><span style="color:#111">(</span><span style="color:#111">self</span><span style="color:#111">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">with</span> <span style="color:#111">mock</span><span style="color:#f92672">.</span><span style="color:#111">patch</span><span style="color:#111">(</span><span style="color:#d88200">&#39;time.sleep&#39;</span><span style="color:#111">,</span> <span style="color:#111">return_value</span><span style="color:#f92672">=</span><span style="color:#00a8c8">None</span><span style="color:#111">)</span> <span style="color:#00a8c8">as</span> <span style="color:#111">patched_time_sleep</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">func_with_time</span><span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Harus dipanggil 1 kali</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">self</span><span style="color:#f92672">.</span><span style="color:#111">assertEqual</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#111">patched_time_sleep</span><span style="color:#f92672">.</span><span style="color:#111">call_count</span><span style="color:#111">)</span>
+</span></span></code></pre></div><p><strong>Referensi</strong>: <a href="https://stackoverflow.com/questions/22836874/how-to-stub-time-sleep-in-python-unit-testing">How to stub time.sleep() in Python unit testing</a></p>
 <h3 id="referensi">Referensi</h3>
 <ul>
 <li><a href="https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub">https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub</a></li>
@@ -170,7 +170,7 @@
     
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     

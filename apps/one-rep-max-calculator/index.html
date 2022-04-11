@@ -6,13 +6,13 @@
 <meta name="generator" content="Hugo 0.96.0" />
 
 
-    <title>WhatsApp Link - Hazuli Fidastian</title>
+    <title>One Rep Max Calculator - Hazuli Fidastian</title>
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="WhatsApp Link - Hazuli Fidastian">
-    <title itemprop="name">WhatsApp Link | Hazuli Fidastian</title>
-    <meta name="twitter:title" content="WhatsApp Link | Hazuli Fidastian" />
-    <meta itemprop="name" content="WhatsApp Link | Hazuli Fidastian" />
-    <meta name="application-name" content="WhatsApp Link | Hazuli Fidastian" />
+    <meta property="og:title" content="One Rep Max Calculator - Hazuli Fidastian">
+    <title itemprop="name">One Rep Max Calculator | Hazuli Fidastian</title>
+    <meta name="twitter:title" content="One Rep Max Calculator | Hazuli Fidastian" />
+    <meta itemprop="name" content="One Rep Max Calculator | Hazuli Fidastian" />
+    <meta name="application-name" content="One Rep Max Calculator | Hazuli Fidastian" />
     <meta property="og:site_name" content="" />
 
 
@@ -21,11 +21,11 @@
 
 
 
-<meta property="description" content="Membuat link WhatsApp Me, dan kirim pesan tanpa menyimpan nomor tujuan.">
-<meta name="description" content="Membuat link WhatsApp Me, dan kirim pesan tanpa menyimpan nomor tujuan." />
-<meta itemprop="description" content="Membuat link WhatsApp Me, dan kirim pesan tanpa menyimpan nomor tujuan." />
-<meta property="og:description" content="Membuat link WhatsApp Me, dan kirim pesan tanpa menyimpan nomor tujuan." />
-<meta name="twitter:description" content="Membuat link WhatsApp Me, dan kirim pesan tanpa menyimpan nomor tujuan." />
+<meta property="description" content="Kalkulator untuk menghitung 1 repetisi maksimal">
+<meta name="description" content="Kalkulator untuk menghitung 1 repetisi maksimal" />
+<meta itemprop="description" content="Kalkulator untuk menghitung 1 repetisi maksimal" />
+<meta property="og:description" content="Kalkulator untuk menghitung 1 repetisi maksimal" />
+<meta name="twitter:description" content="Kalkulator untuk menghitung 1 repetisi maksimal" />
 
 
 
@@ -33,11 +33,11 @@
 
 
 
-<base href="https://hazulifidastian.github.io/apps/whatsapp-link/">
-<link rel="canonical" href="https://hazulifidastian.github.io/apps/whatsapp-link/" itemprop="url" /> 
-<meta name="url" content="https://hazulifidastian.github.io/apps/whatsapp-link/" />
-<meta name="twitter:url" content="https://hazulifidastian.github.io/apps/whatsapp-link/" /> 
-<meta property="og:url" content="https://hazulifidastian.github.io/apps/whatsapp-link/" />
+<base href="https://hazulifidastian.github.io/apps/one-rep-max-calculator/">
+<link rel="canonical" href="https://hazulifidastian.github.io/apps/one-rep-max-calculator/" itemprop="url" /> 
+<meta name="url" content="https://hazulifidastian.github.io/apps/one-rep-max-calculator/" />
+<meta name="twitter:url" content="https://hazulifidastian.github.io/apps/one-rep-max-calculator/" /> 
+<meta property="og:url" content="https://hazulifidastian.github.io/apps/one-rep-max-calculator/" />
 
 <meta name="robots" content="index,follow" /> 
 <meta name="googlebot" content="index,follow" />
@@ -90,7 +90,7 @@
         <a class="article-section" href="https://hazulifidastian.github.io/apps/">apps</a>
       </div>
 
-      <h1 class="article-title">WhatsApp Link</h1>
+      <h1 class="article-title">One Rep Max Calculator</h1>
 
       <div class="article-meta">
         <span class="article-date">
@@ -100,7 +100,7 @@
 
     
     
-    Senin, 6 September 2021
+    Senin, 31 Januari 2022
 
 
 
@@ -113,53 +113,54 @@
       
 
       <div class="article-content">
-        <p>Membuat link WhatsApp Me dengan menggabungkan api WhatsApp yang digunakan untuk menginisiasi 
-pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang akan dikirimkan.</p>
+        
+<p>
+    Aplikasi ini dibuat menggunakan library <a href="https://alpinejs.dev/">AlpineJS</a>.
+    Perhitungan maksimal 1 repetisi menggunakan formula <a href="https://en.wikipedia.org/wiki/One-repetition_maximum">Brzycki</a>.
+</p>
 
-<p>Aplikasi ini dibuat reaktif menggunakan <a href="https://alpinejs.dev/">AlpineJS</a>. Otomatis memantau perubahan pada input nomor telepon
-dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
-
-<div class="box" id="app" x-data="{ phoneNumber: '', message: '', generatedLink: '' }">
+<div class="box" id="app" x-data="{ w: 0, reps: 2, orm: 0 }">
     <div class="field">
-        <label class="label" for="phoneNumber">NOMOR TELEPON</label>
-        <input x-model="phoneNumber" class="input" type="text" id="phoneNumber" placeholder="Nomor telepon, gunakan awalan +62 untuk indonesia">
+        <label class="label" for="text">BERAT</label>
+        <div class="control has-icons-right">
+            <input x-model="w" class="input" type="text" id="berat" placeholder="Isi dengan berat">
+            <span class="icon is-small is-right">
+                Kg
+            </span>
+        </div>
     </div>
 
     <div class="field">
-        <label class="label" for="message">PESAN</label>
-        <textarea x-model="message" class="textarea" name="message" id="message" rows="3" placeholder="Pesan"></textarea>
+        <label class="label" for="reps">REPETISI</label>
+        <div class="select">
+            <select x-model="reps" name="reps" id="reps">
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </div>
     </div>
 
     <div class="field">
-        <label class="label" for="link">LINK</label>
-        <textarea 
-            class="textarea"
-            x-text="generatedLink =
-            'https://api.whatsapp.com/send?phone=' + '+' + phoneNumber.replace(/[^\d]/g,'') + '&text=' + encodeURI(message)
-            " 
-            name="link" 
-            id="link" 
-            rows="3" 
-            placeholder="Link terisi otomatis" 
-            readonly></textarea>
-        <p class="help"><button class="button is-small is-light" type="button" @click="$clipboard(link)">Salin ke Clipboard</button></p>
-    </div>
-
-    <div class="field" x-show="phoneNumber.length > 9 && message !== ''">
-        <label class="label" for="aLink">KIRIM PESAN WHATSAPP</label>
-        <a target="_blank" class="button is-primary" id="aLink" :href="generatedLink">KIRIM SEKARANG</a>
+        <label class="label" for="text">1 REP MAX</label>
+        <div class="control has-icons-right">
+            <input :value="(w / (1.0278 - (0.0278*reps))).toFixed(1)" class="input" type="text" id="orm" readonly>
+            <span class="icon is-small is-right">
+                Kg
+            </span>
+        </div>
     </div>
 </div>
 
 <script src="//unpkg.com/alpinejs" defer></script>
-<script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.magic('clipboard', () => {
-            return subject => navigator.clipboard.writeText(subject)
-        });
-    });
-</script>
-
 
         
 <div class="article-tags block mt-6 mb-6">
@@ -173,7 +174,7 @@ dan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.</p>
   <a class="tag is-black" href="https://hazulifidastian.github.io/tags/alpinejs/">#alpinejs</a
   >&nbsp;
   
-  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/whastapp/">#whastapp</a
+  <a class="tag is-black" href="https://hazulifidastian.github.io/tags/fitness/">#fitness</a
   >&nbsp;
   
 </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 
 
     <title>Fish Shell Upgrade Error - Hazuli Fidastian</title>
@@ -127,8 +127,8 @@
 <h3 id="force-overwrite">Force Overwrite</h3>
 <p>Setelah berhasil masuk terminal, saya bisa memperbaiki proses upgrade fish shell yang gagal.</p>
 <p>Perintah dibawah ini digunakan untuk memaksa manajer aplikasi untuk overwrite file jika diperlukan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt -o Dpkg::Options::<span style="color:#f92672">=</span><span style="color:#d88200">&#34;--force-overwrite&#34;</span> -f upgrade
-</code></pre></div><h2 id="catatan">Catatan</h2>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt -o Dpkg::Options::<span style="color:#f92672">=</span><span style="color:#d88200">&#34;--force-overwrite&#34;</span> -f upgrade
+</span></span></code></pre></div><h2 id="catatan">Catatan</h2>
 <p>Saat terjadi masalah gagal upgrade fish shell saya langsung restart OS. Terminal tidak bisa dibuka setelah restart.</p>
 <p>Padahal awalnya terminal masih bisa dibuka. Harusnya saat itu langsung diterapkan solusi force overwrite.</p>
 <p>Jangan lupa untuk mengembalikan nilai shell menjadi default setelah berhasil. Cek <strong>User default value</strong> setelan opsi shell pada dconf-editor.</p>
@@ -163,7 +163,7 @@
     
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
