@@ -33,10 +33,10 @@ from unittest import mock from unittest import TestCase  class TestClass(TestCas
     
     <item>
       <title>GitHub Webhooks dan Python Deployment</title>
-      <link>https://hazulifidastian.github.io/github-webhooks-dan-python-deployment/</link>
+      <link>https://hazulifidastian.github.io/stories/github-webhooks-dan-python-deployment/</link>
       <pubDate>Mon, 22 Jun 2020 22:58:05 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/github-webhooks-dan-python-deployment/</guid>
+      <guid>https://hazulifidastian.github.io/stories/github-webhooks-dan-python-deployment/</guid>
       <description>Deskripsi Masalah Seorang developer memiliki aplikasi yang sudah ditahap production. Live, sudah bisa diakses menggunakan internet. Aplikasinya dibangun menggunakan web framework dengan bahasa pemrograman python.
 Pada server, developer menggunakan docker sebagai solusi pengepakan aplikasi. Kode disalin ke dalam sebuah image menjadi satu paket dengan sistem operasi didalam container.
 Proses deployment yang berjalan sekarang menggunakan cara:
@@ -45,10 +45,10 @@ Proses deployment yang berjalan sekarang menggunakan cara:
     
     <item>
       <title>Django: Login dan Registrasi dengan Akun Google</title>
-      <link>https://hazulifidastian.github.io/django-login-dan-registrasi-dengan-akun-google/</link>
+      <link>https://hazulifidastian.github.io/stories/django-login-dan-registrasi-dengan-akun-google/</link>
       <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/django-login-dan-registrasi-dengan-akun-google/</guid>
+      <guid>https://hazulifidastian.github.io/stories/django-login-dan-registrasi-dengan-akun-google/</guid>
       <description>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.
 Fitur login dan registrasi penguna disini saya bagi menjadi dua. Pertama, pengguna bisa melakukan registrasi dan login menggunakan akun email dan sosial media. Disini saya menggunakan akun google/gmail, facebook, dan twitter. Kemudian kedua, pengguna bisa registrasi manual seperti biasa menggunakan form berisi username dan password.
 Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user dan integrasi dengan akun google.</description>
@@ -56,10 +56,10 @@ Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user 
     
     <item>
       <title>Suspendable App</title>
-      <link>https://hazulifidastian.github.io/suspendable-app/</link>
+      <link>https://hazulifidastian.github.io/stories/suspendable-app/</link>
       <pubDate>Mon, 02 Mar 2020 06:25:49 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/suspendable-app/</guid>
+      <guid>https://hazulifidastian.github.io/stories/suspendable-app/</guid>
       <description>Saya akan membagi aplikasi menjadi dua bagian. Pertama adalah bagian yang terus-menerus memantau input yang diberikan user melalui keyboard. Bagian ini akan aktif bersamaan dengan berjalannya aplikasi. Saya akan membuat fungsi yang merespon terhadap kombinasi shortcut keyboard tertentu.
 Kedua adalah bagian yang menjalankan pekerjaan utama dalam aplikasi. Bagian ini bisa dikontrol, suspend (ditunda pekerjaannya), resume (dilanjutkan kembali) dan dihentikan.
 Error yang terjadi dibagian kedua tidak boleh mempengaruhi bagian pertama. Dan bagian pertama memiliki kontrol penuh terhadap bagian kedua.</description>

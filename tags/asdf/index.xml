@@ -19,10 +19,10 @@ Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua 
     
     <item>
       <title>asdf</title>
-      <link>https://hazulifidastian.github.io/asdf/</link>
+      <link>https://hazulifidastian.github.io/stories/asdf/</link>
       <pubDate>Fri, 26 Jun 2020 10:24:41 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/asdf/</guid>
+      <guid>https://hazulifidastian.github.io/stories/asdf/</guid>
       <description>asdf adalah command line interface (CLI) yang digunakan untuk memanajemeni beberapa atau banyak versi bahasa pemrograman. asdf seperti pyenv pada python, rbenv pada ruby atau nvm pada nodejs tetapi all in one. asdf bisa menangani semuanya, khususnya bahasa pemrograman populer.
 Pada perkembangannya, asdf tidak hanya digunakan untuk bahasa pemgrograman saja. Ada plugin yang bisa memanajemeni database seperti mysql dan postgresql, redis, bahkan text editor neovim.
 Kenapa asdf? Menurut dokumentasi resminya, ini adalah alasan kenapa menggunakan asdf:</description>
