@@ -6,7 +6,16 @@
     <description>Recent content in Notes on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Mon, 11 Apr 2022 07:36:02 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jun 2022 15:01:17 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elixir Learning Resources</title>
+      <link>https://hazulifidastian.github.io/notes/elixir-learning-resources/</link>
+      <pubDate>Tue, 07 Jun 2022 15:01:17 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.github.io/notes/elixir-learning-resources/</guid>
+      <description>Online Sites  Elixir Documentation Elixir School Fullstack Phoenix Discover Elixir &amp;amp; Phoenix  Books  Programming Elixir 1.6 Learn Functional Programming with Elixir Joy of Elixir Elixir in Action, Second Edition Concurrent Data Processing in Elixir Designing Elixir System With OTP The Little Elixir &amp;amp; OTP Guidebook Adopting Elixir Programming Phoenix 1.4 Programming Ecto Testing Elixir Real-time Phoenix Phoenix in Action Phoenix Liveview Phoenix Inside Out Series  Video Courses  Getting Started with Elixir Elixir for Beginners Elixir for Programmers, Second Edition LearnElixir.</description>
+    </item>
+    
     <item>
       <title>Python Notes</title>
       <link>https://hazulifidastian.github.io/notes/python-notes/</link>
