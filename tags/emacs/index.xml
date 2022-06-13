@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 18 Jun 2020 23:15:25 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs 27 dan Font Ligature</title>
-      <link>https://hazulifidastian.github.io/stories/emacs-27-dan-font-ligature/</link>
+      <link>https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/</link>
       <pubDate>Thu, 18 Jun 2020 23:15:25 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/emacs-27-dan-font-ligature/</guid>
+      <guid>https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/</guid>
       <description>Font ligature adalah, karakter spesial pada font yang menggabungkan beberapa karakter berdekatan menjadi satu.
 Ligature pada awalnya digunakan pada media cetak tradisional untuk menghemat ruang. Dalam pemrograman, ligature digunakan untuk menyederhanakan dan memperindah kode.
 Emacs 27 pada dasarnya tidak mendukung ligature secara khusus, tapi ada beberapa cara untuk mensiasatinya. Tentunya kita perlu menerapkan konfigurasi khusus.
@@ -21,10 +21,10 @@ Editor lain, seperti milik JetBrains, VS Code mendukung ligature out of the box.
     
     <item>
       <title>Magit Cheatsheet</title>
-      <link>https://hazulifidastian.github.io/notes/magit-cheatsheet/</link>
+      <link>https://hazulifidastian.github.io/blog/magit-cheatsheet/</link>
       <pubDate>Mon, 15 Jun 2020 20:39:51 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/magit-cheatsheet/</guid>
+      <guid>https://hazulifidastian.github.io/blog/magit-cheatsheet/</guid>
       <description>Saya menggunakan Emacs 27, dengan framework konfigurasi Doom. Standarnya, Doom menggunakan emulasi vim menggunakan evil-mode. Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya tidak akan terlepas dari evil-mode.
 Bagi Anda vanilla user, saya memasukkan nama command/perintah untuk melengkapi shortcut key. Agar, jika Anda tidak mengenali key-nya, Anda bisa mengakses perintahnya melalui shortcut M-x.
 Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-status.</description>
@@ -32,10 +32,10 @@ Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-statu
     
     <item>
       <title>Compiling Emacs 27 Ubuntu 18.04</title>
-      <link>https://hazulifidastian.github.io/notes/compiling-emacs-27-ubuntu-18-04/</link>
+      <link>https://hazulifidastian.github.io/blog/compiling-emacs-27-ubuntu-18-04/</link>
       <pubDate>Sat, 30 May 2020 16:26:37 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/compiling-emacs-27-ubuntu-18-04/</guid>
+      <guid>https://hazulifidastian.github.io/blog/compiling-emacs-27-ubuntu-18-04/</guid>
       <description>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan instalasi beberapa tools dan library.
 Compile &amp;amp; Install
 # Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common  # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo  # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz  tar -xzf emacs-27.0.91.tar.gz  # Konfigurasi dan install emacs cd emacs-27.</description>
@@ -43,10 +43,10 @@ Compile &amp;amp; Install
     
     <item>
       <title>Modul PHP Doom Emacs</title>
-      <link>https://hazulifidastian.github.io/notes/modul-php-doom-emacs/</link>
+      <link>https://hazulifidastian.github.io/blog/modul-php-doom-emacs/</link>
       <pubDate>Thu, 14 May 2020 00:48:53 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/modul-php-doom-emacs/</guid>
+      <guid>https://hazulifidastian.github.io/blog/modul-php-doom-emacs/</guid>
       <description>Konfigurasi Doom Emacs init.el Jelajah file konfigurasi dengan shorcut SPC f p, kemudian pilih file init.el. Aktifkan beberapa modul dengan cara menghilangkan tanda komentar ;;.
  Modul syntax, ada pada grup :checkers. Modul lsp, ada pada grup :tools. Modul (php +lsp), tambahan +lsp. Ada pada grup :lang.  package.el Aktifkan package phpactor pada file konfigurasi package.el. Buka dengan shorcut SPC f p.
 (package! phpactor) Sinkronisasi Konfigurasi Doom Emacs Ketikkan perintah ~/.</description>

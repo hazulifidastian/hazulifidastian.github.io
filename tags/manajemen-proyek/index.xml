@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 19 Jun 2020 22:04:00 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/manajemen-proyek/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Project Workflow</title>
-      <link>https://hazulifidastian.github.io/stories/project-workflow/</link>
+      <link>https://hazulifidastian.github.io/blog/project-workflow/</link>
       <pubDate>Fri, 19 Jun 2020 22:04:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/project-workflow/</guid>
+      <guid>https://hazulifidastian.github.io/blog/project-workflow/</guid>
       <description>Flashback Saya pernah menggunakan taiga.io untuk membantu memanajemeni proyek saya. Fiturnya banyak, gratis lagi. Saya pasang di komputer personal memanajemeni proyek dalam lingkungan lokal.
 Dulu, saya juga menggunakan redmine, aplikasi manajemen proyek yang dibuat dengan framework ruby on rails. Gratis. Bisa diunduh dan dipasang di komputer personal. Saat itu zaman IDE netbeans sedang hype dan svn masih populer sebagai aplikasi manajemen source code . Berarti sudah lama sekali.
 Aplikasi JIRA termasuk yang pernah saya coba, tapi hanya sekedar mencoba.</description>

@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 31 Jan 2022 22:51:26 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/fitness/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>One Rep Max Calculator</title>
-      <link>https://hazulifidastian.github.io/apps/one-rep-max-calculator/</link>
+      <link>https://hazulifidastian.github.io/app/one-rep-max-calculator/</link>
       <pubDate>Mon, 31 Jan 2022 22:51:26 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/apps/one-rep-max-calculator/</guid>
+      <guid>https://hazulifidastian.github.io/app/one-rep-max-calculator/</guid>
       <description>  Aplikasi ini dibuat menggunakan library AlpineJS. Perhitungan maksimal 1 repetisi menggunakan formula Brzycki. BERAT Kg    REPETISI 2 3 4 5 6 7 8 9 10 11 12    1 REP MAX Kg     </description>
     </item>
     

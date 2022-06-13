@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 11 Apr 2022 07:36:02 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python Notes</title>
-      <link>https://hazulifidastian.github.io/notes/python-notes/</link>
+      <link>https://hazulifidastian.github.io/blog/python-notes/</link>
       <pubDate>Mon, 11 Apr 2022 07:36:02 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/python-notes/</guid>
+      <guid>https://hazulifidastian.github.io/blog/python-notes/</guid>
       <description>Tools Konversi requirements.txt ke Paket Poetry pyproject.toml Dari requirements.txt:
 pytest-django==4.5.2 di pyproject.toml menjadi
 pytest-django = &amp;#34;4.5.2&amp;#34; Menambahkan opsi dari requirements.txt:
@@ -22,10 +22,10 @@ Werkzeug = {extras = [&amp;#34;watchdog&amp;#34;], version = &amp;#34;2.0.3&amp;
     
     <item>
       <title>Python Mock dan Stub</title>
-      <link>https://hazulifidastian.github.io/notes/python-mock-dan-stub/</link>
+      <link>https://hazulifidastian.github.io/blog/python-mock-dan-stub/</link>
       <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/python-mock-dan-stub/</guid>
+      <guid>https://hazulifidastian.github.io/blog/python-mock-dan-stub/</guid>
       <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
 import os.environ from unittest import mock  @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo():  foo() Mocking time.sleep Patch menggunakan decorator.
 from unittest import mock from unittest import TestCase  class TestClass(TestCase):  @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None)  def test_func_with_time(self, patched_time_sleep):  func_with_time()   # Harus dipanggil 1 kali  self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.</description>
@@ -33,10 +33,10 @@ from unittest import mock from unittest import TestCase  class TestClass(TestCas
     
     <item>
       <title>GitHub Webhooks dan Python Deployment</title>
-      <link>https://hazulifidastian.github.io/stories/github-webhooks-dan-python-deployment/</link>
+      <link>https://hazulifidastian.github.io/blog/github-webhooks-dan-python-deployment/</link>
       <pubDate>Mon, 22 Jun 2020 22:58:05 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/github-webhooks-dan-python-deployment/</guid>
+      <guid>https://hazulifidastian.github.io/blog/github-webhooks-dan-python-deployment/</guid>
       <description>Deskripsi Masalah Seorang developer memiliki aplikasi yang sudah ditahap production. Live, sudah bisa diakses menggunakan internet. Aplikasinya dibangun menggunakan web framework dengan bahasa pemrograman python.
 Pada server, developer menggunakan docker sebagai solusi pengepakan aplikasi. Kode disalin ke dalam sebuah image menjadi satu paket dengan sistem operasi didalam container.
 Proses deployment yang berjalan sekarang menggunakan cara:
@@ -45,10 +45,10 @@ Proses deployment yang berjalan sekarang menggunakan cara:
     
     <item>
       <title>Django: Login dan Registrasi dengan Akun Google</title>
-      <link>https://hazulifidastian.github.io/stories/django-login-dan-registrasi-dengan-akun-google/</link>
+      <link>https://hazulifidastian.github.io/blog/django-login-dan-registrasi-dengan-akun-google/</link>
       <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/django-login-dan-registrasi-dengan-akun-google/</guid>
+      <guid>https://hazulifidastian.github.io/blog/django-login-dan-registrasi-dengan-akun-google/</guid>
       <description>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.
 Fitur login dan registrasi penguna disini saya bagi menjadi dua. Pertama, pengguna bisa melakukan registrasi dan login menggunakan akun email dan sosial media. Disini saya menggunakan akun google/gmail, facebook, dan twitter. Kemudian kedua, pengguna bisa registrasi manual seperti biasa menggunakan form berisi username dan password.
 Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user dan integrasi dengan akun google.</description>
@@ -56,10 +56,10 @@ Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user 
     
     <item>
       <title>Suspendable App</title>
-      <link>https://hazulifidastian.github.io/stories/suspendable-app/</link>
+      <link>https://hazulifidastian.github.io/blog/suspendable-app/</link>
       <pubDate>Mon, 02 Mar 2020 06:25:49 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/suspendable-app/</guid>
+      <guid>https://hazulifidastian.github.io/blog/suspendable-app/</guid>
       <description>Saya akan membagi aplikasi menjadi dua bagian. Pertama adalah bagian yang terus-menerus memantau input yang diberikan user melalui keyboard. Bagian ini akan aktif bersamaan dengan berjalannya aplikasi. Saya akan membuat fungsi yang merespon terhadap kombinasi shortcut keyboard tertentu.
 Kedua adalah bagian yang menjalankan pekerjaan utama dalam aplikasi. Bagian ini bisa dikontrol, suspend (ditunda pekerjaannya), resume (dilanjutkan kembali) dan dihentikan.
 Error yang terjadi dibagian kedua tidak boleh mempengaruhi bagian pertama. Dan bagian pertama memiliki kontrol penuh terhadap bagian kedua.</description>

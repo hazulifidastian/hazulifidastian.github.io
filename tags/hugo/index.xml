@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 27 Aug 2021 01:27:41 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Menampilkan Hari dan Bulan dalam Bahasa Indonesia pada Framework Hugo</title>
-      <link>https://hazulifidastian.github.io/notes/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</link>
+      <link>https://hazulifidastian.github.io/blog/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</link>
       <pubDate>Fri, 27 Aug 2021 01:27:41 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</guid>
+      <guid>https://hazulifidastian.github.io/blog/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</guid>
       <description>File data File data/locale/id/day.yaml.
 Monday: Senin Tuesday: Selasa Wednesday: Rabu Thursday: Kamis Friday: Jum&amp;#39;at Saturday: Sabtu Sunday: Minggu File data/locale/id/month.yaml.
 - Januari - Februari - Maret - April - Mei - Juni - Juli - Agustus - September - Oktober - November - Desember Konfigurasi File config.toml
@@ -22,10 +22,10 @@ Monday: Senin Tuesday: Selasa Wednesday: Rabu Thursday: Kamis Friday: Jum&amp;#3
     
     <item>
       <title>Night Mode</title>
-      <link>https://hazulifidastian.github.io/stories/night-mode/</link>
+      <link>https://hazulifidastian.github.io/blog/night-mode/</link>
       <pubDate>Tue, 25 Feb 2020 22:31:24 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/night-mode/</guid>
+      <guid>https://hazulifidastian.github.io/blog/night-mode/</guid>
       <description>Mode Malam  Mode malam website
   Mode malam atau dengan nama lain mode gelap (dark mode), sudah menjadi trend desain antarmuka. Banyak aplikasi mobile, desktop bahkan website menerapkannya.
 Aplikasi messenger seperti telegram, slack, signals sudah menjadikan ini sebagai fiturnya. Terakhir whatsapp, meluncurkan fitur ini pada aplikasi beta di platform android.

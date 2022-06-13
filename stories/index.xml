@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 15 Apr 2022 02:22:33 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/stories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Roadmap 2022</title>
-      <link>https://hazulifidastian.github.io/stories/roadmap-2022/</link>
+      <link>https://hazulifidastian.github.io/blog/roadmap-2022/</link>
       <pubDate>Fri, 15 Apr 2022 02:22:33 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/roadmap-2022/</guid>
+      <guid>https://hazulifidastian.github.io/blog/roadmap-2022/</guid>
       <description>Sudah pertengahan bulan April baru nulis roadmap 2022, tenang belum terlambat. Justru saya punya banyak waktu untuk mempertimbangkan sekian banyak dan rumitnya pilihan untuk menjalani 2022.
 Roadmap 2022 sebenarnya sudah mulai saya rancang dari pertengahan tahun 2021. Saat itu saya sudah membuat sebagian konsep tulisan untuk roadmap 2021-2022. Namun biasa, jiwa penunda waktu dan gambaran yang belum matang akan fokus yang mau diambil 2021-2022, tulisan hanya mengendap difolder draft.
 Roadmap disini berkaitan dengan target capaian keahlian dibidang teknologi informasi, pemrograman khususnya.</description>
@@ -20,10 +20,10 @@ Roadmap disini berkaitan dengan target capaian keahlian dibidang teknologi infor
     
     <item>
       <title>asdf</title>
-      <link>https://hazulifidastian.github.io/stories/asdf/</link>
+      <link>https://hazulifidastian.github.io/blog/asdf/</link>
       <pubDate>Fri, 26 Jun 2020 10:24:41 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/asdf/</guid>
+      <guid>https://hazulifidastian.github.io/blog/asdf/</guid>
       <description>asdf adalah command line interface (CLI) yang digunakan untuk memanajemeni beberapa atau banyak versi bahasa pemrograman. asdf seperti pyenv pada python, rbenv pada ruby atau nvm pada nodejs tetapi all in one. asdf bisa menangani semuanya, khususnya bahasa pemrograman populer.
 Pada perkembangannya, asdf tidak hanya digunakan untuk bahasa pemgrograman saja. Ada plugin yang bisa memanajemeni database seperti mysql dan postgresql, redis, bahkan text editor neovim.
 Kenapa asdf? Menurut dokumentasi resminya, ini adalah alasan kenapa menggunakan asdf:</description>
@@ -31,10 +31,10 @@ Kenapa asdf? Menurut dokumentasi resminya, ini adalah alasan kenapa menggunakan 
     
     <item>
       <title>GitHub Webhooks dan Python Deployment</title>
-      <link>https://hazulifidastian.github.io/stories/github-webhooks-dan-python-deployment/</link>
+      <link>https://hazulifidastian.github.io/blog/github-webhooks-dan-python-deployment/</link>
       <pubDate>Mon, 22 Jun 2020 22:58:05 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/github-webhooks-dan-python-deployment/</guid>
+      <guid>https://hazulifidastian.github.io/blog/github-webhooks-dan-python-deployment/</guid>
       <description>Deskripsi Masalah Seorang developer memiliki aplikasi yang sudah ditahap production. Live, sudah bisa diakses menggunakan internet. Aplikasinya dibangun menggunakan web framework dengan bahasa pemrograman python.
 Pada server, developer menggunakan docker sebagai solusi pengepakan aplikasi. Kode disalin ke dalam sebuah image menjadi satu paket dengan sistem operasi didalam container.
 Proses deployment yang berjalan sekarang menggunakan cara:
@@ -43,10 +43,10 @@ Proses deployment yang berjalan sekarang menggunakan cara:
     
     <item>
       <title>Project Workflow</title>
-      <link>https://hazulifidastian.github.io/stories/project-workflow/</link>
+      <link>https://hazulifidastian.github.io/blog/project-workflow/</link>
       <pubDate>Fri, 19 Jun 2020 22:04:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/project-workflow/</guid>
+      <guid>https://hazulifidastian.github.io/blog/project-workflow/</guid>
       <description>Flashback Saya pernah menggunakan taiga.io untuk membantu memanajemeni proyek saya. Fiturnya banyak, gratis lagi. Saya pasang di komputer personal memanajemeni proyek dalam lingkungan lokal.
 Dulu, saya juga menggunakan redmine, aplikasi manajemen proyek yang dibuat dengan framework ruby on rails. Gratis. Bisa diunduh dan dipasang di komputer personal. Saat itu zaman IDE netbeans sedang hype dan svn masih populer sebagai aplikasi manajemen source code . Berarti sudah lama sekali.
 Aplikasi JIRA termasuk yang pernah saya coba, tapi hanya sekedar mencoba.</description>
@@ -54,10 +54,10 @@ Aplikasi JIRA termasuk yang pernah saya coba, tapi hanya sekedar mencoba.</descr
     
     <item>
       <title>Emacs 27 dan Font Ligature</title>
-      <link>https://hazulifidastian.github.io/stories/emacs-27-dan-font-ligature/</link>
+      <link>https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/</link>
       <pubDate>Thu, 18 Jun 2020 23:15:25 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/emacs-27-dan-font-ligature/</guid>
+      <guid>https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/</guid>
       <description>Font ligature adalah, karakter spesial pada font yang menggabungkan beberapa karakter berdekatan menjadi satu.
 Ligature pada awalnya digunakan pada media cetak tradisional untuk menghemat ruang. Dalam pemrograman, ligature digunakan untuk menyederhanakan dan memperindah kode.
 Emacs 27 pada dasarnya tidak mendukung ligature secara khusus, tapi ada beberapa cara untuk mensiasatinya. Tentunya kita perlu menerapkan konfigurasi khusus.
@@ -66,10 +66,10 @@ Editor lain, seperti milik JetBrains, VS Code mendukung ligature out of the box.
     
     <item>
       <title>Django: Login dan Registrasi dengan Akun Google</title>
-      <link>https://hazulifidastian.github.io/stories/django-login-dan-registrasi-dengan-akun-google/</link>
+      <link>https://hazulifidastian.github.io/blog/django-login-dan-registrasi-dengan-akun-google/</link>
       <pubDate>Sat, 13 Jun 2020 04:55:23 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/django-login-dan-registrasi-dengan-akun-google/</guid>
+      <guid>https://hazulifidastian.github.io/blog/django-login-dan-registrasi-dengan-akun-google/</guid>
       <description>Setelah mempraktekkan tutorial ini, anda akan bisa membuat sendiri fitur login dan registrasi pengguna menggunakan framework django.
 Fitur login dan registrasi penguna disini saya bagi menjadi dua. Pertama, pengguna bisa melakukan registrasi dan login menggunakan akun email dan sosial media. Disini saya menggunakan akun google/gmail, facebook, dan twitter. Kemudian kedua, pengguna bisa registrasi manual seperti biasa menggunakan form berisi username dan password.
 Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user dan integrasi dengan akun google.</description>
@@ -77,10 +77,10 @@ Artikel pertama ini, kita akan membahas mulai pemasangan django, pembuatan user 
     
     <item>
       <title>Suspendable App</title>
-      <link>https://hazulifidastian.github.io/stories/suspendable-app/</link>
+      <link>https://hazulifidastian.github.io/blog/suspendable-app/</link>
       <pubDate>Mon, 02 Mar 2020 06:25:49 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/suspendable-app/</guid>
+      <guid>https://hazulifidastian.github.io/blog/suspendable-app/</guid>
       <description>Saya akan membagi aplikasi menjadi dua bagian. Pertama adalah bagian yang terus-menerus memantau input yang diberikan user melalui keyboard. Bagian ini akan aktif bersamaan dengan berjalannya aplikasi. Saya akan membuat fungsi yang merespon terhadap kombinasi shortcut keyboard tertentu.
 Kedua adalah bagian yang menjalankan pekerjaan utama dalam aplikasi. Bagian ini bisa dikontrol, suspend (ditunda pekerjaannya), resume (dilanjutkan kembali) dan dihentikan.
 Error yang terjadi dibagian kedua tidak boleh mempengaruhi bagian pertama. Dan bagian pertama memiliki kontrol penuh terhadap bagian kedua.</description>
@@ -88,10 +88,10 @@ Error yang terjadi dibagian kedua tidak boleh mempengaruhi bagian pertama. Dan b
     
     <item>
       <title>Night Mode</title>
-      <link>https://hazulifidastian.github.io/stories/night-mode/</link>
+      <link>https://hazulifidastian.github.io/blog/night-mode/</link>
       <pubDate>Tue, 25 Feb 2020 22:31:24 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/night-mode/</guid>
+      <guid>https://hazulifidastian.github.io/blog/night-mode/</guid>
       <description>Mode Malam  Mode malam website
   Mode malam atau dengan nama lain mode gelap (dark mode), sudah menjadi trend desain antarmuka. Banyak aplikasi mobile, desktop bahkan website menerapkannya.
 Aplikasi messenger seperti telegram, slack, signals sudah menjadikan ini sebagai fiturnya. Terakhir whatsapp, meluncurkan fitur ini pada aplikasi beta di platform android.
@@ -100,19 +100,19 @@ Saya termasuk yang sering menggunakan antarmuka mode malam ini. Memang karena se
     
     <item>
       <title>Halo Pelican</title>
-      <link>https://hazulifidastian.github.io/stories/halo-pelican/</link>
+      <link>https://hazulifidastian.github.io/blog/halo-pelican/</link>
       <pubDate>Sun, 14 Jul 2019 03:32:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/halo-pelican/</guid>
+      <guid>https://hazulifidastian.github.io/blog/halo-pelican/</guid>
       <description>&lt;p&gt;Website ini sebelumnya dibuat menggunakan pure html dan framework css skeleton. Fiturnya hanya berisi informasi personal statis dan jarang diperbarui.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Custom Domain Github</title>
-      <link>https://hazulifidastian.github.io/stories/custom-domain-github/</link>
+      <link>https://hazulifidastian.github.io/blog/custom-domain-github/</link>
       <pubDate>Wed, 28 Jun 2017 08:00:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/custom-domain-github/</guid>
+      <guid>https://hazulifidastian.github.io/blog/custom-domain-github/</guid>
       <description>&lt;p&gt;Setelah membuat website menggunakan Github, website bisa dibuatkan domain khusus.
 Artinya, setiap kita ingin akses ke website tidak perlu menggunakan domain standar
 bawaan dari Github hazulifidastian.github.io. Tapi bisa menggunakan alamat yang kita
@@ -121,10 +121,10 @@ tentukan sendiri, misalnya alamat saya ini &lt;del&gt;hazulifidastian.my.id&lt;/
     
     <item>
       <title>Membuat Website Gratis Github</title>
-      <link>https://hazulifidastian.github.io/stories/membuat-website-gratis-github/</link>
+      <link>https://hazulifidastian.github.io/blog/membuat-website-gratis-github/</link>
       <pubDate>Wed, 28 Jun 2017 06:00:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/stories/membuat-website-gratis-github/</guid>
+      <guid>https://hazulifidastian.github.io/blog/membuat-website-gratis-github/</guid>
       <description>&lt;p&gt;Membuat website sederhana yang menampilkan profil pribadi atau organisasi bisa 
 dilakukan dengan menggunakan Github. Kita tidak perlu menyewa jasa penyedia hosting 
 berbayar. Cukup dengan membuat akun Github fasilitas “hosting” web bisa digunakan 

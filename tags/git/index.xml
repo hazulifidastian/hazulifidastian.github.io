@@ -9,20 +9,20 @@
     <lastBuildDate>Thu, 26 Aug 2021 21:06:01 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Strategi Merge Branch Git yang Konflik</title>
-      <link>https://hazulifidastian.github.io/notes/strategi-merge-branch-git-yang-konflik/</link>
+      <link>https://hazulifidastian.github.io/blog/strategi-merge-branch-git-yang-konflik/</link>
       <pubDate>Thu, 26 Aug 2021 21:06:01 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/strategi-merge-branch-git-yang-konflik/</guid>
+      <guid>https://hazulifidastian.github.io/blog/strategi-merge-branch-git-yang-konflik/</guid>
       <description>Saya termasuk orang yang paranoid saat melihat dua branch git yang akan digabungkan terdapat banyak konflik. Sudah terbayang kesulitan untuk memilih, memilah bagian kode mana yang akan dipakai. Apalagi jika file yang konflik ada banyak, ditambah selisih waktu antar branch juga panjang.
 Jika menggunakan metode biasa, misalnya dengan langsung merge branch feature atau bugs ke branch master, saya cenderung panik terus bingung mau mulai dari mana karena melihat banyaknya file yang konflik.</description>
     </item>
     
     <item>
       <title>Git Tips dan Tricks</title>
-      <link>https://hazulifidastian.github.io/notes/git-tips-dan-tricks/</link>
+      <link>https://hazulifidastian.github.io/blog/git-tips-dan-tricks/</link>
       <pubDate>Wed, 24 Jun 2020 16:22:19 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/git-tips-dan-tricks/</guid>
+      <guid>https://hazulifidastian.github.io/blog/git-tips-dan-tricks/</guid>
       <description>Caching Password git config --global credential.helper cache git push origin master Username dan password akan dicache, git push selanjutnya tidak akan diminta lagi.
 Referensi: Caching your GitHub password in Git
 Melihat Revisi Commit Melihat revisi commit pada log.

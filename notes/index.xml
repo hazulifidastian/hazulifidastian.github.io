@@ -6,22 +6,35 @@
     <description>Recent content in Notes on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Tue, 07 Jun 2022 15:01:17 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jun 2022 15:48:03 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx Blocker</title>
+      <link>https://hazulifidastian.github.io/blog/nginx-blocker/</link>
+      <pubDate>Mon, 13 Jun 2022 15:48:03 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.github.io/blog/nginx-blocker/</guid>
+      <description>Bagian 1: Instalasi   Download install-ngxblocker
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/install-ngxblocker -O /usr/local/sbin/install-ngxblocker sudo chmod +x /usr/local/sbin/install-ngxblocker   Jalankan install-ngxblocker dengan mode DRY-MODE/DRY-RUN untuk melihat peubahan apa yang dibuat dan file apa saja yang didownload.
+cd /usr/local/sbin sudo ./install-ngxblocker Dengan DRY-MODE, script hanya melakukan simulasi setup.
+  Jalankan install-ngxblocker dengan parameter -x untuk benar-benar mendownload file yang diperlukan.
+cd /usr/local/sbin sudo ./install-ngxblocker -x Script ini akan membuat folder /etc/nginx/bots.d dan mendownload file konfigurasi yang diperlukan ke folder tersebut.</description>
+    </item>
+    
     <item>
       <title>Elixir Learning Resources</title>
-      <link>https://hazulifidastian.github.io/notes/elixir-learning-resources/</link>
+      <link>https://hazulifidastian.github.io/blog/elixir-learning-resources/</link>
       <pubDate>Tue, 07 Jun 2022 15:01:17 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/elixir-learning-resources/</guid>
+      <guid>https://hazulifidastian.github.io/blog/elixir-learning-resources/</guid>
       <description>Online Sites  Elixir Documentation Elixir School Fullstack Phoenix Discover Elixir &amp;amp; Phoenix  Books  Programming Elixir 1.6 Learn Functional Programming with Elixir Joy of Elixir Elixir in Action, Second Edition Concurrent Data Processing in Elixir Designing Elixir System With OTP The Little Elixir &amp;amp; OTP Guidebook Adopting Elixir Programming Phoenix 1.4 Programming Ecto Testing Elixir Real-time Phoenix Phoenix in Action Phoenix Liveview Phoenix Inside Out Series  Video Courses  Getting Started with Elixir Elixir for Beginners Elixir for Programmers, Second Edition LearnElixir.</description>
     </item>
     
     <item>
       <title>Python Notes</title>
-      <link>https://hazulifidastian.github.io/notes/python-notes/</link>
+      <link>https://hazulifidastian.github.io/blog/python-notes/</link>
       <pubDate>Mon, 11 Apr 2022 07:36:02 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/python-notes/</guid>
+      <guid>https://hazulifidastian.github.io/blog/python-notes/</guid>
       <description>Tools Konversi requirements.txt ke Paket Poetry pyproject.toml Dari requirements.txt:
 pytest-django==4.5.2 di pyproject.toml menjadi
 pytest-django = &amp;#34;4.5.2&amp;#34; Menambahkan opsi dari requirements.txt:
@@ -31,10 +44,10 @@ Werkzeug = {extras = [&amp;#34;watchdog&amp;#34;], version = &amp;#34;2.0.3&amp;
     
     <item>
       <title>PHP Notes</title>
-      <link>https://hazulifidastian.github.io/notes/php-notes/</link>
+      <link>https://hazulifidastian.github.io/blog/php-notes/</link>
       <pubDate>Tue, 22 Feb 2022 23:32:19 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/php-notes/</guid>
+      <guid>https://hazulifidastian.github.io/blog/php-notes/</guid>
       <description>Tools Xdebug Mode Off Trigger Makefile Error Pesan error:
 make: *** [Makefile:135: dump-autoload] Error 2816 Solusi:
  Hilangkan setting XDEBUG_MODE = &amp;quot;off&amp;quot; Tambahkan informasi folder composer pada konfigurasi skipped paths di PHPStorm. Lihat tautan ini https://github.com/composer/composer/issues/8302#issuecomment-526908909.  </description>
@@ -42,10 +55,10 @@ make: *** [Makefile:135: dump-autoload] Error 2816 Solusi:
     
     <item>
       <title>Menampilkan Hari dan Bulan dalam Bahasa Indonesia pada Framework Hugo</title>
-      <link>https://hazulifidastian.github.io/notes/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</link>
+      <link>https://hazulifidastian.github.io/blog/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</link>
       <pubDate>Fri, 27 Aug 2021 01:27:41 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</guid>
+      <guid>https://hazulifidastian.github.io/blog/menampilkan-hari-dan-bulan-dalam-bahasa-indonesia-pada-framework-hugo/</guid>
       <description>File data File data/locale/id/day.yaml.
 Monday: Senin Tuesday: Selasa Wednesday: Rabu Thursday: Kamis Friday: Jum&amp;#39;at Saturday: Sabtu Sunday: Minggu File data/locale/id/month.yaml.
 - Januari - Februari - Maret - April - Mei - Juni - Juli - Agustus - September - Oktober - November - Desember Konfigurasi File config.toml
@@ -55,30 +68,30 @@ Monday: Senin Tuesday: Selasa Wednesday: Rabu Thursday: Kamis Friday: Jum&amp;#3
     
     <item>
       <title>Strategi Merge Branch Git yang Konflik</title>
-      <link>https://hazulifidastian.github.io/notes/strategi-merge-branch-git-yang-konflik/</link>
+      <link>https://hazulifidastian.github.io/blog/strategi-merge-branch-git-yang-konflik/</link>
       <pubDate>Thu, 26 Aug 2021 21:06:01 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/strategi-merge-branch-git-yang-konflik/</guid>
+      <guid>https://hazulifidastian.github.io/blog/strategi-merge-branch-git-yang-konflik/</guid>
       <description>Saya termasuk orang yang paranoid saat melihat dua branch git yang akan digabungkan terdapat banyak konflik. Sudah terbayang kesulitan untuk memilih, memilah bagian kode mana yang akan dipakai. Apalagi jika file yang konflik ada banyak, ditambah selisih waktu antar branch juga panjang.
 Jika menggunakan metode biasa, misalnya dengan langsung merge branch feature atau bugs ke branch master, saya cenderung panik terus bingung mau mulai dari mana karena melihat banyaknya file yang konflik.</description>
     </item>
     
     <item>
       <title>asdf Cheatsheet</title>
-      <link>https://hazulifidastian.github.io/notes/asdf-cheatsheet/</link>
+      <link>https://hazulifidastian.github.io/blog/asdf-cheatsheet/</link>
       <pubDate>Sat, 27 Jun 2020 05:29:47 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/asdf-cheatsheet/</guid>
+      <guid>https://hazulifidastian.github.io/blog/asdf-cheatsheet/</guid>
       <description>Cheatsheet Berikut daftar opsi yang bisa digunakan pada perintah asdf.
 Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua paket yang terpasangasdf plugin list alldaftar seluruh pluginasdf plugin listdaftar plugin yang terpasangasdf plugin list --urlsdaftar plugin yang terpasang beserta urlnyaasdf plugin add pythonpasang plugin pythonasdf plugin remove pythoncopot plugin pythonasdf plugin update pythonperbarui plugin pythonasdf plugin update --allperbarui seluruh pluginManajemen Paket PerintahDeskripsiasdf list all pythondaftar paket python yang bisa dipasangasdf latest pythonversi stabil terakhir paket pythonasdf latest python 3.</description>
     </item>
     
     <item>
       <title>Git Tips dan Tricks</title>
-      <link>https://hazulifidastian.github.io/notes/git-tips-dan-tricks/</link>
+      <link>https://hazulifidastian.github.io/blog/git-tips-dan-tricks/</link>
       <pubDate>Wed, 24 Jun 2020 16:22:19 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/git-tips-dan-tricks/</guid>
+      <guid>https://hazulifidastian.github.io/blog/git-tips-dan-tricks/</guid>
       <description>Caching Password git config --global credential.helper cache git push origin master Username dan password akan dicache, git push selanjutnya tidak akan diminta lagi.
 Referensi: Caching your GitHub password in Git
 Melihat Revisi Commit Melihat revisi commit pada log.
@@ -89,10 +102,10 @@ Melihat Revisi Commit Melihat revisi commit pada log.
     
     <item>
       <title>Python Mock dan Stub</title>
-      <link>https://hazulifidastian.github.io/notes/python-mock-dan-stub/</link>
+      <link>https://hazulifidastian.github.io/blog/python-mock-dan-stub/</link>
       <pubDate>Wed, 24 Jun 2020 12:11:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/python-mock-dan-stub/</guid>
+      <guid>https://hazulifidastian.github.io/blog/python-mock-dan-stub/</guid>
       <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
 import os.environ from unittest import mock  @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo():  foo() Mocking time.sleep Patch menggunakan decorator.
 from unittest import mock from unittest import TestCase  class TestClass(TestCase):  @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None)  def test_func_with_time(self, patched_time_sleep):  func_with_time()   # Harus dipanggil 1 kali  self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.</description>
@@ -100,10 +113,10 @@ from unittest import mock from unittest import TestCase  class TestClass(TestCas
     
     <item>
       <title>Magit Cheatsheet</title>
-      <link>https://hazulifidastian.github.io/notes/magit-cheatsheet/</link>
+      <link>https://hazulifidastian.github.io/blog/magit-cheatsheet/</link>
       <pubDate>Mon, 15 Jun 2020 20:39:51 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/magit-cheatsheet/</guid>
+      <guid>https://hazulifidastian.github.io/blog/magit-cheatsheet/</guid>
       <description>Saya menggunakan Emacs 27, dengan framework konfigurasi Doom. Standarnya, Doom menggunakan emulasi vim menggunakan evil-mode. Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya tidak akan terlepas dari evil-mode.
 Bagi Anda vanilla user, saya memasukkan nama command/perintah untuk melengkapi shortcut key. Agar, jika Anda tidak mengenali key-nya, Anda bisa mengakses perintahnya melalui shortcut M-x.
 Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-status.</description>
@@ -111,10 +124,10 @@ Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-statu
     
     <item>
       <title>Compiling Emacs 27 Ubuntu 18.04</title>
-      <link>https://hazulifidastian.github.io/notes/compiling-emacs-27-ubuntu-18-04/</link>
+      <link>https://hazulifidastian.github.io/blog/compiling-emacs-27-ubuntu-18-04/</link>
       <pubDate>Sat, 30 May 2020 16:26:37 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/compiling-emacs-27-ubuntu-18-04/</guid>
+      <guid>https://hazulifidastian.github.io/blog/compiling-emacs-27-ubuntu-18-04/</guid>
       <description>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan instalasi beberapa tools dan library.
 Compile &amp;amp; Install
 # Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common  # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo  # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz  tar -xzf emacs-27.0.91.tar.gz  # Konfigurasi dan install emacs cd emacs-27.</description>
@@ -122,10 +135,10 @@ Compile &amp;amp; Install
     
     <item>
       <title>Modul PHP Doom Emacs</title>
-      <link>https://hazulifidastian.github.io/notes/modul-php-doom-emacs/</link>
+      <link>https://hazulifidastian.github.io/blog/modul-php-doom-emacs/</link>
       <pubDate>Thu, 14 May 2020 00:48:53 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/modul-php-doom-emacs/</guid>
+      <guid>https://hazulifidastian.github.io/blog/modul-php-doom-emacs/</guid>
       <description>Konfigurasi Doom Emacs init.el Jelajah file konfigurasi dengan shorcut SPC f p, kemudian pilih file init.el. Aktifkan beberapa modul dengan cara menghilangkan tanda komentar ;;.
  Modul syntax, ada pada grup :checkers. Modul lsp, ada pada grup :tools. Modul (php +lsp), tambahan +lsp. Ada pada grup :lang.  package.el Aktifkan package phpactor pada file konfigurasi package.el. Buka dengan shorcut SPC f p.
 (package! phpactor) Sinkronisasi Konfigurasi Doom Emacs Ketikkan perintah ~/.</description>
@@ -133,10 +146,10 @@ Compile &amp;amp; Install
     
     <item>
       <title>Lightline dan winwidth Nvim</title>
-      <link>https://hazulifidastian.github.io/notes/lightline-dan-winwidth-nvim/</link>
+      <link>https://hazulifidastian.github.io/blog/lightline-dan-winwidth-nvim/</link>
       <pubDate>Mon, 09 Mar 2020 11:51:46 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/lightline-dan-winwidth-nvim/</guid>
+      <guid>https://hazulifidastian.github.io/blog/lightline-dan-winwidth-nvim/</guid>
       <description>Pembahasan kali ini adalah tentang statusline di Nvim. Statusline adalah, garis horizontal yang ada dibagian bawah nvim. Ia menampilkan status dari buffer/file yang sedang aktif.
 Statusline bisa menampilkan informasi dalam beberapa bagian. Bisa berisi mode vim, nama file, direktori dari file, posisi kursor, dll.
 Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan plugin Lightline1. Plugin ini ringan, dan mudah dikustomisasi. Kita bisa dengan mudah mengatur tema untuk memper-indah tampilan status.</description>
@@ -144,10 +157,10 @@ Untuk mempermudah mengatur tampilan informasi pada statusline, saya menggunakan 
     
     <item>
       <title>Fish Shell Upgrade Error</title>
-      <link>https://hazulifidastian.github.io/notes/fish-shell-upgrade-error/</link>
+      <link>https://hazulifidastian.github.io/blog/fish-shell-upgrade-error/</link>
       <pubDate>Sat, 29 Feb 2020 10:12:40 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/fish-shell-upgrade-error/</guid>
+      <guid>https://hazulifidastian.github.io/blog/fish-shell-upgrade-error/</guid>
       <description>Fish shell gagal di upgrade karena issue https://github.com/fish-shell/fish-shell/issues/5822. Package manager gagal me-replace file autocompletion rg.fish.
 Penyebabnya adalah, pernah instalasi aplikasi ripgrep menggunakan cargo. Cargo adalah package manager bawaan dari bahasa pemograman rust.
 Cargo menjadikan user rigprep sebagai pemilik file rg.fish. Sehingga package manager bawaan OS gagal me-replace file tersebut.
@@ -157,10 +170,10 @@ Instalasi aplikasi baru juga tidak bisa.</description>
     
     <item>
       <title>Format DateField Django</title>
-      <link>https://hazulifidastian.github.io/notes/format-datefield-django/</link>
+      <link>https://hazulifidastian.github.io/blog/format-datefield-django/</link>
       <pubDate>Tue, 22 Jan 2019 07:00:00 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/notes/format-datefield-django/</guid>
+      <guid>https://hazulifidastian.github.io/blog/format-datefield-django/</guid>
       <description>Format Spesifik Menentukan format spesifik DateField pada form. Jika pengguna memasukkan tanggal diluar format tersebut, form akan menampilkan error saat validasi.
 # forms.py class MyForm(forms.ModelForm):  # Hanya menerima input dengan format contoh: 25/01/2019   tanggal = forms.DateField(input_formats=&amp;#39;%d-%m-%Y&amp;#39;) Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.
 # settings.py DATE_INPUT_FORMATS = &amp;#39;%d-%m-%Y&amp;#39; Penggunaan yang Salah! Jika DATE_INPUT_FORMATS tidak di set, django akan melihat konfigurasi LANGUAGE_CODE pada settings.</description>
