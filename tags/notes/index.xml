@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ubuntu on Hazuli Fidastian</title>
-    <link>https://hazulifidastian.github.io/tags/ubuntu/</link>
-    <description>Recent content in ubuntu on Hazuli Fidastian</description>
+    <title>notes on Hazuli Fidastian</title>
+    <link>https://hazulifidastian.github.io/tags/notes/</link>
+    <description>Recent content in notes on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Wed, 08 Jun 2022 07:13:01 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jun 2022 07:13:01 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu Linux Notes</title>
       <link>https://hazulifidastian.github.io/blog/ubuntu-linux-notes/</link>
