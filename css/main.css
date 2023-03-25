@@ -556,3 +556,7 @@ h6 {
     font-size: inherit;
   }
 }
+
+.disqus {
+  padding: 0 15px;
+}
