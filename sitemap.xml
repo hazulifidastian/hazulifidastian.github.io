@@ -4,8 +4,23 @@
   <url>
     <loc>https://hazulifidastian.github.io/about/</loc>
   </url><url>
+    <loc>https://hazulifidastian.github.io/blog/</loc>
+    <lastmod>2023-03-25T22:14:30+07:00</lastmod>
+  </url><url>
     <loc>https://hazulifidastian.github.io/</loc>
-    <lastmod>2022-06-13T15:48:03+07:00</lastmod>
+    <lastmod>2023-03-25T22:14:30+07:00</lastmod>
+  </url><url>
+    <loc>https://hazulifidastian.github.io/tags/mysql/</loc>
+    <lastmod>2023-03-25T22:14:30+07:00</lastmod>
+  </url><url>
+    <loc>https://hazulifidastian.github.io/tags/</loc>
+    <lastmod>2023-03-25T22:14:30+07:00</lastmod>
+  </url><url>
+    <loc>https://hazulifidastian.github.io/tags/zig/</loc>
+    <lastmod>2023-03-25T22:14:30+07:00</lastmod>
+  </url><url>
+    <loc>https://hazulifidastian.github.io/blog/zig-ke-mysql-dengan-library-c/</loc>
+    <lastmod>2023-03-25T22:14:30+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/nginx/</loc>
     <lastmod>2022-06-13T15:48:03+07:00</lastmod>
@@ -17,9 +32,6 @@
     <lastmod>2022-06-13T15:48:03+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/security/</loc>
-    <lastmod>2022-06-13T15:48:03+07:00</lastmod>
-  </url><url>
-    <loc>https://hazulifidastian.github.io/tags/</loc>
     <lastmod>2022-06-13T15:48:03+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/linux/</loc>
@@ -47,9 +59,6 @@
     <lastmod>2022-04-15T02:22:33+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/blog/roadmap-2022/</loc>
-    <lastmod>2022-04-15T02:22:33+07:00</lastmod>
-  </url><url>
-    <loc>https://hazulifidastian.github.io/stories/</loc>
     <lastmod>2022-04-15T02:22:33+07:00</lastmod>
   </url><url>
     <loc>https://hazulifidastian.github.io/tags/python/</loc>

@@ -268,7 +268,7 @@ h3 {
   margin: 0 0 25px 0;
   padding: 1em;
   text-align: center;
-  border: 1px solid #f5f5f5;
+  border: 3px solid #ddd;
 }
 
 .article-content figure figcaption {
@@ -394,11 +394,16 @@ h3 {
 
 .highlight {
   position: relative;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .highlight pre {
-  padding: 10px;
+  /* border-radius: 10px; */
+  border: 3px solid #1997A5;
+}
+
+.highlight code>span>span {
+  padding: 0 10px !important;
 }
 
 .footnotes {
@@ -453,4 +458,24 @@ h3 {
 
 .disqus {
   padding: 0 15px;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }

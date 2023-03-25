@@ -140,16 +140,16 @@
       <div class="article-content">
 
         <h3 id="caching-password">Caching Password</h3>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global credential.helper cache
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global credential.helper cache
 </span></span><span style="display:flex;"><span>git push origin master
 </span></span></code></pre></div><p>Username dan password akan dicache, <code>git push</code> selanjutnya tidak akan diminta lagi.</p>
 <p>Referensi: <a href="https://help.github.com/en/github/using-git/caching-your-github-password-in-git#platform-linux">Caching your GitHub password in Git</a></p>
 <h3 id="melihat-revisi-commit">Melihat Revisi Commit</h3>
 <p>Melihat revisi commit pada log.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># Menggunakan range id commit.</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Menggunakan range id commit.</span>
 </span></span><span style="display:flex;"><span>git log --oneline 6ff1760..05474ff
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># Menggunakan range nama branch.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Menggunakan range nama branch.</span>
 </span></span><span style="display:flex;"><span>git log --oneline master..origin/master
 </span></span></code></pre></div><p>Referensi:</p>
 <ul>
@@ -158,10 +158,10 @@
 </ul>
 <h3 id="melihat-revisi-kode">Melihat Revisi Kode</h3>
 <p>Melihat revisi kode.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># Menggunakan range id commit.</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Menggunakan range id commit.</span>
 </span></span><span style="display:flex;"><span>git diff 6ff1760..05474ff
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># Menggunakan range nama branch.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Menggunakan range nama branch.</span>
 </span></span><span style="display:flex;"><span>git diff master..origin/master
 </span></span></code></pre></div><p>Referensi:</p>
 <ul>
@@ -170,7 +170,7 @@
 </ul>
 <h3 id="force-push-yang-aman">Force Push yang Aman</h3>
 <p>Force push dengan metode ini memastikan tidak akan menimpa/overwrite pekerjaan tim yang lain pada branch remote. Jika branch remote sudah ada commit yang lain force push akan dibatalkan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push --force-with-lease origin master
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push --force-with-lease origin master
 </span></span></code></pre></div>
 
 

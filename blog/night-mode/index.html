@@ -31,40 +31,6 @@
 
 
 
- 
-    <meta property="og:type" content="article" />
-    <meta property="article:publisher" content="" /> 
-    <meta property="og:article:published_time" content=2020-02-25T22:31:24&#43;0700 /> 
-    <meta property="article:published_time" content=2020-02-25T22:31:24&#43;0700 />
-
-    <script defer type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Article",
-      "headline": "Night Mode",
-      "author": {
-        "@type": "Person",
-        "name": ""
-      },
-      "datePublished": "2020-02-25",
-      "description": "Mode malam (night mode) untuk website. Menggunakan HTML, CSS dan Javascript.",
-      "wordCount":  726 ,
-      "mainEntityOfPage": "True",
-      "dateModified": "2020-02-25",
-      "image": {
-        "@type": "imageObject",
-        "url": ""
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Hazuli Fidastian",
-        "logo": {
-          "@type": "imageObject",
-          "url": "favicon.ico"
-        }
-      }
-    }
-  </script>
 
 
 <base href="https://hazulifidastian.github.io/blog/night-mode/">
@@ -127,7 +93,7 @@
 
       <div class="article-section">
 
-        <a class="article-section" href="https://hazulifidastian.github.io/stories/">stories</a>
+        <a class="article-section" href="https://hazulifidastian.github.io/blog/">blog</a>
 
       </div>
 
@@ -176,48 +142,6 @@
 
       
 
-<div id="article-toc">
-  <input id="collapsible" class="toggle" type="checkbox">
-  <label for="collapsible" class="lbl-toggle" title="Daftar Isi">
-    Klik 
-    <span class="toggle-melihat-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 -4 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-toggle-left"><rect x="1" y="5" width="22" height="14" rx="7" ry="7"></rect><circle cx="8" cy="12" r="3"></circle></svg>
-    </span>
-    <span class="toggle-menyembunyikan-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 -4 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-toggle-right"><rect x="1" y="5" width="22" height="14" rx="7" ry="7"></rect><circle cx="16" cy="12" r="3"></circle></svg>    </span>
-    <span class="toggle-melihat-text">untuk melihat daftar isi.</span>
-    <span class="toggle-menyembunyikan-text">untuk menyembunyikan daftar isi.</span>
-  </label>
-  
-  <div class="collapsible-content">
-    <div class="content-inner">
-      <div id="article-toc-content">
-        <h2 class="toc-title">Daftar Isi</h2>
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#mode-malam">Mode Malam</a></li>
-    <li><a href="#why">Why</a></li>
-    <li><a href="#koding">Koding</a>
-      <ul>
-        <li><a href="#cascading-stylesheet">Cascading Stylesheet</a></li>
-        <li><a href="#toggle-tombol-tema">Toggle, Tombol Tema</a></li>
-        <li><a href="#javascript">Javascript</a></li>
-      </ul>
-    </li>
-    <li><a href="#kesimpulan">Kesimpulan</a></li>
-  </ul>
-</nav>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-      
-
-      
-
 
       <div class="article-content">
 
@@ -242,90 +166,90 @@
 <p>Website ini dibangun dengan framework <a href="https://gohugo.io/">hugo</a>. Pembuatan fitur mode malam tidak ada kaitannya dengan frameworknya. Seluruh kodenya cukup dibuat dengan CSS dan Javascript.</p>
 <h3 id="cascading-stylesheet">Cascading Stylesheet</h3>
 <p>Style yang mirip telegram saya temukan diwebsite <a href="https://userstyles.org/styles/171257/telegram-midnight-for-vk-dark-theme-for-vk">ini</a>. Sebenarnya bisa saja membuat palet warna yang mirip tema telegram secara manual. Warna bisa diambil dari screenshot aplikasi telegram langsung. Tapi malas :D.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#616e87;font-style:italic">/* Night mode */</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* Night mode */</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1">html</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">background-color</span><span style="color:#eceff4">:</span> <span style="color:#b48ead">#06090e</span> <span style="color:#5e81ac;font-style:italic">!important</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">filter</span><span style="color:#eceff4">:</span> <span style="color:#81a1c1">invert</span><span style="color:#eceff4">(</span><span style="color:#b48ead">100</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">hue-rotate</span><span style="color:#eceff4">(</span><span style="color:#b48ead">180</span><span style="color:#81a1c1">deg</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">brightness</span><span style="color:#eceff4">(</span><span style="color:#b48ead">105</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">contrast</span><span style="color:#eceff4">(</span><span style="color:#b48ead">85</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1">-webkit-</span><span style="color:#81a1c1;font-weight:bold">filter</span><span style="color:#eceff4">:</span> <span style="color:#81a1c1">invert</span><span style="color:#eceff4">(</span><span style="color:#b48ead">100</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">hue-rotate</span><span style="color:#eceff4">(</span><span style="color:#b48ead">180</span><span style="color:#81a1c1">deg</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">brightness</span><span style="color:#eceff4">(</span><span style="color:#b48ead">105</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">contrast</span><span style="color:#eceff4">(</span><span style="color:#b48ead">85</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">html</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#ae81ff">#06090e</span> <span style="color:#75715e">!important</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">filter</span><span style="color:#111">:</span> <span style="color:#111">invert</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">%</span><span style="color:#111">)</span> <span style="color:#111">hue-rotate</span><span style="color:#111">(</span><span style="color:#ae81ff">180</span><span style="color:#00a8c8">deg</span><span style="color:#111">)</span> <span style="color:#111">brightness</span><span style="color:#111">(</span><span style="color:#ae81ff">105</span><span style="color:#00a8c8">%</span><span style="color:#111">)</span> <span style="color:#111">contrast</span><span style="color:#111">(</span><span style="color:#ae81ff">85</span><span style="color:#00a8c8">%</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">-webkit-</span><span style="color:#00a8c8">filter</span><span style="color:#111">:</span> <span style="color:#111">invert</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">%</span><span style="color:#111">)</span> <span style="color:#111">hue-rotate</span><span style="color:#111">(</span><span style="color:#ae81ff">180</span><span style="color:#00a8c8">deg</span><span style="color:#111">)</span> <span style="color:#111">brightness</span><span style="color:#111">(</span><span style="color:#ae81ff">105</span><span style="color:#00a8c8">%</span><span style="color:#111">)</span> <span style="color:#111">contrast</span><span style="color:#111">(</span><span style="color:#ae81ff">85</span><span style="color:#00a8c8">%</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1">body</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">background-color</span><span style="color:#eceff4">:</span> <span style="color:#b48ead">#fff</span> <span style="color:#5e81ac;font-style:italic">!important</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#ae81ff">#fff</span> <span style="color:#75715e">!important</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1">img</span><span style="color:#81a1c1">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1">video</span><span style="color:#81a1c1">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1">body</span> <span style="color:#81a1c1">*</span> <span style="color:#81a1c1">[</span><span style="color:#81a1c1">style</span><span style="color:#81a1c1">*=</span><span style="color:#a3be8c">&#34;background-image&#34;</span><span style="color:#81a1c1">]</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">filter</span><span style="color:#eceff4">:</span> <span style="color:#81a1c1">hue-rotate</span><span style="color:#eceff4">(</span><span style="color:#b48ead">180</span><span style="color:#81a1c1">deg</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">contrast</span><span style="color:#eceff4">(</span><span style="color:#b48ead">100</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">invert</span><span style="color:#eceff4">(</span><span style="color:#b48ead">100</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1">-webkit-</span><span style="color:#81a1c1;font-weight:bold">filter</span><span style="color:#eceff4">:</span> <span style="color:#81a1c1">hue-rotate</span><span style="color:#eceff4">(</span><span style="color:#b48ead">180</span><span style="color:#81a1c1">deg</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">contrast</span><span style="color:#eceff4">(</span><span style="color:#b48ead">100</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">invert</span><span style="color:#eceff4">(</span><span style="color:#b48ead">100</span><span style="color:#81a1c1">%</span><span style="color:#eceff4">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">img</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">video</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">body</span> <span style="color:#f92672">*</span> <span style="color:#f92672">[</span><span style="color:#f92672">style</span><span style="color:#f92672">*=</span><span style="color:#d88200">&#34;background-image&#34;</span><span style="color:#f92672">]</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">filter</span><span style="color:#111">:</span> <span style="color:#111">hue-rotate</span><span style="color:#111">(</span><span style="color:#ae81ff">180</span><span style="color:#00a8c8">deg</span><span style="color:#111">)</span> <span style="color:#111">contrast</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">%</span><span style="color:#111">)</span> <span style="color:#111">invert</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">%</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">-webkit-</span><span style="color:#00a8c8">filter</span><span style="color:#111">:</span> <span style="color:#111">hue-rotate</span><span style="color:#111">(</span><span style="color:#ae81ff">180</span><span style="color:#00a8c8">deg</span><span style="color:#111">)</span> <span style="color:#111">contrast</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">%</span><span style="color:#111">)</span> <span style="color:#111">invert</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">%</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">#</span><span style="color:#8fbcbb">article-toc</span> <span style="color:#eceff4">#</span><span style="color:#8fbcbb">TableOfContents</span> <span style="color:#81a1c1">a</span><span style="color:#81a1c1">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">.</span><span style="color:#8fbcbb">article-content</span> <span style="color:#81a1c1">a</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">border-bottom</span><span style="color:#eceff4">:</span> <span style="color:#b48ead">3</span><span style="color:#81a1c1">px</span> <span style="color:#81a1c1;font-weight:bold">solid</span> <span style="color:#b48ead">#f8f8f8</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">box-shadow</span><span style="color:#eceff4">:</span> <span style="color:#81a1c1;font-weight:bold">inset</span> <span style="color:#b48ead">0</span> <span style="color:#b48ead">-4</span><span style="color:#81a1c1">px</span> <span style="color:#b48ead">0</span> <span style="color:#b48ead">#f8f8f8</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">article-toc</span> <span style="color:#111">#</span><span style="color:#111">TableOfContents</span> <span style="color:#f92672">a</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">article-content</span> <span style="color:#f92672">a</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border-bottom</span><span style="color:#111">:</span> <span style="color:#ae81ff">3</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#ae81ff">#f8f8f8</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">box-shadow</span><span style="color:#111">:</span> <span style="color:#00a8c8">inset</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">-4</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">#f8f8f8</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">#</span><span style="color:#8fbcbb">article-toc</span> <span style="color:#eceff4">#</span><span style="color:#8fbcbb">TableOfContents</span> <span style="color:#81a1c1">a</span><span style="color:#eceff4">:</span><span style="color:#d08770">hover</span><span style="color:#81a1c1">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">.</span><span style="color:#8fbcbb">article-content</span> <span style="color:#81a1c1">a</span><span style="color:#eceff4">:</span><span style="color:#d08770">hover</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">border-bottom</span><span style="color:#eceff4">:</span> <span style="color:#b48ead">3</span><span style="color:#81a1c1">px</span> <span style="color:#81a1c1;font-weight:bold">solid</span> <span style="color:#b48ead">#f8f8f8</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">box-shadow</span><span style="color:#eceff4">:</span> <span style="color:#81a1c1;font-weight:bold">inset</span> <span style="color:#b48ead">0</span> <span style="color:#b48ead">-4</span><span style="color:#81a1c1">px</span> <span style="color:#b48ead">0</span> <span style="color:#b48ead">#f8f8f8</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">background</span><span style="color:#eceff4">:</span> <span style="color:#b48ead">#f8f8f8</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">article-toc</span> <span style="color:#111">#</span><span style="color:#111">TableOfContents</span> <span style="color:#f92672">a</span><span style="color:#111">:</span><span style="color:#75af00">hover</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">article-content</span> <span style="color:#f92672">a</span><span style="color:#111">:</span><span style="color:#75af00">hover</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border-bottom</span><span style="color:#111">:</span> <span style="color:#ae81ff">3</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#ae81ff">#f8f8f8</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">box-shadow</span><span style="color:#111">:</span> <span style="color:#00a8c8">inset</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">-4</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">#f8f8f8</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background</span><span style="color:#111">:</span> <span style="color:#ae81ff">#f8f8f8</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
 </span></span></code></pre></div><p>Setelah utak-atik lumayan lama, penyesuaian dengan tema telegram tidak seperti yang diharapkan. Dan saya rasa cukup dengan hasil yang sekarang. Lain waktu bila lebih didalami lagi.</p>
 <h3 id="toggle-tombol-tema">Toggle, Tombol Tema</h3>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#eceff4">&lt;</span><span style="color:#81a1c1">a</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#8fbcbb">id</span><span style="color:#81a1c1">=</span><span style="color:#a3be8c">&#34;night-mode-toggle&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#8fbcbb">title</span><span style="color:#81a1c1">=</span><span style="color:#a3be8c">&#34;Toggle Night/Light mode&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#8fbcbb">data-current-mode</span><span style="color:#81a1c1">=</span><span style="color:#a3be8c">&#34;light&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#8fbcbb">style</span><span style="color:#81a1c1">=</span><span style="color:#a3be8c">&#34;cursor: pointer;&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">&gt;&lt;/</span><span style="color:#81a1c1">a</span><span style="color:#eceff4">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">a</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;night-mode-toggle&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">title</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Toggle Night/Light mode&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">data-current-mode</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;light&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">style</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;cursor: pointer;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">a</span><span style="color:#111">&gt;</span>
 </span></span></code></pre></div><h3 id="javascript">Javascript</h3>
 <p>Saya menggunakan fitur <em>localstorage</em> pada javascript sebagai penanda browser sedang ada dimode malam (night) atau terang (light).</p>
 <p><em>localstorage</em> merupakan properti pada objek window dijavascript. Memungkinkan kita untuk menyimpan pasangan data key dan value<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <p>Data tetap tersimpan pada browser. Tidak ada kadarluarsa. Bisa dihapus oleh website yang membuatnya, atau secara manual oleh pemilik browser.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">var</span> toggle <span style="color:#81a1c1">=</span> <span style="color:#81a1c1">document</span><span style="color:#eceff4">.</span>getElementById<span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;night-mode-toggle&#34;</span><span style="color:#eceff4">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">var</span> currentMode <span style="color:#81a1c1">=</span> toggle<span style="color:#eceff4">.</span>dataset<span style="color:#eceff4">.</span>currentMode<span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">var</span> nightTheme <span style="color:#81a1c1">=</span> <span style="color:#81a1c1">document</span><span style="color:#eceff4">.</span>getElementById<span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;night-mode-theme&#34;</span><span style="color:#eceff4">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">var</span> nightIcon <span style="color:#81a1c1">=</span> <span style="color:#a3be8c">`&lt;svg viewBox=&#34;0 0 24 24&#34; width=&#34;15&#34; height=&#34;15&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; class=&#34;css-i6dzq1&#34;&gt;&lt;path d=&#34;M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;`</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">var</span> lightIcon <span style="color:#81a1c1">=</span> <span style="color:#a3be8c">`&lt;svg viewBox=&#34;0 0 24 24&#34; width=&#34;15&#34; height=&#34;15&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; class=&#34;css-i6dzq1&#34;&gt;&lt;circle cx=&#34;12&#34; cy=&#34;12&#34; r=&#34;5&#34;&gt;&lt;/circle&gt;&lt;line x1=&#34;12&#34; y1=&#34;1&#34; x2=&#34;12&#34; y2=&#34;3&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;12&#34; y1=&#34;21&#34; x2=&#34;12&#34; y2=&#34;23&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4.22&#34; y1=&#34;4.22&#34; x2=&#34;5.64&#34; y2=&#34;5.64&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;18.36&#34; y1=&#34;18.36&#34; x2=&#34;19.78&#34; y2=&#34;19.78&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;1&#34; y1=&#34;12&#34; x2=&#34;3&#34; y2=&#34;12&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;21&#34; y1=&#34;12&#34; x2=&#34;23&#34; y2=&#34;12&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4.22&#34; y1=&#34;19.78&#34; x2=&#34;5.64&#34; y2=&#34;18.36&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;18.36&#34; y1=&#34;5.64&#34; x2=&#34;19.78&#34; y2=&#34;4.22&#34;&gt;&lt;/line&gt;&lt;/svg&gt;`</span><span style="color:#eceff4">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">var</span> <span style="color:#75af00">toggle</span> <span style="color:#f92672">=</span> <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#34;night-mode-toggle&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">var</span> <span style="color:#75af00">currentMode</span> <span style="color:#f92672">=</span> <span style="color:#75af00">toggle</span><span style="color:#111">.</span><span style="color:#75af00">dataset</span><span style="color:#111">.</span><span style="color:#75af00">currentMode</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">var</span> <span style="color:#75af00">nightTheme</span> <span style="color:#f92672">=</span> <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#34;night-mode-theme&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">var</span> <span style="color:#75af00">nightIcon</span> <span style="color:#f92672">=</span> <span style="color:#d88200">`&lt;svg viewBox=&#34;0 0 24 24&#34; width=&#34;15&#34; height=&#34;15&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; class=&#34;css-i6dzq1&#34;&gt;&lt;path d=&#34;M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;`</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">var</span> <span style="color:#75af00">lightIcon</span> <span style="color:#f92672">=</span> <span style="color:#d88200">`&lt;svg viewBox=&#34;0 0 24 24&#34; width=&#34;15&#34; height=&#34;15&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; class=&#34;css-i6dzq1&#34;&gt;&lt;circle cx=&#34;12&#34; cy=&#34;12&#34; r=&#34;5&#34;&gt;&lt;/circle&gt;&lt;line x1=&#34;12&#34; y1=&#34;1&#34; x2=&#34;12&#34; y2=&#34;3&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;12&#34; y1=&#34;21&#34; x2=&#34;12&#34; y2=&#34;23&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4.22&#34; y1=&#34;4.22&#34; x2=&#34;5.64&#34; y2=&#34;5.64&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;18.36&#34; y1=&#34;18.36&#34; x2=&#34;19.78&#34; y2=&#34;19.78&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;1&#34; y1=&#34;12&#34; x2=&#34;3&#34; y2=&#34;12&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;21&#34; y1=&#34;12&#34; x2=&#34;23&#34; y2=&#34;12&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;4.22&#34; y1=&#34;19.78&#34; x2=&#34;5.64&#34; y2=&#34;18.36&#34;&gt;&lt;/line&gt;&lt;line x1=&#34;18.36&#34; y1=&#34;5.64&#34; x2=&#34;19.78&#34; y2=&#34;4.22&#34;&gt;&lt;/line&gt;&lt;/svg&gt;`</span><span style="color:#111">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>toggle<span style="color:#eceff4">.</span>addEventListener<span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;click&#34;</span><span style="color:#eceff4">,</span> <span style="color:#eceff4">()</span> <span style="color:#eceff4">=&gt;</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">if</span> <span style="color:#eceff4">(</span>toggle<span style="color:#eceff4">.</span>dataset<span style="color:#eceff4">.</span>currentMode <span style="color:#81a1c1">===</span> <span style="color:#a3be8c">&#34;light&#34;</span><span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>    setTheme<span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;night&#34;</span><span style="color:#eceff4">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#eceff4">}</span> <span style="color:#81a1c1;font-weight:bold">else</span> <span style="color:#81a1c1;font-weight:bold">if</span> <span style="color:#eceff4">(</span>toggle<span style="color:#eceff4">.</span>dataset<span style="color:#eceff4">.</span>currentMode <span style="color:#81a1c1">===</span> <span style="color:#a3be8c">&#34;night&#34;</span><span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>    setTheme<span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;light&#34;</span><span style="color:#eceff4">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#eceff4">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">toggle</span><span style="color:#111">.</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#34;click&#34;</span><span style="color:#111">,</span> <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">toggle</span><span style="color:#111">.</span><span style="color:#75af00">dataset</span><span style="color:#111">.</span><span style="color:#75af00">currentMode</span> <span style="color:#f92672">===</span> <span style="color:#d88200">&#34;light&#34;</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">setTheme</span><span style="color:#111">(</span><span style="color:#d88200">&#34;night&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span> <span style="color:#00a8c8">else</span> <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">toggle</span><span style="color:#111">.</span><span style="color:#75af00">dataset</span><span style="color:#111">.</span><span style="color:#75af00">currentMode</span> <span style="color:#f92672">===</span> <span style="color:#d88200">&#34;night&#34;</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">setTheme</span><span style="color:#111">(</span><span style="color:#d88200">&#34;light&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">});</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic">// the default theme is light
-</span></span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"></span><span style="color:#81a1c1;font-weight:bold">var</span> savedTheme <span style="color:#81a1c1">=</span> localStorage<span style="color:#eceff4">.</span>getItem<span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;night-mode-storage&#34;</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">||</span> <span style="color:#a3be8c">&#34;light&#34;</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>setTheme<span style="color:#eceff4">(</span>savedTheme<span style="color:#eceff4">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// the default theme is light
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">var</span> <span style="color:#75af00">savedTheme</span> <span style="color:#f92672">=</span> <span style="color:#75af00">localStorage</span><span style="color:#111">.</span><span style="color:#75af00">getItem</span><span style="color:#111">(</span><span style="color:#d88200">&#34;night-mode-storage&#34;</span><span style="color:#111">)</span> <span style="color:#f92672">||</span> <span style="color:#d88200">&#34;light&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">setTheme</span><span style="color:#111">(</span><span style="color:#75af00">savedTheme</span><span style="color:#111">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">function</span> setTheme<span style="color:#eceff4">(</span>mode<span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>  localStorage<span style="color:#eceff4">.</span>setItem<span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;night-mode-storage&#34;</span><span style="color:#eceff4">,</span> mode<span style="color:#eceff4">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">setTheme</span><span style="color:#111">(</span><span style="color:#75af00">mode</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">localStorage</span><span style="color:#111">.</span><span style="color:#75af00">setItem</span><span style="color:#111">(</span><span style="color:#d88200">&#34;night-mode-storage&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">mode</span><span style="color:#111">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#81a1c1;font-weight:bold">if</span> <span style="color:#eceff4">(</span>mode <span style="color:#81a1c1">===</span> <span style="color:#a3be8c">&#34;night&#34;</span><span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>    nightTheme<span style="color:#eceff4">.</span>disabled <span style="color:#81a1c1">=</span> <span style="color:#81a1c1;font-weight:bold">false</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>    toggle<span style="color:#eceff4">.</span>dataset<span style="color:#eceff4">.</span>currentMode <span style="color:#81a1c1">=</span> <span style="color:#a3be8c">&#34;night&#34;</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>    toggle<span style="color:#eceff4">.</span>innerHTML <span style="color:#81a1c1">=</span> lightIcon<span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#eceff4">}</span> <span style="color:#81a1c1;font-weight:bold">else</span> <span style="color:#81a1c1;font-weight:bold">if</span> <span style="color:#eceff4">(</span>mode <span style="color:#81a1c1">===</span> <span style="color:#a3be8c">&#34;light&#34;</span><span style="color:#eceff4">)</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>    nightTheme<span style="color:#eceff4">.</span>disabled <span style="color:#81a1c1">=</span> <span style="color:#81a1c1;font-weight:bold">true</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>    toggle<span style="color:#eceff4">.</span>dataset<span style="color:#eceff4">.</span>currentMode <span style="color:#81a1c1">=</span> <span style="color:#a3be8c">&#34;light&#34;</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>    toggle<span style="color:#eceff4">.</span>innerHTML <span style="color:#81a1c1">=</span> nightIcon<span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#eceff4">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#eceff4">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">mode</span> <span style="color:#f92672">===</span> <span style="color:#d88200">&#34;night&#34;</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">nightTheme</span><span style="color:#111">.</span><span style="color:#75af00">disabled</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">false</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">toggle</span><span style="color:#111">.</span><span style="color:#75af00">dataset</span><span style="color:#111">.</span><span style="color:#75af00">currentMode</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;night&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">toggle</span><span style="color:#111">.</span><span style="color:#75af00">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#75af00">lightIcon</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span> <span style="color:#00a8c8">else</span> <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">mode</span> <span style="color:#f92672">===</span> <span style="color:#d88200">&#34;light&#34;</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">nightTheme</span><span style="color:#111">.</span><span style="color:#75af00">disabled</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">true</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">toggle</span><span style="color:#111">.</span><span style="color:#75af00">dataset</span><span style="color:#111">.</span><span style="color:#75af00">currentMode</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;light&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">toggle</span><span style="color:#111">.</span><span style="color:#75af00">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#75af00">nightIcon</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
 </span></span></code></pre></div><p>Untuk tombol tema saya menggunakan icon dari <a href="https://feathericons.com/">feather icon</a>. Icon bulan untuk mode malam, dan icon matahari untuk mode terang.</p>
 <p><strong>Breakdown</strong></p>
 <p>Potongan kode ini menangani saat tombol diklik.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>toggle<span style="color:#eceff4">.</span>addEventListener<span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;click&#34;</span><span style="color:#eceff4">,</span> <span style="color:#eceff4">()</span> <span style="color:#eceff4">=&gt;</span> <span style="color:#eceff4">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#616e87;font-style:italic">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"></span><span style="color:#eceff4">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75af00">toggle</span><span style="color:#111">.</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#34;click&#34;</span><span style="color:#111">,</span> <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span>
 </span></span></code></pre></div><p>Jika attribute <code>dataset-current-mode</code> berisi nilai <code>light</code>, akan memanggil fungsi setTheme menjadi mode malam. Dan sebaliknya jika berisi nilai <code>night</code>.</p>
 <p>Potongan kode ini menginisiasi standar mode yang digunakan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#81a1c1;font-weight:bold">var</span> savedTheme <span style="color:#81a1c1">=</span> localStorage<span style="color:#eceff4">.</span>getItem<span style="color:#eceff4">(</span><span style="color:#a3be8c">&#34;night-mode-storage&#34;</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">||</span> <span style="color:#a3be8c">&#34;light&#34;</span><span style="color:#eceff4">;</span>
-</span></span><span style="display:flex;"><span>setTheme<span style="color:#eceff4">(</span>savedTheme<span style="color:#eceff4">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">var</span> <span style="color:#75af00">savedTheme</span> <span style="color:#f92672">=</span> <span style="color:#75af00">localStorage</span><span style="color:#111">.</span><span style="color:#75af00">getItem</span><span style="color:#111">(</span><span style="color:#d88200">&#34;night-mode-storage&#34;</span><span style="color:#111">)</span> <span style="color:#f92672">||</span> <span style="color:#d88200">&#34;light&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">setTheme</span><span style="color:#111">(</span><span style="color:#75af00">savedTheme</span><span style="color:#111">);</span>
 </span></span></code></pre></div><p>Jika saat ini adalah kunjungan pertama pengguna. Maka, mode terang yang diterapkan.</p>
 <p><code>function setTheme</code>, menerapkan mode sesuai dengan parameter mode yang diberikan.</p>
 <p>Fungsi ini juga akan mengganti data penanda mode yang saat ini aktif dan juga icon tombol mode.</p>

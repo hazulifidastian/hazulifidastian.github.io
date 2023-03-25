@@ -152,7 +152,7 @@
 <h3 id="force-overwrite">Force Overwrite</h3>
 <p>Setelah berhasil masuk terminal, saya bisa memperbaiki proses upgrade fish shell yang gagal.</p>
 <p>Perintah dibawah ini digunakan untuk memaksa manajer aplikasi untuk overwrite file jika diperlukan.</p>
-<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt -o Dpkg::Options::<span style="color:#81a1c1">=</span><span style="color:#a3be8c">&#34;--force-overwrite&#34;</span> -f upgrade
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt -o Dpkg::Options::<span style="color:#f92672">=</span><span style="color:#d88200">&#34;--force-overwrite&#34;</span> -f upgrade
 </span></span></code></pre></div><h2 id="catatan">Catatan</h2>
 <p>Saat terjadi masalah gagal upgrade fish shell saya langsung restart OS. Terminal tidak bisa dibuka setelah restart.</p>
 <p>Padahal awalnya terminal masih bisa dibuka. Harusnya saat itu langsung diterapkan solusi force overwrite.</p>

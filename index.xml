@@ -6,7 +6,7 @@
     <description>Recent content on Hazuli Fidastian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-id</language>
-    <lastBuildDate>Mon, 13 Jun 2022 15:48:03 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Mar 2023 22:14:30 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://hazulifidastian.github.io/about/</link>
@@ -19,6 +19,18 @@ Anda bisa menemukan saya online di Twitter dan di Medium.
 Ingin membicarakan proyek? Hubungi saya melalui email.
 Catatan:
 Doodle: Sketsa oleh Wiwin. Template: Based on Hugo Mood. </description>
+    </item>
+    
+    <item>
+      <title>Zig ke Mysql Dengan Library C</title>
+      <link>https://hazulifidastian.github.io/blog/zig-ke-mysql-dengan-library-c/</link>
+      <pubDate>Sat, 25 Mar 2023 22:14:30 +0700</pubDate>
+      
+      <guid>https://hazulifidastian.github.io/blog/zig-ke-mysql-dengan-library-c/</guid>
+      <description>Ujicoba ini menggunakan zig versi 0.9.1 di platform Ubuntu 20.04 WSL 2 Windows.
+Persiapan Install MySQL Client Dev Library $ apt install default-libmysqlclient-dev Instalasi ini menghasilkan file header mysql.h pada folder /usr/include/mysql yang akan digunakan sebagai referensi oleh kode zig.
+Inisiasi Aplikasi $ mkdir zig_mysql $ cd zig_mysql $ zig init-exe Perintah zig init-exe untuk membuat aplikasi executable, sedangkan zig init-lib untuk membuat library.
+Kode Edit File build.zig File build.zig tersedia setelah perintah zig init-exe.</description>
     </item>
     
     <item>
