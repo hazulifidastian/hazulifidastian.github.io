@@ -138,37 +138,37 @@
         <p>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan
 instalasi beberapa tools dan library.</p>
 <p><strong>Compile &amp; Install</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu</span>
 </span></span><span style="display:flex;"><span>sudo apt purge emacs26 emacs26-common
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Install tools dan library</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install tools dan library</span>
 </span></span><span style="display:flex;"><span>sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Download source code emacs</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Download source code emacs</span>
 </span></span><span style="display:flex;"><span>wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>tar -xzf emacs-27.0.91.tar.gz
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Konfigurasi dan install emacs</span>
-</span></span><span style="display:flex;"><span><span style="color:#0086b3">cd</span> emacs-27.0.91
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Konfigurasi dan install emacs</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">cd</span> emacs-27.0.91
 </span></span><span style="display:flex;"><span>./autogen.sh
 </span></span><span style="display:flex;"><span>./configure
 </span></span><span style="display:flex;"><span>make
 </span></span><span style="display:flex;"><span>make install
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Check instalasi</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check instalasi</span>
 </span></span><span style="display:flex;"><span>emacs --version
 </span></span></code></pre></div><p><strong>Rebuild</strong></p>
 <p>Setelah instalasi selesai, file konfigurasi emacs perlu di <strong>build</strong>
 ulang menggunakan emacs versi terbaru. Saya menggunakan doom
 emacs, perintahnya:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.emacs.d/bin/doom sync
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.emacs.d/bin/doom sync
 </span></span><span style="display:flex;"><span>~/.emacs.d/bin/doom build
 </span></span></code></pre></div><p>Jika tidak di <strong>rebuild</strong> ulang, emacs akan menampilkan interface standard.
 Hasil kompilasi konfigurasi menggunakan Emacs 26 tidak bisa digunakan pada Emacs 27.</p>
 <p><strong>Uninstall</strong></p>
 <p>Jika ingin menhapus instalasi, ketik perintah:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make uninstall
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make uninstall
 </span></span></code></pre></div>
 
 
