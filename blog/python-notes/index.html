@@ -148,13 +148,13 @@
         <h2 id="tools">Tools</h2>
 <h3 id="konversi-requirementstxt-ke-paket-poetry-pyprojecttoml">Konversi requirements.txt ke Paket Poetry pyproject.toml</h3>
 <p>Dari <strong>requirements.txt</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>pytest-django==4.5.2
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>pytest-django==4.5.2
 </span></span></code></pre></div><p>di <strong>pyproject.toml</strong> menjadi</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#000">pytest-django</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;4.5.2&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>pytest-django <span style="color:#eceff4">=</span> <span style="color:#a3be8c">&#34;4.5.2&#34;</span>
 </span></span></code></pre></div><p>Menambahkan opsi dari  <strong>requirements.txt</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Werkzeug[watchdog]==2.0.3
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Werkzeug[watchdog]==2.0.3
 </span></span></code></pre></div><p>di <strong>pyproject.toml</strong> menjadi</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#000">Werkzeug</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#000">extras</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;watchdog&#34;</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000">version</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;2.0.3&#34;</span><span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>Werkzeug <span style="color:#eceff4">=</span> <span style="color:#eceff4">{</span>extras <span style="color:#eceff4">=</span> <span style="color:#eceff4">[</span><span style="color:#a3be8c">&#34;watchdog&#34;</span><span style="color:#eceff4">],</span> version <span style="color:#eceff4">=</span> <span style="color:#a3be8c">&#34;2.0.3&#34;</span><span style="color:#eceff4">}</span>
 </span></span></code></pre></div>
 
 

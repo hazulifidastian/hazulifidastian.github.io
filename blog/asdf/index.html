@@ -267,11 +267,11 @@ database seperti mysql dan postgresql, redis, bahkan text editor neovim.</p>
 Untuk sistem operasi lain silahkan baca di tautan <a href="https://asdf-vm.com/#/core-manage-asdf-vm?id=install">Install asdf</a> ini.</p>
 <p><strong>Dependensi</strong></p>
 <p><code>asdf</code> bergantung pada aplikasi <code>git</code> dan <code>curl</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install git curl
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install git curl
 </span></span></code></pre></div><p><strong>Memasang asdf</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-</span></span><span style="display:flex;"><span><span style="color:#204a87">cd</span> ~/.asdf
-</span></span><span style="display:flex;"><span>git checkout <span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>git describe --abbrev<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span> --tags<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">cd</span> ~/.asdf
+</span></span><span style="display:flex;"><span>git checkout <span style="color:#a3be8c">&#34;</span><span style="color:#81a1c1;font-weight:bold">$(</span>git describe --abbrev<span style="color:#81a1c1">=</span><span style="color:#b48ead">0</span> --tags<span style="color:#81a1c1;font-weight:bold">)</span><span style="color:#a3be8c">&#34;</span>
 </span></span></code></pre></div><p>Baris pertama perintah diatas, meng-cloning repositori <code>asdf</code> dari github
 ke direktori <code>~/.asdf</code>. Baris keduanya digunakan untuk
 pindah ke direktori <code>~/.asdf</code>.</p>
@@ -279,9 +279,9 @@ pindah ke direktori <code>~/.asdf</code>.</p>
 yang didefinisikan oleh tag pada repositori git.</p>
 <p><strong>Integrasi dengan shell</strong></p>
 <p>Tambahkan baris dibawah ini ke <code>~/.bashrc</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>. <span style="color:#000">$HOME</span>/.asdf/asdf.sh
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>. $HOME/.asdf/asdf.sh
 </span></span></code></pre></div><p>Tambahkan juga baris dibawah ini untuk <strong>completions</strong> <code>~/.bashrc</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>. <span style="color:#000">$HOME</span>/.asdf/completions/asdf.bash
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>. $HOME/.asdf/completions/asdf.bash
 </span></span></code></pre></div><p>Dengan diaktifkannya <strong>completions</strong>, shell akan memberikan saran
 opsi untuk melengkapi perintah <code>asdf</code>.</p>
 <p>Anda bisa merujuk <a href="https://asdf-vm.com/#/core-manage-asdf-vm?id=add-to-your-shell">referensi</a> cara
@@ -292,40 +292,40 @@ Misalnya plugin <a href="https://github.com/danhper/asdf-python">python</a>, ber
 script atau instruksi untuk menangani paket python.</p>
 <h3 id="daftar-plugin">Daftar Plugin</h3>
 <p>Perintah dibawah digunakan untuk menampilkan daftar plugin yang tersedia.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugins list all
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugins list all
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar sebagian plugin</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar sebagian plugin</span>
 </span></span><span style="display:flex;"><span>python         *https://github.com/danhper/asdf-python.git
 </span></span><span style="display:flex;"><span>R              https://github.com/iroddis/asdf-R.git
 </span></span><span style="display:flex;"><span>ruby           *https://github.com/asdf-vm/asdf-ruby.git
 </span></span></code></pre></div><p>Tambahkan perintah <code>grep</code> untuk menyaring daftar.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugins list all <span style="color:#000;font-weight:bold">|</span> grep elixir
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugins list all <span style="color:#eceff4">|</span> grep elixir
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># hasil penyaringan</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># hasil penyaringan</span>
 </span></span><span style="display:flex;"><span>elixir         *https://github.com/asdf-vm/asdf-elixir.git
 </span></span></code></pre></div><h3 id="memasang-plugin">Memasang Plugin</h3>
 <p>Plugin bisa dipasang sesuai dengan nama yang ditampilkan oleh perintah <code>list all</code> diatas.
 Perintah dibawah akan memasang plugin python.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add python
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add python
 </span></span></code></pre></div><h3 id="mencopot-plugin">Mencopot Plugin</h3>
 <p>Plugin yang sudah dipasang bisa dicopot jika tidak digunakan lagi. Perintah dibawah mencopot
 pemasangan plugin.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin remove python
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin remove python
 </span></span></code></pre></div><h3 id="memperbarui-plugin">Memperbarui Plugin</h3>
 <p>Plugin sebenarnya adalah script atau instruksi untuk memanajemeni paket. Script ini merupakan repository yang tersimpan di github.
 Yang saya pahami, instruksi ini biasanya berupa shell script (bash script). Lakukan pembaruan secara berkala untuk
 memastikan keandalannya.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin update python
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin update python
 </span></span></code></pre></div><p>Diatas adalah perintah untuk memperbarui plugin python. Untuk memperbarui seluruh plugin, gunakan
 perintah.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin update --all
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin update --all
 </span></span></code></pre></div><h2 id="asdf-dan-python">asdf dan Python</h2>
 <p>Pada bagian ini saya akan menjelaskan alur kerja penggunaan plugin <code>asdf</code> yaitu python. Mulai dari pemasangan
 plugin, hingga menerapkan versi tertentu pada project.</p>
 <h3 id="memasang-plugin-python">Memasang Plugin Python</h3>
 <p>Dibawah adalah perintah pemasangan plugin python. Perintah tersebut akan mengunduh script
 yang berfungsi untuk memanajemeni paket python.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add python
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add python
 </span></span></code></pre></div><p><code>asdf</code> bergantung dengan plugin, perintah <code>asdf</code> seperti <code>asdf add &lt;nama-plugin&gt; &lt;versi&gt;</code> akan
 menjalankan script plugin python untuk melakukan pemasangan. Begitu juga untuk plugin yang lain,
 <code>asdf</code> akan menjalankan script plugin tersebut.</p>
@@ -333,9 +333,9 @@ menjalankan script plugin python untuk melakukan pemasangan. Begitu juga untuk p
 File-filenya berisi shell script (bash) untuk menangani perintah seperti <code>install</code> juga <code>list-all</code>.</p>
 <h3 id="melihat-daftar-paket-python">Melihat Daftar Paket Python</h3>
 <p>Setelah pemasangan, perintah dibawah digunakan untuk menampilkan daftar paket python yang tersedia.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf list all python
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf list all python
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Sebagian daftar paket python</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># Sebagian daftar paket python</span>
 </span></span><span style="display:flex;"><span>3.7.7
 </span></span><span style="display:flex;"><span>3.8.3
 </span></span><span style="display:flex;"><span>anaconda3-5.3.1
@@ -346,9 +346,9 @@ File-filenya berisi shell script (bash) untuk menangani perintah seperti <code>i
 </span></span><span style="display:flex;"><span>miniconda3-4.7.12
 </span></span><span style="display:flex;"><span>pypy3.6-7.3.1
 </span></span></code></pre></div><p>Akan muncul banyak paket python. Gunakan perintah tambahan <code>grep</code> untuk menyaring daftar paket.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf list all python <span style="color:#000;font-weight:bold">|</span> grep miniconda
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf list all python <span style="color:#eceff4">|</span> grep miniconda
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># Sebagian hasil</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># Sebagian hasil</span>
 </span></span><span style="display:flex;"><span>miniconda3-4.5.12
 </span></span><span style="display:flex;"><span>miniconda3-4.6.14
 </span></span><span style="display:flex;"><span>miniconda3-4.7.10
@@ -364,16 +364,16 @@ Saring daftar paket dengan <code>grep dev</code></li>
 </ul>
 <p>Saya sendiri akan memasang python versi 3.7 dan python 3.8. Saat ini, versi 3.7.7 adalah versi terakhir dari python 3.7.
 Sedangkan versi 3.8.3 adalah versi terakhir dari python 3.8.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf install python 3.7.7
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf install python 3.7.7
 </span></span><span style="display:flex;"><span>asdf install python 3.8.3
 </span></span></code></pre></div><p>Uppss.. Error.</p>
 <p><code>asdf</code> memasang paket python menggunakan metode kompilasi source code. <code>asdf</code> tidak mengunduh paket binary python,
 namun source codenya.</p>
 <p>Sebelum melakukan kompilasi, perlu dipenuhi dependensi yang dibutuhkan oleh source code python.</p>
 <p>Pada sistem operasi elementary os atau ubuntu, ketik perintah<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    xz-utils tk-dev libffi-dev liblzma-dev python-openssl
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev <span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev <span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>    xz-utils tk-dev libffi-dev liblzma-dev python-openssl
 </span></span></code></pre></div><p>Ulang kembali perintah pemasangan python 3.7.7 dan 3.8.3 diatas.</p>
 <h3 id="set-versi-global">Set Versi Global</h3>
 <p>Sekarang saya memiliki dua versi python dalam satu perangkat komputer, bagaimana
@@ -381,21 +381,21 @@ cara saya menggunakannya.</p>
 <p><code>asdf</code> memiliki fitur untuk mengeset satu versi dari paket menjadi global. Hanya satu versi
 yang bisa global dari sebuah paket menjadi global.</p>
 <p>Jika kita menjalankan perintah dibawah ini.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf global python 3.7.7
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf global python 3.7.7
 </span></span></code></pre></div><p>Python 3.7.7 sekarang menjadi versi global. Artinya, dari manapun Anda menjalankan python,
 otomatis akan menggunakan python versi global.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#204a87">cd</span> ~
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#81a1c1">cd</span> ~
 </span></span><span style="display:flex;"><span>python --version
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># hasilnya</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># hasilnya</span>
 </span></span><span style="display:flex;"><span>Python 3.7.7
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">cd</span> /usr/local
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">cd</span> /usr/local
 </span></span><span style="display:flex;"><span>python --version
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># hasilnya</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># hasilnya</span>
 </span></span><span style="display:flex;"><span>Python 3.7.7
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>which python
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># hasilnya</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># hasilnya</span>
 </span></span><span style="display:flex;"><span>/home/username/.asdf/shims/python
 </span></span></code></pre></div><h3 id="pip">pip</h3>
 <p><code>pip</code> otomatis terpasang berbarengan dengan pemasangan python. Anda bisa melakukan pemasangan paket python
@@ -406,7 +406,7 @@ dengan versi pythonnya, tidak dengan user atau sistem operasi.</p>
 <p>Karena python 3.7.7 sudah di set global oleh <code>asdf</code>, maka <code>pip</code> juga akan mengarah ke python tersebut. Otomatis juga
 paket-paket yang dipasang menggunakan <code>pip</code>.</p>
 <p>Contohnya saya memasang paket <code>black</code>, <code>pylint</code> dan <code>flake8</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install -U black
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install -U black
 </span></span><span style="display:flex;"><span>pip install -U pylint
 </span></span><span style="display:flex;"><span>pip install -U flake8
 </span></span><span style="display:flex;"><span>
@@ -416,26 +416,26 @@ paket-paket yang dipasang menggunakan <code>pip</code>.</p>
 </span></span><span style="display:flex;"><span>which pylint
 </span></span><span style="display:flex;"><span>which flake8
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># hasilnya</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># hasilnya</span>
 </span></span><span style="display:flex;"><span>/home/username/.asdf/shims/black
 </span></span><span style="display:flex;"><span>/home/username/.asdf/shims/pylint
 </span></span><span style="display:flex;"><span>/home/username/.asdf/shims/flake8
 </span></span></code></pre></div><p>Terlihat paket yang dipasang berada didalam direktori asdf. Dan paket tersebut bisa diakses dari lokasi manapun.</p>
 <h3 id="reshim">reshim</h3>
 <p>Setelah pemasangan paket menggunakan pip, selalu jalankan perintah <code>reshim</code>.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf reshim python 3.7.7
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf reshim python 3.7.7
 </span></span></code></pre></div><p>Ini memastikan paket yang baru dipasang (jika paket tersebut memiliki file executable) bisa diakses.</p>
 <p>Perhatikan hasil perintah <code>which black</code> dibawah ini. <code>black</code> adalah paket python yang memiliki file executable dengan nama <code>black</code> juga.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>which black
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>which black
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># hasilnya</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># hasilnya</span>
 </span></span><span style="display:flex;"><span>/home/username/.asdf/shims/black
 </span></span></code></pre></div><p>Jika dilihat file <code>shims/black</code>,</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /home/username/.asdf/shims/black
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /home/username/.asdf/shims/black
 </span></span></code></pre></div><p>berisi intersepsi dan pengalihan perintah ke <code>asdf</code>. <code>asdf</code> nantinya akan memilihkan versi <code>black</code> yang tepat.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">#!/usr/bin/env bash
-</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#8f5902;font-style:italic"># asdf-plugin: python 3.7.7</span>
-</span></span><span style="display:flex;"><span><span style="color:#204a87">exec</span> /home/username/.asdf/bin/asdf <span style="color:#204a87">exec</span> <span style="color:#4e9a06">&#34;black&#34;</span> <span style="color:#4e9a06">&#34;</span><span style="color:#000">$@</span><span style="color:#4e9a06">&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#5e81ac;font-style:italic">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#5e81ac;font-style:italic"></span><span style="color:#616e87;font-style:italic"># asdf-plugin: python 3.7.7</span>
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">exec</span> /home/username/.asdf/bin/asdf <span style="color:#81a1c1">exec</span> <span style="color:#a3be8c">&#34;black&#34;</span> <span style="color:#a3be8c">&#34;</span>$@<span style="color:#a3be8c">&#34;</span>
 </span></span></code></pre></div><p>Apa itu shim? Menurut wikipedia<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, shim adalah:</p>
 <blockquote>
 <p>In computer programming, a shim is a library that transparently intercepts API calls
@@ -454,22 +454,22 @@ Atau baca langsung penjelasan dari dokumentasi<sup id="fnref:4"><a href="#fn:4" 
 <p><code>asdf</code> menyediakan fitur untuk mendefinisikan versi yang berbeda dengan versi global, pada sebuah direktori.
 Hal ini sangat berguna, seperti saat menggunakan tool dependensi manajemen seperti <code>poetry</code> dan <code>pipenv</code>.</p>
 <p>Perintah dibawah ini akan membuat direktori project, dan menjadikan python versi 3.8.8 sebagai versi standarnya.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir project_python_38
-</span></span><span style="display:flex;"><span><span style="color:#204a87">cd</span> project_python_38
-</span></span><span style="display:flex;"><span>asdf <span style="color:#204a87">local</span> python 3.8.3
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir project_python_38
+</span></span><span style="display:flex;"><span><span style="color:#81a1c1">cd</span> project_python_38
+</span></span><span style="display:flex;"><span>asdf <span style="color:#81a1c1">local</span> python 3.8.3
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># cek versi python</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># cek versi python</span>
 </span></span><span style="display:flex;"><span>python --version
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># hasilnya</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># hasilnya</span>
 </span></span><span style="display:flex;"><span>Python 3.8.3
 </span></span></code></pre></div><p>Di direktori tersebut, <code>asdf</code> membuat file <code>.tool-versions</code> berisi,</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python 3.8.3
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python 3.8.3
 </span></span></code></pre></div><p>Jika project menggunakan python untuk backend dan nodejs pada frontend. Gunakan perintah untuk menerapkan versi
 lokal nodejs di direktori tersebut. Pastikan plugin nodejs dan paketnya sudah terpasang.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf <span style="color:#204a87">local</span> nodejs 12.16.3
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf <span style="color:#81a1c1">local</span> nodejs 12.16.3
 </span></span></code></pre></div><p>File <code>.tool-versions</code> akan berisi informasi tambahan berupa versi lokal nodejs.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python 3.8.3
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python 3.8.3
 </span></span><span style="display:flex;"><span>nodejs 12.16.3
 </span></span></code></pre></div><h2 id="plugin-lainnya">Plugin Lainnya</h2>
 <p>Saya hanya akan membahas beberapa plugin saja. Daftar lengkapnya bisa dilihat di halaman
@@ -477,147 +477,147 @@ lokal nodejs di direktori tersebut. Pastikan plugin nodejs dan paketnya sudah te
 <h3 id="php">PHP</h3>
 <p>Pemasangan plugin dan paket PHP.</p>
 <p><strong>Dependensi</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y libxml2-dev libcurl4-gnutls-dev libzip-dev <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    icu-devtools libicu-dev ibjpeg-dev libmcrypt-dev <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    libreadline-dev
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y libxml2-dev libcurl4-gnutls-dev libzip-dev <span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>    icu-devtools libicu-dev ibjpeg-dev libmcrypt-dev <span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>    libreadline-dev
 </span></span></code></pre></div><p><strong>Memasang Plugin dan Paket</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add php
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add php
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket php</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket php</span>
 </span></span><span style="display:flex;"><span>asdf list all php
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># versi stabil terakhir</span>
 </span></span><span style="display:flex;"><span>asdf latest php
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi stabil terakhir</span>
 </span></span><span style="display:flex;"><span>asdf install latest php
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi 7 stabil terakhir</span>
-</span></span><span style="display:flex;"><span>asdf install latest php <span style="color:#0000cf;font-weight:bold">7</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi 7 stabil terakhir</span>
+</span></span><span style="display:flex;"><span>asdf install latest php <span style="color:#b48ead">7</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket yang terpasang</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket yang terpasang</span>
 </span></span><span style="display:flex;"><span>asdf list php
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># set versi global</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># set versi global</span>
 </span></span><span style="display:flex;"><span>asdf global php &lt;versi pilihan&gt;
 </span></span></code></pre></div><p>Informasi lengkap plugin PHP bisa dilihat di repositori <a href="https://github.com/asdf-community/asdf-php">asdf-community/asdf-php</a></p>
 <h3 id="erlang">Erlang</h3>
 <p>Pemasangan plugin dan paket Erlang.</p>
 <p><strong>Dependensi</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get -y install build-essential autoconf m4 libncurses5-dev <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    libpng-dev libssh-dev unixodbc-dev xsltproc fop <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    libxml2-utils libncurses-dev openjdk-11-jdk
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get -y install build-essential autoconf m4 libncurses5-dev <span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>    libwxgtk3.0-gtk3-dev libgl1-mesa-dev libglu1-mesa-dev <span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>    libpng-dev libssh-dev unixodbc-dev xsltproc fop <span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>    libxml2-utils libncurses-dev openjdk-11-jdk
 </span></span></code></pre></div><p><strong>Memasang Plugin dan Paket</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add erlang
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add erlang
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket erlang</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket erlang</span>
 </span></span><span style="display:flex;"><span>asdf list all erlang
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># versi stabil terakhir</span>
 </span></span><span style="display:flex;"><span>asdf latest erlang
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi stabil terakhir</span>
 </span></span><span style="display:flex;"><span>asdf install latest erlang
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi 22 stabil terakhir</span>
-</span></span><span style="display:flex;"><span>asdf install latest erlang <span style="color:#0000cf;font-weight:bold">22</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi 22 stabil terakhir</span>
+</span></span><span style="display:flex;"><span>asdf install latest erlang <span style="color:#b48ead">22</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket yang terpasang</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket yang terpasang</span>
 </span></span><span style="display:flex;"><span>asdf list erlang
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># set versi global</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># set versi global</span>
 </span></span><span style="display:flex;"><span>asdf global erlang &lt;versi pilihan&gt;
 </span></span></code></pre></div><p>Informasi lengkap plugin Erlang bisa dilihat di repositori <a href="https://github.com/asdf-vm/asdf-erlang">asdf-erlang</a></p>
 <h3 id="elixir">Elixir</h3>
 <p>Pemasangan plugin dan paket Elixir.</p>
 <p><strong>Dependensi</strong></p>
 <p>Elixir membutuhkan aplikasi unzip.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install unzip
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install unzip
 </span></span></code></pre></div><p>Elixir juga membutuhkan Erlang. Sebelum pemasangan Elixir, pasang paket Erlang menggunakan <code>asdf</code> terlebih dahulu.</p>
 <p><strong>Kompatibilitas dengan Erlang</strong></p>
 <p>Informasi kompatibilitas antara Elixir dan Erlang bisa dilihat di halaman <a href="https://hexdocs.pm/elixir/master/compatibility-and-deprecations.html#compatibility-between-elixir-and-erlang-otp">Compatibility between Elixir and Erlang/OTP </a>.</p>
 <p><strong>Pemasangan plugin dan paket Elixir</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add elixir
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add elixir
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket elixir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket elixir</span>
 </span></span><span style="display:flex;"><span>asdf list all elixir
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># versi stabil terakhir</span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># tergantung dengan versi erlang</span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># yang ada pada sistem operasi</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># tergantung dengan versi erlang</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># yang ada pada sistem operasi</span>
 </span></span><span style="display:flex;"><span>asdf latest elixir
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi stabil terakhir</span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># tergantung dengan versi erlang</span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># yang ada pada sistem operasi</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># tergantung dengan versi erlang</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># yang ada pada sistem operasi</span>
 </span></span><span style="display:flex;"><span>asdf install latest elixir
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi 1.9 stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi 1.9 stabil terakhir</span>
 </span></span><span style="display:flex;"><span>asdf install latest elixir 1.9
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket yang terpasang</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket yang terpasang</span>
 </span></span><span style="display:flex;"><span>asdf list elixir
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># set versi global</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># set versi global</span>
 </span></span><span style="display:flex;"><span>asdf global elixir &lt;versi pilihan&gt;
 </span></span></code></pre></div><p>Informasi lengkap plugin Elixir bisa dilihat di repositori <a href="https://github.com/asdf-vm/asdf-elixir">asdf-elixir</a></p>
 <h3 id="ruby">Ruby</h3>
 <p>Pemasangan plugin dan paket Ruby.</p>
 <p><strong>Dependensi</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get install autoconf bison build-essential libssl-dev <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev <span style="color:#4e9a06">\
-</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    libffi-dev libgdbm6 libgdbm-dev libdb-dev
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get install autoconf bison build-essential libssl-dev <span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>    libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev <span style="color:#ebcb8b">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ebcb8b"></span>    libffi-dev libgdbm6 libgdbm-dev libdb-dev
 </span></span></code></pre></div><p>Referensi dependensi bisa dilihat di halaman <a href="https://github.com/rbenv/ruby-build/wiki#suggested-build-environment">Suggested build environment</a>.</p>
 <p><strong>Memasang Plugin dan Paket</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add ruby
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add ruby
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket ruby</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket ruby</span>
 </span></span><span style="display:flex;"><span>asdf list all ruby
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># versi stabil terakhir</span>
 </span></span><span style="display:flex;"><span>asdf latest ruby
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi stabil terakhir</span>
 </span></span><span style="display:flex;"><span>asdf install latest ruby
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi 2 stabil terakhir</span>
-</span></span><span style="display:flex;"><span>asdf install latest ruby <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi 2 stabil terakhir</span>
+</span></span><span style="display:flex;"><span>asdf install latest ruby <span style="color:#b48ead">2</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket yang terpasang</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket yang terpasang</span>
 </span></span><span style="display:flex;"><span>asdf list ruby
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># set versi global</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># set versi global</span>
 </span></span><span style="display:flex;"><span>asdf global ruby &lt;versi pilihan&gt;
 </span></span></code></pre></div><p>Informasi lengkap plugin Ruby bisa dilihat di repositori <a href="https://github.com/asdf-vm/asdf-ruby">asdf-ruby</a></p>
 <h3 id="nodejs">Node.js</h3>
 <p>Pemasangan plugin dan paket Node.js.</p>
 <p><strong>Dependensi</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get install dirmngr gpg
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get install dirmngr gpg
 </span></span></code></pre></div><p>Referensi dependensi bisa dilihat di halaman <a href="https://github.com/rbenv/ruby-build/wiki#suggested-build-environment">Suggested build environment</a>.</p>
 <p><strong>Memasang Plugin dan Paket</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add nodejs
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>asdf plugin add nodejs
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># impor keyring</span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># https://github.com/asdf-vm/asdf-nodejs#install</span>
-</span></span><span style="display:flex;"><span>bash -c <span style="color:#4e9a06">&#39;${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># impor keyring</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># https://github.com/asdf-vm/asdf-nodejs#install</span>
+</span></span><span style="display:flex;"><span>bash -c <span style="color:#a3be8c">&#39;${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring&#39;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket ruby</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket ruby</span>
 </span></span><span style="display:flex;"><span>asdf list all nodejs
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># versi stabil terakhir</span>
 </span></span><span style="display:flex;"><span>asdf latest nodejs
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi stabil terakhir</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi stabil terakhir</span>
 </span></span><span style="display:flex;"><span>asdf install latest nodejs
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># pasang versi 12 stabil terakhir</span>
-</span></span><span style="display:flex;"><span>asdf install latest nodejs <span style="color:#0000cf;font-weight:bold">12</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># pasang versi 12 stabil terakhir</span>
+</span></span><span style="display:flex;"><span>asdf install latest nodejs <span style="color:#b48ead">12</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># daftar paket yang terpasang</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># daftar paket yang terpasang</span>
 </span></span><span style="display:flex;"><span>asdf list nodejs
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># set versi global</span>
+</span></span><span style="display:flex;"><span><span style="color:#616e87;font-style:italic"># set versi global</span>
 </span></span><span style="display:flex;"><span>asdf global nodejs &lt;versi pilihan&gt;
 </span></span></code></pre></div><p>Informasi lengkap plugin Node.js bisa dilihat di repositori <a href="https://github.com/asdf-vm/asdf-nodejs">asdf-nodejs</a></p>
 <h2 id="kesimpulan">Kesimpulan</h2>
