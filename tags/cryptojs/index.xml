@@ -13,9 +13,9 @@
       <pubDate>Sun, 12 Sep 2021 04:48:55 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/app/membaca-pesan-rahasia/</guid>
-      <description>Membaca pesan rahasia yang dibuat menggunakan empat algoritma pilihan yaitu AES, TripleDES, Rabbit dan RC4Drop.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.
- PESAN TERENKRIPSI   PESAN  Salin ke Clipboard
-   Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server.</description>
+      <description> Membaca pesan rahasia yang dibuat menggunakan empat algoritma pilihan yaitu AES, TripleDES, Rabbit dan RC4Drop. Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. ALGORITMA AES TripleDES Rabbit RC4Drop KUNCI RAHASIA Kunci rahasia yang digunakan saat Anda meng-engkripsi pesan.
+PESAN TERENKRIPSI PESAN Salin ke Clipboard
+Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server. </description>
     </item>
     
     <item>
@@ -24,9 +24,9 @@
       <pubDate>Sun, 12 Sep 2021 04:48:47 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/app/membuat-pesan-rahasia/</guid>
-      <description>Membuat pesan rahasia menggunakan empat algoritma pilihan yaitu AES, TripleDES, Rabbit dan RC4Drop.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. ALGORITMA AES TripleDES Rabbit RC4Drop    KUNCI RAHASIA Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.
- PESAN   PESAN TERENKRIPSI  Salin ke Clipboard
-   Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server.</description>
+      <description> Membuat pesan rahasia menggunakan empat algoritma pilihan yaitu AES, TripleDES, Rabbit dan RC4Drop. Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. ALGORITMA AES TripleDES Rabbit RC4Drop KUNCI RAHASIA Pastikan anda mengingat kunci rahasia ini, agar pesan bisa dibaca kembali.
+PESAN PESAN TERENKRIPSI Salin ke Clipboard
+Aplikasi ini tidak menyimpan data yang anda isikan pada form. Aktifitas pembuatan password dilakukan dibrowser (peramban) anda tanpa melibatkan sisi server. </description>
     </item>
     
     <item>
@@ -35,8 +35,7 @@
       <pubDate>Sat, 11 Sep 2021 17:52:02 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/app/sha1-hash-generator/</guid>
-      <description>  Apa itu hash dan SHA1.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. TEKS  SHA1 HASH Salin ke Clipboard
-      document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); }); let sha1 = function(text) { return CryptoJS.SHA1(text) } </description>
+      <description>Apa itu hash dan SHA1. Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. TEKS SHA1 HASH Salin ke Clipboard</description>
     </item>
     
     <item>
@@ -45,8 +44,7 @@
       <pubDate>Sat, 11 Sep 2021 17:09:08 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/app/md5-hash-generator/</guid>
-      <description>  Apa itu hash dan MD5.  Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. TEKS  MD5 HASH Salin ke Clipboard
-      document.addEventListener(&#39;alpine:init&#39;, () = { Alpine.magic(&#39;clipboard&#39;, () = { return subject = navigator.clipboard.writeText(subject) }); }); let md5 = function(text) { return CryptoJS.MD5(text) } </description>
+      <description>Apa itu hash dan MD5. Aplikasi ini dibuat menggunakan library AlpineJS dan CryptoJS. TEKS MD5 HASH Salin ke Clipboard</description>
     </item>
     
   </channel>

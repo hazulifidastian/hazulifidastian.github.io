@@ -13,10 +13,10 @@
       <pubDate>Mon, 13 Jun 2022 15:48:03 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/blog/nginx-bad-bot-blocker/</guid>
-      <description>Bagian 1: Instalasi   Download install-ngxblocker
-sudo wget https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/install-ngxblocker -O /usr/local/sbin/install-ngxblocker sudo chmod +x /usr/local/sbin/install-ngxblocker   Jalankan install-ngxblocker dengan mode DRY-MODE/DRY-RUN untuk melihat peubahan apa yang dibuat dan file apa saja yang didownload.
+      <description>Bagian 1, Instalasi Download install-ngxblocker
+sudo wget https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/install-ngxblocker -O /usr/local/sbin/install-ngxblocker sudo chmod +x /usr/local/sbin/install-ngxblocker Jalankan install-ngxblocker dengan mode DRY-MODE/DRY-RUN untuk melihat peubahan apa yang dibuat dan file apa saja yang didownload.
 cd /usr/local/sbin sudo ./install-ngxblocker Dengan DRY-MODE, script hanya melakukan simulasi setup.
-  Jalankan install-ngxblocker dengan parameter -x untuk benar-benar mendownload file yang diperlukan.
+Jalankan install-ngxblocker dengan parameter -x untuk benar-benar mendownload file yang diperlukan.
 cd /usr/local/sbin sudo ./install-ngxblocker -x Script ini akan membuat folder /etc/nginx/bots.d dan mendownload file konfigurasi yang diperlukan ke folder tersebut.</description>
     </item>
     
@@ -29,7 +29,7 @@ cd /usr/local/sbin sudo ./install-ngxblocker -x Script ini akan membuat folder /
       <description>Timezone Show Timezone:
 timedatectl List Timezone:
 timedatectl list-timezones Set Timezone:
-timedatectl set-timezone Asia/Jakarta Add sudo user  Tambah user sudo adduser &amp;lt;username&amp;gt;  Tambah ke group sudo sudo adduser &amp;lt;username&amp;gt; sudo  verifikasi id &amp;lt;username&amp;gt;   Change password  Ganti password user sudo passwd &amp;lt;username&amp;gt;  Delete password sudo passwd --delete &amp;lt;username&amp;gt;  Force expire password sudo passwd --expire &amp;lt;username&amp;gt;  Lock user sudo passwd --lock &amp;lt;username&amp;gt;  Unlock user sudo passwd --unlock &amp;lt;username&amp;gt;   </description>
+timedatectl set-timezone Asia/Jakarta Add sudo user Tambah user sudo adduser &amp;lt;username&amp;gt; Tambah ke group sudo sudo adduser &amp;lt;username&amp;gt; sudo verifikasi id &amp;lt;username&amp;gt; Change password Ganti password user sudo passwd &amp;lt;username&amp;gt; Delete password sudo passwd --delete &amp;lt;username&amp;gt; Force expire password sudo passwd --expire &amp;lt;username&amp;gt; Lock user sudo passwd --lock &amp;lt;username&amp;gt; Unlock user sudo passwd --unlock &amp;lt;username&amp;gt; </description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ timedatectl set-timezone Asia/Jakarta Add sudo user  Tambah user sudo adduser &a
       <pubDate>Tue, 07 Jun 2022 15:01:17 +0700</pubDate>
       
       <guid>https://hazulifidastian.github.io/blog/elixir-learning-resources/</guid>
-      <description>Online Sites  Elixir Documentation Elixir School Fullstack Phoenix Discover Elixir &amp;amp; Phoenix  Books  Programming Elixir 1.6 Learn Functional Programming with Elixir Joy of Elixir Elixir in Action, Second Edition Concurrent Data Processing in Elixir Designing Elixir System With OTP The Little Elixir &amp;amp; OTP Guidebook Adopting Elixir Programming Phoenix 1.4 Programming Ecto Testing Elixir Real-time Phoenix Phoenix in Action Phoenix Liveview Phoenix Inside Out Series  Video Courses  Getting Started with Elixir Elixir for Beginners Elixir for Programmers, Second Edition LearnElixir.</description>
+      <description>Online Sites Elixir Documentation Elixir School Fullstack Phoenix Discover Elixir &amp;amp; Phoenix Books Programming Elixir 1.6 Learn Functional Programming with Elixir Joy of Elixir Elixir in Action, Second Edition Concurrent Data Processing in Elixir Designing Elixir System With OTP The Little Elixir &amp;amp; OTP Guidebook Adopting Elixir Programming Phoenix 1.4 Programming Ecto Testing Elixir Real-time Phoenix Phoenix in Action Phoenix Liveview Phoenix Inside Out Series Video Courses Getting Started with Elixir Elixir for Beginners Elixir for Programmers, Second Edition LearnElixir.</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@ Werkzeug = {extras = [&amp;#34;watchdog&amp;#34;], version = &amp;#34;2.0.3&amp;
       <guid>https://hazulifidastian.github.io/blog/php-notes/</guid>
       <description>Tools Xdebug Mode Off Trigger Makefile Error Pesan error:
 make: *** [Makefile:135: dump-autoload] Error 2816 Solusi:
- Hilangkan setting XDEBUG_MODE = &amp;quot;off&amp;quot; Tambahkan informasi folder composer pada konfigurasi skipped paths di PHPStorm. Lihat tautan ini https://github.com/composer/composer/issues/8302#issuecomment-526908909.  </description>
+Hilangkan setting XDEBUG_MODE = &amp;quot;off&amp;quot; Tambahkan informasi folder composer pada konfigurasi skipped paths di PHPStorm. Lihat tautan ini https://github.com/composer/composer/issues/8302#issuecomment-526908909. </description>
     </item>
     
     <item>
@@ -74,8 +74,8 @@ make: *** [Makefile:135: dump-autoload] Error 2816 Solusi:
       <description>File data File data/locale/id/day.yaml.
 Monday: Senin Tuesday: Selasa Wednesday: Rabu Thursday: Kamis Friday: Jum&amp;#39;at Saturday: Sabtu Sunday: Minggu File data/locale/id/month.yaml.
 - Januari - Februari - Maret - April - Mei - Juni - Juli - Agustus - September - Oktober - November - Desember Konfigurasi File config.toml
-[params]  defaultContentLanguage = &amp;#34;id&amp;#34; Template Partial File layouts/partials/date.html.
-{{ if eq .Context.Site.Params.defaultContentLanguage &amp;#34;en&amp;#34;}}  {{ .Dt.Format &amp;#34;Monday, 02 Jan 2006&amp;#34; }} {{ else }}  {{ $days := index (index .</description>
+[params] defaultContentLanguage = &amp;#34;id&amp;#34; Template Partial File layouts/partials/date.html.
+{{ if eq .Context.Site.Params.defaultContentLanguage &amp;#34;en&amp;#34;}} {{ .Dt.Format &amp;#34;Monday, 02 Jan 2006&amp;#34; }} {{ else }} {{ $days := index (index .</description>
     </item>
     
     <item>
@@ -95,7 +95,7 @@ Jika menggunakan metode biasa, misalnya dengan langsung merge branch feature ata
       
       <guid>https://hazulifidastian.github.io/blog/asdf-cheatsheet/</guid>
       <description>Cheatsheet Berikut daftar opsi yang bisa digunakan pada perintah asdf.
-Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua paket yang terpasangasdf plugin list alldaftar seluruh pluginasdf plugin listdaftar plugin yang terpasangasdf plugin list --urlsdaftar plugin yang terpasang beserta urlnyaasdf plugin add pythonpasang plugin pythonasdf plugin remove pythoncopot plugin pythonasdf plugin update pythonperbarui plugin pythonasdf plugin update --allperbarui seluruh pluginManajemen Paket PerintahDeskripsiasdf list all pythondaftar paket python yang bisa dipasangasdf latest pythonversi stabil terakhir paket pythonasdf latest python 3.</description>
+Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua paket yang terpasangasdf plugin list alldaftar seluruh pluginasdf plugin listdaftar plugin yang terpasangasdf plugin list --urlsdaftar plugin yang terpasang beserta urlnyaasdf plugin add pythonpasang plugin pythonasdf plugin remove pythoncopot plugin pythonasdf plugin update pythonperbarui plugin pythonasdf plugin update --allperbarui seluruh pluginManajemen Paket PerintahDeskripsiasdf list all pythondaftar paket python yang bisa dipasangasdf latest pythonversi stabil terakhir paket pythonasdf latest python 3.</description>
     </item>
     
     <item>
@@ -107,9 +107,9 @@ Manajemen Plugin PerintahDeskripsiasdf listdaftar plugin beserta semua 
       <description>Caching Password git config --global credential.helper cache git push origin master Username dan password akan dicache, git push selanjutnya tidak akan diminta lagi.
 Referensi: Caching your GitHub password in Git
 Melihat Revisi Commit Melihat revisi commit pada log.
-# Menggunakan range id commit. git log --oneline 6ff1760..05474ff  # Menggunakan range nama branch. git log --oneline master..origin/master Referensi:
- git-log gitrevision  Melihat Revisi Kode Melihat revisi kode.
-# Menggunakan range id commit.</description>
+# Menggunakan range id commit. git log --oneline 6ff1760..05474ff # Menggunakan range nama branch. git log --oneline master..origin/master Referensi:
+git-log gitrevision Melihat Revisi Kode Melihat revisi kode.
+# Menggunakan range id commit. git diff 6ff1760.</description>
     </item>
     
     <item>
@@ -119,8 +119,9 @@ Melihat Revisi Commit Melihat revisi commit pada log.
       
       <guid>https://hazulifidastian.github.io/blog/python-mock-dan-stub/</guid>
       <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
-import os.environ from unittest import mock  @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo():  foo() Mocking time.sleep Patch menggunakan decorator.
-from unittest import mock from unittest import TestCase  class TestClass(TestCase):  @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None)  def test_func_with_time(self, patched_time_sleep):  func_with_time()   # Harus dipanggil 1 kali  self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.</description>
+import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() Mocking time.sleep Patch menggunakan decorator.
+from unittest import mock from unittest import TestCase class TestClass(TestCase): @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None) def test_func_with_time(self, patched_time_sleep): func_with_time() # Harus dipanggil 1 kali self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.
+from unittest import mock from unittest import TestCase class TestClass(TestCase): def test_func_with_time(self): with mock.</description>
     </item>
     
     <item>
@@ -131,7 +132,7 @@ from unittest import mock from unittest import TestCase  class TestClass(TestCas
       <guid>https://hazulifidastian.github.io/blog/magit-cheatsheet/</guid>
       <description>Saya menggunakan Emacs 27, dengan framework konfigurasi Doom. Standarnya, Doom menggunakan emulasi vim menggunakan evil-mode. Jadi cheatsheet yang ada pada artikel ini, terutama shortcut magit-nya tidak akan terlepas dari evil-mode.
 Bagi Anda vanilla user, saya memasukkan nama command/perintah untuk melengkapi shortcut key. Agar, jika Anda tidak mengenali key-nya, Anda bisa mengakses perintahnya melalui shortcut M-x.
-Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-status.</description>
+Shortcut Magit Buffer Key Command &amp;amp;/ Deskripsi SPC gg magit-status. Buka buffer magit (git status) gr Refresh buffer magit ?</description>
     </item>
     
     <item>
@@ -142,7 +143,7 @@ Shortcut Magit Buffer    Key Command &amp;amp;/ Deskripsi     SPC gg magit-statu
       <guid>https://hazulifidastian.github.io/blog/compiling-emacs-27-ubuntu-18-04/</guid>
       <description>Proses kompilasi emacs tidak terlalu sulit, hanya perlu mempersiapkan instalasi beberapa tools dan library.
 Compile &amp;amp; Install
-# Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common  # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo  # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz  tar -xzf emacs-27.0.91.tar.gz  # Konfigurasi dan install emacs cd emacs-27.</description>
+# Jika OS sudah terinstalasi emacs26, sebaiknya diuninstall terlebih dahulu sudo apt purge emacs26 emacs26-common # Install tools dan library sudo apt install build-essential libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libxpm-dev automake autoconf libgtk-3-dev texinfo # Download source code emacs wget https://github.com/emacs-mirror/emacs/archive/emacs-27.0.91.tar.gz tar -xzf emacs-27.0.91.tar.gz # Konfigurasi dan install emacs cd emacs-27.0.91 .</description>
     </item>
     
     <item>
@@ -152,8 +153,8 @@ Compile &amp;amp; Install
       
       <guid>https://hazulifidastian.github.io/blog/modul-php-doom-emacs/</guid>
       <description>Konfigurasi Doom Emacs init.el Jelajah file konfigurasi dengan shorcut SPC f p, kemudian pilih file init.el. Aktifkan beberapa modul dengan cara menghilangkan tanda komentar ;;.
- Modul syntax, ada pada grup :checkers. Modul lsp, ada pada grup :tools. Modul (php +lsp), tambahan +lsp. Ada pada grup :lang.  package.el Aktifkan package phpactor pada file konfigurasi package.el. Buka dengan shorcut SPC f p.
-(package! phpactor) Sinkronisasi Konfigurasi Doom Emacs Ketikkan perintah ~/.</description>
+Modul syntax, ada pada grup :checkers. Modul lsp, ada pada grup :tools. Modul (php +lsp), tambahan +lsp. Ada pada grup :lang. package.el Aktifkan package phpactor pada file konfigurasi package.el. Buka dengan shorcut SPC f p.
+(package! phpactor) Sinkronisasi Konfigurasi Doom Emacs Ketikkan perintah ~/.emacs.d/bin/doom sync untuk menyesuaikan perubahan konfigurasi pada doom emacs.</description>
     </item>
     
     <item>
@@ -187,8 +188,8 @@ Instalasi aplikasi baru juga tidak bisa.</description>
       
       <guid>https://hazulifidastian.github.io/blog/format-datefield-django/</guid>
       <description>Format Spesifik Menentukan format spesifik DateField pada form. Jika pengguna memasukkan tanggal diluar format tersebut, form akan menampilkan error saat validasi.
-# forms.py class MyForm(forms.ModelForm):  # Hanya menerima input dengan format contoh: 25/01/2019   tanggal = forms.DateField(input_formats=&amp;#39;%d-%m-%Y&amp;#39;) Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.
-# settings.py DATE_INPUT_FORMATS = &amp;#39;%d-%m-%Y&amp;#39; Penggunaan yang Salah! Jika DATE_INPUT_FORMATS tidak di set, django akan melihat konfigurasi LANGUAGE_CODE pada settings.</description>
+# forms.py class MyForm(forms.ModelForm): # Hanya menerima input dengan format contoh: 25/01/2019 tanggal = forms.DateField(input_formats=&amp;#39;%d-%m-%Y&amp;#39;) Konfigurasi DATE_INPUT_FORMATS pada settings.py untuk menampilkan format output yang diinginkan pada DateField.
+# settings.py DATE_INPUT_FORMATS = &amp;#39;%d-%m-%Y&amp;#39; Penggunaan yang Salah! Jika DATE_INPUT_FORMATS tidak di set, django akan melihat konfigurasi LANGUAGE_CODE pada settings.py. Contoh jika file settings.</description>
     </item>
     
   </channel>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Hugo 0.96.0" />
+<meta name="generator" content="Hugo 0.100.2" />
 
 
     <title>Nginx Bad Bot Blocker - Hazuli Fidastian</title>
@@ -110,45 +110,31 @@
       
 
       <div class="article-content">
-        <h2 id="bagian-1-instalasi">Bagian 1: Instalasi</h2>
-<ol>
-<li>
+        <h3 id="bagian-1-instalasi">Bagian 1, Instalasi</h3>
 <p>Download <code>install-ngxblocker</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo wget https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/install-ngxblocker -O /usr/local/sbin/install-ngxblocker
 </span></span><span style="display:flex;"><span>sudo chmod +x /usr/local/sbin/install-ngxblocker
-</span></span></code></pre></div></li>
-<li>
-<p>Jalankan <code>install-ngxblocker</code> dengan mode DRY-MODE/DRY-RUN untuk melihat peubahan apa yang dibuat dan file apa saja yang didownload.</p>
+</span></span></code></pre></div><p>Jalankan <code>install-ngxblocker</code> dengan mode DRY-MODE/DRY-RUN untuk melihat peubahan apa yang dibuat dan file apa saja yang didownload.</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#111">cd</span> /usr/local/sbin
 </span></span><span style="display:flex;"><span>sudo ./install-ngxblocker
 </span></span></code></pre></div><p>Dengan DRY-MODE, script hanya melakukan simulasi setup.</p>
-</li>
-<li>
 <p>Jalankan <code>install-ngxblocker</code> dengan parameter <code>-x</code> untuk benar-benar mendownload file yang diperlukan.</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#111">cd</span> /usr/local/sbin
 </span></span><span style="display:flex;"><span>sudo ./install-ngxblocker -x
 </span></span></code></pre></div><p>Script ini akan membuat folder <code>/etc/nginx/bots.d</code> dan mendownload file konfigurasi yang diperlukan ke folder tersebut. Juga akan mendownload file <code>setup-ngxblocker</code> dan <code>update-ngxblocker</code> ke folder <code>/usr/local/sbin</code>.</p>
-</li>
-<li>
 <p>Ganti mode script setup dan update agar bisa dieksekusi mandiri.</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod +x /usr/local/sbin/setup-ngxblocker
 </span></span><span style="display:flex;"><span>sudo chmod +x /usr/local/sbin/update-ngxblocker
-</span></span></code></pre></div></li>
-</ol>
-<h2 id="bagian-2-setup">Bagian 2: Setup</h2>
-<ol>
-<li>
+</span></span></code></pre></div><h3 id="bagian-2-setup">Bagian 2, Setup</h3>
 <p>Jalankan <code>setup-ngxblocker</code> dengan mode DRY-MODE/DRY-RUN. Tidak ada perubahan dan file yang akan didownload.</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#111">cd</span> /usr/local/sbin/
 </span></span><span style="display:flex;"><span>sudo ./setup-ngxblocker
 </span></span></code></pre></div><p>Script ini juga akan menambahkan IP server anda ke dalam <code>whitelist-ips.conf</code> pada <code>/etc/nginx/bots.d/whitelist-ips.conf</code></p>
-</li>
-<li>
 <p>Setup otomatis. Setup ini akan berhasil jika struktur folder konfigurasi anda terdapat <code>sites-available</code>. Jika tidak, lihat bagian <strong>Setup manual</strong>.</p>
-<ul>
-<li>
 <p>Jalankan <code>setup-ngxblocker</code> dengan parameter <code>-x</code>.</p>
-<p>Jika file konfigurasi anda di folder sites-available memiliki extensi <code>.conf</code> tambahkan parameter <code>-e conf</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#111">cd</span> /usr/local/sbin/
+</span></span><span style="display:flex;"><span>sudo ./setup-ngxblocker -x
+</span></span></code></pre></div><p>Jika file konfigurasi anda di folder sites-available memiliki extensi <code>.conf</code> tambahkan parameter <code>-e conf</code>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#111">cd</span> /usr/local/sbin/
 </span></span><span style="display:flex;"><span>sudo ./setup-ngxblocker -x -e conf
 </span></span></code></pre></div><p>Script ini akan menambahkan</p>
@@ -156,10 +142,6 @@
 </span></span><span style="display:flex;"><span>include /etc/nginx/bots.d/ddos.conf<span style="color:#111">;</span>
 </span></span><span style="display:flex;"><span>include /etc/nginx/bots.d/blockbots.conf<span style="color:#111">;</span>
 </span></span></code></pre></div><p>ke file konfigurasi <code>.conf</code> anda.</p>
-</li>
-</ul>
-</li>
-<li>
 <p>Setup manual.</p>
 <ul>
 <li>
@@ -179,31 +161,23 @@
 <p>Jika Nginx disetup dibelakang router/proxy, tambahkan juga IP router/proxynya jika IP tersebut yang digunakan untuk mengakses Nginx.</p>
 </li>
 </ul>
-</li>
-<li>
 <p>Test validitas konfigurasi</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nginx -t
 </span></span></code></pre></div><p>hasilnya harus;</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 </span></span><span style="display:flex;"><span>nginx: configuration file /etc/nginx/nginx.conf <span style="color:#111">test</span> is successful
-</span></span></code></pre></div></li>
-<li>
-<p>Reload/restart Nginx</p>
+</span></span></code></pre></div><p>Reload/restart Nginx</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nginx -t <span style="color:#f92672">&amp;&amp;</span> sudo nginx -s reload
-</span></span></code></pre></div><p>atau;</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service nginx restart
-</span></span></code></pre></div></li>
-</ol>
-<h2 id="bagian-3-auto-update-konfigurasi-mandiri-dan-test">Bagian 3: Auto-update, Konfigurasi Mandiri dan Test</h2>
-<ol>
-<li>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># atau;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo service nginx restart
+</span></span></code></pre></div><h3 id="bagian-3-auto-update-konfigurasi-mandiri-dan-test">Bagian 3, Auto-update, Konfigurasi Mandiri dan Test</h3>
 <p>Setup crontab untuk otomatis update blocker</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo crontab -e
 </span></span></code></pre></div><p>Update setiap jam 10 malam dan informasi update akan dikirim ke email;</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ae81ff">00</span> <span style="color:#ae81ff">22</span> * * * sudo /usr/local/sbin/update-ngxblocker -e yourname@youremail.com
 </span></span></code></pre></div><p>Blocker akan mengupdate dirinya sendiri dan memangil ulang Nginx setelah versi terakhir file <code>globalblacklist.conf</code> selesai didownload.</p>
-</li>
-<li>
 <p>Konfigurasi mandiri</p>
 <p>Lokasi file konfigurasi yang bisa disesuaikan mandiri;</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/etc/nginx/bots.d/whitelist-ips.conf
@@ -215,9 +189,7 @@
 </span></span><span style="display:flex;"><span>/etc/nginx/bots.d/bad-referrer-words.conf
 </span></span><span style="display:flex;"><span>/etc/nginx/bots.d/custom-bad-referrers.conf
 </span></span><span style="display:flex;"><span>/etc/nginx/bots.d/ddos.conf
-</span></span></code></pre></div></li>
-<li>
-<p>Testing</p>
+</span></span></code></pre></div><p>Testing</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -A <span style="color:#d88200">&#34;Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&#34;</span> -I http://yourdomain.com
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>curl -A <span style="color:#d88200">&#34;Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)&#34;</span> -I http://yourdomain.com
@@ -240,8 +212,6 @@
 <li>curl: (56) TCP connection reset by peer</li>
 <li>curl: (92) HTTP/2 stream 0 was not closed cleanly: PROTOCOL_ERROR (err 1)</li>
 </ul>
-</li>
-</ol>
 
 
         

@@ -15,8 +15,8 @@
       <guid>https://hazulifidastian.github.io/app/whatsapp-link/</guid>
       <description>Membuat link WhatsApp Me dengan menggabungkan api WhatsApp yang digunakan untuk menginisiasi pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang akan dikirimkan.
 Aplikasi ini dibuat reaktif menggunakan AlpineJS. Otomatis memantau perubahan pada input nomor telepondan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.
-NOMOR TELEPONPESANLINKSalin ke Clipboard
-9 &amp;&amp; message !== &#39;&#39;&#34;KIRIM PESAN WHATSAPPKIRIM SEKARANGdocument.</description>
+NOMOR TELEPONPESANLINKSalin ke Clipboard
+KIRIM PESAN WHATSAPPKIRIM SEKARANG</description>
     </item>
     
   </channel>

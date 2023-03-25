@@ -16,7 +16,7 @@
       <description>Timezone Show Timezone:
 timedatectl List Timezone:
 timedatectl list-timezones Set Timezone:
-timedatectl set-timezone Asia/Jakarta Add sudo user  Tambah user sudo adduser &amp;lt;username&amp;gt;  Tambah ke group sudo sudo adduser &amp;lt;username&amp;gt; sudo  verifikasi id &amp;lt;username&amp;gt;   Change password  Ganti password user sudo passwd &amp;lt;username&amp;gt;  Delete password sudo passwd --delete &amp;lt;username&amp;gt;  Force expire password sudo passwd --expire &amp;lt;username&amp;gt;  Lock user sudo passwd --lock &amp;lt;username&amp;gt;  Unlock user sudo passwd --unlock &amp;lt;username&amp;gt;   </description>
+timedatectl set-timezone Asia/Jakarta Add sudo user Tambah user sudo adduser &amp;lt;username&amp;gt; Tambah ke group sudo sudo adduser &amp;lt;username&amp;gt; sudo verifikasi id &amp;lt;username&amp;gt; Change password Ganti password user sudo passwd &amp;lt;username&amp;gt; Delete password sudo passwd --delete &amp;lt;username&amp;gt; Force expire password sudo passwd --expire &amp;lt;username&amp;gt; Lock user sudo passwd --lock &amp;lt;username&amp;gt; Unlock user sudo passwd --unlock &amp;lt;username&amp;gt; </description>
     </item>
     
   </channel>

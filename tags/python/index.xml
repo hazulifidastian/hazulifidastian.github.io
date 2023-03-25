@@ -27,8 +27,9 @@ Werkzeug = {extras = [&amp;#34;watchdog&amp;#34;], version = &amp;#34;2.0.3&amp;
       
       <guid>https://hazulifidastian.github.io/blog/python-mock-dan-stub/</guid>
       <description>Mocking os.environ Jika kode yang dites memanggil fungsi os.environ. Gunakan kode dibawah ini untuk melakukan mocking.
-import os.environ from unittest import mock  @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo():  foo() Mocking time.sleep Patch menggunakan decorator.
-from unittest import mock from unittest import TestCase  class TestClass(TestCase):  @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None)  def test_func_with_time(self, patched_time_sleep):  func_with_time()   # Harus dipanggil 1 kali  self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.</description>
+import os.environ from unittest import mock @mock.patch.dict(os.environ, {&amp;#39;KEY&amp;#39;: &amp;#39;Value&amp;#39;}) def test_foo(): foo() Mocking time.sleep Patch menggunakan decorator.
+from unittest import mock from unittest import TestCase class TestClass(TestCase): @mock.patch(&amp;#39;time.sleep&amp;#39;, return_value=None) def test_func_with_time(self, patched_time_sleep): func_with_time() # Harus dipanggil 1 kali self.assertEqual(1, patched_time_sleep.call_count) Patch menggunakan context manager with.
+from unittest import mock from unittest import TestCase class TestClass(TestCase): def test_func_with_time(self): with mock.</description>
     </item>
     
     <item>
@@ -40,7 +41,7 @@ from unittest import mock from unittest import TestCase  class TestClass(TestCas
       <description>Deskripsi Masalah Seorang developer memiliki aplikasi yang sudah ditahap production. Live, sudah bisa diakses menggunakan internet. Aplikasinya dibangun menggunakan web framework dengan bahasa pemrograman python.
 Pada server, developer menggunakan docker sebagai solusi pengepakan aplikasi. Kode disalin ke dalam sebuah image menjadi satu paket dengan sistem operasi didalam container.
 Proses deployment yang berjalan sekarang menggunakan cara:
- Aplikasi rsync untuk memperbarui kode yang ada pada server Aplikasi remote ssh untuk mengontrol server Menjalankan perintah pada server untuk memperbarui docker container Menjalankan perintah pada server untuk migrasi database  Prosesnya masih dilakukan secara manual.</description>
+Aplikasi rsync untuk memperbarui kode yang ada pada server Aplikasi remote ssh untuk mengontrol server Menjalankan perintah pada server untuk memperbarui docker container Menjalankan perintah pada server untuk migrasi database Prosesnya masih dilakukan secara manual.</description>
     </item>
     
     <item>
