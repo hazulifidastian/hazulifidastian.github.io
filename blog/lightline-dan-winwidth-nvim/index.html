@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Hugo 0.100.2" />
+<meta name="generator" content="Hugo 0.111.3">
 
 
-    <title>Lightline dan winwidth Nvim - Hazuli Fidastian</title>
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Lightline dan winwidth Nvim - Hazuli Fidastian">
-    <title itemprop="name">Lightline dan winwidth Nvim | Hazuli Fidastian</title>
-    <meta name="twitter:title" content="Lightline dan winwidth Nvim | Hazuli Fidastian" />
-    <meta itemprop="name" content="Lightline dan winwidth Nvim | Hazuli Fidastian" />
-    <meta name="application-name" content="Lightline dan winwidth Nvim | Hazuli Fidastian" />
-    <meta property="og:site_name" content="" />
+<title>Lightline dan winwidth Nvim - Hazuli Fidastian</title>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Lightline dan winwidth Nvim - Hazuli Fidastian">
+<title itemprop="name">Lightline dan winwidth Nvim | Hazuli Fidastian</title>
+<meta name="twitter:title" content="Lightline dan winwidth Nvim | Hazuli Fidastian" />
+<meta itemprop="name" content="Lightline dan winwidth Nvim | Hazuli Fidastian" />
+<meta name="application-name" content="Lightline dan winwidth Nvim | Hazuli Fidastian" />
+<meta property="og:site_name" content="" />
 
 
-    <link href='https://hazulifidastian.github.io/favicon.ico' rel='icon' type='image/x-icon' />
+<link href='https://hazulifidastian.github.io/favicon.ico' rel='icon' type='image/x-icon' />
 
 
 
@@ -28,29 +28,29 @@
 
 
 <base href="https://hazulifidastian.github.io/blog/lightline-dan-winwidth-nvim/">
-<link rel="canonical" href="https://hazulifidastian.github.io/blog/lightline-dan-winwidth-nvim/" itemprop="url" /> 
+<link rel="canonical" href="https://hazulifidastian.github.io/blog/lightline-dan-winwidth-nvim/" itemprop="url" />
 <meta name="url" content="https://hazulifidastian.github.io/blog/lightline-dan-winwidth-nvim/" />
-<meta name="twitter:url" content="https://hazulifidastian.github.io/blog/lightline-dan-winwidth-nvim/" /> 
+<meta name="twitter:url" content="https://hazulifidastian.github.io/blog/lightline-dan-winwidth-nvim/" />
 <meta property="og:url" content="https://hazulifidastian.github.io/blog/lightline-dan-winwidth-nvim/" />
 
-<meta name="robots" content="index,follow" /> 
+<meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
 <meta name="google-site-verification" content="Won_YvYvA2MlMOjNNvvHeLbAwVOs3Qt9-Dbaj-MtHAo" />
 
 
-<meta name="theme-color" content="#1997A5" /> 
+<meta name="theme-color" content="#1997A5" />
 <meta name="msapplication-TileColor" content="#1997A5" />
 
 <meta name="keywords" content="" />
 <meta name="imagemode" content="force" />
-<meta name="coverage" content="Worldwide" /> 
+<meta name="coverage" content="Worldwide" />
 <meta name="distribution" content="Global" />
-<meta name="HandheldFriendly" content="True" /> 
+<meta name="HandheldFriendly" content="True" />
 <meta name="msapplication-tap-highlight" content="no" />
-<meta name="apple-mobile-web-app-title" content="" /> 
+<meta name="apple-mobile-web-app-title" content="" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-touch-fullscreen" content="yes" /> 
+<meta name="apple-touch-fullscreen" content="yes" />
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="https://hazulifidastian.github.io/css/main.css" media="all">
@@ -151,18 +151,18 @@ Terutama ketika window memiliki ruang horizontal yang sempit.</p>
 <h3 id="konfigurasi">Konfigurasi</h3>
 <p>Ketika kita menginisiasi lightline, kita akan mengatur variabel tipe dictionaries dengan
 nama <code>g:lightline</code>, dan dengan key <code>component_function</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-viml" data-lang="viml"><span style="display:flex;"><span><span style="color:#00a8c8">let</span> <span style="color:#75af00">g</span>:<span style="color:#75af00">lightline</span> <span style="color:#111">=</span> {<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \   <span style="color:#d88200">&#39;active&#39;</span>: {<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \       <span style="color:#d88200">&#39;left&#39;</span>:[ [ <span style="color:#d88200">&#39;...&#39;</span> ]<span style="color:#111">,</span> [<span style="color:#d88200">&#39;gitbranch&#39;</span> <span style="color:#111">,</span> <span style="color:#d88200">&#39;...&#39;</span>]<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \     ]<span style="color:#111">,</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \       <span style="color:#d88200">&#39;right&#39;</span>:[ [<span style="color:#d88200">&#39;...&#39;</span>]<span style="color:#111">,</span> [<span style="color:#d88200">&#39;...&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;cocstatus&#39;</span>]<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \     ]<span style="color:#111">,</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \   }<span style="color:#111">,</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \   <span style="color:#d88200">&#39;component_function&#39;</span>: {<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \     <span style="color:#d88200">&#39;gitbranch&#39;</span>: <span style="color:#d88200">&#39;LightlineFugitiveHead&#39;</span><span style="color:#111">,</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \     <span style="color:#d88200">&#39;cocstatus&#39;</span>: <span style="color:#d88200">&#39;LightlineCocStatus&#39;</span><span style="color:#111">,</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \   }<span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    \ }<span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-viml" data-lang="viml"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">let</span> g:lightline = {<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \   <span style="color:#d14">&#39;active&#39;</span>: {<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \       <span style="color:#d14">&#39;left&#39;</span>:[ [ <span style="color:#d14">&#39;...&#39;</span> ], [<span style="color:#d14">&#39;gitbranch&#39;</span> , <span style="color:#d14">&#39;...&#39;</span>]<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \     ],<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \       <span style="color:#d14">&#39;right&#39;</span>:[ [<span style="color:#d14">&#39;...&#39;</span>], [<span style="color:#d14">&#39;...&#39;</span>, <span style="color:#d14">&#39;cocstatus&#39;</span>]<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \     ],<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \   },<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \   <span style="color:#d14">&#39;component_function&#39;</span>: {<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \     <span style="color:#d14">&#39;gitbranch&#39;</span>: <span style="color:#d14">&#39;LightlineFugitiveHead&#39;</span>,<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \     <span style="color:#d14">&#39;cocstatus&#39;</span>: <span style="color:#d14">&#39;LightlineCocStatus&#39;</span>,<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \   }<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    \ }<span style="color:#a61717;background-color:#e3d2d2">
 </span></span></span></code></pre></div><p>Penjelasan pengaturan dengan contoh kode diatas adalah, tampilkan <code>gitbranch</code> pada statusline
 aktif pada bagian kiri, dan <code>cocstatus</code> pada bagian kanan.</p>
 <p>Sedikit penjelasan, <code>gitbranch</code> berisi informasi branch/cabang git yang sedang aktif pada sebuah
@@ -175,29 +175,29 @@ maka fungsi <code>LightlineCocStatus</code> yang akan dieksekusi.</p>
 <p>Pada contoh pengaturan diatas, kita sebenarnya membuat fungsi sendiri dengan nama, <code>LightlineFugitiveHead</code>,
 dan <code>LightlineCocStatus</code>. Didalam fungsi inilah diatur mekanisme untuk menampilkan
 informasi pada statusline.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-viml" data-lang="viml"><span style="display:flex;"><span><span style="color:#75715e">&#34; Lebar minimal window</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#00a8c8">let</span> <span style="color:#75af00">g</span>:<span style="color:#75af00">minwidth</span> <span style="color:#111">=</span> <span style="color:#ae81ff">120</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#00a8c8">function</span><span style="color:#111">!</span> <span style="color:#75af00">LightlineFugitiveHead</span><span style="color:#111">()</span> <span style="color:#75af00">abort</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">    &#34; Cek, apakah lebar window &gt; dari lebar minimal</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">    &#34; Jika Ya, tampilkan informasi gitbranch</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">winwidth</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span> <span style="color:#111">&gt;</span> <span style="color:#75af00">g</span>:<span style="color:#75af00">minwidth</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#00a8c8">if</span> <span style="color:#75af00">exists</span><span style="color:#111">(</span><span style="color:#d88200">&#39;*FugitiveHead&#39;</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>            <span style="color:#00a8c8">let</span> <span style="color:#75af00">branch</span> <span style="color:#111">=</span> <span style="color:#75af00">FugitiveHead</span><span style="color:#111">()</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>            <span style="color:#75af00">return</span> <span style="color:#75af00">branch</span> <span style="color:#111">!=</span># <span style="color:#d88200">&#39;&#39;</span> ? <span style="color:#d88200">&#39;⽊ &#39;</span>.<span style="color:#75af00">branch</span> : <span style="color:#d88200">&#39;&#39;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#00a8c8">endif</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#00a8c8">endif</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75af00">return</span> <span style="color:#d88200">&#39;&#39;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#00a8c8">endfunction</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#00a8c8">function</span><span style="color:#111">!</span> <span style="color:#75af00">LightlineCocStatus</span><span style="color:#111">()</span> <span style="color:#75af00">abort</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">    &#34; Cek, apakah lebar window &gt; dari lebar minimal</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">    &#34; Jika Ya, tampilkan informasi cocstatus</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">winwidth</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">)</span> <span style="color:#111">&gt;</span> <span style="color:#75af00">g</span>:<span style="color:#75af00">minwidth</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>        <span style="color:#75af00">return</span> <span style="color:#75af00">coc</span>#<span style="color:#75af00">status</span><span style="color:#111">()</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#00a8c8">endif</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75af00">return</span> <span style="color:#d88200">&#39;&#39;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#00a8c8">endfunction</span><span style="color:#960050;background-color:#1e0010">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-viml" data-lang="viml"><span style="display:flex;"><span><span style="color:#998;font-style:italic">&#34; Lebar minimal window</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#000;font-weight:bold">let</span> g:minwidth = <span style="color:#099">120</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#000;font-weight:bold">function</span>! LightlineFugitiveHead() abort<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#998;font-style:italic">    &#34; Cek, apakah lebar window &gt; dari lebar minimal</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#998;font-style:italic">    &#34; Jika Ya, tampilkan informasi gitbranch</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    <span style="color:#000;font-weight:bold">if</span> (winwidth(<span style="color:#099">0</span>) &gt; g:minwidth)<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>        <span style="color:#000;font-weight:bold">if</span> exists(<span style="color:#d14">&#39;*FugitiveHead&#39;</span>)<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>            <span style="color:#000;font-weight:bold">let</span> branch = FugitiveHead()<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>            return branch !=# <span style="color:#d14">&#39;&#39;</span> ? <span style="color:#d14">&#39;⽊ &#39;</span>.branch : <span style="color:#d14">&#39;&#39;</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>        <span style="color:#000;font-weight:bold">endif</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    <span style="color:#000;font-weight:bold">endif</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    return <span style="color:#d14">&#39;&#39;</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#000;font-weight:bold">endfunction</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#000;font-weight:bold">function</span>! LightlineCocStatus() abort<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#998;font-style:italic">    &#34; Cek, apakah lebar window &gt; dari lebar minimal</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#998;font-style:italic">    &#34; Jika Ya, tampilkan informasi cocstatus</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    <span style="color:#000;font-weight:bold">if</span> (winwidth(<span style="color:#099">0</span>) &gt; g:minwidth)<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>        return coc#status()<span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    <span style="color:#000;font-weight:bold">endif</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span>    return <span style="color:#d14">&#39;&#39;</span><span style="color:#a61717;background-color:#e3d2d2">
+</span></span></span><span style="display:flex;"><span><span style="color:#a61717;background-color:#e3d2d2"></span><span style="color:#000;font-weight:bold">endfunction</span><span style="color:#a61717;background-color:#e3d2d2">
 </span></span></span></code></pre></div><p>Kode diatas adalah contoh fungsi yang didalamnya melakukan pengecekan, apakah
 lebar window lebih besar dari nilai variabel lebar minimal window. Nilai variabel
 lebar minimal window adalah <code>120</code>.</p>

@@ -168,8 +168,7 @@ h3 {
 }
 
 .archive-item-link:hover {
-  -webkit-box-shadow: 0 -1px 0 0 #fff inset, 0 -3px 0 0 #ffce07 inset;
-  box-shadow: 0 -1px 0 0 #fff inset, 0 -3px 0 0 #ffce07 inset;
+  background-color: #ffce07;
   transition: all 0.3s ease-out;
 }
 
@@ -268,7 +267,7 @@ h3 {
   margin: 0 0 25px 0;
   padding: 1em;
   text-align: center;
-  border: 3px solid #ddd;
+  border: 3px solid #e5e5e5;
 }
 
 .article-content figure figcaption {
@@ -320,7 +319,6 @@ h3 {
 #article-toc .lbl-toggle .toggle-menyembunyikan-icon {
   padding-left: 5px;
   margin-right: 2px;
-  box-shadow: inset 0 -3px 0 #ffce07;
 }
 
 #article-toc .lbl-toggle .toggle-melihat-icon:hover,
@@ -399,7 +397,7 @@ h3 {
 
 .highlight pre {
   /* border-radius: 10px; */
-  border: 3px solid #1997A5;
+  border: 3px solid #e5e5e5;
 }
 
 .highlight code>span>span {
@@ -478,4 +476,8 @@ h3 {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
+}
+
+code {
+  color: inherit;
 }

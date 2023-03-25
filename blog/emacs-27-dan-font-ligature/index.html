@@ -3,54 +3,88 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="generator" content="Hugo 0.100.2" />
+<meta name="generator" content="Hugo 0.111.3">
 
 
-    <title>Emacs 27 dan Font Ligature - Hazuli Fidastian</title>
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Emacs 27 dan Font Ligature - Hazuli Fidastian">
-    <title itemprop="name">Emacs 27 dan Font Ligature | Hazuli Fidastian</title>
-    <meta name="twitter:title" content="Emacs 27 dan Font Ligature | Hazuli Fidastian" />
-    <meta itemprop="name" content="Emacs 27 dan Font Ligature | Hazuli Fidastian" />
-    <meta name="application-name" content="Emacs 27 dan Font Ligature | Hazuli Fidastian" />
-    <meta property="og:site_name" content="" />
+<title>Emacs 27 dan Font Ligature - Hazuli Fidastian</title>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Emacs 27 dan Font Ligature - Hazuli Fidastian">
+<title itemprop="name">Emacs 27 dan Font Ligature | Hazuli Fidastian</title>
+<meta name="twitter:title" content="Emacs 27 dan Font Ligature | Hazuli Fidastian" />
+<meta itemprop="name" content="Emacs 27 dan Font Ligature | Hazuli Fidastian" />
+<meta name="application-name" content="Emacs 27 dan Font Ligature | Hazuli Fidastian" />
+<meta property="og:site_name" content="" />
 
 
-    <link href='https://hazulifidastian.github.io/favicon.ico' rel='icon' type='image/x-icon' />
-
-
-
+<link href='https://hazulifidastian.github.io/favicon.ico' rel='icon' type='image/x-icon' />
 
 
 
 
 
+
+
+
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="" />
+<meta property="og:article:published_time" content=2020-06-18T23:15:25&#43;0700 />
+<meta property="article:published_time" content=2020-06-18T23:15:25&#43;0700 />
+
+<script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "Emacs 27 dan Font Ligature",
+      "author": {
+        "@type": "Person",
+        "name": ""
+      },
+      "datePublished": "2020-06-18",
+      "description": "",
+      "wordCount":  1360 ,
+      "mainEntityOfPage": "True",
+      "dateModified": "2020-06-18",
+      "image": {
+        "@type": "imageObject",
+        "url": ""
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hazuli Fidastian",
+        "logo": {
+          "@type": "imageObject",
+          "url": "favicon.ico"
+        }
+      }
+    }
+  </script>
 
 
 <base href="https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/">
-<link rel="canonical" href="https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/" itemprop="url" /> 
+<link rel="canonical" href="https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/" itemprop="url" />
 <meta name="url" content="https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/" />
-<meta name="twitter:url" content="https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/" /> 
+<meta name="twitter:url" content="https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/" />
 <meta property="og:url" content="https://hazulifidastian.github.io/blog/emacs-27-dan-font-ligature/" />
 
-<meta name="robots" content="index,follow" /> 
+<meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
 <meta name="google-site-verification" content="Won_YvYvA2MlMOjNNvvHeLbAwVOs3Qt9-Dbaj-MtHAo" />
 
 
-<meta name="theme-color" content="#1997A5" /> 
+<meta name="theme-color" content="#1997A5" />
 <meta name="msapplication-TileColor" content="#1997A5" />
 
 <meta name="keywords" content="" />
 <meta name="imagemode" content="force" />
-<meta name="coverage" content="Worldwide" /> 
+<meta name="coverage" content="Worldwide" />
 <meta name="distribution" content="Global" />
-<meta name="HandheldFriendly" content="True" /> 
+<meta name="HandheldFriendly" content="True" />
 <meta name="msapplication-tap-highlight" content="no" />
-<meta name="apple-mobile-web-app-title" content="" /> 
+<meta name="apple-mobile-web-app-title" content="" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-touch-fullscreen" content="yes" /> 
+<meta name="apple-touch-fullscreen" content="yes" />
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="https://hazulifidastian.github.io/css/main.css" media="all">
@@ -144,38 +178,38 @@
 <p>Font JetBrains Mono bisa di gunakan gratis. Bisa diunduh pada halaman <a href="https://www.jetbrains.com/lp/mono/">ini</a>.</p>
 <p>Pasang font pada sistem operasi kita. Untuk distro turunan Ubuntu, salin file font ke folder ~/.local/share/fonts. Selanjutnya, jalankan perintah fc-cache untuk memperbarui cache font.</p>
 <p>Ubah konfigurasi emacs menggunakan set-face-attribute.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">set-face-attribute</span> <span style="color:#d88200">&#39;default</span> <span style="color:#00a8c8">nil</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">:family</span> <span style="color:#d88200">&#34;JetBrains Mono&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">:height</span> <span style="color:#ae81ff">105</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(<span style="color:#008080">set-face-attribute</span> <span style="color:#990073">&#39;default</span> <span style="color:#008080">nil</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0086b3">:family</span> <span style="color:#d14">&#34;JetBrains Mono&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0086b3">:height</span> <span style="color:#099">105</span>)
 </span></span></code></pre></div><p>Sesuaikan konfigurasi diatas dengan selera Anda di emacs.</p>
 <p>Restart emacs Anda.</p>
 <p>Sampai disini, tidak akan ada perubahan sama sekali pada emacs. Tidak ada karakter ligature yang muncul. Ini karena kita belum menambahkan konfigurasi untuk mengaktifkan ligaturenya.</p>
 <p>Pada halaman web font JetBrains Mono, tidak ada informasi dukungan terhadap editor emacs dan tidak ada juga informasi cara untuk mengkonfigurasinya.</p>
 <p>Saya googling. Ketemu dengan dua informasi. Pertama di stackexchange dan issue tracking font JetBrains Mono digithub.</p>
 <p>Berikut, saya mulai dengan menerapkan konfigurasi dari stackexchange<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defconst</span> <span style="color:#111">jetbrains-ligature-mode--ligatures</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;--&gt;&#34;</span> <span style="color:#d88200">&#34;//&#34;</span> <span style="color:#d88200">&#34;/**&#34;</span> <span style="color:#d88200">&#34;/*&#34;</span> <span style="color:#d88200">&#34;*/&#34;</span> <span style="color:#d88200">&#34;&lt;!--&#34;</span> <span style="color:#d88200">&#34;:=&#34;</span> <span style="color:#d88200">&#34;-&gt;&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;&lt;-&#34;</span> <span style="color:#d88200">&#34;-&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;-&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;&lt;=&gt;&#34;</span> <span style="color:#d88200">&#34;==&#34;</span> <span style="color:#d88200">&#34;!=&#34;</span> <span style="color:#d88200">&#34;&lt;=&#34;</span> <span style="color:#d88200">&#34;&gt;=&#34;</span> <span style="color:#d88200">&#34;=:=&#34;</span> <span style="color:#d88200">&#34;!==&#34;</span> <span style="color:#d88200">&#34;&amp;&amp;&#34;</span> <span style="color:#d88200">&#34;||&#34;</span> <span style="color:#d88200">&#34;...&#34;</span> <span style="color:#d88200">&#34;..&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;|||&#34;</span> <span style="color:#d88200">&#34;///&#34;</span> <span style="color:#d88200">&#34;&amp;&amp;&amp;&#34;</span> <span style="color:#d88200">&#34;===&#34;</span> <span style="color:#d88200">&#34;++&#34;</span> <span style="color:#d88200">&#34;--&#34;</span> <span style="color:#d88200">&#34;=&gt;&#34;</span> <span style="color:#d88200">&#34;|&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;|&#34;</span> <span style="color:#d88200">&#34;||&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;||&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;|||&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;|||&#34;</span> <span style="color:#d88200">&#34;&gt;&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;&lt;&#34;</span> <span style="color:#d88200">&#34;::=&#34;</span> <span style="color:#d88200">&#34;|]&#34;</span> <span style="color:#d88200">&#34;[|&#34;</span> <span style="color:#d88200">&#34;{|&#34;</span> <span style="color:#d88200">&#34;|}&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;[&lt;&#34;</span> <span style="color:#d88200">&#34;&gt;]&#34;</span> <span style="color:#d88200">&#34;:?&gt;&#34;</span> <span style="color:#d88200">&#34;:?&#34;</span> <span style="color:#d88200">&#34;/=&#34;</span> <span style="color:#d88200">&#34;[||]&#34;</span> <span style="color:#d88200">&#34;!!&#34;</span> <span style="color:#d88200">&#34;?:&#34;</span> <span style="color:#d88200">&#34;?.&#34;</span> <span style="color:#d88200">&#34;::&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;+++&#34;</span> <span style="color:#d88200">&#34;??&#34;</span> <span style="color:#d88200">&#34;###&#34;</span> <span style="color:#d88200">&#34;##&#34;</span> <span style="color:#d88200">&#34;:::&#34;</span> <span style="color:#d88200">&#34;####&#34;</span> <span style="color:#d88200">&#34;.?&#34;</span> <span style="color:#d88200">&#34;?=&#34;</span> <span style="color:#d88200">&#34;=!=&#34;</span> <span style="color:#d88200">&#34;&lt;|&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;&lt;:&#34;</span> <span style="color:#d88200">&#34;:&lt;&#34;</span> <span style="color:#d88200">&#34;:&gt;&#34;</span> <span style="color:#d88200">&#34;&gt;:&#34;</span> <span style="color:#d88200">&#34;&lt;&gt;&#34;</span> <span style="color:#d88200">&#34;***&#34;</span> <span style="color:#d88200">&#34;;;&#34;</span> <span style="color:#d88200">&#34;/==&#34;</span> <span style="color:#d88200">&#34;.=&#34;</span> <span style="color:#d88200">&#34;.-&#34;</span> <span style="color:#d88200">&#34;__&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;=/=&#34;</span> <span style="color:#d88200">&#34;&lt;-&lt;&#34;</span> <span style="color:#d88200">&#34;&lt;&lt;&lt;&#34;</span> <span style="color:#d88200">&#34;&gt;&gt;&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;=&lt;&#34;</span> <span style="color:#d88200">&#34;&lt;&lt;=&#34;</span> <span style="color:#d88200">&#34;&lt;==&#34;</span> <span style="color:#d88200">&#34;&lt;==&gt;&#34;</span> <span style="color:#d88200">&#34;==&gt;&#34;</span> <span style="color:#d88200">&#34;=&gt;&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;&gt;=&gt;&#34;</span> <span style="color:#d88200">&#34;&gt;&gt;=&#34;</span> <span style="color:#d88200">&#34;&gt;&gt;-&#34;</span> <span style="color:#d88200">&#34;&gt;-&#34;</span> <span style="color:#d88200">&#34;&lt;~&gt;&#34;</span> <span style="color:#d88200">&#34;-&lt;&#34;</span> <span style="color:#d88200">&#34;-&lt;&lt;&#34;</span> <span style="color:#d88200">&#34;=&lt;&lt;&#34;</span> <span style="color:#d88200">&#34;---&#34;</span> <span style="color:#d88200">&#34;&lt;-|&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;&lt;=|&#34;</span> <span style="color:#d88200">&#34;/\\&#34;</span> <span style="color:#d88200">&#34;\\/&#34;</span> <span style="color:#d88200">&#34;|=&gt;&#34;</span> <span style="color:#d88200">&#34;|~&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;~~&#34;</span> <span style="color:#d88200">&#34;&lt;~&#34;</span> <span style="color:#d88200">&#34;~~&#34;</span> <span style="color:#d88200">&#34;~~&gt;&#34;</span> <span style="color:#d88200">&#34;~&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;&lt;$&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;$&#34;</span> <span style="color:#d88200">&#34;$&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;+&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;+&#34;</span> <span style="color:#d88200">&#34;+&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;*&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;*&#34;</span> <span style="color:#d88200">&#34;*&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;/&gt;&#34;</span> <span style="color:#d88200">&#34;&lt;/&#34;</span> <span style="color:#d88200">&#34;/&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;&lt;-&gt;&#34;</span> <span style="color:#d88200">&#34;..&lt;&#34;</span> <span style="color:#d88200">&#34;~=&#34;</span> <span style="color:#d88200">&#34;~-&#34;</span> <span style="color:#d88200">&#34;-~&#34;</span> <span style="color:#d88200">&#34;~@&#34;</span> <span style="color:#d88200">&#34;^=&#34;</span> <span style="color:#d88200">&#34;-|&#34;</span> <span style="color:#d88200">&#34;_|_&#34;</span> <span style="color:#d88200">&#34;|-&#34;</span> <span style="color:#d88200">&#34;||-&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;|=&#34;</span> <span style="color:#d88200">&#34;||=&#34;</span> <span style="color:#d88200">&#34;#{&#34;</span> <span style="color:#d88200">&#34;#[&#34;</span> <span style="color:#d88200">&#34;]#&#34;</span> <span style="color:#d88200">&#34;#(&#34;</span> <span style="color:#d88200">&#34;#?&#34;</span> <span style="color:#d88200">&#34;#_&#34;</span> <span style="color:#d88200">&#34;#_(&#34;</span> <span style="color:#d88200">&#34;#:&#34;</span> <span style="color:#d88200">&#34;#!&#34;</span> <span style="color:#d88200">&#34;#=&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#d88200">&#34;&amp;=&#34;</span><span style="color:#111">))</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>(<span style="color:#0086b3">defconst</span> <span style="color:#008080">jetbrains-ligature-mode--ligatures</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">&#39;</span>(<span style="color:#d14">&#34;--&gt;&#34;</span> <span style="color:#d14">&#34;//&#34;</span> <span style="color:#d14">&#34;/**&#34;</span> <span style="color:#d14">&#34;/*&#34;</span> <span style="color:#d14">&#34;*/&#34;</span> <span style="color:#d14">&#34;&lt;!--&#34;</span> <span style="color:#d14">&#34;:=&#34;</span> <span style="color:#d14">&#34;-&gt;&gt;&#34;</span> <span style="color:#d14">&#34;&lt;&lt;-&#34;</span> <span style="color:#d14">&#34;-&gt;&#34;</span> <span style="color:#d14">&#34;&lt;-&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;&lt;=&gt;&#34;</span> <span style="color:#d14">&#34;==&#34;</span> <span style="color:#d14">&#34;!=&#34;</span> <span style="color:#d14">&#34;&lt;=&#34;</span> <span style="color:#d14">&#34;&gt;=&#34;</span> <span style="color:#d14">&#34;=:=&#34;</span> <span style="color:#d14">&#34;!==&#34;</span> <span style="color:#d14">&#34;&amp;&amp;&#34;</span> <span style="color:#d14">&#34;||&#34;</span> <span style="color:#d14">&#34;...&#34;</span> <span style="color:#d14">&#34;..&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;|||&#34;</span> <span style="color:#d14">&#34;///&#34;</span> <span style="color:#d14">&#34;&amp;&amp;&amp;&#34;</span> <span style="color:#d14">&#34;===&#34;</span> <span style="color:#d14">&#34;++&#34;</span> <span style="color:#d14">&#34;--&#34;</span> <span style="color:#d14">&#34;=&gt;&#34;</span> <span style="color:#d14">&#34;|&gt;&#34;</span> <span style="color:#d14">&#34;&lt;|&#34;</span> <span style="color:#d14">&#34;||&gt;&#34;</span> <span style="color:#d14">&#34;&lt;||&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;|||&gt;&#34;</span> <span style="color:#d14">&#34;&lt;|||&#34;</span> <span style="color:#d14">&#34;&gt;&gt;&#34;</span> <span style="color:#d14">&#34;&lt;&lt;&#34;</span> <span style="color:#d14">&#34;::=&#34;</span> <span style="color:#d14">&#34;|]&#34;</span> <span style="color:#d14">&#34;[|&#34;</span> <span style="color:#d14">&#34;{|&#34;</span> <span style="color:#d14">&#34;|}&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;[&lt;&#34;</span> <span style="color:#d14">&#34;&gt;]&#34;</span> <span style="color:#d14">&#34;:?&gt;&#34;</span> <span style="color:#d14">&#34;:?&#34;</span> <span style="color:#d14">&#34;/=&#34;</span> <span style="color:#d14">&#34;[||]&#34;</span> <span style="color:#d14">&#34;!!&#34;</span> <span style="color:#d14">&#34;?:&#34;</span> <span style="color:#d14">&#34;?.&#34;</span> <span style="color:#d14">&#34;::&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;+++&#34;</span> <span style="color:#d14">&#34;??&#34;</span> <span style="color:#d14">&#34;###&#34;</span> <span style="color:#d14">&#34;##&#34;</span> <span style="color:#d14">&#34;:::&#34;</span> <span style="color:#d14">&#34;####&#34;</span> <span style="color:#d14">&#34;.?&#34;</span> <span style="color:#d14">&#34;?=&#34;</span> <span style="color:#d14">&#34;=!=&#34;</span> <span style="color:#d14">&#34;&lt;|&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;&lt;:&#34;</span> <span style="color:#d14">&#34;:&lt;&#34;</span> <span style="color:#d14">&#34;:&gt;&#34;</span> <span style="color:#d14">&#34;&gt;:&#34;</span> <span style="color:#d14">&#34;&lt;&gt;&#34;</span> <span style="color:#d14">&#34;***&#34;</span> <span style="color:#d14">&#34;;;&#34;</span> <span style="color:#d14">&#34;/==&#34;</span> <span style="color:#d14">&#34;.=&#34;</span> <span style="color:#d14">&#34;.-&#34;</span> <span style="color:#d14">&#34;__&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;=/=&#34;</span> <span style="color:#d14">&#34;&lt;-&lt;&#34;</span> <span style="color:#d14">&#34;&lt;&lt;&lt;&#34;</span> <span style="color:#d14">&#34;&gt;&gt;&gt;&#34;</span> <span style="color:#d14">&#34;&lt;=&lt;&#34;</span> <span style="color:#d14">&#34;&lt;&lt;=&#34;</span> <span style="color:#d14">&#34;&lt;==&#34;</span> <span style="color:#d14">&#34;&lt;==&gt;&#34;</span> <span style="color:#d14">&#34;==&gt;&#34;</span> <span style="color:#d14">&#34;=&gt;&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;&gt;=&gt;&#34;</span> <span style="color:#d14">&#34;&gt;&gt;=&#34;</span> <span style="color:#d14">&#34;&gt;&gt;-&#34;</span> <span style="color:#d14">&#34;&gt;-&#34;</span> <span style="color:#d14">&#34;&lt;~&gt;&#34;</span> <span style="color:#d14">&#34;-&lt;&#34;</span> <span style="color:#d14">&#34;-&lt;&lt;&#34;</span> <span style="color:#d14">&#34;=&lt;&lt;&#34;</span> <span style="color:#d14">&#34;---&#34;</span> <span style="color:#d14">&#34;&lt;-|&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;&lt;=|&#34;</span> <span style="color:#d14">&#34;/\\&#34;</span> <span style="color:#d14">&#34;\\/&#34;</span> <span style="color:#d14">&#34;|=&gt;&#34;</span> <span style="color:#d14">&#34;|~&gt;&#34;</span> <span style="color:#d14">&#34;&lt;~~&#34;</span> <span style="color:#d14">&#34;&lt;~&#34;</span> <span style="color:#d14">&#34;~~&#34;</span> <span style="color:#d14">&#34;~~&gt;&#34;</span> <span style="color:#d14">&#34;~&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;&lt;$&gt;&#34;</span> <span style="color:#d14">&#34;&lt;$&#34;</span> <span style="color:#d14">&#34;$&gt;&#34;</span> <span style="color:#d14">&#34;&lt;+&gt;&#34;</span> <span style="color:#d14">&#34;&lt;+&#34;</span> <span style="color:#d14">&#34;+&gt;&#34;</span> <span style="color:#d14">&#34;&lt;*&gt;&#34;</span> <span style="color:#d14">&#34;&lt;*&#34;</span> <span style="color:#d14">&#34;*&gt;&#34;</span> <span style="color:#d14">&#34;&lt;/&gt;&#34;</span> <span style="color:#d14">&#34;&lt;/&#34;</span> <span style="color:#d14">&#34;/&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;&lt;-&gt;&#34;</span> <span style="color:#d14">&#34;..&lt;&#34;</span> <span style="color:#d14">&#34;~=&#34;</span> <span style="color:#d14">&#34;~-&#34;</span> <span style="color:#d14">&#34;-~&#34;</span> <span style="color:#d14">&#34;~@&#34;</span> <span style="color:#d14">&#34;^=&#34;</span> <span style="color:#d14">&#34;-|&#34;</span> <span style="color:#d14">&#34;_|_&#34;</span> <span style="color:#d14">&#34;|-&#34;</span> <span style="color:#d14">&#34;||-&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;|=&#34;</span> <span style="color:#d14">&#34;||=&#34;</span> <span style="color:#d14">&#34;#{&#34;</span> <span style="color:#d14">&#34;#[&#34;</span> <span style="color:#d14">&#34;]#&#34;</span> <span style="color:#d14">&#34;#(&#34;</span> <span style="color:#d14">&#34;#?&#34;</span> <span style="color:#d14">&#34;#_&#34;</span> <span style="color:#d14">&#34;#_(&#34;</span> <span style="color:#d14">&#34;#:&#34;</span> <span style="color:#d14">&#34;#!&#34;</span> <span style="color:#d14">&#34;#=&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#d14">&#34;&amp;=&#34;</span>))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">dolist</span> <span style="color:#111">(</span><span style="color:#111">pat</span> <span style="color:#111">jetbrains-ligature-mode--ligatures</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#75af00">set-char-table-range</span> <span style="color:#111">composition-function-table</span>
-</span></span><span style="display:flex;"><span>                      <span style="color:#111">(</span><span style="color:#75af00">aref</span> <span style="color:#111">pat</span> <span style="color:#ae81ff">0</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                      <span style="color:#111">(</span><span style="color:#75af00">nconc</span> <span style="color:#111">(</span><span style="color:#75af00">char-table-range</span> <span style="color:#111">composition-function-table</span> <span style="color:#111">(</span><span style="color:#75af00">aref</span> <span style="color:#111">pat</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                             <span style="color:#111">(</span><span style="color:#75af00">list</span> <span style="color:#111">(</span><span style="color:#75af00">vector</span> <span style="color:#111">(</span><span style="color:#75af00">regexp-quote</span> <span style="color:#111">pat</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                                           <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>                                    <span style="color:#d88200">&#39;compose-gstring-for-graphic</span><span style="color:#111">)))))</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#0086b3">dolist</span> (<span style="color:#008080">pat</span> <span style="color:#008080">jetbrains-ligature-mode--ligatures</span>)
+</span></span><span style="display:flex;"><span>  (<span style="color:#900;font-weight:bold">set-char-table-range</span> <span style="color:#008080">composition-function-table</span>
+</span></span><span style="display:flex;"><span>                      (<span style="color:#900;font-weight:bold">aref</span> <span style="color:#008080">pat</span> <span style="color:#099">0</span>)
+</span></span><span style="display:flex;"><span>                      (<span style="color:#900;font-weight:bold">nconc</span> (<span style="color:#900;font-weight:bold">char-table-range</span> <span style="color:#008080">composition-function-table</span> (<span style="color:#900;font-weight:bold">aref</span> <span style="color:#008080">pat</span> <span style="color:#099">0</span>))
+</span></span><span style="display:flex;"><span>                             (<span style="color:#900;font-weight:bold">list</span> (<span style="color:#900;font-weight:bold">vector</span> (<span style="color:#900;font-weight:bold">regexp-quote</span> <span style="color:#008080">pat</span>)
+</span></span><span style="display:flex;"><span>                                           <span style="color:#099">0</span>
+</span></span><span style="display:flex;"><span>                                    <span style="color:#990073">&#39;compose-gstring-for-graphic</span>)))))
 </span></span></code></pre></div><p>Hasilnya,</p>
 <figure><img src="/images/emacs-27-dan-font-ligature/jetbrains-mono-config-1.png"
          alt="JetBrains Mono ligature"/><figcaption>
@@ -185,122 +219,122 @@
 
 <p>Terlihat pada gambar, hasilnya tidak memuaskan. Ada beberapa karakter yang tidak tergabung sempurna. Misal, pada karakter <code>===</code>.</p>
 <p>Lanjut dengan konfigurasi kedua dari github issue<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, dengan sebelumnya menghapus konfigurasi dari stackexchange.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#75715e">;; Gathered from https://www.jetbrains.com/lp/mono/#ligatures</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">;; The cheatsheat shows &#34;\/&#34; and &#34;\&#34; which I couldn&#39;t get working</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">alist</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#75715e">;;  -&gt; -- --&gt; -&gt;&gt; -&lt; -&lt;&lt; --- -~ -|</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?-</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:--\\|[-&gt;]&gt;?\\|&lt;&lt;?\\|[~|]\\)&#34;</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#998;font-style:italic">;; Gathered from https://www.jetbrains.com/lp/mono/#ligatures</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">;; The cheatsheat shows &#34;\/&#34; and &#34;\&#34; which I couldn&#39;t get working</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#0086b3">let</span> ((<span style="color:#008080">alist</span> <span style="color:#000;font-weight:bold">&#39;</span>(<span style="color:#998;font-style:italic">;;  -&gt; -- --&gt; -&gt;&gt; -&lt; -&lt;&lt; --- -~ -|</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?-</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:--\\|[-&gt;]&gt;?\\|&lt;&lt;?\\|[~|]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; // /* /// /= /== /&gt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; /** is not supported - see https://github.com/JetBrains/JetBrainsMono/issues/202</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; /* cannot be conditioned on patterns followed by a whitespace,</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; because that would require support for lookaheads in regex.</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; We cannot just match on /*\s, because the whitespace would be considered</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; as part of the match, but the font only specifies the ligature for /* with</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; no trailing characters</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?/</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?://?\\|==?\\|\\*\\*?\\|[&gt;]\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; // /* /// /= /== /&gt;</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; /** is not supported - see https://github.com/JetBrains/JetBrainsMono/issues/202</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; /* cannot be conditioned on patterns followed by a whitespace,</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; because that would require support for lookaheads in regex.</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; We cannot just match on /*\s, because the whitespace would be considered</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; as part of the match, but the font only specifies the ligature for /* with</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; no trailing characters</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?/</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?://?\\|==?\\|\\*\\*?\\|[&gt;]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; */ *** *&gt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; Prevent grouping of **/ as *(*/) by actively looking for **/</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; which consumes the triple but the font does not define a substitution,</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; so it&#39;s rendered normally</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?*</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:\\*/\\|\\*\\*\\|[&gt;/]\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; */ *** *&gt;</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; Prevent grouping of **/ as *(*/) by actively looking for **/</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; which consumes the triple but the font does not define a substitution,</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; so it&#39;s rendered normally</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?*</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:\\*/\\|\\*\\*\\|[&gt;/]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; &lt;!-- &lt;&lt;- &lt;- &lt;=&gt; &lt;= &lt;| &lt;|| &lt;||| &lt;|&gt; &lt;: &lt;&gt; &lt;-&lt; &lt;&lt;&lt; &lt;=&lt; &lt;&lt;= &lt;== &lt;==&gt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; &lt;~&gt; &lt;&lt; &lt;-| &lt;=| &lt;~~ &lt;~ &lt;$&gt; &lt;$ &lt;+&gt; &lt;+ &lt;*&gt; &lt;* &lt;/ &lt;/&gt; &lt;-&gt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?&lt;</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:==&gt;\\|!--\\|~~\\|-[|&lt;]\\||&gt;\\||\\{1,3\\}\\|&lt;[=&lt;-]?\\|=[&gt;&lt;|=]?\\|[*+$~/-]&gt;?\\|[:&gt;]\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; &lt;!-- &lt;&lt;- &lt;- &lt;=&gt; &lt;= &lt;| &lt;|| &lt;||| &lt;|&gt; &lt;: &lt;&gt; &lt;-&lt; &lt;&lt;&lt; &lt;=&lt; &lt;&lt;= &lt;== &lt;==&gt;</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; &lt;~&gt; &lt;&lt; &lt;-| &lt;=| &lt;~~ &lt;~ &lt;$&gt; &lt;$ &lt;+&gt; &lt;+ &lt;*&gt; &lt;* &lt;/ &lt;/&gt; &lt;-&gt;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?&lt;</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:==&gt;\\|!--\\|~~\\|-[|&lt;]\\||&gt;\\||\\{1,3\\}\\|&lt;[=&lt;-]?\\|=[&gt;&lt;|=]?\\|[*+$~/-]&gt;?\\|[:&gt;]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; := ::= :?&gt; :? :: ::: :&lt; :&gt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?:</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:\\?&gt;\\|:?=\\|::?\\|[&gt;?&lt;]\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; := ::= :?&gt; :? :: ::: :&lt; :&gt;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?:</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:\\?&gt;\\|:?=\\|::?\\|[&gt;?&lt;]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; == =:= === =&gt; =!= =/= ==&gt; =&gt;&gt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?=</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:[=&gt;]?&gt;\\|[:=!/]?=\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; == =:= === =&gt; =!= =/= ==&gt; =&gt;&gt;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?=</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:[=&gt;]?&gt;\\|[:=!/]?=\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;;  != !== !!</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?!</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:==?\\|!\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;;  != !== !!</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?!</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:==?\\|!\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; &gt;= &gt;&gt; &gt;] &gt;: &gt;- &gt;&gt;&gt; &gt;&gt;= &gt;&gt;- &gt;=&gt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?&gt;</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:=&gt;\\|&gt;[=&gt;-]\\|[]=:&gt;-]\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; &gt;= &gt;&gt; &gt;] &gt;: &gt;- &gt;&gt;&gt; &gt;&gt;= &gt;&gt;- &gt;=&gt;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?&gt;</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:=&gt;\\|&gt;[=&gt;-]\\|[]=:&gt;-]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; &amp;&amp; &amp;&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?&amp;</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.&amp;&amp;?&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; &amp;&amp; &amp;&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?&amp;</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.&amp;&amp;?&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; || |&gt; ||&gt; |||&gt; |] |} |-&gt; |=&gt; |- ||- |= ||=</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?|</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:||?&gt;\\||[=-]\\|[=-]&gt;\\|[]&gt;}|=-]\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; || |&gt; ||&gt; |||&gt; |] |} |-&gt; |=&gt; |- ||- |= ||=</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?|</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:||?&gt;\\||[=-]\\|[=-]&gt;\\|[]&gt;}|=-]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; ... .. .? .= .- ..&lt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?.</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:\\.[.&lt;]?\\|[.?=-]\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; ... .. .? .= .- ..&lt;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?.</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:\\.[.&lt;]?\\|[.?=-]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; ++ +++ +&gt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?+</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:\\+\\+?\\|&gt;\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; ++ +++ +&gt;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?+</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:\\+\\+?\\|&gt;\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; [| [&lt; [||]</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?\[</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:|\\(?:|]\\)?\\|&lt;\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; [| [&lt; [||]</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?\[</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:|\\(?:|]\\)?\\|&lt;\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; {|</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?{</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.|&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; {|</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?{</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.|&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; ?: ?. ?? ?=</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">??</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.[:.?=]&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; ?: ?. ?? ?=</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">??</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.[:.?=]&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; ## ### #### #{ #[ #( #? #_ #_( #: #! #=</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?#</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:#\\{1,3\\}\\|_(?\\|[{[(?:=!]\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; ## ### #### #{ #[ #( #? #_ #_( #: #! #=</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?#</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:#\\{1,3\\}\\|_(?\\|[{[(?:=!]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; ;;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?\;</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.;&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; ;;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?\;</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.;&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; __ _|_</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?_</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.|?_&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; __ _|_</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?_</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.|?_&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; ~~ ~~&gt; ~&gt; ~= ~- ~@</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?~</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.\\(?:~&gt;\\|[&gt;@=~-]\\)&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; ~~ ~~&gt; ~&gt; ~= ~- ~@</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?~</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.\\(?:~&gt;\\|[&gt;@=~-]\\)&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; $&gt;</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?$</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.&gt;&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; $&gt;</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?$</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.&gt;&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; ^=</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?^</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.=&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; ^=</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?^</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.=&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>               <span style="color:#75715e">;; ]#</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">(</span><span style="color:#d88200">?\]</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;.#&#34;</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>               <span style="color:#111">)))</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">dolist</span> <span style="color:#111">(</span><span style="color:#111">char-regexp</span> <span style="color:#111">alist</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#75af00">set-char-table-range</span> <span style="color:#111">composition-function-table</span> <span style="color:#111">(</span><span style="color:#75af00">car</span> <span style="color:#111">char-regexp</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                          <span style="color:#f92672">`</span><span style="color:#111">([</span><span style="color:#f92672">,</span><span style="color:#111">(</span><span style="color:#75af00">cdr</span> <span style="color:#111">char-regexp</span><span style="color:#111">)</span> <span style="color:#ae81ff">0</span> <span style="color:#75af00">font-shape-gstring</span><span style="color:#111">]))))</span>
+</span></span><span style="display:flex;"><span>               <span style="color:#998;font-style:italic">;; ]#</span>
+</span></span><span style="display:flex;"><span>               (<span style="color:#d14">?\]</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#d14">&#34;.#&#34;</span>)
+</span></span><span style="display:flex;"><span>               )))
+</span></span><span style="display:flex;"><span>  (<span style="color:#0086b3">dolist</span> (<span style="color:#008080">char-regexp</span> <span style="color:#008080">alist</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#900;font-weight:bold">set-char-table-range</span> <span style="color:#008080">composition-function-table</span> (<span style="color:#900;font-weight:bold">car</span> <span style="color:#008080">char-regexp</span>)
+</span></span><span style="display:flex;"><span>                          <span style="color:#000;font-weight:bold">`</span>([<span style="color:#000;font-weight:bold">,</span>(<span style="color:#900;font-weight:bold">cdr</span> <span style="color:#008080">char-regexp</span>) <span style="color:#099">0</span> <span style="color:#900;font-weight:bold">font-shape-gstring</span>]))))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">ranges</span> <span style="color:#f92672">&#39;</span><span style="color:#111">((</span><span style="color:#ae81ff">#x203c</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#x3299</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#x1f000</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#x1f644</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">dolist</span> <span style="color:#111">(</span><span style="color:#111">emojis</span> <span style="color:#111">ranges</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#75af00">set-fontset-font</span> <span style="color:#00a8c8">t</span> <span style="color:#111">emojis</span> <span style="color:#d88200">&#34;Noto Color Emoji&#34;</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#0086b3">let</span> ((<span style="color:#008080">ranges</span> <span style="color:#000;font-weight:bold">&#39;</span>((<span style="color:#099">#x203c</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#x3299</span>)
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#x1f000</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#x1f644</span>))))
+</span></span><span style="display:flex;"><span>  (<span style="color:#0086b3">dolist</span> (<span style="color:#008080">emojis</span> <span style="color:#008080">ranges</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#900;font-weight:bold">set-fontset-font</span> <span style="color:#008080">t</span> <span style="color:#008080">emojis</span> <span style="color:#d14">&#34;Noto Color Emoji&#34;</span>)))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">;; Ranges provided by https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">let</span> <span style="color:#111">((</span><span style="color:#111">ranges</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#75715e">;; Seti-UI + Custom</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xe5fa</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xe62b</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; Devicons</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xe700</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xe7c5</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; Font Awesome</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xf000</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xf2e0</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; Font Awesome Extension</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xe200</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xe2a9</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; Material Design Icons</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xf500</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xfd46</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; Weather</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xe300</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xe3eb</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; Octicons</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xf400</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xf4a8</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#ae81ff">#x2665</span> <span style="color:#ae81ff">#x26a1</span> <span style="color:#ae81ff">#xf27c</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; Powerline Extra Symbols</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xe0b4</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xe0c8</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xe0cc</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xe0d2</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#ae81ff">#xe0a3</span> <span style="color:#ae81ff">#xe0ca</span> <span style="color:#ae81ff">#xe0d4</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; IEC Power Sybols</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#x23fb</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#x23fe</span><span style="color:#111">)</span> <span style="color:#ae81ff">#x2b58</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; Font Logos</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xf300</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xf313</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">;; Pomicons</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#111">(</span><span style="color:#ae81ff">#xe000</span> <span style="color:#f92672">.</span> <span style="color:#ae81ff">#xe00d</span><span style="color:#111">))))</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">dolist</span> <span style="color:#111">(</span><span style="color:#111">syms</span> <span style="color:#111">ranges</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#75af00">set-fontset-font</span> <span style="color:#00a8c8">t</span> <span style="color:#111">syms</span> <span style="color:#d88200">&#34;Symbols Nerd Font&#34;</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">;; Ranges provided by https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#0086b3">let</span> ((<span style="color:#008080">ranges</span> <span style="color:#000;font-weight:bold">&#39;</span>(<span style="color:#998;font-style:italic">;; Seti-UI + Custom</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xe5fa</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xe62b</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; Devicons</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xe700</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xe7c5</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; Font Awesome</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xf000</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xf2e0</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; Font Awesome Extension</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xe200</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xe2a9</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; Material Design Icons</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xf500</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xfd46</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; Weather</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xe300</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xe3eb</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; Octicons</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xf400</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xf4a8</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#099">#x2665</span> <span style="color:#099">#x26a1</span> <span style="color:#099">#xf27c</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; Powerline Extra Symbols</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xe0b4</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xe0c8</span>)
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xe0cc</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xe0d2</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#099">#xe0a3</span> <span style="color:#099">#xe0ca</span> <span style="color:#099">#xe0d4</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; IEC Power Sybols</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#x23fb</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#x23fe</span>) <span style="color:#099">#x2b58</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; Font Logos</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xf300</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xf313</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#998;font-style:italic">;; Pomicons</span>
+</span></span><span style="display:flex;"><span>                (<span style="color:#099">#xe000</span> <span style="color:#000;font-weight:bold">.</span> <span style="color:#099">#xe00d</span>))))
+</span></span><span style="display:flex;"><span>  (<span style="color:#0086b3">dolist</span> (<span style="color:#008080">syms</span> <span style="color:#008080">ranges</span>)
+</span></span><span style="display:flex;"><span>    (<span style="color:#900;font-weight:bold">set-fontset-font</span> <span style="color:#008080">t</span> <span style="color:#008080">syms</span> <span style="color:#d14">&#34;Symbols Nerd Font&#34;</span>)))
 </span></span></code></pre></div><p>Hasilnya,</p>
 <figure><img src="/images/emacs-27-dan-font-ligature/jetbrains-mono-config-2.png"
          alt="JetBrains Mono ligature"/><figcaption>
