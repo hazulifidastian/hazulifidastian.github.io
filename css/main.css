@@ -1,72 +1,33 @@
-@font-face {
-  font-family: "Lora";
-  font-style: normal;
-  font-weight: normal;
-  src: local('Lora'), local('Lora-Regular'),
-    url("../fonts/Lora-Regular.woff2") format("woff2"),
-    url("../fonts/Lora-Regular.woff") format("woff");
-  block-timeout: 0.3;
-  swap-timeout: 0;
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: normal;
-  src: local('Roboto'), local('Roboto-Regular'),
-    url("../fonts/Roboto-Regular.woff2") format("woff2"),
-    url("../fonts/Roboto-Regular.woff") format("woff");
-  block-timeout: 0.3;
-  swap-timeout: 0;
-}
-
 body {
-  font-family: "Roboto", sans-serif;
-  color: #17181e !important;
-  font-size: 17px;
-  text-size-adjust: 100%;
+  font: normal 16px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-feature-settings: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
 }
 
+.container {
+  max-width: 700px !important;
+}
+
 h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
-  font-family: "Lora", sans-serif;
-  font-weight: 700 !important;
+h5 {
+  font-weight: bold;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2em;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.5em;
 }
 
 h3 {
-  font-size: 1.3rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-h6 {
-  font-size: 0.75rem;
-}
-
-.container {
-  max-width: 700px !important;
+  font-size: 1.17em;
 }
 
 
@@ -174,13 +135,9 @@ h6 {
   color: inherit;
 }
 
-.archive-title {
-  font-family: "Lora", sans-serif;
-}
+.archive-title {}
 
-.archive-item-link {
-  font-family: "Lora", sans-serif;
-}
+.archive-item-link {}
 
 .archive {
   margin: 60px auto 80px;
@@ -190,7 +147,6 @@ h6 {
 }
 
 .archive-title {
-  font-family: "Lora", sans-serif;
   font-size: 32px;
   margin-top: 60px;
   text-align: center;
@@ -202,11 +158,10 @@ h6 {
 }
 
 .archive-item-link {
-  font-family: "Lora", sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   display: inline;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 1.17em;
   color: inherit;
   padding: 5px 0 0;
   border-bottom: none;
@@ -263,12 +218,9 @@ h6 {
 }
 
 
-.archive-description {
-  font-size: 16px;
-}
+.archive-description {}
 
 .article-title {
-  font-size: 34px;
   line-height: 47px;
   margin: 0 0 0.3em;
   text-align: center;
@@ -320,7 +272,6 @@ h6 {
 }
 
 .article-content figure figcaption {
-  font-size: 0.9em;
   text-align: center;
 }
 
@@ -444,7 +395,6 @@ h6 {
 .highlight {
   position: relative;
   margin: 40px 0;
-  font-size: 14px;
 }
 
 .highlight pre {
@@ -470,7 +420,6 @@ h6 {
   margin: 0;
   padding: 0;
   color: #ccc;
-  font-size: 14px;
 }
 
 .footer-links li {
@@ -501,61 +450,6 @@ h6 {
   margin-left: 2px;
 }
 
-@media (min-width: 600px) {
-  .header {
-    padding: 5em 0 1em;
-  }
-
-  main {
-    margin-top: 6.5rem;
-  }
-
-  .higlight,
-  pre code,
-  code {
-    font-size: 1rem !important;
-  }
-
-  .highlight {
-    font-size: 1rem;
-    margin: 40px 0;
-  }
-
-  .nav-logo img {
-    max-height: 80px;
-  }
-
-  .archive-title {
-    font-size: 38px;
-  }
-
-  .archive-item-link {
-    font-size: 19px;
-  }
-
-  .article-title {
-    font-size: 37px;
-  }
-
-  .article-content li p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .article-content li .highlight {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  .article-content li figure {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
-  .footer-links {
-    font-size: inherit;
-  }
-}
 
 .disqus {
   padding: 0 15px;

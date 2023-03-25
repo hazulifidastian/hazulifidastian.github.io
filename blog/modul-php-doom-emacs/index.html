@@ -145,7 +145,7 @@
 </ol>
 <h3 id="packageel"><code>package.el</code></h3>
 <p>Aktifkan package phpactor pada file konfigurasi <code>package.el</code>. Buka dengan shorcut <code>SPC f p</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">package!</span> <span style="color:#111">phpactor</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">package!</span> <span style="color:#000">phpactor</span><span style="color:#000;font-weight:bold">)</span>
 </span></span></code></pre></div><h3 id="sinkronisasi-konfigurasi-doom-emacs">Sinkronisasi Konfigurasi Doom Emacs</h3>
 <p>Ketikkan perintah <code>~/.emacs.d/bin/doom sync</code> untuk menyesuaikan perubahan konfigurasi pada doom emacs.</p>
 <h2 id="install-phpactor">Install Phpactor</h2>
@@ -156,15 +156,15 @@ Sedangkan instalasi composer bisa menggunakan panduan <a href="https://getcompos
 <p>Hasil instalasi ada pada direktori <code>~/.emacs.d/phpactor</code>.</p>
 <h2 id="install-dependencies">Install Dependencies</h2>
 <p>Modul <code>php</code> emacs doom memiliki beberapa ketergantugan paket PHP. Paket tambahan tersebut diinstalasi secara global menggunakan composer.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer global require <span style="color:#8045ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    d11wtq/boris <span style="color:#8045ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    phpunit/phpunit <span style="color:#8045ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>    techlivezheng/phpctags
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>composer global require <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    d11wtq/boris <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    phpunit/phpunit <span style="color:#4e9a06">\
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06"></span>    techlivezheng/phpctags
 </span></span></code></pre></div><h3 id="konfigurasi-variable-environment-path">Konfigurasi variable environment PATH</h3>
 <p>Setelah instalasi selesai, composer meletakkan file executable pada folder <code>\~/.composer/vendor/bin</code>. Tergantung sistem operasi, lokasi file binary composer akan berbeda.</p>
 <p>Pastikan lokasi file executable dari composer berada dalam variable <code>PATH</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># place this in your profile file, like ~/.bash_profile or ~/.zshenv</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">export</span> <span style="color:#111">PATH</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;~/.composer/vendor/bin:</span><span style="color:#111">$PATH</span><span style="color:#d88200">&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># place this in your profile file, like ~/.bash_profile or ~/.zshenv</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87">export</span> <span style="color:#000">PATH</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;~/.composer/vendor/bin:</span><span style="color:#000">$PATH</span><span style="color:#4e9a06">&#34;</span>
 </span></span></code></pre></div><p>Konfigurasi akan berbeda jika menggunakan <code>Fish shell</code>.</p>
 <p>Dengan memasukkan folder executable composer ke variabel <code>PATH</code>, maka executable tersebut bisa diakses dari folder mana saja didalam sistem operasi.</p>
 <h3 id="sinkronisasi-konfigurasi-doom-emacs-1">Sinkronisasi Konfigurasi Doom Emacs</h3>
@@ -172,7 +172,7 @@ Sedangkan instalasi composer bisa menggunakan panduan <a href="https://getcompos
 <h2 id="instalasi-lsp-language-server-protocol-php">Instalasi LSP (Language Server Protocol) PHP</h2>
 <p>Intelephense adalah paket yang direkomendasikan oleh emacs-lsp untuk menjadi lsp PHP. Paket ini biasa digunakan sebagai ekstensi pada Visual Studio Code.</p>
 <p>Instalasi intelephense menggunakan aplikasi npm.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo npm -i intelephense -g
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo npm -i intelephense -g
 </span></span></code></pre></div><h2 id="tips">Tips</h2>
 <ul>
 <li>Perintah phpactor bisa diakses menggunakan shortcut <code>M-x</code>, kemudian ketikkan <code>phpactor</code>. Anda bisa eksplorasi perintah-perintahnya. Mulai dari install atau update paket phpactor, hingga refactoring kode php.</li>
@@ -231,7 +231,6 @@ Pastikan Intelephense sudah diinstalasi dengan dengan akses global. Periksa deng
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
-
     
 
   </div>
