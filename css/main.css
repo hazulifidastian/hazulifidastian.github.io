@@ -329,3 +329,8 @@ h6,
 code {
   color: inherit;
 }
+
+li,
+p {
+  word-break: break-word;
+}
