@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 08 Jun 2022 07:13:01 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu Linux Notes</title>
-      <link>https://hazulifidastian.github.io/blog/ubuntu-linux-notes/</link>
+      <link>https://hazulifidastian.github.io/catatan/ubuntu-linux-notes/</link>
       <pubDate>Wed, 08 Jun 2022 07:13:01 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/blog/ubuntu-linux-notes/</guid>
+      <guid>https://hazulifidastian.github.io/catatan/ubuntu-linux-notes/</guid>
       <description>Timezone Show Timezone:
 timedatectl List Timezone:
 timedatectl list-timezones Set Timezone:

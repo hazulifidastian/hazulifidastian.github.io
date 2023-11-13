@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 22 Feb 2022 23:32:19 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PHP Notes</title>
-      <link>https://hazulifidastian.github.io/blog/php-notes/</link>
+      <link>https://hazulifidastian.github.io/catatan/php-notes/</link>
       <pubDate>Tue, 22 Feb 2022 23:32:19 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/blog/php-notes/</guid>
+      <guid>https://hazulifidastian.github.io/catatan/php-notes/</guid>
       <description>Tools Xdebug Mode Off Trigger Makefile Error Pesan error:
 make: *** [Makefile:135: dump-autoload] Error 2816 Solusi:
 Hilangkan setting XDEBUG_MODE = &amp;quot;off&amp;quot; Tambahkan informasi folder composer pada konfigurasi skipped paths di PHPStorm. Lihat tautan ini https://github.com/composer/composer/issues/8302#issuecomment-526908909. </description>
@@ -20,10 +20,10 @@ Hilangkan setting XDEBUG_MODE = &amp;quot;off&amp;quot; Tambahkan informasi fold
     
     <item>
       <title>Modul PHP Doom Emacs</title>
-      <link>https://hazulifidastian.github.io/blog/modul-php-doom-emacs/</link>
+      <link>https://hazulifidastian.github.io/catatan/modul-php-doom-emacs/</link>
       <pubDate>Thu, 14 May 2020 00:48:53 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/blog/modul-php-doom-emacs/</guid>
+      <guid>https://hazulifidastian.github.io/catatan/modul-php-doom-emacs/</guid>
       <description>Konfigurasi Doom Emacs init.el Jelajah file konfigurasi dengan shorcut SPC f p, kemudian pilih file init.el. Aktifkan beberapa modul dengan cara menghilangkan tanda komentar ;;.
 Modul syntax, ada pada grup :checkers. Modul lsp, ada pada grup :tools. Modul (php +lsp), tambahan +lsp. Ada pada grup :lang. package.el Aktifkan package phpactor pada file konfigurasi package.el. Buka dengan shorcut SPC f p.
 (package! phpactor) Sinkronisasi Konfigurasi Doom Emacs Ketikkan perintah ~/.emacs.d/bin/doom sync untuk menyesuaikan perubahan konfigurasi pada doom emacs.</description>

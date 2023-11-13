@@ -1,0 +1,20 @@
+body {
+  font: normal 16px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-feature-settings: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+#home .columns {
+  display: flex;
+  /* height: 70vh; */
+}
+
+#home .title.is-1 {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 700px !important;
+}

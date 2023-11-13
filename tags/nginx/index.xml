@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 13 Jun 2022 15:48:03 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nginx Bad Bot Blocker</title>
-      <link>https://hazulifidastian.github.io/blog/nginx-bad-bot-blocker/</link>
+      <link>https://hazulifidastian.github.io/catatan/nginx-bad-bot-blocker/</link>
       <pubDate>Mon, 13 Jun 2022 15:48:03 +0700</pubDate>
       
-      <guid>https://hazulifidastian.github.io/blog/nginx-bad-bot-blocker/</guid>
+      <guid>https://hazulifidastian.github.io/catatan/nginx-bad-bot-blocker/</guid>
       <description>Bagian 1, Instalasi Download install-ngxblocker
 sudo wget https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/install-ngxblocker -O /usr/local/sbin/install-ngxblocker sudo chmod +x /usr/local/sbin/install-ngxblocker Jalankan install-ngxblocker dengan mode DRY-MODE/DRY-RUN untuk melihat peubahan apa yang dibuat dan file apa saja yang didownload.
 cd /usr/local/sbin sudo ./install-ngxblocker Dengan DRY-MODE, script hanya melakukan simulasi setup.
