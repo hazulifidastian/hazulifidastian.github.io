@@ -54,7 +54,7 @@ h6,
 
 #home .columns {
   display: flex;
-  height: 70vh;
+  padding-top: 50px;
 }
 
 .archive-section,
