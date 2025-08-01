@@ -1,23 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>whastapp on Hazuli Fidastian</title>
-    <link>https://hazulifidastian.github.io/tags/whastapp/</link>
-    <description>Recent content in whastapp on Hazuli Fidastian</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>id-id</language>
-    <lastBuildDate>Mon, 06 Sep 2021 14:07:21 +0700</lastBuildDate><atom:link href="https://hazulifidastian.github.io/tags/whastapp/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>WhatsApp Link</title>
-      <link>https://hazulifidastian.github.io/aplikasi/whatsapp-link/</link>
-      <pubDate>Mon, 06 Sep 2021 14:07:21 +0700</pubDate>
-      
-      <guid>https://hazulifidastian.github.io/aplikasi/whatsapp-link/</guid>
-      <description>Membuat link WhatsApp Me dengan menggabungkan api WhatsApp yang digunakan untuk menginisiasi pengiriman pesan melalui browser, kemudian nomor telepon tujuan dan pesan yang akan dikirimkan.
-Aplikasi ini dibuat reaktif menggunakan AlpineJS. Otomatis memantau perubahan pada input nomor telepondan input pesan kemudian mengkompilasi kedua input tersebut menjadi link.
-NOMOR TELEPONPESANLINKSalin ke Clipboard
-KIRIM PESAN WHATSAPPKIRIM SEKARANG</description>
-    </item>
-    
-  </channel>
-</rss>
