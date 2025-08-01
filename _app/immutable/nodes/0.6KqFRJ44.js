@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import{c as i,b as m,a as o,f as p,n as c}from"../chunks/CFuR8cDd.js";import{h as f,s as h}from"../chunks/Bj-s3nRG.js";var l=p('<link rel="icon" href="https://avatars.githubusercontent.com/u/1778170?v=4"/>');function _(r,t){var a=i();f(s=>{var e=l();o(s,e)});var n=m(a);h(n,()=>t.children??c),o(r,a)}export{_ as component};
